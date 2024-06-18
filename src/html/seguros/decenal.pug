@@ -43,7 +43,7 @@ block contenido
                     li.container-anchor
                         a(href="#infonavit" title="Ir a la sección de INFONAVIT") INFONAVIT
                     li.container-anchor.container-anchor--bold
-                        a(href="#contactar" title="Ir a Contactar ahora") Contactar ahora
+                        a(href="#contactar" title="Ir a la sección Contactar ahora") Contactar ahora
         .c-introduction-text#introduccion
             div.c-introduction-text__text-container
                 p Es importante considerar que una vez finalizada la etapa de construcción se hace la entrega de tu patrimonio, y se pueden presentar daños por vicios ocultos en el mismo.
@@ -85,7 +85,7 @@ block contenido
                 h3 Coberturas
                 .c-coverage__container-elements
                     ul.c-coverage__list-elements
-                        div.container-text
+                        li.container-text
                             h4 Seguridad. 10 años
                             p Daños que afectan a cimentaciones, estructura u otros elementos que determinan la estabilidad y solidez de la edificación, por:
                         li.c-coverage__list-elements__container-element 
@@ -158,40 +158,40 @@ block contenido
             section.container-fovissste
                 h3 Información FOVISSSTE
                 div.container-fovissste__container
-                    article.o-card-large
+                    div.o-card-large
                         p Facturación: Oferentes de vivienda
-                        a.o-btn-arrow(href="#" title="Ir hacia facturacion Oferentes de vivienda")
+                        a.o-btn-arrow(href="#" aria-label="Link hacia facturacion Oferentes de vivienda" title="Ir hacia facturacion Oferentes de vivienda")
                             i.i-icon.i-arrow-up-right(aria-hidden="true")
 
                 div.container-fovissste__container
-                    article.o-card-large
+                    div.o-card-large
                         p Comunicado normalización de operación 2024
-                        button.o-btn-arrow.o-btn-arrow--arrow-down(href="#" title="Leer más")
+                        button.o-btn-arrow.o-btn-arrow--arrow-down(aria-label="boton expandir información" title="Leer más")
                             i.i-icon.i-arrow-up-right(aria-hidden="true")
 
                 div.container-fovissste__container
-                    article.o-card-large
+                    div.o-card-large
                         p Certificados: Acreditados FOVISSSTE
-                        button.o-btn-arrow.o-btn-arrow--arrow-down(href="#" title="Leer más")
+                        button.o-btn-arrow.o-btn-arrow--arrow-down(aria-label="boton expandir información" title="Leer más")
                             i.i-icon.i-arrow-up-right(aria-hidden="true")
                     div.container-fovissste__container__contenido
                         div.container-fovissste__container__contenido__container-card
                             button.o-card-archive(title="Descargar PDF certificado")
-                                div.container-image
+                                span.container-image
                                     img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
-                                div.container-text
-                                    p Descarga tu certificado
+                                span.container-text
+                                    span Descarga tu certificado
                         div.container-fovissste__container__contenido__container-card
                             button.o-card-archive(title="Descargar PDF condiciones generales")
-                                div.container-image
+                                span.container-image
                                     img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
-                                div.container-text
-                                    p Consulta condiciones generales
+                                span.container-text
+                                    span Consulta condiciones generales
 
                 div.container-fovissste__container
-                    article.o-card-large
+                    div.o-card-large
                         p Asistencias FOVISSSTE
-                        button.o-btn-arrow.o-btn-arrow--arrow-down#button-expand-card-large-4(href="#" title="Leer más")
+                        button.o-btn-arrow.o-btn-arrow--arrow-down#button-expand-card-large-4(aria-label="boton expandir información" title="Leer más")
                             i.i-icon.i-arrow-up-right(aria-hidden="true")
                     div.container-fovissste__container__contenido#contenido-4
                         p GMX Seguros otorga al asegurado servicios adicionales como asistencia médica, asistencia al hogar, asistencia en gadgets y una gran red de descuentos en establecimientos comerciales.
@@ -226,33 +226,33 @@ block contenido
                                 p para solicitar los servicios de asistencia que ponemos a tu disposición.
                         div.container-fovissste__container__contenido__container-card
                             button.o-card-archive(title="Descargar PDF Folleto de asistencias")
-                                div.container-image
+                                span.container-image
                                     img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
-                                div.container-text
-                                    p Consultar Folleto de asistencias
+                                span.container-text
+                                    span Consultar Folleto de asistencias
 
         .c-fovissste#infonavit
             section.container-fovissste.container-fovissste--blue-light
                 h3 Información INFONAVIT
-                article.o-card-large.o-card-large--light-blue
+                div.o-card-large.o-card-large--light-blue
                     p Decenal tradicional seguro contra vicios ocultos
-                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Ir hacía seguro contra vicios ocultos")
                         i.i-icon.i-arrow-up-right(aria-hidden="true")
-                article.o-card-large.o-card-large--light-blue
+                div.o-card-large.o-card-large--light-blue
                     p ¿Tu vivienda tiene algún daño?
-                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Ir hacía ¿Tu vivienda tiene algún daño?")
                         i.i-icon.i-arrow-up-right(aria-hidden="true")
-                article.o-card-large.o-card-large--light-blue
+                div.o-card-large.o-card-large--light-blue
                     p Facturación: Oferentes de vivienda
-                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Ir hacía Facturación: Oferentes de vivienda")
                         i.i-icon.i-arrow-up-right(aria-hidden="true")
-                article.o-card-large.o-card-large--light-blue
+                div.o-card-large.o-card-large--light-blue
                     p Certificados: Acreditados Infonavit
-                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Ir hacía Certificados Acreditados Infonavit")
                         i.i-icon.i-arrow-up-right(aria-hidden="true")
-                article.o-card-large.o-card-large--light-blue
+                div.o-card-large.o-card-large--light-blue
                     p Certificados: Nuevo seguro de calidad de la vivienda
-                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Ir hacía Certificados Nuevo seguro de calidad de la vivienda")
                         i.i-icon.i-arrow-up-right(aria-hidden="true")
 
         .c-contact-form#contactar
@@ -312,8 +312,8 @@ block contenido
                         input(type="text" id="name-developer" name="name-developer" placeholder="Nombre del desarrollador" aria-required="true")
                         div#error-name-developer.error-message
                     div.container-form__text-area
-                        label(for="") ¿Comentarios adicionales? ¿Alguna necesidad específica?
-                        textarea(name="") 
+                        label(for="comments") ¿Comentarios adicionales? ¿Alguna necesidad específica?
+                        textarea(name="comments" id="comments") 
                     .container-error
                         div.container-form__container-terms
                             label(for="TyC") 

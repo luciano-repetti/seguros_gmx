@@ -30,10 +30,10 @@ block contenido
 
         .c-contact-form.c-contact-form--quotation
             section.container-contact-form.container-contact-form--quotation
-                h3 Un agente especializado, te ayudará a contratar lo que realmente necesitas.
+                h3#contact-form-title Un agente especializado, te ayudará a contratar lo que realmente necesitas.
                 form.container-form(action="#" method="post" aria-labelledby="contact-form-title")
                     label(for="insurance-type") Tipo de seguro de Interés
-                        div.container-message
+                    div.container-message
                         div.container-form__custom-select
                             select(name="insurance-type" id="insurance-type" aria-required="true")
                                 option(value="" disabled selected) Seleccione...
@@ -92,5 +92,5 @@ block contenido
                     div.container-form__container-button
                         button.o-btn.o-btn--green(type="submit" aria-label="Contactar agente") Contactar agente
             div.container-officine
-                p Si lo deseas puedes consultar <br /> nuestras 
+                p Si lo deseas puedes consultar #[br] nuestras 
                     a(href="" title="Ir hacia oficinas de atención") oficinas de atención

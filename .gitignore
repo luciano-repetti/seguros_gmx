@@ -28,3 +28,4 @@ yarn-error.log
 
 # Si usas Visual Studio Code
 .vscode/
+.vercel
