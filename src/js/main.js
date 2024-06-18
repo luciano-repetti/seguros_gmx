@@ -451,18 +451,19 @@ document
 	});
 
 document.addEventListener("DOMContentLoaded", function () {
-	var splides = document.querySelectorAll(".splide.values");
+	var splides = document.querySelectorAll(".slider-values");
 	splides.forEach(function (splide) {
 		var instance = new Splide(splide, {
 			start: 0,
 			perPage: 1,
+			omitEnd: true,
+			arrows: true,
+			lazyLoad: "sequential",
 			breakpoints: {
 				1257: {
-					arrows: true,
 					perPage: 1,
 				},
 				696: {
-					arrows: true,
 					perPage: 1,
 				},
 				500: {

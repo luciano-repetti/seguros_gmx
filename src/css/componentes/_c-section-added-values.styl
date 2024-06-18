@@ -124,7 +124,7 @@
         padding 3em 2em
         padding-top 0
     +Mobile(max)
-        padding 3em 1em
+        padding 3em 0em
         padding-top 0
     +MobilePortrait(max)
         padding 3em .5em
@@ -192,28 +192,28 @@
                 background white
                 opacity 1
     .splide__pagination
-            display flex
-            align-items center
-            gap 1em
-            bottom -3em
+        display flex
+        align-items center
+        gap 1em
+        bottom -3em
+        +Mobile(max)
+            bottom .5em
+        .is-active
+            opacity 1
+            width 50px
+            height 7px
+            background green-1
+            border-radius 4px
             +Mobile(max)
-                bottom .5em
-            .is-active
-                opacity 1
-                width 50px
-                height 7px
-                background green-1
-                border-radius 4px
-                +Mobile(max)
-                    width 35px
-                    height 5px
-            &__page
-                width 8px
-                height 8px
-                background white
-                opacity 1
-                +Mobile(max)
-                    width 5px
-                    height 5px
+                width 35px
+                height 5px
+        &__page
+            width 8px
+            height 8px
+            background white
+            opacity 1
+            +Mobile(max)
+                width 5px
+                height 5px
             
         
