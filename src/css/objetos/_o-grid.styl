@@ -1,0 +1,108 @@
+.o-container
+	margin 0 auto
+	max-width container-width + 40
+	padding 0 20px
+
+.o-row
+	margin 0 auto
+
+	&:after
+		clear both
+		content ''
+		display table
+
+.o-flex
+	display flex
+	
+.o-col-12
+	width 100%
+
+.o-col-11
+	width 91.66666667%
+
+.o-col-10
+	width 83.33333333%
+
+.o-col-9
+	width 75%
+
+.o-col-8
+	width 66.66666667%
+
+.o-col-7
+	width 58.33333333%
+
+.o-col-6
+	width 50%
+
+.o-col-5
+	width 41.66666667%
+
+.o-col-4
+	width 33.33333333%
+
+.o-col-3
+	width 25%
+
+.o-col-2
+	width 16.66666667%
+
+.o-col-1
+	width 8.33333333%
+
+
+.o-grid-flex
+	display flex
+	align-items center
+
+.o-noSpace
+	padding 0
+	margin 0
+
+.o-col
+	+TabletPortrait() 
+		&-lg-1 
+			width 8.3333333333%
+
+		&-lg-2 
+			width 16.6666666667%
+
+		&-lg-3 
+			width 25%
+
+		&-lg-4 
+			width 33.3333333333%
+
+		&-lg-5 
+			width 41.6666666667%
+
+		&-lg-6 
+			width 50%
+
+		&-lg-7 
+			width 58.3333333333%
+
+		&-lg-8 
+			width 66.6666666667%
+
+		&-lg-9 
+			width 75%
+
+		&-lg-10 
+			width 83.3333333333%
+
+		&-lg-11 
+			width 91.6666666667%
+
+		&-lg-12 
+			width 100%
+			
+.o-gridBlog
+	max-width 1048px
+	margin 0 auto
+	padding 50px 0 80px
+	+TabletPortrait()
+		padding-bottom 130px
+	+Desktop()
+		margin-left auto
+		margin-right 0

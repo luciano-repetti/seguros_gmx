@@ -1,0 +1,55 @@
+.o-card-product
+	width 136px
+	height 136px
+	padding 12px
+	border 0.5px solid blue-4
+	border-radius 36px
+	display flex
+	flex-direction column
+	align-items center
+	justify-content flex-start
+	text-align center
+	position relative
+	overflow hidden
+	background gray-1
+	transition 0.3s ease
+	strong
+		font-size 16px
+		line-height 18px
+		color blueDark-2
+		font-weight regular
+		position relative
+	&__img
+		max-width 50px
+		margin 0 auto
+		padding-bottom 12px
+		display inline-flex
+		align-items center
+		justify-content center
+		position relative
+
+	&:before
+		content ''
+		width 50px
+		position absolute
+		height 50px
+		border-radius 50%
+		background blue-1
+		top 0
+		left 0
+		bottom 0
+		right 0
+		margin auto
+		z-index 0
+		opacity 0
+		transition transform 0.3s ease-out, opacity 0.3s ease
+	
+	&:hover,
+	&:focus
+		border-color blueDark-2
+		
+		&:before
+			transform scale(4)
+			opacity 1
+		
+

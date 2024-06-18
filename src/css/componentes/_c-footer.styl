@@ -1,0 +1,218 @@
+.c-footer
+	&__menu
+		+Mobile()
+			margin-right 30px
+		//padding-top 24px
+		li
+			margin-bottom 14px
+			a
+				color white
+				font-size 16px
+				line-height 22px
+				&:hover,
+				&:focus
+					color blue-3
+	&__title
+		
+		margin 24px 0
+		+TabletPortrait()
+			margin-top 0
+			min-height 52px
+
+		a
+			font-size 20px
+			line-height 26px
+			color white
+			&:hover,
+			&:focus
+				color blue-3
+
+	&__top
+		display flex
+		flex-wrap wrap
+		background blueDark-4
+		padding 30px 24px
+		border-radius 36px 36px 0 0 
+		+Tablet()
+			padding 68px 24px
+			border-radius 36px 36px 36px 0
+
+	&__brand
+		//max-width 170px
+		flex 100%
+		+TabletLandscape()
+			flex auto
+		ul
+			display flex
+			align-items flex-end
+			//justify-content center
+			gap 10%
+			flex-wrap wrap
+			+TabletLandscape()
+				margin-right 30px
+				display block
+			li
+				
+				margin-bottom 30px
+				+TabletPortrait()
+					margin-bottom 50px
+
+	&__col
+		width 100%
+		+Mobile()
+			width 50%
+		+TabletPortrait()
+			width 25%
+		+TabletLandscape()
+			width 20%
+		+Desktop()
+			&:nth-of-type(4),
+			&:nth-of-type(5)
+
+				width auto
+
+	&__bottom
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		gap 2%
+	
+	&__social
+		background blueDark-4
+		border-radius 0 0 36px 36px
+		padding 20px 0
+		width 100%
+		// +Tablet()
+		// 	width 20%
+		+Tablet()
+			width 30%
+		+TabletPortrait()
+			width 26%
+		+TabletLandscape()
+			width 20%
+		ul
+			display flex
+			flex-wrap wrap
+			justify-content center
+			height 100%
+			align-items center
+			li
+				margin 5px 10px
+	&__logos 
+		//border-radius 36px
+		//overflow hidden
+		padding 20px 0px
+		margin-top 15px
+		width 100%
+		+Tablet()
+			width 68%
+			padding 40px 0px
+			margin-top 0
+
+		+TabletPortrait()
+			width 72%
+		+TabletLandscape()
+			width 78%
+			padding 20px
+
+		ul
+			display flex 
+			flex-wrap wrap
+			justify-content center
+			gap 20px 40px
+			height 100%
+			align-items center
+			max-width 275px
+			margin auto
+			+Mobile()
+				max-width 400px
+			+TabletPortrait()
+				max-width none
+				margin-left 0
+				gap 20px 30px
+			+TabletLandscape()
+				justify-content space-around
+				gap 20px 40px
+		li
+			//padding 10px 24px
+			a
+				display block
+		img
+			height 30px
+		
+		// &--insurance
+		// 	+Tablet()
+		// 		width 66%
+		// 	+TabletPortrait()
+		// 		width 40%
+		// 	+TabletLandscape()
+		// 		width 46%
+		// &--institutions
+		// 	+Tablet()
+		// 		width 33%
+		// 	+TabletPortrait()
+		// 		width 30%
+		// 		ul
+		// 			gap 20px 30px
+
+	&__legal
+		display flex
+		flex-wrap wrap
+		padding 14px 0
+		gap 2%
+		//justify-content center
+		p
+			color black
+			font-size 16px
+			line-height 22px
+			margin-bottom 15px
+			// +Tablet()
+			// 	width 30%
+			// 	margin-bottom 0
+			// +TabletPortrait()
+			// 	width 26%
+			width 100%
+			text-align center
+			+TabletLandscape()
+				width 20%
+				margin-bottom 0
+		ul
+			display flex
+			flex-wrap wrap
+			gap 15px 20px
+			justify-content center
+			width 100%
+			max-width 500px
+			margin auto
+			+Tablet()
+				max-width none
+			+TabletLandscape()
+				gap 15px 30px
+			a
+				color blueDark-1
+				font-size 16px
+				line-height 22px
+				&:hover,
+				&:focus
+					color black
+			// +Tablet()
+			// 	width 68%
+			// 	margin-bottom 0
+			// +TabletPortrait()
+			// 	width 72%
+			+TabletLandscape()
+				width 78%
+				justify-content space-around
+			+Desktop()
+				gap 15px 40px
+				
+	&__gmx
+		display block
+		max-width 128px
+	&__tel
+		font-size 22px
+		line-height 28px
+		color white
+		&:hover,
+		&:focus
+			color blue-3

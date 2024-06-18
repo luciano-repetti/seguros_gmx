@@ -1,0 +1,61 @@
+.c-form-search
+	display flex
+	height 100%
+	width 100%
+	background white
+	+TabletLandscape()
+		width 85%
+		padding 18px 0
+		margin-left: auto;
+
+	&__container
+		display flex
+		justify-content space-between
+		align-items center
+		width 100%
+		flex-wrap wrap
+
+	&__buttons
+		width 40%
+		text-align right 
+		+TabletLandscape()
+			width auto
+		.o-btn
+			min-width 48px
+			border-radius 50%
+			padding 11px 6px
+			margin-left 7%
+			transition 0.3s all ease
+			+Mobile()
+				margin-left 20px
+			+TabletLandscape()
+				margin-left 24px
+				min-width: 190px;
+				padding 12px 30px
+				border-radius 28px
+			+Desktop()
+				min-width 208px
+
+			.i-icon
+				font-size 24px
+				vertical-align middle
+				+TabletLandscape()
+					display none
+
+			span
+				display none
+				+TabletLandscape()
+					display block
+
+	&__input
+		width 60%
+		+TabletLandscape()
+			flex 1
+		.i-icon
+			color blueDark-1
+			font-size 18px
+			vertical-align middle
+			display none
+			+TabletLandscape()
+				display inline-block
+	

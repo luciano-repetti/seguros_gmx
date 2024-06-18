@@ -1,0 +1,30 @@
+# Ignorar directorios
+node_modules/
+dist/
+.vercel/
+.svn
+vercel.json
+
+# Ignorar archivos generados por Gulp o cualquier otro compilador
+*.css
+*.html
+
+# Ignorar archivos de configuración específicos de tu entorno de desarrollo
+.env
+
+# Ignorar archivos de respaldo
+*~
+
+# Ignorar archivos de caché y logs
+.cache/
+logs/
+
+# Ignorar archivos de dependencias de desarrollo específicos de Node.js
+npm-debug.log
+yarn-error.log
+
+# Si usas editorconfig
+.editorconfig
+
+# Si usas Visual Studio Code
+.vscode/

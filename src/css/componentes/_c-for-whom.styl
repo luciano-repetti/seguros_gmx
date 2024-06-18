@@ -1,0 +1,48 @@
+.c-for-whom
+        padding 2em 0
+        width 640px
+        color blueDark-1
+        > h3
+            font-family tipografia-serif
+            font-size 50px
+            +Tablet(max)
+                font-size 40px
+        > p
+            margin-top 1em
+            font-family tipografia-serif
+            font-size 26px
+            +Tablet(max)
+                font-size 20px
+        &__box-container
+            display grid
+            grid-template-columns repeat(2, 1fr)
+            gap 1em
+            margin-top 3em
+            +Mobile(max)
+                grid-template-columns repeat(1, 1fr)
+            &__box
+                border-radius 1em
+                padding 1.5em
+                gap 2em
+                display flex
+                flex-direction column
+                justify-content space-between;
+                position relative
+                > p
+                    font-size 22px
+                    line-height 28px
+                    margin-bottom 1em
+                &--blue
+                    color white
+                    background-color blueDark-1
+                &--light-blue
+                    color black
+                    background-color blueDark-5
+                &__container-image
+                    width fit-content
+                    padding .5em
+                    border-radius 1em
+                    background-color white
+                    img
+                        width 36px
+                        height auto

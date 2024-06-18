@@ -1,0 +1,326 @@
+extends ../template/_template
+
+append configuracion
+    -var page			= {}
+    -page['link']		= 'seguros/decenal.html'
+    -page['title']		= 'Decenal'
+    -page['descrip']	= 'Página de seguros'
+    -page['keys']		= ''
+    -page['lang']		= 'es'
+    -page['responsive']	= true
+    -page['section']	= []
+    -page['libsCss']	= []
+    -page['libs']		= []
+    -page['plugins']	= ['splide']
+    -page['js']			= [] 
+
+    - var path = '../../'
+
+
+block contenido
+    main.o-section--main
+        .c-banner-text.c-banner-text--padding1
+            section.o-section.o-section--banner-small
+                .o-container
+                    .o-module.o-module--deco5.u-text-center
+                        .o-module__title 
+                            h1 #[small Seguros] Seguro #[strong Decenal]
+        .c-navigation-page
+            nav.c-navigation-page__list-section(aria-label="Secciones del sitio")
+                ul
+                    li.container-anchor.container-anchor--active
+                        a(href="#introduccion" title="Ir a la sección Introducción") Introducción
+                    li.container-anchor
+                        a(href="#en-que-consiste" title="Ir a la sección de ¿En qué consiste?") ¿En qué consiste?
+                    li.container-anchor
+                        a(href="#para-quien-es" title="Ir a la sección de ¿Para quién es?") ¿Para quién es?
+                    li.container-anchor
+                        a(href="#cobertura" title="Ir a la sección de Cobertura") Coberturas
+                    li.container-anchor
+                        a(href="#consideraciones" title="Ir a la sección de Consideraciones") Consideraciones
+                    li.container-anchor
+                        a(href="#fovissste" title="Ir a la sección de FOVISSSTE") FOVISSSTE
+                    li.container-anchor
+                        a(href="#infonavit" title="Ir a la sección de INFONAVIT") INFONAVIT
+                    li.container-anchor.container-anchor--bold
+                        a(href="#contactar" title="Ir a Contactar ahora") Contactar ahora
+        .c-introduction-text#introduccion
+            div.c-introduction-text__text-container
+                p Es importante considerar que una vez finalizada la etapa de construcción se hace la entrega de tu patrimonio, y se pueden presentar daños por vicios ocultos en el mismo.
+                p Es por esto que en GMX Seguros te respaldamos obligándonos a reparar los daños que se presenten una vez entregado el inmueble y que procedan de vicios ocultos en la construcción.
+
+        .c-consists#en-que-consiste
+            section.c-consists.c-consists__card-safe
+                h3 ¿En qué consiste?
+                div.c-consists__card-safe__container-card
+                    div.c-consists__card-safe__container-card__card
+                        p Es un seguro que cubre la etapa posterior a la construcción.
+                    div.c-consists__card-safe__container-card__card.c-consists__card-safe__container-card__card--image-container
+                        img(src=urlFolder+"images/seguros/GMX-grupo.png" alt="Imagen de un grupo de constructores")
+
+        .c-consists#para-quien-es
+            section.c-for-whom
+                h3 ¿Para quién es?
+                p Esta póliza ofrece cobertura para:
+                ul.c-for-whom__box-container
+                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
+                        p Desarrolladores inmobiliarios
+                        div.c-for-whom__box-container__box__container-image
+                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
+                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
+                        p Constructoras
+                        div.c-for-whom__box-container__box__container-image
+                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
+                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
+                        p Infonavit (aplica para viviendas con o sin avance de obra)
+                        div.c-for-whom__box-container__box__container-image
+                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
+                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
+                        p FOVISSSTE
+                        div.c-for-whom__box-container__box__container-image
+                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
+
+        .c-coverage#cobertura
+            section.c-coverage__container-banner
+                h3 Coberturas
+                .c-coverage__container-elements
+                    ul.c-coverage__list-elements
+                        div.container-text
+                            h4 Seguridad. 10 años
+                            p Daños que afectan a cimentaciones, estructura u otros elementos que determinan la estabilidad y solidez de la edificación, por:
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Vicios de construcción y hechura.
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Vicios del suelo en el cual se construyó.
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Mal comportamiento estructural.
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Error de cálculo y diseño estructural.
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Mala resistencia y calidad de los materiales.
+                    div.container-text
+                        h4 Coberturas Adicionales.
+                        p Daños que afectan la habitabilidad de la vivienda ocasionados por:
+                    ul.c-coverage__list-elements
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Vicios de construcción y hechura.
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Mala resistencia y calidad de los materiales.
+                    div.container-text
+                        h4 Instalaciones. 2 años.
+                        p Daños en instalaciones hidrosanitarias, eléctricas y de gas colocadas por el desarrollador que afecten la habitabilidad de la vivienda, ocasionados por:
+                    ul.c-coverage__list-elements
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Vicios de construcción y hechura.
+                        li.c-coverage__list-elements__container-element 
+                            div.c-coverage__list-elements__container-image
+                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                            div.c-coverage__list-elements__element
+                                p Mala calidad de los materiales utilizados.
+
+        .c-consists#consideraciones
+            section.c-considerations
+                h3 Consideraciones #[small Es importante para realizar una cotización]
+                .c-container-cards
+                    ul.box-container
+                        li.box-container__box.box-container__box--expand
+                            div.box-container__box__number
+                                span 1
+                            p Mostrar los ingresos anuales por su actividad, tipo y cantidad de materiales peligrosos almacenados.
+                        li.box-container__box.box-container__box--image
+                            img(src=urlFolder+"images/seguros/GMX-todo-ok.png" alt="Icon Scientist")
+
+        .c-fovissste#fovissste
+            section.container-fovissste
+                h3 Información FOVISSSTE
+                div.container-fovissste__container
+                    article.o-card-large
+                        p Facturación: Oferentes de vivienda
+                        a.o-btn-arrow(href="#" title="Ir hacia facturacion Oferentes de vivienda")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+
+                div.container-fovissste__container
+                    article.o-card-large
+                        p Comunicado normalización de operación 2024
+                        button.o-btn-arrow.o-btn-arrow--arrow-down(href="#" title="Leer más")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+
+                div.container-fovissste__container
+                    article.o-card-large
+                        p Certificados: Acreditados FOVISSSTE
+                        button.o-btn-arrow.o-btn-arrow--arrow-down(href="#" title="Leer más")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    div.container-fovissste__container__contenido
+                        div.container-fovissste__container__contenido__container-card
+                            button.o-card-archive(title="Descargar PDF certificado")
+                                div.container-image
+                                    img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
+                                div.container-text
+                                    p Descarga tu certificado
+                        div.container-fovissste__container__contenido__container-card
+                            button.o-card-archive(title="Descargar PDF condiciones generales")
+                                div.container-image
+                                    img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
+                                div.container-text
+                                    p Consulta condiciones generales
+
+                div.container-fovissste__container
+                    article.o-card-large
+                        p Asistencias FOVISSSTE
+                        button.o-btn-arrow.o-btn-arrow--arrow-down#button-expand-card-large-4(href="#" title="Leer más")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    div.container-fovissste__container__contenido#contenido-4
+                        p GMX Seguros otorga al asegurado servicios adicionales como asistencia médica, asistencia al hogar, asistencia en gadgets y una gran red de descuentos en establecimientos comerciales.
+                        p El servicio de asistencias tiene una vigencia de tres años a partir de la escrituración de la vivienda. El número de eventos incluidos para cada asistencia se reestablece cada año.
+                        div.container-text-large
+                            p Asistencia médica
+                            ul.container-list
+                                li Orientación médica telefónica
+                                li Ambulancia terrestre por emergencia
+                                li Referencias médicas
+                                li Médico a domicilio o consulta en consultorio
+                        div.container-text-large
+                            p Servicio de Asistencia al hogar
+                            ul.container-list
+                                li Plomería
+                                li Cerrajería en casa
+                                li Electricidad
+                                li Asistencia especializada
+                        div.container-text-large
+                            p Asistencia en gadgets
+                        div.container-text-large
+                            p Reparación o reposición de equipos
+                        div.container-text-large
+                            p Red de descuentos en establecimientos comerciales
+                        div.container-fovissste__container__contenido__card-large
+                            div.container-fovissste__container__contenido__card-large__container-button
+                                a.o-btn-arrow(href="tel:+5590635397" title="Ir hacia el numero de telefono")
+                                    i.i-icon.i-arrow-up-right(aria-hidden="true")
+                            div.container-fovissste__container__contenido__card-large__container-info
+                                p Comunícate al teléfono
+                                strong (55) 9063.5397
+                                p para solicitar los servicios de asistencia que ponemos a tu disposición.
+                        div.container-fovissste__container__contenido__container-card
+                            button.o-card-archive(title="Descargar PDF Folleto de asistencias")
+                                div.container-image
+                                    img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
+                                div.container-text
+                                    p Consultar Folleto de asistencias
+
+        .c-fovissste#infonavit
+            section.container-fovissste.container-fovissste--blue-light
+                h3 Información INFONAVIT
+                article.o-card-large.o-card-large--light-blue
+                    p Decenal tradicional seguro contra vicios ocultos
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                        i.i-icon.i-arrow-up-right(aria-hidden="true")
+                article.o-card-large.o-card-large--light-blue
+                    p ¿Tu vivienda tiene algún daño?
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                        i.i-icon.i-arrow-up-right(aria-hidden="true")
+                article.o-card-large.o-card-large--light-blue
+                    p Facturación: Oferentes de vivienda
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                        i.i-icon.i-arrow-up-right(aria-hidden="true")
+                article.o-card-large.o-card-large--light-blue
+                    p Certificados: Acreditados Infonavit
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                        i.i-icon.i-arrow-up-right(aria-hidden="true")
+                article.o-card-large.o-card-large--light-blue
+                    p Certificados: Nuevo seguro de calidad de la vivienda
+                    a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" title="Leer más")
+                        i.i-icon.i-arrow-up-right(aria-hidden="true")
+
+        .c-contact-form#contactar
+            section.container-contact-form
+                h3#contact-form-title Contactar ahora
+                p Solicita asesoría de un agente especializado, el cual te ayudará a contratar lo que realmente necesitas.
+                form.container-form(action="#" method="post" aria-labelledby="contact-form-title")
+                    label(for="insurance-type") Tipo de seguro de Interés
+                    div.container-message
+                        div.container-form__custom-select
+                            select(name="insurance-type" id="insurance-type" aria-required="true")
+                                option(value="" disabled selected) Seleccione...
+                                option(value="Ambiental") Instituciones educativas
+                                option(value="Ambiental") Profesionistas
+                                option(value="Ambiental") Sector salud
+                                option(value="Ambiental") Ambiental
+                                option(value="Ambiental") Construcción
+                                option(value="Ambiental") Industria Manufactura y Comercio
+                                option(value="Ambiental") Aviación
+                                option(value="Ambiental") Embarcaciones
+                                option(value="Ambiental") Carga en Tránsito
+                                option(value="Ambiental") Gobierno
+                                option(value="Ambiental") Familiar
+                                option(value="Ambiental") Esparcimiento
+                                option(value="Ambiental") Riesgos Especiales
+                            i.i-icon.i-angle-down(aria-hidden="true")
+                        div#error-insurance-type.error-message
+                    //- label.container-message(for="full-name")
+                    div.container-message
+                        input(type="text" id="full-name" name="full-name" placeholder="Nombre completo" aria-required="true")
+                        div#error-full-name.error-message
+                    //- label.container-message(for="business-name")
+                    div.container-message
+                        input(type="text" id="business-name" name="business-name" placeholder="Razón social" aria-required="true")
+                        div#error-business-name.error-message
+                    //- label(for="phone")
+                    div.container-message
+                        input(type="text" id="phone" name="phone" placeholder="Teléfono celular" aria-required="true")
+                        div#error-phone.error-message
+                    //- label(for="email")
+                    div.container-message
+                        input(type="email" id="email" name="email" placeholder="Correo electrónico" aria-required="true")
+                        div#error-email.error-message
+                    //- label(for="city")
+                    div.container-message
+                        input(type="text" id="city" name="city" placeholder="Ciudad" aria-required="true")
+                        div#error-city.error-message
+                    div.container-message
+                        div.container-form__custom-select
+                            select(name="state" id="state" aria-required="true")
+                                option(value="" disabled selected) Seleccione una opción
+                                option(value="Estado") Estado
+                            i.i-icon.i-angle-down(aria-hidden="true")
+                        div#error-state.error-message
+                    //- label(for="name-developer")
+                    div.container-message
+                        input(type="text" id="name-developer" name="name-developer" placeholder="Nombre del desarrollador" aria-required="true")
+                        div#error-name-developer.error-message
+                    div.container-form__text-area
+                        label(for="") ¿Comentarios adicionales? ¿Alguna necesidad específica?
+                        textarea(name="") 
+                    .container-error
+                        div.container-form__container-terms
+                            label(for="TyC") 
+                                input(type="checkbox" id="TyC" name="TyC" aria-required="true")
+                                a(href="" target="_blank") Acepto los Términos y Condiciones
+                        div#error-TyC.error-message
+                    div.container-form__container-button
+                        button.o-btn.o-btn--green(type="submit" aria-label="Contactar agente") Contactar agente
+                    div.container-form__image
+                        img(src=urlFolder+"images/seguros/GMX-inscripcion-datos.png" alt="Imagen sobre persona inscribiendo datos")

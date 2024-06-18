@@ -1,0 +1,172 @@
+$c-card-type2 = 'c-card-type2'
+
+.c-card-type2
+	flex-direction column
+	padding 20px 24px
+	height 100%
+	justify-content space-between
+	+Desktop()
+		padding 25px 30px 20px 30px
+
+	&__title 
+		flex 100%
+		
+		+Mobile()
+			max-width 160px
+			margin-right 8%
+			flex auto
+		h3 
+			font-size 28px
+			line-height 32px
+			font-family tipografia-serif
+			color white
+			margin-bottom 0
+			a
+				color inherit
+				&:hover,
+				&:focus
+					color green-1
+			em
+				font-size 20px
+				line-height 26px
+				color white
+				font-style normal
+				font-family tipografia-sans
+
+		p 
+			font-size 16px
+			line-height 22px
+			color white
+			margin-bottom 5px
+
+		small
+			font-size 12px
+			line-height 18px
+			color white
+			margin-top 10px
+			display block
+
+	&__top 
+		display flex
+		padding-top 25px
+		flex-wrap wrap
+	
+	&__text
+		margin-top 10px
+		
+		+Mobile()
+			margin-top 80px
+			flex 1
+		p 
+			color white
+			font-size 20px
+			line-height 26px
+			margin-bottom 0
+
+	&__bottom 
+		display flex
+		justify-content space-between
+		align-items flex-end
+
+	&__image 
+		max-width 150px
+		margin-top 15px
+		+TabletPortrait()
+			margin-top -5px
+			max-width 160px
+
+	// &__button 
+	// 	padding-bottom 30px
+		
+	// 	+Mobile()
+	// 		margin-right 20px
+
+	&--styl1 
+		+Mobile()
+			flex-direction row
+			flex-wrap wrap
+		.{$c-card-type2}__top
+			+Tablet()
+				flex-direction column
+			+Desktop()
+				width 68%
+		
+		.{$c-card-type2}__text
+			+Mobile()
+				margin-top 20px
+			
+		.{$c-card-type2}__button
+			padding-bottom 0
+			margin-right 0
+		.{$c-card-type2}__image 
+			max-width 90px
+			margin-top 15px
+			+Desktop()
+				max-width 120px
+				margin-top 0
+				margin-bottom 60px
+		.{$c-card-type2}__title
+			+Mobile()
+				flex none
+		.{$c-card-type2}__bottom
+			+Mobile()
+				width 100%
+			+Desktop()
+				width 32%
+				flex-direction column
+				justify-content flex-end
+				
+
+	&--styl2 
+		flex-direction row
+
+		.{$c-card-type2}__top
+			padding-top 0
+			align-items center
+			
+		.{$c-card-type2}__title
+			max-width none
+			margin-right 0
+			h3
+				line-height 1
+
+		.{$c-card-type2}__button
+			margin-right 0
+			padding-bottom 0
+		
+		.{$c-card-type2}__bottom
+			align-items center
+		
+
+	&--styl3 
+		justify-content space-between
+		padding-bottom 0
+	
+		.{$c-card-type2}__bottom
+			flex-direction column-reverse
+			align-items baseline
+			height 100%
+			justify-content space-between
+
+		.{$c-card-type2}__image
+			max-width 142px
+			position relative
+			margin-right 10px
+			margin-left auto
+			margin-top 0px
+		
+		.{$c-card-type2}__button
+			padding 0
+			margin-right 0
+			position relative
+			top 54px
+		.{$c-card-type2}__title
+			+Mobile()
+				max-width 190px
+			h3, p
+				color black
+			h3
+				a
+					&:hover,
+					&:focus
+						color white

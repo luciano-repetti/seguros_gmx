@@ -1,0 +1,219 @@
+.c-added-values
+    display flex
+    justify-content center
+    width 100%
+    padding 30px 20px
+    &__container
+        display flex
+        flex-direction column
+        gap 3em
+        width 100%
+        max-width 1200px
+        padding 5em 6em
+        border-radius 2em
+        background-color blueDark-1
+        color white
+        position relative
+        +Mobile(max)
+            padding 3em 2em
+        > h3
+            font-size 60px
+            font-family tipografia-serif
+            +TabletPortrait(max)
+                font-size 40px
+            +Mobile(max)
+                font-size 30px
+    &__container-banner
+        display flex
+        align-items center
+        justify-content space-between
+        +MobileLandscape(max)
+            flex-direction column-reverse
+            align-items flex-start
+            gap 1em
+    &__container-text
+        display flex
+        flex-direction column
+        justify-content space-between
+        height 100%
+        +Tablet(max)
+            gap 1em
+        // > h3
+        //     font-size 60px
+        //     font-family tipografia-serif
+        //     +TabletPortrait(max)
+        //         font-size 40px
+        //     +Mobile(max)
+        //         font-size 30px
+        > h4
+            font-size 28px
+            font-family tipografia-serif
+            +TabletPortrait(max)
+                font-size 22px
+            +Mobile(max)
+                font-size 18px
+    &__container-image
+        width 176px
+        height auto
+        +TabletPortrait(max)
+            width 100px
+    &__container-card
+        width 100%
+        display flex
+        position relative
+        &--gap-1
+            gap 1em
+        &--padding-1
+            padding-right 1em
+        &__card-box
+            display flex
+            flex 1
+            gap 1.5em
+            padding 1.5em 2em
+            border-radius 2em
+            flex-direction column
+            background-color white
+            color blueDark-1
+            > p
+                font-family tipografia-serif
+                font-size 24px
+                line-height 32px
+                width 90%
+                +TabletPortrait(max)
+                    width 100%
+                    font-size 22px
+                    line-height 28px
+            > .container-title
+                display flex
+                justify-content space-between
+                align-items center
+                > p
+                    margin-bottom 0
+                > img
+                    width 48px
+                    heigth 48px
+                    +Mobile(max)
+                        width 42px
+                        heigth 42px
+
+    // &__container
+    //     > .container-slider
+    //         position absolute
+    //         bottom 3em
+    //         left 0
+    //         display flex
+    //         gap 1em
+    //         width 100%
+    //         justify-content center
+    //         .button-slider
+    //             cursor pointer
+    //             padding 0
+    //             width 8px
+    //             height 8px
+    //             background-color white
+    //             border-radius 100%
+    //             border none
+    //             outline none
+    //             &.active
+    //                 width 70px
+    //                 background green-1
+    //                 border-radius 4px
+
+.splide
+    +Mobile(max)
+        padding 3em 2em
+        padding-top 0
+    +Mobile(max)
+        padding 3em 1em
+        padding-top 0
+    +MobilePortrait(max)
+        padding 3em .5em
+        padding-top 0
+    &__arrow
+        cursor pointer
+        width 48px
+        height 48px
+        border-radius 50%
+        border 1px solid white
+        display flex
+        align-items center
+        justify-content center
+        background transparent
+        opacity 1
+        +MobileLandscape(max)
+            width 45px
+            height 45px
+        > i
+            color white
+            font-size 1.5em
+        &--next
+            right -1.5em
+            transform translate(100%, -50%)
+            +Mobile(max)
+                transform translate(100%, -50%)
+                right 1.5em
+        &--prev
+            left -1.5em
+            transform translate(-100%, -50%)
+            +Mobile(max)
+                transform translate(-50%, -50%)
+                left 0
+    &--desktop
+        display block
+        +Desktop(max)
+            display none
+    &--tablet
+        display none
+        +Desktop(max)
+            display block
+        @media (max-width 696px)
+            display none
+    &--mobile
+        display none
+        @media (max-width 696px)
+            display block
+    &not(.is-overflow)
+        .splide__pagination
+            display flex
+            align-items center
+            gap 1em
+            bottom -3em
+            +Mobile(max)
+                bottom 0em
+            .is-active
+                opacity 1
+                width 50px
+                height 7px
+                background green-1
+                border-radius 4px
+            &__page
+                width 8px
+                height 8px
+                background white
+                opacity 1
+    .splide__pagination
+            display flex
+            align-items center
+            gap 1em
+            bottom -3em
+            +Mobile(max)
+                bottom 0em
+            .is-active
+                opacity 1
+                width 50px
+                height 7px
+                background green-1
+                border-radius 4px
+                +Mobile(max)
+                    width 35px
+                    height 5px
+            &__page
+                width 8px
+                height 8px
+                background white
+                opacity 1
+                +Mobile(max)
+                    width 5px
+                    height 5px
+            
+        

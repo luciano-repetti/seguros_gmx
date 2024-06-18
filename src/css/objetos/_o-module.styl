@@ -1,0 +1,159 @@
+.o-module
+	&__title
+		position relative
+		h1, h2, h3
+			font-size 28px
+			line-height 38px 
+			color blueDark-1
+			display inline-block
+			strong
+				font-size 46px
+				line-height 66px 
+				font-family tipografia-serif
+				font-weight regular
+				display block
+				position relative
+				&:before
+					content ''
+					position absolute
+					//z-index -1
+					top -2px
+					height 88px
+					background-repeat no-repeat
+					background-size contain
+					background-position left top
+				+MobileLandscape()
+					font-size 52px
+					line-height 72px
+				+Mobile()
+					font-size 60px
+					line-height 80px 
+
+	&--deco1 &
+		&__title
+			h1, h2, h3
+				strong
+					margin-top 5px
+					&:before
+						content ''
+						background-image url(background'/gmx-deco-1.png')
+						width 236px
+						height 74px
+						left -42px
+						top -8px
+						+MobileLandscape()
+							width 280px
+							height 88px
+							left -66px
+						+Mobile()
+							width 336px
+							height 104px
+							left -98px
+
+
+	&--deco2 &
+		&__title
+			h1, h2, h3
+				strong
+					margin-top 5px
+					&:before
+						content ''
+						background-image url(background'/gmx-deco-1.png')
+						width 260px
+						height 80px
+						left -18px
+						top -8px
+						+MobileLandscape()
+							width 280px
+							height 88px
+							left -32px
+						+Mobile()
+							width 336px
+							height 104px
+							left -42px
+
+
+	&--deco3 &
+		&__title
+			h1, h2, h3
+				strong
+					&:before
+						content ''
+						background-image url(background'/gmx-deco-3.png')
+						width 216px
+						left -26px
+						height 68px
+						+MobileLandscape()
+							width 244px
+							height 76px
+							left -34px
+						+Mobile()
+							left -20px
+							
+						+Desktop()
+							width 263px
+							left -26px
+							height 82px
+						
+							
+
+	&--deco4 &
+		&__title
+			h1, h2, h3
+				strong
+					&:before
+						content ''
+						background-image url(background'/gmx-deco-2.png')
+						width 175px
+						left -26px
+						height 70px
+						+MobileLandscape()
+							width 200px
+							left -26px
+							height 80px
+						+Mobile()
+							width 248px
+							left -40px
+							height 99px
+
+	&--deco5 &
+		&__title
+			h1, h2, h3
+				color white
+				font-size 40px
+				+MobileLandscape()
+					font-size 50px
+				+Mobile()
+					font-size 60px
+				small
+					font-size 18px
+					font-family tipografia-serif
+					font-weight regular
+					display block
+					position relative
+				strong
+					margin-top 20px
+					color green-1
+					&:before
+						content ''
+						background-image url(background'/gmx-deco-1.png')
+						width 280px
+						height 88px
+						top: 50%
+						left 50%
+						transform: translate(-50%, -50%)
+						// left -42px
+						// top -8px
+						+MobileLandscape()
+							width 280px
+							height 88px
+							// left -66px
+						+Mobile()
+							width 336px
+							height 104px
+							// left -98px
+	
+	&--white &
+		&__title
+			h1, h2, h3
+				color white

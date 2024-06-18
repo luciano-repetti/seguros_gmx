@@ -1,0 +1,210 @@
+body
+	background white
+
+.c-toolkit
+	&__nav
+		position fixed
+		z-index 5
+		top 0
+		left 0
+		margin 0
+		padding 0 20px
+		width 100%
+		text-align right
+		background white 
+		display flex
+		align-items center
+		justify-content center
+		border-bottom 1px solid #D1D2D4
+		img
+			max-width 220px
+			margin 5px 0
+		ul
+			display flex
+			flex 1
+			justify-content flex-end
+			li
+				margin 0 10px
+				a
+					color black
+					font-size 16px
+					line-height 20px
+					font-weight 600
+					display block
+					&:hover,
+					&:focus
+						color #D7EAEF
+			
+	&__section
+		padding 50px 0
+	&__title
+		margin-bottom 30px
+		h2
+			font-size 40px
+			line-height 44px
+			font-family tipografia-serif
+			font-weight regular 
+	&__subtitle
+		margin-bottom 30px
+		h3
+			font-size 36px
+			line-height 40px
+			font-family tipografia-serif
+			font-weight regular
+		p
+			font-size 28px
+			line-height 36px	
+			font-weight regular
+		&.m-red
+			margin-top 30px
+			p
+				color #005581
+				font-size 18px
+				line-height 24px
+				margin 0
+	// &__box
+	// 	//max-width: 1000px;
+	// 	margin: auto;
+	// 	padding: 0 20px;
+
+	&__color
+		margin 20px 0
+		
+		display flex
+		flex-wrap wrap
+		& > li
+			margin 10px
+			//width 140px
+			>p
+				
+				color #3C3C3B
+				font-size 16px
+				margin-bottom 10px
+				margin-left 10px
+
+	&__color-item
+		display block
+		width 140px
+		height 140px
+		border 1px solid #EAEBED
+		border-bottom 0
+	
+
+	&__color-nombre
+		padding 8px
+		background #F5F6F8
+		border 1px solid #EAEBED
+		
+		font-size 16px
+		p
+			margin 5px 0 0
+			color #3C3C3B
+			
+
+	&__fuente
+		margin 20px 0
+		display flex
+		flex-wrap wrap
+		& > li
+			margin 10px
+			width 140px
+	
+	&__fuente-item
+		width 140px
+		background #FFFFFF
+		border 1px solid #eaebed
+		padding 30px 15px
+		text-align center
+		p
+			font-size 64px
+			line-height 1
+			margin-bottom 0
+
+	&__fuente-nombre
+		background #f5f6f8
+		border 1px solid #eaebed
+		border-top 0
+		padding 10px
+		color #3c3c3b
+		font-size 16px
+		p 
+			margin 0 0 5px
+		strong
+			display block
+
+	&__botones
+		margin 20px 0
+		display flex
+		flex-wrap wrap
+		align-items center
+		
+		& > li
+			margin 10px
+			//width 300px
+
+	&__botones-item 
+		// background #f5f6f8
+		// border 1px solid #eaebed
+		//padding 30px 15px
+		//min-height 110px
+		display flex
+		align-items center
+		justify-content center
+
+	&__botones-nombre 
+		background #F5F6F8
+		border 1px solid #eaebed
+		border-top 0
+		padding 10px
+		color #3c3c3b
+		font-size 16px
+		p
+			margin 0
+
+	&__icono
+		margin 20px 0
+		text-align center
+		display flex
+		flex-wrap wrap
+		& > li
+			margin 10px
+			width 140px
+	
+	&__icono-item
+		display flex
+		width 140px
+		background #fff
+		border 1px solid #eaebed
+		padding 20px 15px
+		justify-content center
+		align-items center
+		
+		.i-icon
+			font-size 30px
+
+	&__icono-nombre
+		background #f5f6f8
+		border 1px solid #eaebed
+		border-top 0
+		padding 10px
+		color #3c3c3b
+		font-size 14px
+		p
+			margin 5px 0 0
+
+	&__margin
+		margin 70px 0
+
+	&--gray
+		background #F5F6F8
+		padding: 70px 0;
+
+	&__flex
+		display flex 
+		gap 50px
+
+section:nth-of-type(1)
+	padding-top 100px
+
+// #banners
+// 	background #F5F6F8

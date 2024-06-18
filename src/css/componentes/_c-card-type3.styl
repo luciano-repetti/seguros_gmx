@@ -1,0 +1,124 @@
+$c-card-type3 = 'c-card-type3'
+
+.c-card-type3
+	flex-direction column
+	//padding 30px 30px
+	padding 20px 24px
+	height 100%
+	align-items center
+	justify-content center
+	min-height 112px
+	+Mobile()
+		min-height 160px
+	+Desktop()
+		padding 30px 30px
+
+	&__title
+		+TabletPortrait()
+			margin-top: 55px;
+
+	&__text
+		width 100%
+		display flex
+		justify-content center
+		//text-align center
+		p 
+			color white
+			font-size 20px
+			line-height 26px
+			margin-bottom 0
+			strong
+				font-family tipografia-serif
+				font-size 72px
+				line-height 76px
+				display block
+				font-weight regular
+			small
+				font-size 16px
+				line-height 20px
+				text-transform uppercase
+			em
+				font-weight regular
+				font-style normal
+	
+			
+		+TabletPortrait()
+			justify-content flex-start
+			//text-align left
+	&__info
+		margin-top 24px
+		width 100%
+		text-align center
+		+TabletPortrait()
+			text-align left
+		p 
+			color white
+			font-size 22px
+			line-height 28px
+			font-family tipografia-serif
+			margin-bottom 0
+	
+	&__picture
+		max-width 206px
+		position relative
+		margin 0 auto
+		width 100%
+		img
+			max-width 60px
+			margin-left 0
+			margin-right 0
+
+	&--styl1
+		.{$c-card-type3}__text
+			p
+				//display inline-flex
+				//align-items center
+				//justify-content center
+				font-family tipografia-serif
+				//flex-wrap wrap
+				//text-align center
+				//flex-direction column
+				margin auto
+				font-size 28px
+				line-height 32px
+				color black
+				display flex
+				align-items end
+				flex-wrap wrap
+				max-width 350px
+				
+				justify-content: center;
+				text-align: center;
+				+MobileLandscape()
+					text-align: left;
+				strong
+					flex 0 auto
+					margin 0 15px
+					line-height 64px
+				em
+					flex 1 0
+			
+	&--styl2
+		// +Desktop()
+		// 	padding 50px 40px 30px 50px
+		p
+			em
+				font-size 16px
+				line-height 20px
+				text-transform uppercase
+
+	&--styl3
+		.{$c-card-type3}__text
+			p
+				strong
+					font-size 48px
+					line-height 58px
+	&--styl4
+		+TabletPortrait()
+			padding 30px 18px
+		.{$c-card-type3}__text
+			text-align center
+			+TabletPortrait()
+				text-align left
+			p
+				color black

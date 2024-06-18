@@ -1,0 +1,65 @@
+.o-btn
+	background white
+	color blueDark-1
+	cursor pointer
+	display inline-block
+	text-align center
+	font-size 16px
+	line-height 22px
+	padding 12px 30px
+	//box-shadow 0px 24px 38px #E9CCBB2E
+	border 1px solid blueDark-1
+	border-radius 28px
+	min-width 208px
+	transition 0.3s all ease
+	&:hover,
+	&:focus
+		border-color green-1
+		color green-1
+
+	&--green
+		background green-1
+		//box-shadow 0px 24px 38px #E9CCBB2E
+		border-color green-1
+		color black
+		&:hover,
+		&:focus
+			color white
+
+
+.o-btn-arrow
+	border 1px solid white
+	width 48px
+	height 48px
+	display inline-flex
+	border-radius 50%
+	background white
+	color blueDark-1
+	font-size 22px
+	align-items center
+	justify-content center
+	&:hover,
+	&:focus
+		border-color green-1
+		background green-1
+		color white
+
+	&--green
+		background green-1
+		border-color green-1
+		color white
+	&--border-light-blue
+		background: blue-1
+		border-color: blueDark-1
+		&:hover
+			color: blue-1
+			background: blueDark-1
+			border-color: blueDark-1
+	&--arrow-down
+		cursor: pointer
+		transition 0.3s all ease
+		&:hover, &.active
+			transform: rotateZ(135deg)
+			background green-1
+			border-color green-1
+			color white

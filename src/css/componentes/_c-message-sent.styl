@@ -1,0 +1,39 @@
+.c-message-sent
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: 2em
+    .container-message
+        width: 100%
+        max-width: 1200px
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 1em
+        &__title
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+            position: relative
+            h3
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                font-size: 60px
+                color: blueDark-1
+                text-align: center
+                +Phablet(max)
+                    font-size: 28px
+                +MobileLandscape(max)
+                    font-size: 22px
+            img
+                width 180px
+                +Phablet(max)
+                    width 100px
+        > p
+            color: #545454
+            font-size: 18px
+            text-align: center
+            +Phablet(max)
+                font-size: 16px

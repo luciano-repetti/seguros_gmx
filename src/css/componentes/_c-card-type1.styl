@@ -1,0 +1,98 @@
+$c-card-type1 = 'c-card-type1'
+
+.c-card-type1
+	flex-direction column
+	padding 20px 24px
+	height 100%
+	align-items center
+	justify-content center
+	min-height 112px
+	position relative
+	&__text
+		width 100%
+		display flex
+		justify-content center
+		text-align center
+		p 
+			color #FFFFFF
+			font-size 20px
+			line-height 26px
+			margin-bottom 0
+			strong
+				font-weight regular
+				+Mobile()
+					display block
+		+Mobile()
+			justify-content flex-start
+			text-align left
+
+	
+	&__picture
+		max-width 60px
+		position relative
+	&__image
+		overflow hidden
+		border-radius 36px
+		width 100%
+		height 100%
+		img
+			width 100%
+			height 100%
+			object-fit cover
+	
+	&__icon
+		width 56px
+		height 56px
+		border 0.6px solid blue-2
+		border-radius 26px
+		display inline-flex
+		align-items center
+		justify-content center
+		flex none
+		img
+			max-width 33px
+	
+	&--styl1
+		+Mobile()
+			flex-direction row
+		.{$c-card-type1}__text
+			margin-top 20px
+			+Mobile()
+				margin-left 30px
+				margin-top 0
+				justify-content unset
+		
+			
+	&--styl2
+		+TabletPortrait()
+			min-height 296px
+			align-items: flex-start;
+			padding-top 70px
+		.{$c-card-type1}__text
+			+TabletPortrait()
+				max-width: 220px;
+
+	&--styl3
+		.{$c-card-type1}__text
+			p
+				color black
+		
+		
+	&--styl4
+		padding 0
+		background blueDark-1
+		.{$c-card-type1}__text
+			padding 20px 40px
+			width 100%
+			p
+				color white
+
+			+Mobile()
+				position absolute
+				background blueDark-4
+				max-width 310px
+				border-radius 36px
+				padding 20px 30px 30px
+				left 10%
+				bottom 80px
+				

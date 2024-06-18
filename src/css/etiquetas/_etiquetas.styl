@@ -1,0 +1,176 @@
+html
+	box-sizing border-box
+
+*, *:before, 
+*:after 
+	box-sizing inherit
+
+body
+	margin 0
+	padding 0
+	font-family tipografia-sans
+	font-weight regular
+	background white
+	
+h1, h2, h3, h4, h5, h6 
+	margin-top 0
+	margin-bottom 0.5rem
+	font-weight regular
+
+// h1
+// 	font-family tipografia-Georgia
+// 	font-weight regular
+// 	font-size 64px 
+// 	line-height 72px
+
+// h2
+// 	font-family tipografia-sans
+// 	font-weight regular
+// 	font-size 36px 
+// 	line-height 44px
+
+// h3
+// 	font-family tipografia-sans
+// 	font-weight regular
+// 	font-size 24px 
+// 	line-height 32px
+
+// h4
+// 	font-family tipografia-sans
+// 	font-weight bold
+// 	font-size 18px 
+// 	line-height 26px
+
+// h5
+// 	font-family tipografia-Georgia
+// 	font-weight bold
+// 	font-size 18px 
+// 	line-height 24px
+
+// h6
+// 	font-family tipografia-Georgia
+// 	font-weight regular
+// 	font-size 64px 
+// 	line-height 72px
+
+p
+	margin-top 0
+	margin-bottom 1rem
+
+ol, ul 
+	margin 0
+	padding 0
+	list-style none
+
+a
+	text-decoration none
+	transition 0.3s all ease
+	-webkit-tap-highlight-color transparent
+
+hr
+	clear both
+	border 0
+	border-top 1px solid black
+	border-radius 0
+	margin 30px 0
+
+img 
+	display inline-block
+	vertical-align middle
+	max-width 100%
+	height auto
+	border-style none
+
+fieldset
+	margin 60px 0 0 0
+	padding 0
+	border none
+
+	&:first-child
+		margin-top 0
+
+input
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	outline none
+	&:focus
+		color gray
+
+	&.error
+		border-color red
+		color red
+
+	&.disabled
+	&:disabled
+		color black
+		-webkit-text-fill-color black
+		border-bottom 1px dashed black
+
+
+	&[type=radio]
+		position relative
+		margin-right 6px
+
+		&:after
+			background white
+			border 3px solid white
+			border-radius 20px
+			box-shadow 0 0 0 1px black
+			content ''
+			display block
+			height 10px
+			left -2px
+			position absolute
+			top -2px
+			width  10px
+
+		&:checked
+			&:after
+				background-color darkgray
+
+		&:disabled
+			&:after
+				box-shadow 0 0 0 1px lightgray
+				border 3px solid lightgray
+				background lightgray
+
+			&:checked
+				&:after
+					background-color lightgray
+
+		&.error
+			&:after
+				box-shadow 0 0 0 1px red
+				border 3px solid lightgray
+				background lightgray
+
+	&[type=checkbox]
+		@extend input[type=radio]
+
+		&:after
+			border-radius 2px
+
+		&:checked
+			&:after
+				background darkgray
+
+		&:disabled
+			&:checked
+				&:after
+					background-color lightgray
+
+	&.noLabel
+		margin-bottom 10px
+
+	&:focus
+		& + label
+			opacity 1
+			top 0
+
+textarea
+	width 100%
+	height 4em
+	outline none
+	box-sizing border-box
+	border none

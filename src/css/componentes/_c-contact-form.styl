@@ -1,0 +1,191 @@
+.c-contact-form
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: 2em
+    +MobileLandscape(max)
+        padding: 20px 20px
+    .container-contact-form
+        display: flex
+        flex-direction: column
+        gap: 1em
+        width: 100%
+        max-width: 1200px
+        background-color: blueDark-1
+        color: #fff
+        padding: 4em
+        border-radius: 2em
+        +Mobile(max)
+            padding: 2em
+        > h3
+            width: 100%
+            font-size: 60px
+            font-family: tipografia-serif
+            +Phablet(max)
+                font-size: 45px
+            +Mobile(max)
+                font-size: 35px
+            +MobilePortrait(max)
+                font-size: 30px
+        > p
+            width 60%
+            font-size: 20px
+            +Phablet(max)
+                width 100%
+                font-size: 18px
+            +MobilePortrait(max)
+                font-size: 16px
+        .container-form
+            display: flex
+            flex-direction: column
+            gap: 1.5em
+            padding-top: 2em
+            width 100%
+            max-width: 60%
+            position: relative
+            +TabletLandscape(max)
+                max-width: 100%
+            > label, .container-error
+                width 100%
+                display: flex
+                flex-direction: column
+                gap: .5em
+            input, select
+                width 100%
+                padding: .7em
+                border-radius: 8px
+                border: none
+            input[type=checkbox]
+                width fit-content
+            input[type=checkbox]:after
+                display none
+            input::placeholder, select
+                color: blueDark-1
+            select
+                width: 100%
+                appearance: none
+                -webkit-appearance none
+                -moz-appearance none
+                padding: .8em
+                padding-right 1.5em
+            &__custom-select
+                position: relative
+                > i
+                    color: green-1
+                    font-size: 1.2em
+                    position: absolute
+                    top: 50%
+                    right: 1em
+                    transform: translateY(-50%)
+            &__container-terms
+                position: relative
+                background-color: #19658E
+                padding: 1em
+                border-radius: 8px
+                > label
+                    position: relative
+                    z-index: 10
+                    display: flex
+                    align-items: center
+                    gap: .5em
+                    color: #fff
+                    > a
+                        color: #fff
+                        font-size: .9em
+            &__container-contact
+                display: flex
+                flex-direction: column
+                gap: 1em
+                margin-left: 2em
+                width: 100%
+                > p
+                    color: #545454
+                .container-contacts
+                    display: flex
+                    gap: 4em
+                    +Mobile(max)
+                        flex-direction: column
+                        gap: 1em
+                    > label
+                        display: flex
+                        align-items: center
+                        gap: .5em
+                        img
+                            width 18px
+                            height: auto
+            &__image
+                top: 20%
+                right: -70%
+                transform: translateY(-50%)
+                position: absolute
+                +TabletLandscape(max)
+                    display none
+                img
+                    width 350px
+                    height auto
+            &__container-button
+                width 100%
+                .o-btn
+                    width 100%
+            &__text-area
+                display: flex
+                flex-direction: column
+                gap: 1em
+                > label
+                    font-size: .9em
+                textarea
+                    padding: .7em
+                    height: 100px
+                    resize: vertical
+                    border-radius: 8px
+        &--quotation
+            position relative
+            max-width 640px
+            background-color: transparent
+            padding-top: 0
+            +TabletPortrait(max)
+                max-width: 100%
+                padding: 0
+            > h3
+                font-size: 20px
+                color: #545454
+                font-family: tipografia-sans
+                +Phablet(max)
+                    font-size: 18px
+            .container-form
+                max-width: 100%
+                label
+                    color: #545454
+                input, select
+                    border: 1px solid blue-3
+                    background-color: blue-1
+                &__container-terms
+                    border: 1px solid blue-3
+                    background-color: blue-1
+                    > label > a
+                        color green-1
+                        text-decoration: underline green-1
+    .container-officine
+        width: fit-content
+        height: fit-content
+        padding: 1.5em
+        background-color: blue-1
+        border-radius: 1.5em
+        p
+            color: blueDark-1
+            a
+                color: green-1
+                text-decoration: underline green-1
+    &--quotation
+        +TabletPortrait(max)
+            padding: 4em
+            flex-direction: column-reverse
+            gap: 2em
+
+.error-message
+    color: red
+    font-size: 0.875em
+    margin-top: 0.5em
+
+.error
+    border: 1px solid red !important

@@ -1,0 +1,181 @@
+- var empresarial = [{'name': 'PyMes','img': 'GMX-PyMes.png','link': '#!'},{'name': 'Exportación','img': 'GMX-Exportacion.png','link': '#!'},{'name': 'Gasolineras','img': 'GMX-Gasolineras.png','link': '#!'},{'name': 'Obras de Arte','img': 'GMX-Obras.png','link': '#!'},{'name': 'Guarderías y Estancias Infantiles','img': 'GMX-Guarderia.png','link': '#!'},{'name': 'Actos Violentos','img': 'GMX-Actos.png','link': '#!'},{'name': 'Paramétrico Huracán','img': 'GMX-Huracan.png','link': '#!'},{'name': 'Paramétrico Terremoto','img': 'GMX-Terremoto.png','link': '#!'},];
+- var personales = [{'name': 'Hogar','img': 'GMX-Hogar.png','link': '#!'},{'name': 'Mascotas','img': 'GMX-Mascotas.png','link': '#!'},];
+- var construcciones = [{'name': 'RC Construcción','img': 'GMX-Construccion.png','link': '#!'},{'name': 'Decenal','img': 'GMX-Decenal.png','link': '#!'},];
+- var transportes = [{'name': 'Carga en Tránsito','img': 'GMX-Carga.png','link': '#!'},{'name': 'RC Aviación','img': 'GMX-Aviacion.png','link': '#!'},{'name': 'Drones','img': 'GMX-Drones.png','link': '#!'},{'name': 'Embarcaciones','img': 'GMX-Embarcaciones.png','link': '#!'},];
+- var sectorSalud = [{'name': 'Hospitales y Sanatorios','img': 'GMX-Hospitales.png','link': '#!'},{'name': 'Spa´s','img': 'GMX-Spa.png','link': '#!'},{'name': 'Clínicas y Consultorios','img': 'GMX-Clinicas.png','link': '#!'},{'name': 'Médicos y Profesionales de la Salud','img': 'GMX-Medicos.png','link': '#!'},];
+- var hoteleria = [{'name': 'Hoteles','img': 'GMX-Hoteles.png','link': '#!'},{'name': 'Restaurantes y Bares','img': 'GMX-Restaurantes.png','link': '#!'},{'name': 'Eventos Recreativos','img': 'GMX-Eventos.png','link': '#!'},{'name': 'Club Deportivo','img': 'GMX-Deportivo.png','link': '#!'},{'name': 'Campo de Golf','img': 'GMX-Golf.png','link': '#!'},{'name': 'Propiedades en Renta Temporal','img': 'GMX-Renta.png','link': '#!'},{'name': 'Industria de la Bebida','img': 'GMX-Bebida.png','link': '#!'},];
+
+header.c-header.js-header
+	.o-container
+		.c-header__container
+			.c-header__search
+				a.c-header__searchBtn.js-btnSearch(href="#" title="Abrir buscador" aria-expanded="false")
+					span.sr-only Abrir Buscador
+					i.i-icon.i-search(aria-hidden="true")
+
+			a.c-header__brandMob(href=urlFolder title="GMX Seguros - Home")
+				span.sr-only Logo GMX
+				i.i-icon.i-gmx(aria-hidden="true")
+
+			.c-header__mobile
+				a.c-header__burguer.js-menuOpen(href="#" title="Menú abrir")
+					span.sr-only Menú abrir
+
+			.c-header__navigation
+				a.c-header__brandDesk(href=urlFolder title="GMX Seguros - Home")
+					img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/global/GMX-Logo.png" alt="Imagen logo GMX Seguros")
+
+				.c-header__cta
+					i.i-icon.i-gmx(aria-hidden="true")
+					
+					a.c-header__close.js-menuClose(href="#" title="Menú cerrar")
+						i.i-icon.i-close(aria-hidden="true")
+
+				nav.c-header__nav
+					ul.c-header__menu.js-menu
+						li
+							a.c-header__subLink.js-subLink(href="#" title="Seguros" data-level="1" aria-expanded="false" aria-haspopup="true") Seguros
+							.c-header__submenu.js-submenu
+								a.c-header__back.js-subBack(href="#" title="Regresar a menú" ) #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a menú
+								ul.c-header__subList.c-header__subList--large.js-submenuList
+									li
+										a.c-header__subLink.js-subLink(href="#" title="Profesionistas" data-level="2" aria-expanded="false" aria-haspopup="true") Profesionistas
+										.c-header__submenu.js-submenu
+											a.c-header__back.js-subBack(href="#" title="Regresar a Seguros" ) #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a Seguros
+											ul
+												li
+													a(href="#" title="RC Profesional") RC Profesional
+												li
+													a(href="#" title="Odontólogos") Odontólogos
+												li
+													a(href="#" title="Médico Veterinario") Médico Veterinario
+												li
+													a(href="#" title="Servidores Públicos") Servidores Públicos
+												li
+													a(href="#" title="Médicos y Profesionales de la Salud") Médicos y Profesionales de la Salud
+									li
+										a.c-header__subLink.js-subLink(href="#" title="Empresariales" data-level="2" aria-expanded="false" aria-haspopup="true") Empresariales
+										.c-header__submenu.js-submenu
+											a.c-header__back.js-subBack(href="#" title="Regresar a Empresariales") #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a Empresariales
+											ul
+												each empresa in empresarial
+													li
+														a(href=empresa.link title=empresa.name)= empresa.name
+												
+									li 
+										a.c-header__subLink.js-subLink(href="#" title="Personales" data-level="2" aria-expanded="false" aria-haspopup="true") Personales
+										.c-header__submenu.js-submenu
+											a.c-header__back.js-subBack(href="#" title="Regresar a Personales") #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a Personales
+											ul
+												each personal in personales
+													li
+														a(href=personal.link title=personal.name)= personal.name
+									li
+										a.c-header__subLink.js-subLink(href="#" title="Construcción" data-level="2" aria-expanded="false" aria-haspopup="true") Construcción
+										.c-header__submenu.js-submenu
+											a.c-header__back.js-subBack(href="#" title="Regresar a Construcción") #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a Construcción
+											ul
+												each construccion in construcciones
+													li
+														a(href=construccion.link title=construccion.name)= construccion.name
+									li 
+										a.c-header__subLink.js-subLink(href="#" title="Transportes y Aviación" data-level="2" aria-expanded="false" aria-haspopup="true") Transportes y Aviación
+										.c-header__submenu.js-submenu
+											a.c-header__back.js-subBack(href="#" title="Regresar a Transportes y Aviación") #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a Transportes y Aviación
+											ul
+												each transporte in transportes
+													li
+														a(href=transporte.link title=transporte.name)= transporte.name
+									li 
+										a.c-header__subLink.js-subLink(href="#" title="Sector Salud" data-level="2" aria-expanded="false" aria-haspopup="true") Sector Salud
+										.c-header__submenu.js-submenu
+											a.c-header__back.js-subBack(href="#" title="Regresar a Sector Salud") #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a Sector Salud
+											ul
+												each sector in sectorSalud
+													li
+														a(href=sector.link title=sector.name)= sector.name
+									li 
+										a.c-header__subLink.js-subLink(href="#" title="Hotelería y Recreación" data-level="2" aria-expanded="false" aria-haspopup="true") Hotelería y Recreación
+										.c-header__submenu.js-submenu
+											a.c-header__back.js-subBack(href="#" title="Regresar a Hotelería y Recreación") #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a Hotelería y Recreación
+											ul
+												each hotel in hoteleria
+													li
+														a(href=hotel.link title=hotel.name)= hotel.name
+						li
+							a.c-header__subLink.js-subLink(href="#" title="Compañia" data-level="1" aria-expanded="false" aria-haspopup="true") Compañia
+							.c-header__submenu.js-submenu
+								a.c-header__back.js-subBack(href="#" title="Regresar a menú" ) #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a menú
+								ul.c-header__subList.js-submenuList
+									li
+										a(href="#" title="Historia") Historia
+									li
+										a(href="#" title="Misión, Visión y Valores") Misión, Visión y Valores
+									li
+										a(href="#" title="Innovación") Innovación
+									li
+										a(href="#" title="Integridad corporativa") Integridad corporativa
+
+						li
+							a(href="#" title="Cotizar Seguro") Cotizar Seguro
+							
+						li
+							a.c-header__subLink.js-subLink(href="#" title="Soy Agente" data-level="1" aria-expanded="false" aria-haspopup="true") Soy Agente
+							.c-header__submenu.js-submenu
+								a.c-header__back.js-subBack(href="#" title="Regresar a menú" ) #[i.i-icon.i-arrow-left(aria-hidden="true")] Regresar a menú
+								ul.c-header__subList.js-submenuList
+									li
+										a(href="#" title="¿Cómo reportar siniestro?") ¿Cómo reportar siniestro?
+									li
+										a(href="#" title="Procedimiento de atención a siniestros") Procedimiento de atención a siniestros
+									li
+										a(href="#" title="Documentación por ramo para el trámite de siniestros") Documentación por ramo para el trámite de siniestros
+									li
+										a(href="#" title="Avisos y noticias") Avisos y noticias
+									li
+										a(href="#" title="Boletines") Boletines
+									li
+										a(href="#" title="Puntos de venta en línea") Puntos de venta en línea
+									li
+										a(href="#" title="Sitios de consulta") Sitios de consulta
+									li
+										a(href="#" title="Preguntas frecuentes") Preguntas frecuentes
+									li
+										a(href="#" title="Atención agentes") Atención agentes
+
+				.c-header__buttons
+					ul
+						li: a.o-btn(href="#!" title="Ir a Paga tu seguro") Paga tu seguro
+						li: a.o-btn.o-btn--green(href="#!" title="Ir a Reportar siniestro") Reportar siniestro
+
+				.c-header__links
+					ul
+						li
+							a(href="tel:5554804000" title="Llamar al (55) 5480.4000" target="_blank") (55) 5480.4000
+						li
+							a(href="#" title="Ir a Ayuda con tu seguro") Ayuda con tu seguro
+						li
+							a(href="#" title="Ir a Encuentra un agente") Encuentra un agente
+						li
+							a(href="#" title="Ir a Blog") Blog
+						li
+							a.c-header__searchDesk.js-btnSearch(href="#" title="Abrir buscador" aria-expanded="false")
+								i.i-icon.i-search(aria-hidden="true")
+								span Buscar
+
+			.o-container.c-header__searchForm.js-headerSearch(aria-hidden="true")
+				form.c-form-search(action="#" method="get" autocomplete="off" novalidate role="search") 
+					fieldset.c-form-search__container
+						legend.sr-only Formulario buscador
+						.c-form-search__input
+							i.i-icon.i-search(aria-hidden="true")
+							label.sr-only(for="searchHeader") Estoy buscando
+							input.o-input-search#searchHeader(name="search" type="text" placeholder="Estoy buscando...")
+						.c-form-search__buttons
+							button.o-btn.o-btn--green(type="submit") 
+								i.i-icon.i-search(aria-hidden="true")
+								span Buscar
+							a.o-btn.js-closeSearch(href="#" title="Cancelar y cerrar buscador") 
+								i.i-icon.i-close(aria-hidden="true")
+								span Cancelar
+	

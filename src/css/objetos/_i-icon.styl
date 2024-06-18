@@ -1,0 +1,100 @@
+fontface(tipografia-icon, icomoon-font-path)
+
+.i-icon
+	font-family tipografia-icon !important
+	speak none
+	font-style normal
+	font-weight normal
+	font-variant normal
+	text-transform none
+	// font-size 18px
+	line-height 1
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+
+.i-icon
+	&.i-close
+		&:before
+			content icon-close
+	&.i-gmx
+		&:before
+			content icon-gmx
+	&.i-arrow-down
+		&:before
+			content icon-arrow-down
+	&.i-arrow-up
+		&:before
+			content icon-arrow-up
+	&.i-arrow-left
+		&:before
+			content icon-arrow-left
+	&.i-arrow-right
+		&:before
+			content icon-arrow-right
+	&.i-facebook
+		&:before
+			content icon-facebook
+	&.i-linkedin
+		&:before
+			content icon-linkedin
+	&.i-twitter-x
+		&:before
+			content icon-twitter-x
+	&.i-arrow-up-right
+		&:before
+			content icon-arrow-up-right
+	&.i-angle-down
+		&:before
+			content icon-angle-down
+	&.i-angle-up
+		&:before
+			content icon-angle-up
+	&.i-angle-left
+		&:before
+			content icon-angle-left
+	&.i-angle-right
+		&:before
+			content icon-angle-right
+	&.i-search
+		&:before
+			content icon-search
+
+
+.i-btn
+	width 40px
+	height 40px
+	display inline-flex
+	border-radius 50%
+	justify-content center
+	align-items center
+	.i-icon
+		color white
+	&:hover,
+	&:focus
+		background white
+
+	&--facebook
+		background #1948be
+		font-size 30px
+		&:hover,
+		&:focus
+			.i-icon
+				color #1948be
+
+
+	&--linkedin
+		background #007ebb
+		font-size 26px
+		&:hover,
+		&:focus
+			.i-icon
+				color #007ebb
+	&--twitter
+		background black
+		font-size 30px
+		&:hover,
+		&:focus
+			.i-icon
+				color black

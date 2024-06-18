@@ -1,0 +1,55 @@
+.c-consists
+    width 100%
+    display flex
+    justify-content center
+    padding 30px 20px
+    &__card-safe
+        position relative
+        display block
+        max-width 640px
+        color blueDark-1
+        +Tablet(max)
+            max-width 100%
+        > h3
+            font-family tipografia-serif
+            font-size 50px
+            +Tablet(max)
+                font-size 40px
+        &__container-card
+            position relative
+            +TabletLandscape(max)
+                display flex
+                flex-direction column-reverse
+                gap 1em
+            &__card
+                min-height 200px
+                background-color blue-1
+                border 1px solid blue-3
+                border-radius 1em
+                font-size 1.5em
+                padding 1em
+                > p
+                    font-size 26px
+                    +Tablet(max)
+                        font-size 20px
+                &--image-container
+                    height 100%
+                    display flex
+                    align-items center
+                    position absolute
+                    top 0
+                    left -1em
+                    transform translateX(-100%)
+                    +TabletLandscape(max)
+                        width fit-content
+                        min-height auto
+                        position static
+                        left 0
+                        transform translateX(0)
+
+                    > img
+                        width 100px
+                        height auto
+                        +Tablet(max)
+                            width 70px
+                            height auto

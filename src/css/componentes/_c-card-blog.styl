@@ -1,0 +1,139 @@
+$c-card-blog = 'c-card-blog'
+
+.{$c-card-blog}
+	display flex
+	position relative
+	height 100%
+	max-width 280px
+	+Mobile()
+		max-width 320px
+	&:hover,
+	&:focus
+		.{$c-card-blog}__content
+			border-radius 36px 36px 180px 36px
+			//transition-delay .5s
+			
+		.o-btn-arrow 
+			opacity 1
+			visibility visible
+			
+	&__image 
+		position absolute
+		width 100%
+		height 100%
+		left 0
+		top 0
+		overflow hidden
+		&:before
+			content ''
+			position absolute
+			background #1B4360
+			opacity .5
+			width 100%
+			height 100%
+		img
+			width 100%
+			height 100%
+			object-fit cover
+
+	&__content 
+		position relative
+		padding 60px 22px 32px
+		overflow hidden
+		border-radius 36px
+		transition .3s ease
+		min-height 488px
+
+	&__info
+		position relative
+		display flex
+		flex-direction column
+		height 100%
+		z-index 1
+
+	&__cat 
+		margin-bottom 80px
+		p
+			font-size 16px
+			color white
+			line-height 22px
+			margin-bottom 0
+			a
+				color inherit
+				&:hover,
+				&:focus
+					color green-1
+
+	&__title 
+		margin-bottom 96px
+		+Mobile()
+			padding-right 20%
+		h3 
+			color white
+			font-size 32px
+			line-height 38px
+			//max-width 180px
+			a 
+				color inherit
+				&:hover,
+				&:focus
+					color green-1
+
+	.o-btn-arrow 
+		position absolute
+		right 3px
+		bottom 3px
+		opacity 0
+		visibility hidden
+		transition 0.4s ease
+	
+	&--styl1
+		.{$c-card-blog}__image
+			//background blueDark-4
+			&:before
+				opacity 0.1
+				//background blueDark-4
+
+		.{$c-card-blog}__info
+			align-items center
+
+		.{$c-card-blog}__title
+			+Mobile()
+				padding-right 0
+	
+	&--styl2
+		// .{$c-card-blog}__content
+		// 	background blueDark-5
+		.{$c-card-blog}__image
+			background blueDark-5
+			&:before
+				background blueDark-5
+
+		.{$c-card-blog}__info
+			justify-content flex-end
+
+		.{$c-card-blog}__cat
+			order 1
+			text-align center
+			margin-bottom 0
+			p
+				color white
+				a
+					&:hover,
+					&:focus
+						color black
+		.{$c-card-blog}__image
+			img
+				opacity 0.3
+			
+		.{$c-card-blog}__title
+			margin-bottom auto
+			margin-top 102px
+			+Mobile()
+				padding-right 0
+			h3
+				color black
+				a
+					&:hover,
+					&:focus
+						color white

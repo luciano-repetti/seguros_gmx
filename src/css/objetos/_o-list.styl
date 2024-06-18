@@ -1,0 +1,142 @@
+.o-list
+	display flex
+	gap 24px
+	flex-wrap wrap
+	justify-content center 
+	+TabletPortrait()
+		justify-content flex-start 
+
+.o-listGrid
+	display grid
+	gap 24px
+	margin 50px 0 30px
+	+Mobile()
+		grid-template-columns 1fr 1fr
+	+TabletPortrait()
+		grid-template-columns auto 25% 25%
+	+Desktop()
+		grid-template-columns auto 320px 320px
+	li 
+		&:nth-child(1)
+			// grid-row-start 1
+			// grid-row-end span 2
+			// grid-column-start span 1
+			// grid-column-end auto
+			+Mobile()
+				grid-row 1/ span 1
+				grid-column span 2
+			+TabletPortrait()
+				grid-row 1 / span 2
+				grid-column span 1
+			
+		
+		&:nth-child(4)
+			+Mobile()
+				grid-row 2 / span 2
+				grid-column 2
+
+			+TabletPortrait()
+				grid-row 1 / span 2
+				grid-column 3
+
+.o-listGrid-1
+	display grid
+	gap 24px
+	margin 30px 0
+	+Mobile()
+		grid-template-columns 1fr 1fr 1fr
+	+TabletPortrait()
+		grid-template-columns 1fr 1fr 1fr 52%
+	+Desktop()
+		grid-template-columns repeat(3, 152px) auto
+	li 
+		&:nth-child(1)
+			+Mobile()
+				grid-column 1 /span 1
+
+		&:nth-child(2)
+	
+			+Mobile()
+				grid-column 2/span 2
+			+TabletPortrait()
+				grid-row span 1
+				grid-column 2 / span 2
+		&:nth-child(3)
+			+Mobile()
+				grid-column 1/span 2
+				grid-row 2
+		
+		&:nth-child(4)
+			
+			+TabletPortrait()
+				grid-row 2 / span 1
+				grid-column 3
+		
+		&:nth-child(5)
+			+Mobile()
+				grid-column 1/span 3
+				grid-row 3
+
+			+TabletPortrait()
+				grid-column 4
+				grid-row 1 / span 2
+
+
+.o-listGrid-2
+	display grid
+	gap 24px
+	margin 50px 0 30px
+	+Mobile()
+		grid-template-columns 1fr 1fr 1fr 1fr
+	+TabletPortrait()
+		grid-template-columns 30% 1fr 1fr
+	+TabletLandscape()
+		grid-template-columns 1fr 160px 190px 1fr 1fr 190px
+	+Desktop()
+		grid-template-columns 320px 160px 190px 1fr 1fr 190px
+	li 
+		&:nth-child(1)
+			+Mobile()
+				grid-row 1 / span 1
+				grid-column span 3
+				//grid-column span 2
+			+TabletPortrait()
+				grid-column span 1
+			+TabletLandscape()
+				grid-row 1 / span 2
+
+		&:nth-child(2)
+			+Mobile()
+				grid-column span 1
+			+TabletPortrait()
+				grid-row 1 / span 1
+			+TabletLandscape()
+				grid-row 1 / span 2
+
+		&:nth-child(3)
+			+Mobile()
+				grid-column span 1
+
+		&:nth-child(4)
+			+Mobile()
+				grid-column span 3
+			+TabletPortrait()
+				grid-column span 1
+			+TabletLandscape()
+				grid-column span 3
+
+		&:nth-child(5)
+			+Mobile()
+				grid-column span 2
+			+TabletPortrait()
+				grid-column span 1
+			+TabletLandscape()
+				grid-column span 2
+
+		&:nth-child(6)
+			+Mobile()
+				grid-column span 2
+			+TabletPortrait()
+				grid-column span 1
+			+TabletLandscape()
+				grid-column span 2

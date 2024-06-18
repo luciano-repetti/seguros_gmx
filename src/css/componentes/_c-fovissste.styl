@@ -1,0 +1,115 @@
+.c-fovissste
+    width: 100%
+    display: flex
+    justify-content: center
+    padding: 2em
+    +TabletLandscape(max)
+        padding: 20px 20px
+    .container-fovissste
+        display: flex
+        align-items: center
+        flex-direction: column
+        width: 1200px
+        gap: 1em
+        padding: 4em 6em
+        +TabletLandscape(max)
+            padding: 4em 2em
+        +MobileLandscape(max)
+            padding: 4em 0
+        > h3
+            font-size: 50px
+            color: blueDark-1
+            font-family: tipografia-serif
+            margin-bottom: 1em
+            +TabletLandscape(max)
+                font-size: 30px
+        > p
+            margin-bottom: 0
+            color: blueDark-1
+            font-size: 2em
+        &--blue-light
+            background-color: blueDark-5
+            border-radius: 2em
+            > h3
+                color black
+            +MobileLandscape(max)
+                padding: 4em 1em
+        &__container
+            display: flex
+            flex-direction: column
+            width 100%
+            &__contenido
+                padding: 2em
+                display: none
+                flex-direction: column
+                gap: 3em
+                &.active
+                    display: flex
+                .container-text-large
+                    > p
+                        font-size: 30px
+                        margin-bottom: 10px
+                        +Phablet(max)
+                            font-size: 20px
+                > p
+                    color: #545454
+                    font-size: 18px
+                    line-height: 30px
+                ul
+                    > li
+                        position: relative
+                        color: #545454
+                        margin-bottom: 5px
+                        padding-left: 15px
+                        &:before
+                            content: "•"
+                            position: absolute
+                            left: 0
+                            top: 50%
+                            transform: translateY(-50%)
+                            margin-right: 8px
+                            color: blueDark-4
+                            font-size: 1.5em
+                &__card-large
+                    width 70%
+                    background-color: blueDark-5
+                    color: black
+                    display: flex
+                    gap: 1em
+                    padding: 2em
+                    border-radius: 36px
+                    +Phablet(max)
+                        width 100%
+                    +MobileLandscape(max)
+                        flex-direction: column-reverse
+                        padding: 1.5em
+                        gap: 0
+                    &__container-button
+                        display: flex
+                        align-items: center
+                        +MobileLandscape(max)
+                            padding: 0 1em
+                            justify-content: flex-end
+                            .o-btn-arrow
+                                width 30px
+                                height 30px
+                                font-size: 1em
+                    &__container-info
+                        display: flex
+                        flex-direction: column
+                        gap: 1em
+                        +MobileLandscape(max)
+                            gap: .5em
+                        p
+                            color: black
+                            font-size: 18px
+                            +MobileLandscape(max)
+                                font-size: 16px
+                        strong
+                            font-size: 22px
+                            +MobileLandscape(max)
+                                font-size: 18px
+                &__container-card
+                    width 70%
+                    +Phablet(max)
+                        width 100%

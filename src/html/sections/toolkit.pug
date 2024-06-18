@@ -1,0 +1,622 @@
+//- Variables
+include ../config/_site
+include ../config/_variables
+
+if(indice !== 'index.html')
+	- urlFolder = '../'
+
+-var page 				= {  }
+
+- page[ 'link' ] 		= 'toolkit.html'
+- page[ 'title' ] 		= 'title'
+- page[ 'descrip' ] 	= 'description'
+- page[ 'keys' ] 		= 'keywords'
+- page[ 'lang' ] 		= 'en'
+- page[ 'responsive' ]	= true
+- page[ 'section' ] 	= [  ] //{'url':'', 'title': ''}
+- page[ 'libsCss']		= [  ]
+-page['libs'] 			= ['_fillViews', '_alert', '_select', '_customForm', '_validate']
+- page[ 'plugins']		= ['splide' ]
+- page[ 'js']			= [  ]
+- page[ 'print' ]		= [  ]
+
+//- COLORES
+
+- var Colores = {}
+
+//- COLORES PRIMARIOS - EJ.
+- Colores['primary'] = {}
+
+- Colores['primary']['white']   = '#FFFFFF'
+- Colores['primary']['black']   = '#000000'
+
+- Colores['primary']['gray-1']   = '#FDFDFD'
+
+- Colores['primary']['blue-1']    = '#F7F8FE'
+- Colores['primary']['blue-2']    = '#D7EAEF'
+- Colores['primary']['blue-3']    = '#B8D1D6'
+- Colores['primary']['blue-4']    = '#96BAC2'
+
+- Colores['primary']['blueDark-1']  = '#005581'
+- Colores['primary']['blueDark-2']  = '#03306E'
+- Colores['primary']['blueDark-3']  = '#0E3D5C'
+- Colores['primary']['blueDark-4']  = '#1B4360'
+
+- Colores['primary']['green-1']   = '#54B948'
+
+
+//- - var ColorSecondary = []
+
+//- - ColorSecondary.push({ name: 'green-1', hexa: '#039181', title: 'Success' })
+//- - ColorSecondary.push({ name: 'yellow-1', hexa: '#FAC46E', title: 'Alert' })
+//- - ColorSecondary.push({ name: 'red-1', hexa: '#FA6E6E', title: 'Error' })
+
+
+//- FUENTES 
+
+- var FontsSans = []
+
+- FontsSans.push({ nombre: 'Hedvig Letters Sans', peso: '400', weight: 'Regular' })
+
+- var FontsSerif = []
+
+- FontsSerif.push({ nombre: 'Hedvig Letters Serif', peso: '400', weight: 'Regular' })
+
+//- ICONOS
+
+- var Iconos = [{'name': 'i-gmx', 'code':'e90b'},{'name': 'i-arrow-down', 'code':'e90c'},{'name': 'i-arrow-up', 'code':'e90d'},{'name': 'i-arrow-left', 'code':'e90a'},{'name': 'i-arrow-right', 'code':'e909'},{'name':'i-facebook', 'code':'e905'},{'name':'i-linkedin', 'code':'e906'},{'name':'i-twitter-x', 'code':'e907'},{'name':'i-arrow-up-right', 'code':'e908'},{'name':'i-angle-down', 'code':'e900'},{'name':'i-angle-up', 'code':'e901'},{'name':'i-angle-left', 'code':'e902'},{'name':'i-angle-right', 'code':'e903'},{'name':'i-search', 'code':'e904'}]
+
+
+doctype
+html(lang="en")
+	head
+		title Guía de estilos
+		meta( http-equiv="Content-Type" content="text/html; charset=utf-8" )
+
+		-if (process.title === 'gulp produccion')
+			link( href='../css/toolkit.min.css' rel='stylesheet' type='text/css' )
+		-else
+			link( href='../css/toolkit.css' rel='stylesheet' type='text/css' )
+		meta(name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2')
+		link(rel="preconnect" href="https://fonts.googleapis.com")
+		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet")
+
+	body.c-toolkit
+	
+		.c-toolkit__nav
+
+			//-img(src="../images/global/Legionaries-Of-Christ-Logo.png" alt="Legionaries of Christ")
+			ul
+				li: a( href='#color') Colores
+				li: a( href='#typography') Tipografía
+				li: a( href='#buttons') Botones
+				li: a( href='#icons' ) Iconos
+				
+		main
+			section#color.c-toolkit__section
+				.o-container
+					.c-toolkit__title
+						h2 Colores
+					.c-toolkit__block
+						ul.c-toolkit__color
+							for item, i in Colores.primary
+								li
+									.c-toolkit__color-item( style='background:'+ item )
+									.c-toolkit__color-nombre
+										strong #{i}  
+										p #{item}
+				
+					//- .c-toolkit__subtitle.m-red
+					//- 	p STATUS COLORS
+				
+					//- .c-toolkit__block
+					//- 	ul.c-toolkit__color
+					//- 		for item, i in ColorSecondary
+					//- 			li
+					//- 				p #{item.title}
+					//- 				.c-toolkit__color-item( style='background:'+ item.hexa )
+					//- 				.c-toolkit__color-nombre
+					//- 					strong #{item.name}  
+					//- 					p #{item.hexa}
+
+
+			section#typography.c-toolkit__section
+				.o-container
+					.c-toolkit__title
+						h2 Tipografía
+					.c-toolkit__flex
+						.c-toolkit__block
+							.c-toolkit__subtitle
+								h3 Encabezado
+							ul.c-toolkit__fuente
+								for item, i in FontsSerif
+									li
+										.c-toolkit__fuente-item
+											p(style='font-family:'+item.nombre + '; font-weight:'+ item.peso + ';color: #000000' ) Aa  
+											p(style='font-family:'+item.nombre + '; font-weight:'+ item.peso + ';color: #005581' ) Aa  
+										.c-toolkit__fuente-nombre
+											p(style='font-family:'+item.nombre) #{item.nombre}
+											strong( style='font-family:'+item.nombre) #{item.weight}
+											//span #{item.peso}
+						
+
+						.c-toolkit__block
+							.c-toolkit__subtitle
+								p Textos
+							ul.c-toolkit__fuente
+								for item, i in FontsSans
+									li
+										.c-toolkit__fuente-item
+											p(style='font-family:'+item.nombre + '; font-weight:'+ item.peso + ';color: #000000' ) Aa  
+											p(style='font-family:'+item.nombre + '; font-weight:'+ item.peso + ';color: #005581' ) Aa  
+										.c-toolkit__fuente-nombre
+											p(style='font-family:'+item.nombre) #{item.nombre}
+											strong( style='font-family:'+item.nombre) #{item.weight}
+											//span #{item.peso}
+
+			section#buttons.c-toolkit__section
+				.o-container
+					.c-toolkit__title
+						h2 Botones
+			
+					.c-toolkit__block
+						ul.c-toolkit__botones
+							li
+								.c-toolkit__botones-item
+									a.o-btn(href="#!" title="Paga tu seguro") Paga tu seguro
+							li
+								.c-toolkit__botones-item
+									a.o-btn.o-btn--green(href="#!" title="Reportar siniestro") Reportar siniestro
+							li
+								.c-toolkit__botones-item
+									a.o-btn-arrow(href="#" title="Leer más")
+										i.i-icon.i-arrow-up-right(aria-hidden="true")
+							li
+								.c-toolkit__botones-item
+									a.o-btn-arrow.o-btn-arrow--green(href="#" title="Leer más")
+										i.i-icon.i-arrow-up-right(aria-hidden="true")
+
+			section#icons.c-toolkit__section
+				.o-container
+					.c-toolkit__title
+						h2 Iconos
+					.c-toolkit__block
+						ul.c-toolkit__icono
+							each icon in Iconos
+								li
+									.c-toolkit__icono-item
+										i.i-icon(class=icon.name aria-hidden="true")  
+									.c-toolkit__icono-nombre
+										strong #{icon.name}
+										p #{icon.code}
+
+			section#banners.c-toolkit__section
+				.o-container
+					.c-toolkit__title
+						h2 Banners
+				
+				.c-toolkit__margin
+
+					.c-banner-text
+						.c-banner-text__box
+							.o-container
+								.c-banner-text__container
+									.c-banner-text__title
+										h2 Construimos un Futuro #[strong Seguro.]
+									.c-banner-text__text 
+										p Descubre la tranquilidad en cada aspecto de tu vida. Contamos con seguros diseñados a la medida.
+										p Tu futuro más seguro comienza aquí.
+				.o-container
+					.c-toolkit__margin
+						.c-banner
+							p ¿Necesitas realizar una consulta, reclamación o sugerencia? visita #[a.o-btn.o-btn--green(href="#!" title="Unidad Especializada de Atención al Cliente") Unidad Especializada de Atención al Cliente]
+					
+			section#title.c-toolkit__section
+				.o-container
+					.c-toolkit__title
+						h2 Titulos
+
+					.c-toolkit__margin
+						.o-module.o-module--deco1
+							.o-module__title 
+								h2 Experiencia #[strong GMX]
+					
+					.c-toolkit__margin
+						.o-module.o-module--deco2
+							.o-module__title 
+								h2 Sácale provecho a #[strong tu Seguro]
+					
+					.c-toolkit__margin
+						.o-module.o-module--deco3
+							.o-module__title 
+								h2 Somos #[strong Fuertes]
+
+					.c-toolkit__margin
+						.o-module.o-module--deco4
+							.o-module__title 
+								h2 Blog #[strong GMX]
+					
+					
+
+
+			section#card.c-toolkit__section
+				.o-container
+					.c-toolkit__title
+						h2 Tarjetas 
+
+
+					.c-toolkit__margin
+						ul.o-list
+							li
+								a.o-card-product(href="#" title="Rc Profesional")
+									
+									img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Profesional.png" alt=" Imagen de Rc Profesional")
+									strong Rc Profesional
+							li
+								a.o-card-product(href="#" title="Odontólogos")
+									
+									img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Odontologos.png" alt=" Imagen de Odontólogos")
+									strong Odontólogos
+							li
+								a.o-card-product(href="#" title="Médico Veterinario")
+									
+									img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Veterinario.png" alt=" Imagen de Médico Veterinario")
+									strong Médico Veterinario
+							li
+								a.o-card-product(href="#" title="Servidores Públicos")
+									
+									img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Servidores-Publicos.png" alt=" Imagen de Servidores Públicos")
+									strong Servidores Públicos
+							li
+								a.o-card-product(href="#" title="Médicos y Profesionales de la Salud")
+									
+									img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Medicos.png" alt=" Imagen de Médicos y Profesionales de la Salud")
+									strong Médicos y Profesionales de la Salud
+
+					
+					.c-toolkit__margin
+						ul.o-listGrid
+							li 
+								.c-card-type2.o-card.o-card--blueDark
+									.c-card-type2__top
+										.c-card-type2__title
+											p GMX
+											h3: a(href="#" title="Equipo de especialistas") Equipo de especialistas
+											small *Sin costo adicional
+										.c-card-type2__text 
+											p Ayudamos a diagnosticar los riesgos dentro las empresas u organizaciones, y a planear juntos una estrategia de prevención.
+									.c-card-type2__bottom
+										.c-card-type2__image 
+											img.js-lazy.o-img-circle(src=urlFolder+"images/global/GMX-Placeholder-Medium.jpg" data-src=urlFolder+"images/home/GMX-Especialista.png" alt="Imagen de Equipo de especialistas")
+										.c-card-type2__button 
+											a.o-btn-arrow(href="#" title="Leer más")
+												//-span.sr-only Enlace a Equipo de especialistas
+												i.i-icon.i-arrow-up-right(aria-hidden="true")
+							li
+								.c-card-type2.c-card-type2--styl1.o-card.o-card--blueDark
+									.c-card-type2__top
+										.c-card-type2__title
+											p GMX
+											h3: a(href="#" title="MediTips") MediTips
+										.c-card-type2__text 
+											p Portal de acceso a, recomendaciones y actualizaciones para profesionales de la salud.
+									.c-card-type2__bottom
+										.c-card-type2__image 
+											img.js-lazy.o-img-circle(src=urlFolder+"images/global/GMX-Placeholder-Medium.jpg" data-src=urlFolder+"images/home/GMX-Tips.png" alt="Imagen de MediTips")
+										.c-card-type2__button 
+											a.o-btn-arrow(href="#" title="Leer más")
+												//-span.sr-only Enlace a MediTips
+												i.i-icon.i-arrow-up-right(aria-hidden="true")
+							li
+								.c-card-type2.c-card-type2--styl2.o-card.o-card--blueDark
+									.c-card-type2__top
+										.c-card-type2__title
+											h3: a(href="#" title="Consulta tus Derechos Básicos") #[em Consulta tus Derechos] Básicos
+									.c-card-type2__bottom
+										.c-card-type2__button 
+											a.o-btn-arrow(href="#" title="Leer más")
+												//-span.sr-only Enlace a Consulta tus Derechos Básicos
+												i.i-icon.i-arrow-up-right(aria-hidden="true")
+
+							li
+								.c-card-type2.c-card-type2--styl3.o-card
+									.c-card-type2__top
+										.c-card-type2__title
+											p GMX
+											h3: a(href="#" title="¿Qué hacer en caso de siniestro?") ¿Qué hacer en caso de siniestro?
+									.c-card-type2__bottom
+										.c-card-type2__image 
+											img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Medium.jpg" data-src=urlFolder+"images/home/GMX-Derechos.png" alt="Imagen de Derechos Básicos")
+										.c-card-type2__button 
+											a.o-btn-arrow(href="#" title="Leer más")
+												//-span.sr-only Enlace a Derechos Básicos
+												i.i-icon.i-arrow-up-right(aria-hidden="true")
+					.c-toolkit__margin
+						ul.o-listGrid-1
+							li 
+								.c-card-type1.o-card
+									.c-card-type1__picture
+										img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Empresa.png" alt="Imagen Iconografía GMX")
+
+							li
+								.c-card-type1.c-card-type1--styl1.o-card.o-card--blueDark
+									.c-card-type1__icon 
+										img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Seguros.png" alt="Icono GMX Seguros")
+									.c-card-type1__text
+										p Más de 40 tipos de seguros para tu negocio o profesión.
+
+							li
+								.c-card-type1.c-card-type1--styl2.o-card.o-card--blueDark
+									.c-card-type1__text
+										p Somos una empresa mexicana de seguros especializada en Responsabilidad Civil y Daños.
+
+							li
+								.c-card-type1.c-card-type1--styl3.o-card
+									.c-card-type1__text
+										p Protección hecha a la medida.
+
+							li
+								.c-card-type1.c-card-type1--styl4.o-card
+									.c-card-type1__image
+										img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Medium.jpg" data-src=urlFolder+"images/home/GMX-Seguros.jpg" alt="Imagen GMX Seguros")
+									.c-card-type1__text
+										p #[strong Innovamos] hoy los seguros que te acompañarán mañana
+
+					//-.c-toolkit__margin
+						ul.o-gridBlog.o-list
+							li 
+								.c-card-blog
+									.c-card-blog__content
+										.c-card-blog__image
+											img.js-lazy(src="#" data-src="https://placehold.co/420x580" alt="Imagen de blog 1")
+										.c-card-blog__info
+											.c-card-blog__cat
+												p: a(href="#" title="Riesgos") Riesgos
+											.c-card-blog__title
+												h3: a(href="#" title="La neglicencia veterinaria. Sí y es cada vez más mediática") La neglicencia veterinaria. Sí y es cada vez más mediática
+									a.o-btn-arrow.o-btn-arrow--green(href="#" title="Leer más")
+										//-span.sr-only Enlace a Equipo de especialistas
+										i.i-icon.i-arrow-up-right(aria-hidden="true")
+							li 
+								.c-card-blog.c-card-blog--styl1
+									.c-card-blog__content
+										.c-card-blog__image
+											img.js-lazy(src="#" data-src=urlFolder+"images/home/GMX-Blog-1.jpg" alt="Imagen de blog 2")
+										.c-card-blog__info
+											.c-card-blog__cat
+												p: a(href="#" title="BlogMX") BlogMX
+											.c-card-blog__title
+												h3: a(href="#" title="QUÉ SUCEDE CUANDO TU PERRO MUERDE A ALGUIEN Y QUÉ MEDIDAS TOMAR") QUÉ SUCEDE CUANDO TU PERRO MUERDE A ALGUIEN Y QUÉ MEDIDAS TOMAR
+									a.o-btn-arrow.o-btn-arrow--green(href="#" title="Leer más")
+										//-span.sr-only Enlace a Equipo de especialistas
+										i.i-icon.i-arrow-up-right(aria-hidden="true")
+							li 
+								.c-card-blog.c-card-blog--styl2
+									.c-card-blog__content
+										.c-card-blog__image
+											img.js-lazy(src="#" data-src=urlFolder+"images/home/GMX-Blog-2.jpg" alt="Imagen de blog 3")
+										.c-card-blog__info
+											.c-card-blog__cat
+												p: a(href="#" title="BlogMX") BlogMX
+											.c-card-blog__title
+												h3: a(href="#" title="PRIMEROS APRENDIZAJES DEL SECTOR TURÍSTICOS LUEGO DE OTIS") PRIMEROS APRENDIZAJES DEL SECTOR TURÍSTICOS LUEGO DE OTIS
+									a.o-btn-arrow.o-btn-arrow--green(href="#" title="Leer más")
+										//-span.sr-only Enlace a Equipo de especialistas
+										i.i-icon.i-arrow-up-right(aria-hidden="true")
+
+					.c-toolkit__margin
+						.o-gridBlog.c-slider-blog.splide.js-sliderBlog
+							.c-slider-blog__track.splide__track
+								.c-slider-blog__list.splide__list
+									.c-slider-blog__slide.splide__slide
+										.c-card-blog
+											.c-card-blog__content
+												.c-card-blog__image
+													img(src=urlFolder+"images/global/GMX-Placeholder-Large.jpg" data-splide-lazy=urlFolder+"images/home/GMX-Blog-1.jpg" alt="Imagen de blog 1")
+												.c-card-blog__info
+													.c-card-blog__cat
+														p: a(href="#" title="Riesgos") Riesgos
+													.c-card-blog__title
+														h3: a(href="#" title="La neglicencia veterinaria. Sí y es cada vez más mediática") La neglicencia veterinaria. Sí y es cada vez más mediática
+											a.o-btn-arrow.o-btn-arrow--green(href="#" title="Leer más")
+												//-span.sr-only Enlace a Equipo de especialistas
+												i.i-icon.i-arrow-up-right(aria-hidden="true")
+									.c-slider-blog__slide.splide__slide
+										.c-card-blog.c-card-blog--styl1
+											.c-card-blog__content
+												.c-card-blog__image
+													img(src=urlFolder+"images/global/GMX-Placeholder-Large.jpg" data-splide-lazy=urlFolder+"images/home/GMX-Blog-2.jpg" alt="Imagen de blog 2")
+												.c-card-blog__info
+													.c-card-blog__cat
+														p: a(href="#" title="BlogGMX") BlogGMX
+													.c-card-blog__title
+														h3: a(href="#" title="Qué sucede cuando tu perro muerde a alguien y qué medidas tomar") Qué sucede cuando tu perro muerde a alguien y qué medidas tomar
+											a.o-btn-arrow.o-btn-arrow--green(href="#" title="Leer más")
+												//-span.sr-only Enlace a Equipo de especialistas
+												i.i-icon.i-arrow-up-right(aria-hidden="true")
+									.c-slider-blog__slide.splide__slide
+										.c-card-blog.c-card-blog--styl2
+											.c-card-blog__content
+												.c-card-blog__image
+													//-img(src=urlFolder+"images/global/GMX-Placeholder-Large.jpg" data-splide-lazy=urlFolder+"images/home/GMX-Blog-2.jpg" alt="Imagen de blog 3")
+												.c-card-blog__info
+													.c-card-blog__cat
+														p: a(href="#" title="BlogGMX") BlogGMX
+													.c-card-blog__title
+														h3: a(href="#" title="Primeros aprendizajes del sector turístico luego de OTIS") Primeros aprendizajes del sector turístico luego de OTIS
+											a.o-btn-arrow.o-btn-arrow--green(href="#" title="Leer más")
+												//-span.sr-only Enlace a Equipo de especialistas
+												i.i-icon.i-arrow-up-right(aria-hidden="true")
+
+
+
+					.c-toolkit__margin
+						ul.o-listGrid-2
+							li 
+								.c-card-type3.o-card.o-card--blueDark
+									.c-card-type3__title
+										.o-module.o-module--deco3.o-module--white
+											.o-module__title 
+												h2 Somos #[strong Fuertes]
+									.c-card-type3__picture
+										img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Somos-fuertes.png" alt="Imagen Somos Fuertes")
+
+							li 
+								.c-card-type3.o-card.c-card-type3--styl4
+									.c-card-type3__text
+										p Área de siniestros especializada por ramo.
+									
+							li
+								.c-card-type3.c-card-type3--styl3.o-card.o-card--blueDark
+									.c-card-type3__text
+										p Oficinas Regionales autónomas.
+
+							li
+								.c-card-type3.c-card-type3--styl1.o-card
+									.c-card-type3__text
+										p Más de #[strong 25] #[em Años de experiencia]
+
+							li
+								.c-card-type3.c-card-type3--styl2.o-card.o-card--blueDark
+									.c-card-type3__text
+										p #[small Más de] #[strong 300] especialistas
+									.c-card-type3__info
+										p Diseñamos soluciones a tu medida
+
+							li
+								.c-card-type3.c-card-type3--styl3.o-card.o-card--blueDark
+									.c-card-type3__text
+										p #[strong Expertos] en el mercado mexicano			
+			
+			section#tabs.c-toolkit__section
+				.o-container
+					.c-toolkit__title
+						h2 Tabs
+					
+					.c-toolkit__margin
+						.c-tabs
+							h2.u-title#tablist-1 Seguros para tu negocio
+							.c-tabs__nav.js-tabs
+								ul.js-tabsNav(role='tablist' aria-labelledby='tablist-1')
+									li.is-active(role="presentation")
+										a.js-tabsBtn#tab-1(href="#" title="Mostrar Profesionistas" role='tab' aria-selected='true' aria-controls='tabpanel-1') Profesionistas
+									li(role="presentation")
+										a.js-tabsBtn#tab-2(href="#" title="Mostrar Empresariales" role='tab' aria-selected='false' aria-controls='tabpanel-2' tabindex='-1') Empresariales
+									li(role="presentation")
+										a.js-tabsBtn#tab-3(href="#" title="Mostrar Personales" role='tab' aria-selected='false' aria-controls='tabpanel-3' tabindex='-1') Personales
+									li(role="presentation")
+										a.js-tabsBtn#tab-4(href="#" title="Mostrar Construcción" role='tab' aria-selected='false' aria-controls='tabpanel-4' tabindex='-1') Construcción
+									li(role="presentation")
+										a.js-tabsBtn#tab-5(href="#" title="Mostrar Transportes y Aviación" role='tab' aria-selected='false' aria-controls='tabpanel-5' tabindex='-1') Transportes y Aviación
+									li(role="presentation")
+										a.js-tabsBtn#tab-6(href="#" title="Mostrar Sector Salud" role='tab' aria-selected='false' aria-controls='tabpanel-6' tabindex='-1') Sector Salud
+									li(role="presentation")
+										a.js-tabsBtn#tab-7(href="#" title="Mostrar Hotelería y Recreación" role='tab' aria-selected='false' aria-controls='tabpanel-7' tabindex='-1') Hotelería y Recreación
+							.c-tabs__box
+								.c-tabs__panel#tabpanel-1.js-tabsPanel.is-active(role='tabpanel' tabindex='0' aria-labelledby='tab-1' data-title='Profesionistas')
+									a.c-tabs__link.js-tabsLink(href="#" role='button' aria-expanded="true" data-id="tab-1") Profesionistas
+									.c-tabs__content.js-tabsContent
+										ul.o-list
+											li
+												a.o-card-product(href="#" title="Rc Profesional")
+													
+													img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Profesional.png" alt=" Imagen de Rc Profesional")
+													strong Rc Profesional
+											li
+												a.o-card-product(href="#" title="Odontólogos")
+													
+													img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Odontologos.png" alt=" Imagen de Odontólogos")
+													strong Odontólogos
+											li
+												a.o-card-product(href="#" title="Médico Veterinario")
+													
+													img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Veterinario.png" alt=" Imagen de Médico Veterinario")
+													strong Médico Veterinario
+											li
+												a.o-card-product(href="#" title="Servidores Públicos")
+													
+													img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Servidores-Publicos.png" alt=" Imagen de Servidores Públicos")
+													strong Servidores Públicos
+											li
+												a.o-card-product(href="#" title="Médicos y Profesionales de la Salud")
+													
+													img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/GMX-Medicos.png" alt=" Imagen de Médicos y Profesionales de la Salud")
+													strong Médicos y Profesionales de la Salud
+
+								.c-tabs__panel#tabpanel-2.js-tabsPanel(role='tabpanel' tabindex='0' aria-labelledby='tab-2' data-title='Empresariales')
+									- var empresarial = [{'name': 'PyMes','img': 'GMX-PyMes.png','link': '#!'},{'name': 'Exportación','img': 'GMX-Exportacion.png','link': '#!'},{'name': 'Gasolineras','img': 'GMX-Gasolineras.png','link': '#!'},{'name': 'Obras de Arte','img': 'GMX-Obras.png','link': '#!'},{'name': 'Guarderías y Estancias Infantiles','img': 'GMX-Guarderia.png','link': '#!'},{'name': 'Actos Violentos','img': 'GMX-Actos.png','link': '#!'},{'name': 'Paramétrico Huracán','img': 'GMX-Huracan.png','link': '#!'},{'name': 'Paramétrico Terremoto','img': 'GMX-Terremoto.png','link': '#!'},];
+									a.c-tabs__link.js-tabsLink(href="#" role='button' aria-expanded="false" data-id="tab-2") Empresariales
+									.c-tabs__content.js-tabsContent
+										ul.o-list
+											each empresa in empresarial
+									
+												li
+													a.o-card-product(href=empresa.link title=empresa.name)
+														
+														img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/"+empresa.img alt=" Imagen de"+ empresa.name)
+														strong= empresa.name
+
+
+								.c-tabs__panel#tabpanel-3.js-tabsPanel(role='tabpanel' tabindex='0' aria-labelledby='tab-3' data-title='Personales')
+									- var personales = [{'name': 'Hogar','img': 'GMX-Hogar.png','link': '#!'},{'name': 'Mascotas','img': 'GMX-Mascotas.png','link': '#!'},];
+									a.c-tabs__link.js-tabsLink(href="#" role='button' aria-expanded="false" data-id="tab-3") Personales
+									.c-tabs__content.js-tabsContent
+										ul.o-list
+											each personal in personales
+												li
+													a.o-card-product(href=personal.link title=personal.name)
+														
+														img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/"+personal.img alt=" Imagen de"+ personal.name)
+														strong= personal.name
+									
+								.c-tabs__panel#tabpanel-4.js-tabsPanel(role='tabpanel' tabindex='0' aria-labelledby='tab-4' data-title='Construcción')
+									- var construcciones = [{'name': 'RC Construcción','img': 'GMX-Construccion.png','link': '#!'},{'name': 'Decenal','img': 'GMX-Decenal.png','link': '#!'},];
+									a.c-tabs__link.js-tabsLink(href="#" role='button' aria-expanded="false" data-id="tab-4") Construcción
+									.c-tabs__content.js-tabsContent
+										ul.o-list
+											each construccion in construcciones
+												li
+													a.o-card-product(href=construccion.link title=construccion.name)
+														
+														img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/"+construccion.img alt=" Imagen de"+ construccion.name)
+														strong= construccion.name
+
+								.c-tabs__panel#tabpanel-5.js-tabsPanel(role='tabpanel' tabindex='0' aria-labelledby='tab-5' data-title='Transportes y Aviación')
+									- var transportes = [{'name': 'Carga en Tránsito','img': 'GMX-Carga.png','link': '#!'},{'name': 'RC Aviación','img': 'GMX-Aviacion.png','link': '#!'},{'name': 'Drones','img': 'GMX-Drones.png','link': '#!'},{'name': 'Embarcaciones','img': 'GMX-Embarcaciones.png','link': '#!'},];
+									a.c-tabs__link.js-tabsLink(href="#" role='button' aria-expanded="false" data-id="tab-5") Transportes y Aviación
+									.c-tabs__content.js-tabsContent
+										ul.o-list
+											each transporte in transportes
+												li
+													a.o-card-product(href=transporte.link title=transporte.name)
+														
+														img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/"+transporte.img alt=" Imagen de"+ transporte.name)
+														strong= transporte.name
+									
+								.c-tabs__panel#tabpanel-6.js-tabsPanel(role='tabpanel' tabindex='0' aria-labelledby='tab-6' data-title='Sector Salud')
+									- var sectorSalud = [{'name': 'Hospitales y Sanatorios','img': 'GMX-Hospitales.png','link': '#!'},{'name': 'Spa´s','img': 'GMX-Spa.png','link': '#!'},{'name': 'Clínicas y Consultorios','img': 'GMX-Clinicas.png','link': '#!'},{'name': 'Médicos y Profesionales de la Salud','img': 'GMX-Medicos.png','link': '#!'},];
+									a.c-tabs__link.js-tabsLink(href="#" role='button' aria-expanded="false" data-id="tab-6") Sector Salud
+									.c-tabs__content.js-tabsContent
+										ul.o-list
+											each salud in sectorSalud
+												li
+													a.o-card-product(href=salud.link title=salud.name)
+														
+														img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/"+salud.img alt=" Imagen de"+ salud.name)
+														strong= salud.name
+
+								.c-tabs__panel#tabpanel-7.js-tabsPanel(role='tabpanel' tabindex='0' aria-labelledby='tab-7' data-title='Hotelería y Recreación')
+									- var hoteleria = [{'name': 'Hoteles','img': 'GMX-Hoteles.png','link': '#!'},{'name': 'Restaurantes y Bares','img': 'GMX-Restaurantes.png','link': '#!'},{'name': 'Eventos Recreativos','img': 'GMX-Eventos.png','link': '#!'},{'name': 'Club Deportivo','img': 'GMX-Deportivo.png','link': '#!'},{'name': 'Campo de Golf','img': 'GMX-Golf.png','link': '#!'},{'name': 'Propiedades en Renta Temporal','img': 'GMX-Renta.png','link': '#!'},{'name': 'Industria de la Bebida','img': 'GMX-Bebida.png','link': '#!'},];
+									a.c-tabs__link.js-tabsLink(href="#" role='button' aria-expanded="false" data-id="tab-7") Hotelería y Recreación
+									.c-tabs__content.js-tabsContent
+										ul.o-list
+											each hotel in hoteleria
+												li
+													a.o-card-product(href=hotel.link title=hotel.name)
+														
+														img.o-card-product__img.js-lazy(src=urlFolder+"images/global/GMX-Placeholder-Small.jpg" data-src=urlFolder+"images/home/"+hotel.img alt=" Imagen de"+ hotel.name)
+														strong= hotel.name
+		#js
+			include ../template/_scripts
+
