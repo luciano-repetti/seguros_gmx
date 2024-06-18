@@ -1,0 +1,37 @@
+extends ./template/_template
+
+append configuracion
+    -var page			= {}
+    -page['link']		= 'seguros/index.html'
+    -page['title']		= 'Seguros'
+    -page['descrip']	= 'Página de seguros'
+    -page['keys']		= 'seguros, negocios, personales'
+    -page['lang']		= 'es'
+    -page['responsive']	= true
+    -page['section']	= []
+    -page['libsCss']	= []
+    -page['libs']		= []
+    -page['plugins']	= ['splide']
+    -page['js']			= [] 
+
+    - var path = '../'
+
+
+block contenido
+    main.o-section--main
+        .c-banner-text.c-banner-text--padding1
+            section.o-section.o-section--banner-small
+                .o-container
+                    .o-module.o-module--deco5.u-text-center
+                        .o-module__title 
+                            h1 Encuentra un #[strong Agente]
+        .c-navigation-page.c-navigation-page--void
+            div.c-navigation-page__list-section
+
+        .c-message-sent
+            section.container-message
+                div.container-message__title
+                    img(src=urlFolder+"images/seguros/GMX-manos-alternadas.png" alt="alt")
+                    h3 Un Agente se contactará contigo.
+                p En caso no recibir respuesta consultar la sección de SPAM de tu correo electrónico.
+                <a class="o-btn" href="/index.html" title="Ir al inicio">Volver al inicio</a>

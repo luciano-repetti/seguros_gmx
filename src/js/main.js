@@ -516,6 +516,15 @@ document
 			isValid = false;
 		}
 
+		// Validate business name (Razón social)
+		const codePostal = document.getElementById("code-postal");
+		if (codePostal && !codePostal.value.trim()) {
+			document.getElementById("error-code-postal").textContent =
+				"Ingrese su código postal.";
+			codePostal.classList.add("error");
+			isValid = false;
+		}
+
 		// Validate phone
 		const phone = document.getElementById("phone");
 		const phonePattern = /^[0-9]+$/;
