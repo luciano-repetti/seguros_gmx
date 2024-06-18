@@ -454,17 +454,18 @@ document.addEventListener("DOMContentLoaded", function () {
 	var splides = document.querySelectorAll(".splide.values");
 	splides.forEach(function (splide) {
 		var instance = new Splide(splide, {
-			arrows: true,
 			start: 0,
 			perPage: 1,
 			breakpoints: {
 				1257: {
+					arrows: true,
 					perPage: 1,
 				},
 				696: {
+					arrows: true,
 					perPage: 1,
 				},
-				425: {
+				500: {
 					arrows: false,
 				},
 			},
