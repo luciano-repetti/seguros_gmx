@@ -1,79 +1,44 @@
-<img width="200px" src="https://ingenia.com/assets/images/global/Logo-Ingenia-Colour.png" title="Jeet Grid System">
+<img width="200px" src="https://nomadadigitalweb.com.ar/wp-content/uploads/2021/05/Logo-Nomada.png" title="Jeet Grid System">
 
-# Plantilla gulp (stylus)
-Plantilla gulp V. 4 para proyectos planos con stylus
+# Proyecto de Página Web con Pug, Stylus y Gulp
 
-## Requerimentos previos
-### Node*
-Se debe tener instalado [Node.js](https://nodejs.org/es/) versión 8.11.1 o mayor.
+Este proyecto consiste en la creación de una página web utilizando preprocesadores para HTML y CSS, específicamente Pug y Stylus, respectivamente. Utilizamos Gulp para automatizar tareas y manejar los procesos de compilación.
 
-Si deseas tener varias versiones de node instalado en tu computadora puedes revisar la entrada para [Windows](https://luismasdev.com/instalar-varias-versiones-nodejs-en-windows/) ó [Mac y Linux](https://medium.com/@jamesauble/install-nvm-on-mac-with-brew-adb921fb92cc)
+## Estructura del Proyecto
 
-### Gulp*
-Instalación global de [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start)
-```bash
-npm i --g gulp-cli
-```
+Trabajamos las vistas por medio de componentes y mixins, lo que nos permite crear un código modular y reutilizable. Para el CSS, empleamos Stylus junto con la metodología BEM (Block Element Modifier) para mantener un código limpio y mantenible.
 
-Si no se puede instalar probar con:
-```bash
-sudo npm i --g gulp-cli
-```
+El JavaScript se utiliza en su forma básica para agregar funcionalidades como animaciones, sliders, entre otros.
 
-### [.editorconfig*](https://editorconfig.org/)
-Asegurate de instalar este plugin adecuado para tu editor
+El proyecto se manejará con Yarn como el gestor de dependencias.
 
-*Si ya se tienen instalados no es necesario este paso
+## Requisitos
+
+- Node.js (versión 12 o superior)
+- Yarn
+- Gulp CLI
 
 ## Instalación
-Usar comando para instalar las dependencias adecuadas
 
-```bash
-npm i
-```
+1. Clona el repositorio:
 
-## Comandos
-### Compilando archivos para desarrollo*
-Con los siguientes comando podremos compilar el sitio y nos creara solo los archivos necesarios para desarrollo (dist/dev)
-```bash
-npm run desarrollo
-```
-ó
-```bash
-gulp
-```
+   ```bash
+   git clone https://github.com/tu-usuario/tu-proyecto.git
+   cd tu-proyecto
+   ```
 
-### Compilando archivos para producción*
-Con los siguientes comando crearemos el proyecto listo para producción (dist/prod) 
-```bash
-npm run produccion
-```
-ó
-```bash
-gulp produccion
-```
+2. Instala las dependencias:
 
-### Compilación especial (Ingenia)*
-Con los siguientes comando crearemos el proyecto listo para desarrollo (dist/dev) y producción (dist/prod) 
-```bash
-npm run ingenia
-```
-ó
-```bash
-gulp ingenia
-```
+   ```bash
+   yarn install
+   ```
 
-*Todos estos comandos compilan todos los archivos necesarios y levantan un servidor 
+3. Inicia el proyecto:
+   ```bash
+   gulp
+   ```
 
-desarrollo - Crea un servidor a (dist/dev), solo compila los archivos para dev
-
-produccion - Crea un servidor a (dist/prod), solo compila los archivos para prod
-
-ingenia - Crea un servidor a (dist/dev), compila los archivos para prod y dev
-
-
-## Directorio
-Directorio principal (todo se controla desde la carpeta src, no es necesario manipular achivos fuera de esta carpeta)
+## Estructura de Archivos
 
 ```bash
 src
@@ -132,4 +97,3 @@ src
 |----package.json
 |----README.md
 ```
-
