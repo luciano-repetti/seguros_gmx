@@ -14,3 +14,77 @@
 	&--line
 		background blue-1
 		border 1px solid blue-3
+
+.o-card-gray
+	width 100%
+	max-width: 640px
+	display flex
+	flex-direction column
+	background-color blue-1
+	border 1px solid blue-3
+	border-radius 2em
+	padding: 2em
+	gap: 2em
+	> h2
+		color blueDark-1
+		font-size 60px
+		font-family tipografia-serif
+		+Resposive(max, 600px)
+			font-size 40px
+		+MobilePortrait(max)
+			font-size 28px
+
+.o-card-step
+	display: flex
+	flex-direction: column
+	padding: 18px 42px
+	width 100%
+	border: 1px solid blue-3
+	background-color: blue-1
+	border-radius: 2em
+	gap: 1em
+	position: relative
+	+MobileLandscape(max)
+		padding: 20px 20px
+	h3 
+		font-family: tipografia-serif
+		font-size: 28px
+		+MobileLandscape(max)
+			font-size: 26px
+	&--none
+		+TabletLandscape(max)
+			display: none
+	&--image
+		width: fit-content
+		justify-content: center
+		padding: 0 20px
+		+TabletLandscape(max)
+			padding: 2em 20px
+			height: 100px
+		+MobileLandscape(max)
+			margin-top 40px
+		img
+			width 50px
+		&__step
+			color: #005581
+			position: absolute
+			left: -92px
+			+MobileLandscape(max)
+				left 0
+				top -30px
+		&:before
+			content: ''
+			position: absolute
+			left: -38px
+			width 16px
+			height 16px
+			background-color: #03679D
+			border-radius: 100%
+			+MobileLandscape(max)
+				top: -30px
+	&--blue
+		border: 1px solid blueDark-1
+		background-color: blueDark-1
+		color: white
+		padding-right: 65px
+	

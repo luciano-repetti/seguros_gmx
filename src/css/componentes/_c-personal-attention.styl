@@ -1,0 +1,80 @@
+.c-personal-attention
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 800px
+    width 100%
+    +TabletLandscape(max)
+        max-width: 100%
+        padding-right: 20px
+        overflow: hidden
+    h2
+        +TabletLandscape(max)
+            padding-left: 20px
+    ul
+        display: flex
+        flex-direction: column
+        gap: 2em
+        position relative
+        +TabletLandscape(max)
+            margin-left: 7em
+        +MobileLandscape(max)
+            margin-left: 3em
+        &:after
+            content: ''
+            position: absolute
+            width: 2px
+            height: calc(85% - 10px)
+            top: 50%
+            transform: translateY(-50%)
+            left: -30px
+            border-left: 2px dashed #03679D
+            +TabletLandscape(max)
+                height: calc(100%)
+                top: calc(52% + 16px)
+            +MobileLandscape(max)
+                top: calc(51%)
+
+    li
+        display: flex
+        flex-direction: column
+        gap: 1em
+        margin-bottom: 0em
+        position: relative
+    &__container-card
+        display: flex
+        gap: 1em
+        color: gray-2
+        +TabletLandscape(max)
+            flex-direction: column
+        > h3
+            font-size: 28px
+            font-family tipografia-serif
+        p
+            font-size: 16px
+            margin-bottom: 0
+        .container-with-button
+            display: flex
+            align-items: flex-end
+            gap: 1em
+            color white
+            margin: .5em 0
+            +MobileLandscape(max)
+                flex-direction: column-reverse
+                align-items: flex-start
+            p
+                font-size: 22px
+                margin-top: .5em
+            * 
+                margin: 0
+            .o-btn-arrow
+                width 36px
+                height 36px
+                i
+                    font-size: .8em
+        .container-image
+            position absolute
+            top 20px
+            right: 20px
+            > img
+                width 42px

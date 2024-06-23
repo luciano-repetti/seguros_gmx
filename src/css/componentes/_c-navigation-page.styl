@@ -32,17 +32,21 @@
                 max-width 100%
                 justify-content center
                 gap 1.5em
-            li 
-                // &.container-button
-                //     padding 2px
+            li
+                +TabletLandscape(max)
+                    width 100%
+                    display: flex
+                    justify-content: center
                 &.container-anchor
                     > a
                         font-size 18px
                         color blueDark-4
                         text-decoration none
                         padding 1em 0
+                        text-align: center
                         +TabletLandscape(max)
                             padding: .5em 0
+                            width 100%
                     &--active,
                     &:hover
                         > a

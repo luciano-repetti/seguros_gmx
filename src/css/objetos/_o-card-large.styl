@@ -22,3 +22,47 @@
         background-color: blue-1
         > p
             color: blueDark-1
+
+.o-card-with-button
+    min-width 70%
+    display: flex
+    background-color: blueDark-5
+    color: black
+    gap: 1em
+    padding: 2em
+    border-radius: 36px
+    &--width-full
+        min-width 100%
+        gap: 2.5em
+    +Phablet(max)
+        min-width 100%
+    +MobileLandscape(max)
+        flex-direction: column-reverse
+        padding: 1.5em
+        gap: 0
+    &__container-button
+        display: flex
+        align-items: center
+        +MobileLandscape(max)
+            padding: 0 1em
+            justify-content: flex-end
+            .o-btn-arrow
+                width 30px
+                height 30px
+                font-size: 1em
+    &__container-info
+        display: flex
+        flex-direction: column
+        gap: 1em
+        +MobileLandscape(max)
+            gap: .5em
+        p
+            color: black
+            font-size: 18px
+            margin: .5em 0
+            +MobileLandscape(max)
+                font-size: 16px
+        strong
+            font-size: 22px
+            +MobileLandscape(max)
+                font-size: 18px
