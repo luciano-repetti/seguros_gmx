@@ -17,7 +17,7 @@
         +TabletLandscape(max)
             padding 2em 1.5em
             flex-direction column
-        > h3
+        > h2
             width fit-content
             height fit-content
             font-size 1.5em
@@ -32,15 +32,13 @@
         gap 2em
         +TabletLandscape(max)
             padding-left 0
-    .container-text
-        padding-left 6em
-        p
-            margin-top: 2em
+        > p
             font-family tipografia-serif
             font-size 16px
-        h4
+        h3
             font-family tipografia-serif
             font-size 1.4em
+            padding-left: 90px
             +TabletLandscape(max)
                 padding-left 0
         +TabletLandscape(max)
@@ -49,17 +47,19 @@
         display flex
         flex-direction column
         gap 2em
-        .container-content-text
-            display flex
-            flex-direction column
-            gap 2em
-            padding-left 4em
-            p
-                font-size 1.4em
-                font-family tipografia-serif
-            .text-small
-                width 80%
-                font-size 1em
+        > p
+            font-family tipografia-serif
+            padding-left: 90px
+        // .container-content-text
+        //     display flex
+        //     flex-direction column
+        //     gap 2em
+        //     p
+        //         font-size 1.4em
+        //         font-family tipografia-serif
+        //     .text-small
+        //         width 80%
+        //         font-size 1em
         &__container-element
             display flex
             gap 1em

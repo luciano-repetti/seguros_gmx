@@ -1,6 +1,6 @@
 .c-navigation-page
     position: sticky
-    z-index: 1000
+    z-index: 50
     top: 126px
     width 100%
     background-color blue-1
@@ -13,7 +13,6 @@
     +Desktop(max)
         top: 66px
         box-shadow: none
-    +Mobile(max)
         position: static
     &__list-section
         display flex
@@ -39,6 +38,7 @@
                     justify-content: center
                 &.container-anchor
                     > a
+                        width fit-content
                         font-size 18px
                         color blueDark-4
                         text-decoration none
@@ -46,7 +46,6 @@
                         text-align: center
                         +TabletLandscape(max)
                             padding: .5em 0
-                            width 100%
                     &--active,
                     &:hover
                         > a

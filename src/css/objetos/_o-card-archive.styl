@@ -2,16 +2,23 @@
     display: flex
     width 100%
     background-color: blue-1
+    position: relative
     align-items: center
     border: 1px solid blue-3
     border-radius: 16px
     padding: 0
+    padding-left: 60px
     cursor: pointer
-    .container-image
-        padding: 0 1em
-        img
-            width 20px
-            height auto
+    &:before
+        content: ""
+        position: absolute
+        left: 20px
+        display: block
+        width: 24px
+        height: 30px
+        background: url("/images/global/GMX-pdf.png") no-repeat center center
+        background-size: contain
+
     .container-text
         border-left: 1px solid blue-3
         height: 100%

@@ -18,10 +18,46 @@
             font-size: 20px
     .o-btn-arrow
         padding: .5em
+    &--thick
+        padding: 32px
+        +Mobile(max)
+            padding: 22px
+        p
+            width 90%
+            font-size: 24px
+            +Mobile(max)
+                font-size: 18px
+    .punt
+        background-color: white
+        width 38px
+        height: 38px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        +Mobile(max)
+            width 32px
+            height 32px
+        > p
+            color: blueDark-4
+            font-size: 18px
+            width 38px
+            text-align: center
+            +Mobile(max)
+                font-size: 16px
+    .container-text
+        display: flex
+        align-items: stretch
+        gap: 1em
+        position: relative
     &--light-blue
         background-color: blue-1
-        > p
+        border 1px solid blue-3
+        p, small
             color: blueDark-1
+        small
+            font-size: 18px
+            margin-right: 1em
 
 .o-card-with-button
     min-width 70%
@@ -66,3 +102,5 @@
             font-size: 22px
             +MobileLandscape(max)
                 font-size: 18px
+            a
+                color: black

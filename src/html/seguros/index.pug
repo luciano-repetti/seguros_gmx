@@ -26,8 +26,8 @@ block contenido
                         .o-module__title 
                             h1 #[small Seguros] Responsabilidad #[strong Ambiental]
         .c-navigation-page
-            nav.c-navigation-page__list-section(aria-label="Secciones del sitio")
-                ul
+            .c-navigation-page__list-section(aria-label="Secciones del sitio")
+                ul(role="navigation")
                     li.container-anchor.container-anchor--active
                         a(href="#introduccion" title="Ir a la sección Introducción") Introducción
                     li.container-anchor
@@ -47,7 +47,7 @@ block contenido
 
         .c-consists#en-que-consiste
             section.c-consists.c-consists__card-safe
-                h3 ¿En qué consiste?
+                h2 ¿En qué consiste?
                 div.c-consists__card-safe__container-card
                     div.c-consists__card-safe__container-card__card
                         p Es un seguro destinado a cubrir las responsabilidades a consecuencia de los daños derivados de la contaminación que ocasione el asegurado con motivo de sus actividades comerciales.
@@ -56,7 +56,7 @@ block contenido
 
         .c-consists#para-quien-es
             section.c-for-whom
-                h3 ¿Para quién es?
+                h2 ¿Para quién es?
                 p Esta póliza ofrece cobertura para:
                 ul.c-for-whom__box-container
                     li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
@@ -78,7 +78,7 @@ block contenido
 
         .c-coverage#cobertura
             section.c-coverage__container-banner
-                h3 Coberturas
+                h2 Coberturas
                 .c-coverage__container-elements
                     ul.c-coverage__list-elements
                         li.c-coverage__list-elements__container-element 
@@ -101,29 +101,29 @@ block contenido
                                 img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
                             div.c-coverage__list-elements__element
                                 p Gastos de análisis y defensa jurídica.
-                    div.container-text
-                        h4 Coberturas Adicionales.
-                    ul.c-coverage__list-elements
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Costos de respuesta de emergencia que incluyen los gastos para mitigar una pérdida ambiental.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Sanciones económicas.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Interrupción del negocio.
+                    div.c-coverage__list-elements
+                        h3 Coberturas Adicionales.
+                        ul.c-coverage__list-elements
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Costos de respuesta de emergencia que incluyen los gastos para mitigar una pérdida ambiental.
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Sanciones económicas.
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Interrupción del negocio.
 
         .c-added-values
             section.c-added-values__container
                 h3 Valores agregados
-                article.c-added-values__container-banner(hidden=true)
+                .c-added-values__container-banner(hidden=true)
                     div.c-added-values__container-text(hidden=true)
                         h4 Estudios especializados de#[br]Administración de Riesgos
                     div.c-added-values__container-image
@@ -254,36 +254,29 @@ block contenido
 
         .c-consists#consideraciones
             section.c-considerations
-                h3 Consideraciones #[small Es importante para realizar una cotización]
+                h3 Consideraciones #[p Es importante para realizar una cotización]
                 .c-container-cards
                     ul.box-container
                         li.box-container__box
-                            div.box-container__box__number
-                                span 1
+                            span 1
                             p Mostrar los ingresos anuales por su actividad, tipo y cantidad de materiales peligrosos almacenados.
                         li.box-container__box
-                            div.box-container__box__number
-                                span 2
+                            span 2
                             p Actividades previas realizadas en los predios.
                         li.box-container__box
-                            div.box-container__box__number
-                                span 3
+                            span 3
                             p Rutas de exposición del medio ambiente.
                         li.box-container__box
-                            div.box-container__box__number
-                                span 4
+                            span 4
                             p Conocimiento de las condiciones ambientales y pérdidas preexistentes.
                         li.box-container__box
-                            div.box-container__box__number
-                                span 5
+                            span 5
                             p Tanques de almacenamiento, controles y procesos ambientales.
                         li.box-container__box
-                            div.box-container__box__number
-                                span 6
+                            span 6
                             p Años de operación, experiencias y certificaciones o autorizaciones vigentes (ISO 9001, OHSAS, etc).
                         li.box-container__box
-                            div.box-container__box__number
-                                span 7
+                            span 7
                             p Plan de atención a emergencias y/o contingencias ambientales.
                         li.box-container__box.box-container__box--image
                             img(src=urlFolder+"images/seguros/GMX-todo-ok.png" alt="Icon Scientist")
@@ -293,52 +286,41 @@ block contenido
             section.container-requirements
                 h2 Requisitos de contratación
                 .container-cards
-                    article.container-cards__card
+                    .container-cards__card
                         div.container-cards__card__title
-                            h3 GMX #[span Identificación vigente]
+                            h3 GMX #[strong Identificación vigente]
                         ul.container-cards__card__requirements
-                            li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
+                            li
                                 p Acta Constructiva
-                            li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
+                            li
                                 p Credencial del INE o IFE
-                            li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
+                            li
                                 p FM2 para extranjeros
-                            li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
+                            li
                                 p FM3 para extranjeros
-                            li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
+                            li
                                 p Pasaporte
-                            li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
+                            li
                                 p Cédula Profesional
-                            li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
+                            li
                                 p Licencia de conducir
                     article.container-cards__card
                         div.container-cards__card__title
                             h3 GMX #[span Comprobante de domicilio:]
                         ul.container-cards__card__requirements
                             li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
                                 p Telefonos#[br](no mayor a 3 meses)
                             li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
                                 p Gas#[br](no mayor a 3 meses)
                             li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
                                 p Agua#[br](no mayor a 3 meses)
                     article.container-cards__card
                         div.container-cards__card__title
                             h3 GMX #[span Documentación a proporcionar:]
                         ul.container-cards__card__requirements
                             li.container-cards__card__requirements__requirement
-                                img(src=urlFolder+"images/seguros/GMX-escudo-verde.png" alt="")
                                 p Cuestionario Responsabilidad Ambiental de GMX Seguros juntos con sus anexos.
-                            li.container-cards__card__requirements__image
+                            .container-cards__card__requirements__image
                                 img(src=urlFolder+"images/seguros/GMX-sugerencia-lista.png" alt="alt")
 
         .c-contact-form#contactar
@@ -346,57 +328,56 @@ block contenido
                 h3#contact-form-title Contactar ahora
                 p Solicita asesoría de un agente especializado, el cual te ayudará a contratar lo que realmente necesitas.
                 form.container-form(action="#" method="post" aria-labelledby="contact-form-title")
-                    label(for="insurance-type") Tipo de seguro de Interés
-                    div.container-message
-                        div.container-form__custom-select
-                            select(name="insurance-type" id="insurance-type" aria-required="true")
-                                option(value="" disabled selected) Seleccione...
-                                option(value="Ambiental") Instituciones educativas
-                                option(value="Ambiental") Profesionistas
-                                option(value="Ambiental") Sector salud
-                                option(value="Ambiental") Ambiental
-                                option(value="Ambiental") Construcción
-                                option(value="Ambiental") Industria Manufactura y Comercio
-                                option(value="Ambiental") Aviación
-                                option(value="Ambiental") Embarcaciones
-                                option(value="Ambiental") Carga en Tránsito
-                                option(value="Ambiental") Gobierno
-                                option(value="Ambiental") Familiar
-                                option(value="Ambiental") Esparcimiento
-                                option(value="Ambiental") Riesgos Especiales
-                            i.i-icon.i-angle-down(aria-hidden="true")
-                        div#error-insurance-type.error-message
-                    //- label.container-message(for="full-name")
-                    div.container-message
-                        input(type="text" id="full-name" name="full-name" placeholder="Nombre completo" aria-required="true")
-                        div#error-full-name.error-message
-                    //- label(for="phone")
-                    div.container-message
-                        input(type="text" id="phone" name="phone" placeholder="Teléfono celular" aria-required="true")
-                        div#error-phone.error-message
-                    //- label(for="email")
-                    div.container-message
-                        input(type="email" id="email" name="email" placeholder="Correo electrónico" aria-required="true")
-                        div#error-email.error-message
-                    //- label(for="city")
-                    div.container-message
-                        input(type="text" id="city" name="city" placeholder="Ciudad" aria-required="true")
-                        div#error-city.error-message
-                    div.container-message
-                        div.container-form__custom-select
-                            select(name="state" id="state" aria-required="true")
-                                option(value="" disabled selected) Seleccione una opción
-                                option(value="Estado") Estado
-                            i.i-icon.i-angle-down(aria-hidden="true")
-                        div#error-state.error-message
+                    fieldset
+                        legend Tipo de seguro de Interés
+                        div.container-message
+                            div.container-form__custom-select
+                                select(name="insurance-type" id="insurance-type" aria-required="true")
+                                    option(value="" disabled selected) Seleccione...
+                                    option(value="Ambiental") Instituciones educativas
+                                    option(value="Ambiental") Profesionistas
+                                    option(value="Ambiental") Sector salud
+                                    option(value="Ambiental") Ambiental
+                                    option(value="Ambiental") Construcción
+                                    option(value="Ambiental") Industria Manufactura y Comercio
+                                    option(value="Ambiental") Aviación
+                                    option(value="Ambiental") Embarcaciones
+                                    option(value="Ambiental") Carga en Tránsito
+                                    option(value="Ambiental") Gobierno
+                                    option(value="Ambiental") Familiar
+                                    option(value="Ambiental") Esparcimiento
+                                    option(value="Ambiental") Riesgos Especiales
+                                i.i-icon.i-angle-down(aria-hidden="true")
+                            div#error-insurance-type.error-message
+                    fieldset
+                        legend Información personal
+                        div.container-message
+                            input(type="text" id="full-name" name="full-name" placeholder="Nombre completo" aria-required="true")
+                            div#error-full-name.error-message
+                        div.container-message
+                            input(type="text" id="phone" name="phone" placeholder="Teléfono celular" aria-required="true")
+                            div#error-phone.error-message
+                        div.container-message
+                            input(type="email" id="email" name="email" placeholder="Correo electrónico" aria-required="true")
+                            div#error-email.error-message
+                        div.container-message
+                            input(type="text" id="city" name="city" placeholder="Ciudad" aria-required="true")
+                            div#error-city.error-message
+                        div.container-message
+                            div.container-form__custom-select
+                                select(name="state" id="state" aria-required="true")
+                                    option(value="" disabled selected) Seleccione una opción
+                                    option(value="Estado") Estado
+                                i.i-icon.i-angle-down(aria-hidden="true")
+                            div#error-state.error-message
                     .container-error
                         div.container-form__container-terms
                             label(for="TyC") 
                                 input(type="checkbox" id="TyC" name="TyC" aria-required="true")
-                                a(href="" target="_blank") Acepto los Términos y Condiciones
+                                a(href="" target="_blank" title="Ir hacia terminos y condiciones") Acepto los Términos y Condiciones
                         div#error-TyC.error-message
-                    div.container-form__container-contact
-                        p ¿Cómo deseas ser contactado?
+                    fieldset.container-form__container-contact
+                        legend ¿Cómo deseas ser contactado?
                         div.container-contacts
                             label(for="whatsapp") 
                                 input(type="checkbox" id="whatsapp" name="contact-method" value="whatsapp")

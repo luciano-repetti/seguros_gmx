@@ -33,16 +33,16 @@ block contenido
                     li.container-anchor
                         a(href="#procedimiento-siniestros" title="Ir a la sección de Procedimiento de atención a siniestros") Procedimiento de atención a siniestros
                     li.container-anchor
-                        a(href="#Documentacion-siniestros" title="Ir a la sección de Documentación por ramo para el trámite de siniestros") Documentación por ramo para el trámite de siniestros
+                        a(href="#documentacion-siniestros" title="Ir a la sección de Documentación por ramo para el trámite de siniestros") Documentación por ramo para el trámite de siniestros
                     li.container-anchor
                         a(href="#definiciones" title="Ir a la sección de Definiciones") Definiciones
 
-        .c-introduction-text#reportar-siniestro
+        .c-introduction-text.section-change#reportar-siniestro
             section.o-card-gray
                 h2 Reportar Siniestro #[br]online
                 a.o-btn.o-btn--green(href="#!" title="Reportar siniestro") Reportar siniestro
 
-        .c-introduction-text#reportar-siniestro
+        .c-introduction-text.section-change#reportar-siniestro
             section.o-bento
                 h2 Otros canales para reportar un siniestro:
                 .row.row--uno
@@ -87,7 +87,7 @@ block contenido
                         strong siniestros@gmx.com.mx
                         p respuesta máxima al día hábil siguiente
 
-        .o-section
+        .o-section.section-change#procedimiento-siniestros
             section.c-personal-attention
                 h2 Contamos con atención especializada las 24 horas de los 365 días del año.
                 ul
@@ -145,3 +145,109 @@ block contenido
                             .o-card-step
                                 h3 Primer contacto
                                 p Para nosotros es muy importante estar para ti en momentos complicados, es por eso que una vez realizado el reporte, el ajustador que atienda el siniestro se pondrá en contacto vía telefónica con el Asegurado o Beneficiario a la brevedad.
+
+        .o-section.section-change#documentacion-siniestros
+            .o-section.o-section--max-800
+                .c-introduction-text__text-container
+                    p Las siguientes listas son de tipo enunciativo, más no limitativo, operan de acuerdo a cada caso concreto y los documentos serán solicitados por medio del Ajustador.
+                    p Existen ramos donde por su naturaleza, no es posible estandarizar la información documental requerida, por lo que caso por caso, serán requeridos los documentos.
+                ul.c_documentation-siniestros
+                    li.o-card-large.o-card-large--thick
+                        .container-text
+                            div.punt
+                                p A
+                            p Ver método de cálculo
+                        button.o-btn-arrow.o-btn-arrow--arrow-down#button-expand-1(href="#" aria-label="Incendio" title="boton expandir información")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    ul.o-container-list.o-container-list--padding.u-hidden#contenido-1
+                        li Carta reclamación a GMX Seguros, detallando los daños o pérdidas.
+                        li Facturas de adquisición de los bienes afectados; escrituras en caso de inmuebles.
+                        li Copia certificada del acta, con todas sus actuaciones de la inspección ocular y peritajes de las autoridades correspondientes.
+                        li Copia del informe o parte de los bomberos.
+                        li Cotización del valor de reposición de los bienes afectados parcialmente y los destruidos, detallando y desglosando las refacciones, materiales, mano de obra, inventarios, mobiliario, etc.
+                        li Copia del último avalúo practicado a los edificios asegurados
+                        li Recibos de pago de impuestos y derechos.
+                        li Valor en libros de su activo fijo a la fecha del siniestro.
+                    li.o-card-large.o-card-large--thick
+                        .container-text
+                            div.punt
+                                p B
+                            p Diversos técnicos (Equipo electrónico, rotura de maquinaria, calderas, equipo de contratistas)
+                        a.o-btn-arrow(href="#" aria-label="Incendio" title="Ir hacia Diversos técnicos")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--thick
+                        .container-text
+                            div.punt
+                                p C
+                            p Diversos miscelaneos (Robo de contenidos o mercancías, dinero y valores)
+                        a.o-btn-arrow(href="#" aria-label="Incendio" title="Ir hacia Diversos miscelaneos")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--thick
+                        .container-text
+                            div.punt
+                                p D
+                            p Transportes
+                        a.o-btn-arrow(href="#" aria-label="Incendio" title="Ir hacia Transportes")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+
+        .o-section.section-change#definiciones
+            .o-section.o-section--max-1000
+                ul.c_documentation-siniestros
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 01
+                            p Ajustadores
+                        button.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down#button-expand-3(href="#" aria-label="Incendio" title="boton expandir información")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-container-list.o-container-list--padding.u-hidden#contenido-3
+                        p Profesional especializado que se encarga de recopilar todos los antecedentes del siniestro así como su documentación, para analizar y aplicar el contrato de seguro, de manera objetiva e imparcial.
+                        h3 Consultar documentos
+                        p Los despachos de ajustadores y las personas que dentro de estos despachos presten servicios para GMX Seguros, deberán contar con un alto nivel de experiencia, reconocida ética, honestidad y capacidad técnica, equipos y sistemas de cómputo para un adecuado flujo de información y control de los siniestros, vehículos, cámaras fotográficas y video; además, los despachos podrán tener personal bilingüe, presentar informes inglés-español (cuando sea necesario).
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 02
+                            p Asegurado
+                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Diversos técnicos")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 03
+                            p Cabina de siniestro GMX
+                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Diversos miscelaneos")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 04
+                            p Reporte
+                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 05
+                            p Inspección
+                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 06
+                            p Informe
+                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 07
+                            p Determinación de pérdidas
+                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 08
+                            p Convenio de ajuste y finiquito
+                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
+                        .container-text
+                            small 09
+                            p Declinación
+                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
+                            i.i-icon.i-arrow-up-right(aria-hidden="true")

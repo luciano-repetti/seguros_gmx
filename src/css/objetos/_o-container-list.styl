@@ -1,0 +1,32 @@
+.o-container-list
+    display flex
+    flex-direction column
+    gap 1em
+    > li
+        position: relative
+        color: gray-2
+        margin-bottom: 5px
+        padding-left: 15px
+        &:before
+            content: "•"
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            margin-right: 8px
+            color: blueDark-4
+            font-size: 1.5em
+    p
+        color: gray-2
+        font-size: 18px
+        +Mobile(max)
+            font-size: 16px
+
+    h3
+        color: blueDark-1
+        font-size: 32px
+        +Mobile(max)
+            font-size: 24px
+    &--padding
+        padding-left: 2em
+        padding-top: 1em

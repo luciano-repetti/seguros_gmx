@@ -38,12 +38,19 @@
 	font-size 22px
 	align-items center
 	justify-content center
-	&:hover,
-	&:focus
+	+Mobile(max)
+		width 38px
+		height 38px
+		> i
+			font-size: .8em
+	&:hover
 		border-color green-1
 		background green-1
 		color white
-
+	> &:focus
+		border-color green-1
+		background green-1
+		color white
 	&--green
 		background green-1
 		border-color green-1
@@ -51,10 +58,18 @@
 	&--border-light-blue
 		background: blue-1
 		border-color: blueDark-1
+		cursor: pointer
+		transition 0.3s all ease
 		&:hover
 			color: blue-1
 			background: blueDark-1
 			border-color: blueDark-1
+		&--arrow-down
+			&:hover, &.active
+				color: blue-1
+				background: blueDark-1
+				border-color: blueDark-1
+				transform: rotateZ(135deg)
 	&--arrow-down
 		cursor: pointer
 		transition 0.3s all ease
@@ -63,3 +78,4 @@
 			background green-1
 			border-color green-1
 			color white
+

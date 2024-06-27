@@ -26,8 +26,8 @@ block contenido
                         .o-module__title 
                             h1 #[small Seguros] Seguro #[strong Decenal]
         .c-navigation-page
-            nav.c-navigation-page__list-section(aria-label="Secciones del sitio")
-                ul
+            .c-navigation-page__list-section(aria-label="Secciones del sitio")
+                ul(role="navigation")
                     li.container-anchor.container-anchor--active
                         a(href="#introduccion" title="Ir a la sección Introducción") Introducción
                     li.container-anchor
@@ -51,7 +51,7 @@ block contenido
 
         .c-consists#en-que-consiste
             section.c-consists.c-consists__card-safe
-                h3 ¿En qué consiste?
+                h2 ¿En qué consiste?
                 div.c-consists__card-safe__container-card
                     div.c-consists__card-safe__container-card__card
                         p Es un seguro que cubre la etapa posterior a la construcción.
@@ -60,7 +60,7 @@ block contenido
 
         .c-consists#para-quien-es
             section.c-for-whom
-                h3 ¿Para quién es?
+                h2 ¿Para quién es?
                 p Esta póliza ofrece cobertura para:
                 ul.c-for-whom__box-container
                     li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
@@ -82,74 +82,73 @@ block contenido
 
         .c-coverage#cobertura
             section.c-coverage__container-banner
-                h3 Coberturas
+                h2 Coberturas
                 .c-coverage__container-elements
-                    ul.c-coverage__list-elements
-                        li.container-text
-                            h4 Seguridad. 10 años
-                            p Daños que afectan a cimentaciones, estructura u otros elementos que determinan la estabilidad y solidez de la edificación, por:
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Vicios de construcción y hechura.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Vicios del suelo en el cual se construyó.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Mal comportamiento estructural.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Error de cálculo y diseño estructural.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Mala resistencia y calidad de los materiales.
-                    div.container-text
-                        h4 Coberturas Adicionales.
+                    div.c-coverage__list-elements
+                        h3 Seguridad. 10 años
+                        p Daños que afectan a cimentaciones, estructura u otros elementos que determinan la estabilidad y solidez de la edificación, por:
+                        ul.c-coverage__list-elements
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Vicios de construcción y hechura.
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Vicios del suelo en el cual se construyó.
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Mal comportamiento estructural.
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Error de cálculo y diseño estructural.
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Mala resistencia y calidad de los materiales.
+                    div.c-coverage__list-elements
+                        h3 Coberturas Adicionales.
                         p Daños que afectan la habitabilidad de la vivienda ocasionados por:
-                    ul.c-coverage__list-elements
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Vicios de construcción y hechura.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Mala resistencia y calidad de los materiales.
-                    div.container-text
-                        h4 Instalaciones. 2 años.
+                        ul.c-coverage__list-elements
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Vicios de construcción y hechura.
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Mala resistencia y calidad de los materiales.
+                    div.c-coverage__list-elements
+                        h3 Instalaciones. 2 años.
                         p Daños en instalaciones hidrosanitarias, eléctricas y de gas colocadas por el desarrollador que afecten la habitabilidad de la vivienda, ocasionados por:
-                    ul.c-coverage__list-elements
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Vicios de construcción y hechura.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Mala calidad de los materiales utilizados.
+                        ul.c-coverage__list-elements
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Vicios de construcción y hechura.
+                            li.c-coverage__list-elements__container-element 
+                                div.c-coverage__list-elements__container-image
+                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
+                                div.c-coverage__list-elements__element
+                                    p Mala calidad de los materiales utilizados.
 
         .c-consists#consideraciones
             section.c-considerations
-                h3 Consideraciones #[small Es importante para realizar una cotización]
+                h3 Consideraciones #[p Es importante para realizar una cotización]
                 .c-container-cards
                     ul.box-container
                         li.box-container__box.box-container__box--expand
-                            div.box-container__box__number
-                                span 1
+                            span 1
                             p Mostrar los ingresos anuales por su actividad, tipo y cantidad de materiales peligrosos almacenados.
                         li.box-container__box.box-container__box--image
                             img(src=urlFolder+"images/seguros/GMX-todo-ok.png" alt="Icon Scientist")
@@ -172,62 +171,51 @@ block contenido
                 div.container-fovissste__container
                     div.o-card-large
                         p Certificados: Acreditados FOVISSSTE
-                        button.o-btn-arrow.o-btn-arrow--arrow-down(aria-label="boton expandir información" title="Leer más")
+                        button.o-btn-arrow.o-btn-arrow--arrow-down#button-expand-1(aria-label="boton expandir información" title="Leer más")
                             i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    div.container-fovissste__container__contenido
-                        div.container-fovissste__container__contenido__container-card
-                            button.o-card-archive(title="Descargar PDF certificado")
-                                span.container-image
-                                    img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
+                    ul.container-fovissste__container__contenido.u-hidden#contenido-1
+                        li.container-fovissste__container__contenido__container-card
+                            a.o-card-archive(href="#" download="" title="Descargar PDF certificado")
                                 span.container-text
                                     span Descarga tu certificado
-                        div.container-fovissste__container__contenido__container-card
-                            button.o-card-archive(title="Descargar PDF condiciones generales")
-                                span.container-image
-                                    img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
+                        li.container-fovissste__container__contenido__container-card
+                            a.o-card-archive(href="" download="" title="Descargar PDF condiciones generales")
                                 span.container-text
                                     span Consulta condiciones generales
 
                 div.container-fovissste__container
                     div.o-card-large
                         p Asistencias FOVISSSTE
-                        button.o-btn-arrow.o-btn-arrow--arrow-down#button-expand-card-large-4(aria-label="boton expandir información" title="Leer más")
+                        button.o-btn-arrow.o-btn-arrow--arrow-down#button-expand-2(aria-label="boton expandir información" title="Leer más")
                             i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    div.container-fovissste__container__contenido#contenido-4
+                    div.container-fovissste__container__contenido.u-hidden#contenido-2
                         p GMX Seguros otorga al asegurado servicios adicionales como asistencia médica, asistencia al hogar, asistencia en gadgets y una gran red de descuentos en establecimientos comerciales.
                         p El servicio de asistencias tiene una vigencia de tres años a partir de la escrituración de la vivienda. El número de eventos incluidos para cada asistencia se reestablece cada año.
-                        div.container-text-large
-                            p Asistencia médica
-                            ul.container-list
+                            h4 Asistencia médica
+                            ul.o-container-list
                                 li Orientación médica telefónica
                                 li Ambulancia terrestre por emergencia
                                 li Referencias médicas
                                 li Médico a domicilio o consulta en consultorio
-                        div.container-text-large
-                            p Servicio de Asistencia al hogar
-                            ul.container-list
+                            h4 Servicio de Asistencia al hogar
+                            ul.o-container-list
                                 li Plomería
                                 li Cerrajería en casa
                                 li Electricidad
                                 li Asistencia especializada
-                        div.container-text-large
-                            p Asistencia en gadgets
-                        div.container-text-large
-                            p Reparación o reposición de equipos
-                        div.container-text-large
-                            p Red de descuentos en establecimientos comerciales
+                            h4 Asistencia en gadgets
+                            h4 Reparación o reposición de equipos
+                            h4 Red de descuentos en establecimientos comerciales
                         div.o-card-with-button
                             div.o-card-with-button__container-button
                                 a.o-btn-arrow(href="tel:+5590635397" title="Ir hacia el numero de telefono")
                                     i.i-icon.i-arrow-up-right(aria-hidden="true")
                             div.o-card-with-button__container-info
-                                p Comunícate al teléfono
-                                strong (55) 9063.5397
+                                h3 Comunícate al teléfono
+                                strong #[a(href="tel:+5590635397" title="Ir hacia el numero de telefono") (55) 9063.5397]
                                 p para solicitar los servicios de asistencia que ponemos a tu disposición.
                         div.container-fovissste__container__contenido__container-card
-                            button.o-card-archive(title="Descargar PDF Folleto de asistencias")
-                                span.container-image
-                                    img(src=urlFolder+"images/global/GMX-pdf.png" alt="alt")
+                            a.o-card-archive(href="" download="" title="Descargar PDF Folleto de asistencias")
                                 span.container-text
                                     span Consultar Folleto de asistencias
 
@@ -318,7 +306,7 @@ block contenido
                         div.container-form__container-terms
                             label(for="TyC") 
                                 input(type="checkbox" id="TyC" name="TyC" aria-required="true")
-                                a(href="" target="_blank") Acepto los Términos y Condiciones
+                                a(href="" target="_blank" title="Ir hacia terminos y condiciones") Acepto los Términos y Condiciones
                         div#error-TyC.error-message
                     div.container-form__container-button
                         button.o-btn.o-btn--green(type="submit" aria-label="Contactar agente") Contactar agente

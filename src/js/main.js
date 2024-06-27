@@ -476,8 +476,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document
-	.querySelector(".container-form")
-	.addEventListener("submit", function (event) {
+	?.querySelector(".container-form")
+	?.addEventListener("submit", function (event) {
 		event.preventDefault(); // Prevent form submission
 		let isValid = true;
 
@@ -615,16 +615,50 @@ document.addEventListener("DOMContentLoaded", function () {
 	buttons.forEach(function (button) {
 		button.addEventListener("click", function (e) {
 			e.preventDefault();
-			const container = button.closest(".container-fovissste__container");
-			const contenido = container.querySelector(
-				".container-fovissste__container__contenido"
-			);
+			const buttonId = button.id; // Obtén el ID del botón
+			const contentId = buttonId.replace("button-expand", "contenido"); // Deriva el ID del contenido
+			const contenido = document.getElementById(contentId); // Selecciona el contenido por su ID
 
 			// Alternar la clase 'active' en el botón y en el contenedor de contenido
 			button.classList.toggle("active");
 			if (contenido) {
-				contenido.classList.toggle("active");
+				contenido.classList.toggle("u-visible");
 			}
 		});
 	});
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+	const sections = document.querySelectorAll(".section-change");
+	const anchors = document.querySelectorAll("li.container-anchor a");
+
+	function toggleSections(activeId) {
+		sections.forEach((section) => {
+			section.classList.toggle("u-hidden", section.id !== activeId);
+		});
+	}
+
+	anchors.forEach((anchor) => {
+		anchor.addEventListener("click", function (event) {
+			event.preventDefault();
+
+			document
+				.querySelector("li.container-anchor--active")
+				?.classList.remove("container-anchor--active");
+			this.parentElement.classList.add("container-anchor--active");
+
+			const activeId = this.getAttribute("href").substring(1);
+			toggleSections(activeId);
+
+			history.pushState(null, "", `#${activeId}`);
+		});
+	});
+
+	// Inicializar en la carga de la página
+	const activeAnchor = document.querySelector(
+		"li.container-anchor--active a"
+	);
+	if (activeAnchor) {
+		toggleSections(activeAnchor.getAttribute("href").substring(1));
+	}
 });
