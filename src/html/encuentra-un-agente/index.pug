@@ -1,9 +1,9 @@
-extends ./template/_template
+extends ../template/_template
 
 block append configuracion
 	- var page = {};
-	- page['link'] = 'encuentra-agente.html';
-	- page['title'] = 'Encuentra Agente';
+	- page['link'] = 'encuentra-un-agente/index.html';
+	- page['title'] = 'Encuentra un Agente';
 	- page['descrip'] = 'Encuentra un agente para contratar lo que realmente necesitas';
 	- page['keys'] = 'seguros, negocios, personales';
 	- page['lang'] = 'es';
@@ -14,7 +14,7 @@ block append configuracion
 	- page['plugins'] = ['splide'];
 	- page['js'] = [];
 
-	- var path = '../';
+	- var path = '../../';
 
 block contenido
 	main.o-section--main
@@ -94,6 +94,6 @@ block contenido
 					.container-form__container-button
 						button.o-btn.o-btn--green(type='submit' aria-label='Encontrar agente') Encontrar agente
 			.container-officine
-				p Si lo deseas puedes consultar #[br] nuestras
+				p Si lo deseas puedes consultar #[br] nuestras 
 					|
 					a(href='' title='Ir hacia oficinas de atención') oficinas de atención

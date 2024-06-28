@@ -1,9 +1,9 @@
-extends ./template/_template
+extends ../template/_template
 
 block append configuracion
 	- var page = {};
-	- page['link'] = 'seguros/index.html';
-	- page['title'] = 'Seguros';
+	- page['link'] = 'encuentra-un-agente/mensaje-enviado.html';
+	- page['title'] = 'Mensaje enviado';
 	- page['descrip'] = 'Página de seguros';
 	- page['keys'] = 'seguros, negocios, personales';
 	- page['lang'] = 'es';
@@ -14,7 +14,7 @@ block append configuracion
 	- page['plugins'] = ['splide'];
 	- page['js'] = [];
 
-	- var path = '../';
+	- var path = '../../';
 
 block contenido
 	main.o-section--main
