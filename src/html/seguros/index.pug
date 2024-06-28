@@ -1,394 +1,492 @@
 extends ../template/_template
 
-append configuracion
-    -var page			= {}
-    -page['link']		= 'seguros/index.html'
-    -page['title']		= 'Seguros'
-    -page['descrip']	= 'Página de seguros'
-    -page['keys']		= 'seguros, negocios, personales'
-    -page['lang']		= 'es'
-    -page['responsive']	= true
-    -page['section']	= []
-    -page['libsCss']	= []
-    -page['libs']		= []
-    -page['plugins']	= ['splide']
-    -page['js']			= [] 
+block append configuracion
+	- var page = {};
+	- page['link'] = 'seguros/index.html';
+	- page['title'] = 'Seguros';
+	- page['descrip'] = 'Página de seguros';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
 
-    - var path = '../../'
-
+	- var path = '../../';
 
 block contenido
-    main.o-section--main
-        .c-banner-text.c-banner-text--padding1
-            section.o-section.o-section--banner-small
-                .o-container
-                    .o-module.o-module--deco5.u-text-center
-                        .o-module__title 
-                            h1 #[small Seguros] Responsabilidad #[strong Ambiental]
-        .c-navigation-page
-            .c-navigation-page__list-section(aria-label="Secciones del sitio")
-                ul(role="navigation")
-                    li.container-anchor.container-anchor--active
-                        a(href="#introduccion" title="Ir a la sección Introducción") Introducción
-                    li.container-anchor
-                        a(href="#en-que-consiste" title="Ir a la sección de ¿En qué consiste?") ¿En qué consiste?
-                    li.container-anchor
-                        a(href="#para-quien-es" title="Ir a la sección de ¿Para quién es?") ¿Para quién es?
-                    li.container-anchor
-                        a(href="#cobertura" title="Ir a la sección de Cobertura") Coberturas
-                    li.container-anchor
-                        a(href="#consideraciones" title="Ir a la sección de Consideraciones") Consideraciones
-                    li.container-anchor.container-anchor--bold
-                        a(href="#contactar" title="Ir a Contactar ahora") Contactar ahora
-        .c-introduction-text#introduccion
-            div.c-introduction-text__text-container
-                p Actualmente las empresas comienzan a tomar mayor conciencia en temas relacionados con el ambiente; ya que algunas industrias han generado grandes impactos ambientales durante el desarrollo de sus actividades económicas.
-                p Por eso, GMX Seguros cuenta con una cobertura ideal para aquellas empresas que se preocupan por cuidar lo más importante: nuestro medio ambiente.
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title
+							h1 #[small Seguros] Responsabilidad #[strong Ambiental]
+		.c-navigation-page
+			.c-navigation-page__list-section(aria-label='Secciones del sitio')
+				ul(role='navigation')
+					li.container-anchor.container-anchor--active
+						a(href='#introduccion' title='Ir a la sección Introducción') Introducción
+					li.container-anchor
+						a(href='#en-que-consiste' title='Ir a la sección de ¿En qué consiste?') ¿En qué consiste?
+					li.container-anchor
+						a(href='#para-quien-es' title='Ir a la sección de ¿Para quién es?') ¿Para quién es?
+					li.container-anchor
+						a(href='#cobertura' title='Ir a la sección de Cobertura') Coberturas
+					li.container-anchor
+						a(href='#consideraciones' title='Ir a la sección de Consideraciones') Consideraciones
+					li.container-anchor.container-anchor--bold
+						a(href='#contactar' title='Ir a Contactar ahora') Contactar ahora
+		#introduccion.c-introduction-text
+			.c-introduction-text__text-container
+				p Actualmente las empresas comienzan a tomar mayor conciencia en temas relacionados con el ambiente; ya que algunas industrias han generado grandes impactos ambientales durante el desarrollo de sus actividades económicas.
+				p Por eso, GMX Seguros cuenta con una cobertura ideal para aquellas empresas que se preocupan por cuidar lo más importante: nuestro medio ambiente.
 
-        .c-consists#en-que-consiste
-            section.c-consists.c-consists__card-safe
-                h2 ¿En qué consiste?
-                div.c-consists__card-safe__container-card
-                    div.c-consists__card-safe__container-card__card
-                        p Es un seguro destinado a cubrir las responsabilidades a consecuencia de los daños derivados de la contaminación que ocasione el asegurado con motivo de sus actividades comerciales.
-                    div.c-consists__card-safe__container-card__card.c-consists__card-safe__container-card__card--image-container
-                        img(src=urlFolder+"images/seguros/GMX-planta.png" alt="Imagen de una fabrica")
+		#en-que-consiste.c-consists
+			section.c-consists.c-consists__card-safe
+				h2 ¿En qué consiste?
+				.c-consists__card-safe__container-card
+					.c-consists__card-safe__container-card__card
+						p Es un seguro destinado a cubrir las responsabilidades a consecuencia de los daños derivados de la contaminación que ocasione el asegurado con motivo de sus actividades comerciales.
+					.c-consists__card-safe__container-card__card.c-consists__card-safe__container-card__card--image-container
+						img(src=urlFolder + 'images/seguros/GMX-planta.png' alt='Imagen de una fabrica')
 
-        .c-consists#para-quien-es
-            section.c-for-whom
-                h2 ¿Para quién es?
-                p Esta póliza ofrece cobertura para:
-                ul.c-for-whom__box-container
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
-                        p Empresas que manejan o generan materiales y/o residuos peligrosos.
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
-                        p Empresas que por su actividad puedan causar contaminación al medio ambiente.
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
-                        p Empresas a las cuales las autoridades les exigen un seguro de responsabilidad ambiental.
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
-                        p Empresas a las cuales se les exige un seguro por obligación contractual.
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
+		#para-quien-es.c-consists
+			section.c-for-whom
+				h2 ¿Para quién es?
+				p Esta póliza ofrece cobertura para:
+				ul.c-for-whom__box-container
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
+						p Empresas que manejan o generan materiales y/o residuos peligrosos.
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
+						p Empresas que por su actividad puedan causar contaminación al medio ambiente.
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
+						p Empresas a las cuales las autoridades les exigen un seguro de responsabilidad ambiental.
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
+						p Empresas a las cuales se les exige un seguro por obligación contractual.
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
 
-        .c-coverage#cobertura
-            section.c-coverage__container-banner
-                h2 Coberturas
-                .c-coverage__container-elements
-                    ul.c-coverage__list-elements
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Daño ambiental ya sea súbito e imprevisto, gradual y paulatino.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Responsabilidad Civil derivada por contaminación o daños al ambiente.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Responsabilidad Administrativa.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Gastos de análisis y defensa jurídica.
-                    div.c-coverage__list-elements
-                        h3 Coberturas Adicionales.
-                        ul.c-coverage__list-elements
-                            li.c-coverage__list-elements__container-element 
-                                div.c-coverage__list-elements__container-image
-                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                                div.c-coverage__list-elements__element
-                                    p Costos de respuesta de emergencia que incluyen los gastos para mitigar una pérdida ambiental.
-                            li.c-coverage__list-elements__container-element 
-                                div.c-coverage__list-elements__container-image
-                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                                div.c-coverage__list-elements__element
-                                    p Sanciones económicas.
-                            li.c-coverage__list-elements__container-element 
-                                div.c-coverage__list-elements__container-image
-                                    img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                                div.c-coverage__list-elements__element
-                                    p Interrupción del negocio.
+		#cobertura.c-coverage
+			section.c-coverage__container-banner
+				h2 Coberturas
+				.c-coverage__container-elements
+					ul.c-coverage__list-elements
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Daño ambiental ya sea súbito e imprevisto, gradual y paulatino.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Responsabilidad Civil derivada por contaminación o daños al ambiente.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Responsabilidad Administrativa.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Gastos de análisis y defensa jurídica.
+					.c-coverage__list-elements
+						h3 Coberturas Adicionales.
+						ul.c-coverage__list-elements
+							li.c-coverage__list-elements__container-element
+								.c-coverage__list-elements__container-image
+									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+								.c-coverage__list-elements__element
+									p Costos de respuesta de emergencia que incluyen los gastos para mitigar una pérdida ambiental.
+							li.c-coverage__list-elements__container-element
+								.c-coverage__list-elements__container-image
+									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+								.c-coverage__list-elements__element
+									p Sanciones económicas.
+							li.c-coverage__list-elements__container-element
+								.c-coverage__list-elements__container-image
+									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+								.c-coverage__list-elements__element
+									p Interrupción del negocio.
 
-        .c-added-values
-            section.c-added-values__container
-                h3 Valores agregados
-                .c-added-values__container-banner(hidden=true)
-                    div.c-added-values__container-text(hidden=true)
-                        h4 Estudios especializados de#[br]Administración de Riesgos
-                    div.c-added-values__container-image
-                        img(src=urlFolder+"images/seguros/GMX-valores-agregados.png" alt="Valores agregados")
-                .splide.slider-values.splide--desktop#card-carousel-desktop()
-                    .splide__arrows
-                        button.splide__arrow.splide__arrow--prev(type='button' aria-label='Anterior' aria-expanded='false' aria-haspopup='true'): i.i-icon.i-arrow-left(aria-hidden="true")
-                        button.splide__arrow.splide__arrow--next(type='button' aria-label='Siguiente' aria-expanded='false' aria-haspopup='true'): i.i-icon.i-arrow-right(aria-hidden="true")
-                    .splide__track
-                        ul.c-added-values__container-card.splide__list
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="1 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Reporte de informe de cumplimiento normativo.
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="2 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Reporte de informe de riesgos ambientales.
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="3 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.splide__slide
-                                div.c-added-values__container-card__card-box(role="group" aria-roledescription="slide" aria-label="4 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="5 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="6 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
+		.c-added-values
+			section.c-added-values__container
+				h3 Valores agregados
+				.c-added-values__container-banner(hidden)
+					.c-added-values__container-text(hidden)
+						h4 Estudios especializados de#[br]Administración de Riesgos
+					.c-added-values__container-image
+						img(src=urlFolder + 'images/seguros/GMX-valores-agregados.png' alt='Valores agregados')
+				#card-carousel-desktop.splide.slider-values.splide--desktop
+					.splide__arrows
+						button.splide__arrow.splide__arrow--prev(
+							type='button'
+							aria-label='Anterior'
+							aria-expanded='false'
+							aria-haspopup='true'
+						): i.i-icon.i-arrow-left(
+							aria-hidden='true'
+						)
+						button.splide__arrow.splide__arrow--next(
+							type='button'
+							aria-label='Siguiente'
+							aria-expanded='false'
+							aria-haspopup='true'
+						): i.i-icon.i-arrow-right(
+							aria-hidden='true'
+						)
+					.splide__track
+						ul.c-added-values__container-card.splide__list
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='1 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Reporte de informe de cumplimiento normativo.
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='2 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Reporte de informe de riesgos ambientales.
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='3 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.splide__slide
+								.c-added-values__container-card__card-box(role='group' aria-roledescription='slide' aria-label='4 de 6')
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='5 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='6 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
 
-                .splide.slider-values.splide--tablet#card-carousel-tablet()
-                    .splide__arrows
-                        button.splide__arrow.splide__arrow--prev(type='button' aria-label='Anterior' aria-expanded='false' aria-haspopup='true'): i.i-icon.i-arrow-left(aria-hidden="true")
-                        button.splide__arrow.splide__arrow--next(type='button' aria-label='Siguiente' aria-expanded='false' aria-haspopup='true'): i.i-icon.i-arrow-right(aria-hidden="true")
-                    .splide__track
-                        ul.c-added-values__container-card.splide__list
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="1 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Reporte de informe de cumplimiento normativo.
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="2 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Reporte de informe de riesgos ambientales.
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="3 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                                div.c-added-values__container-card__card-box(role="group" aria-roledescription="slide" aria-label="4 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="5 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="6 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
+				#card-carousel-tablet.splide.slider-values.splide--tablet
+					.splide__arrows
+						button.splide__arrow.splide__arrow--prev(
+							type='button'
+							aria-label='Anterior'
+							aria-expanded='false'
+							aria-haspopup='true'
+						): i.i-icon.i-arrow-left(
+							aria-hidden='true'
+						)
+						button.splide__arrow.splide__arrow--next(
+							type='button'
+							aria-label='Siguiente'
+							aria-expanded='false'
+							aria-haspopup='true'
+						): i.i-icon.i-arrow-right(
+							aria-hidden='true'
+						)
+					.splide__track
+						ul.c-added-values__container-card.splide__list
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='1 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Reporte de informe de cumplimiento normativo.
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='2 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Reporte de informe de riesgos ambientales.
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='3 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+								.c-added-values__container-card__card-box(role='group' aria-roledescription='slide' aria-label='4 de 6')
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='5 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='6 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
 
+				#card-carousel-mobile.splide.slider-values.splide--mobile
+					.splide__arrows
+						button.splide__arrow.splide__arrow--prev(
+							type='button'
+							aria-label='Anterior'
+							aria-expanded='false'
+							aria-haspopup='true'
+						): i.i-icon.i-arrow-left(
+							aria-hidden='true'
+						)
+						button.splide__arrow.splide__arrow--next(
+							type='button'
+							aria-label='Siguiente'
+							aria-expanded='false'
+							aria-haspopup='true'
+						): i.i-icon.i-arrow-right(
+							aria-hidden='true'
+						)
+					.splide__track
+						ul.c-added-values__container-card.c-added-values__container-card.splide__list
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='1 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Reporte de informe de cumplimiento normativo.
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='2 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Reporte de informe de riesgos ambientales.
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='3 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
+								.c-added-values__container-card__card-box(role='group' aria-roledescription='slide' aria-label='4 de 6')
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='5 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
+							li.c-added-values__container-card.c-added-values__container-card--gap-1.splide__slide
+								.c-added-values__container-card__card-box.splide__slide(
+									role='group'
+									aria-roledescription='slide'
+									aria-label='6 de 6'
+								)
+									.container-title
+										p GMX
+										img(src=urlFolder + 'images/seguros/GMX-documento-informe.png' alt='icon hoja y escudo')
+									p Estudio de valoración de riesgo ambiental.
 
-                .splide.slider-values.splide--mobile#card-carousel-mobile()
-                    .splide__arrows
-                        button.splide__arrow.splide__arrow--prev(type='button' aria-label='Anterior' aria-expanded='false' aria-haspopup='true'): i.i-icon.i-arrow-left(aria-hidden="true")
-                        button.splide__arrow.splide__arrow--next(type='button' aria-label='Siguiente' aria-expanded='false' aria-haspopup='true'): i.i-icon.i-arrow-right(aria-hidden="true")
-                    .splide__track
-                        ul.c-added-values__container-card.c-added-values__container-card.splide__list
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="1 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Reporte de informe de cumplimiento normativo.
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="2 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Reporte de informe de riesgos ambientales.
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="3 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
-                                div.c-added-values__container-card__card-box(role="group" aria-roledescription="slide" aria-label="4 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.c-added-values__container-card--padding-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="5 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
-                            li.c-added-values__container-card.c-added-values__container-card--gap-1.splide__slide
-                                div.c-added-values__container-card__card-box.splide__slide(role="group" aria-roledescription="slide" aria-label="6 de 6")
-                                    div.container-title
-                                        p GMX
-                                        img(src=urlFolder+"images/seguros/GMX-documento-informe.png" alt="icon hoja y escudo")
-                                    p Estudio de valoración de riesgo ambiental.
+		#consideraciones.c-consists
+			section.c-considerations
+				h3 Consideraciones #[p Es importante para realizar una cotización]
+				.c-container-cards
+					ul.box-container
+						li.box-container__box
+							span 1
+							p Mostrar los ingresos anuales por su actividad, tipo y cantidad de materiales peligrosos almacenados.
+						li.box-container__box
+							span 2
+							p Actividades previas realizadas en los predios.
+						li.box-container__box
+							span 3
+							p Rutas de exposición del medio ambiente.
+						li.box-container__box
+							span 4
+							p Conocimiento de las condiciones ambientales y pérdidas preexistentes.
+						li.box-container__box
+							span 5
+							p Tanques de almacenamiento, controles y procesos ambientales.
+						li.box-container__box
+							span 6
+							p Años de operación, experiencias y certificaciones o autorizaciones vigentes (ISO 9001, OHSAS, etc).
+						li.box-container__box
+							span 7
+							p Plan de atención a emergencias y/o contingencias ambientales.
+						li.box-container__box.box-container__box--image
+							img(src=urlFolder + 'images/seguros/GMX-todo-ok.png' alt='Icon Scientist')
 
+		.c-requirements
+			section.container-requirements
+				h2 Requisitos de contratación
+				.container-cards
+					.container-cards__card
+						.container-cards__card__title
+							h3 GMX #[strong Identificación vigente]
+						ul.container-cards__card__requirements
+							li
+								p Acta Constructiva
+							li
+								p Credencial del INE o IFE
+							li
+								p FM2 para extranjeros
+							li
+								p FM3 para extranjeros
+							li
+								p Pasaporte
+							li
+								p Cédula Profesional
+							li
+								p Licencia de conducir
+					article.container-cards__card
+						.container-cards__card__title
+							h3 GMX #[span Comprobante de domicilio:]
+						ul.container-cards__card__requirements
+							li.container-cards__card__requirements__requirement
+								p Telefonos#[br](no mayor a 3 meses)
+							li.container-cards__card__requirements__requirement
+								p Gas#[br](no mayor a 3 meses)
+							li.container-cards__card__requirements__requirement
+								p Agua#[br](no mayor a 3 meses)
+					article.container-cards__card
+						.container-cards__card__title
+							h3 GMX #[span Documentación a proporcionar:]
+						ul.container-cards__card__requirements
+							li.container-cards__card__requirements__requirement
+								p Cuestionario Responsabilidad Ambiental de GMX Seguros juntos con sus anexos.
+							.container-cards__card__requirements__image
+								img(src=urlFolder + 'images/seguros/GMX-sugerencia-lista.png' alt='alt')
 
-        .c-consists#consideraciones
-            section.c-considerations
-                h3 Consideraciones #[p Es importante para realizar una cotización]
-                .c-container-cards
-                    ul.box-container
-                        li.box-container__box
-                            span 1
-                            p Mostrar los ingresos anuales por su actividad, tipo y cantidad de materiales peligrosos almacenados.
-                        li.box-container__box
-                            span 2
-                            p Actividades previas realizadas en los predios.
-                        li.box-container__box
-                            span 3
-                            p Rutas de exposición del medio ambiente.
-                        li.box-container__box
-                            span 4
-                            p Conocimiento de las condiciones ambientales y pérdidas preexistentes.
-                        li.box-container__box
-                            span 5
-                            p Tanques de almacenamiento, controles y procesos ambientales.
-                        li.box-container__box
-                            span 6
-                            p Años de operación, experiencias y certificaciones o autorizaciones vigentes (ISO 9001, OHSAS, etc).
-                        li.box-container__box
-                            span 7
-                            p Plan de atención a emergencias y/o contingencias ambientales.
-                        li.box-container__box.box-container__box--image
-                            img(src=urlFolder+"images/seguros/GMX-todo-ok.png" alt="Icon Scientist")
-
-
-        .c-requirements
-            section.container-requirements
-                h2 Requisitos de contratación
-                .container-cards
-                    .container-cards__card
-                        div.container-cards__card__title
-                            h3 GMX #[strong Identificación vigente]
-                        ul.container-cards__card__requirements
-                            li
-                                p Acta Constructiva
-                            li
-                                p Credencial del INE o IFE
-                            li
-                                p FM2 para extranjeros
-                            li
-                                p FM3 para extranjeros
-                            li
-                                p Pasaporte
-                            li
-                                p Cédula Profesional
-                            li
-                                p Licencia de conducir
-                    article.container-cards__card
-                        div.container-cards__card__title
-                            h3 GMX #[span Comprobante de domicilio:]
-                        ul.container-cards__card__requirements
-                            li.container-cards__card__requirements__requirement
-                                p Telefonos#[br](no mayor a 3 meses)
-                            li.container-cards__card__requirements__requirement
-                                p Gas#[br](no mayor a 3 meses)
-                            li.container-cards__card__requirements__requirement
-                                p Agua#[br](no mayor a 3 meses)
-                    article.container-cards__card
-                        div.container-cards__card__title
-                            h3 GMX #[span Documentación a proporcionar:]
-                        ul.container-cards__card__requirements
-                            li.container-cards__card__requirements__requirement
-                                p Cuestionario Responsabilidad Ambiental de GMX Seguros juntos con sus anexos.
-                            .container-cards__card__requirements__image
-                                img(src=urlFolder+"images/seguros/GMX-sugerencia-lista.png" alt="alt")
-
-        .c-contact-form#contactar
-            section.container-contact-form
-                h3#contact-form-title Contactar ahora
-                p Solicita asesoría de un agente especializado, el cual te ayudará a contratar lo que realmente necesitas.
-                form.container-form(action="#" method="post" aria-labelledby="contact-form-title")
-                    fieldset
-                        legend Tipo de seguro de Interés
-                        div.container-message
-                            div.container-form__custom-select
-                                select(name="insurance-type" id="insurance-type" aria-required="true")
-                                    option(value="" disabled selected) Seleccione...
-                                    option(value="Ambiental") Instituciones educativas
-                                    option(value="Ambiental") Profesionistas
-                                    option(value="Ambiental") Sector salud
-                                    option(value="Ambiental") Ambiental
-                                    option(value="Ambiental") Construcción
-                                    option(value="Ambiental") Industria Manufactura y Comercio
-                                    option(value="Ambiental") Aviación
-                                    option(value="Ambiental") Embarcaciones
-                                    option(value="Ambiental") Carga en Tránsito
-                                    option(value="Ambiental") Gobierno
-                                    option(value="Ambiental") Familiar
-                                    option(value="Ambiental") Esparcimiento
-                                    option(value="Ambiental") Riesgos Especiales
-                                i.i-icon.i-angle-down(aria-hidden="true")
-                            div#error-insurance-type.error-message
-                    fieldset
-                        legend Información personal
-                        div.container-message
-                            input(type="text" id="full-name" name="full-name" placeholder="Nombre completo" aria-required="true")
-                            div#error-full-name.error-message
-                        div.container-message
-                            input(type="text" id="phone" name="phone" placeholder="Teléfono celular" aria-required="true")
-                            div#error-phone.error-message
-                        div.container-message
-                            input(type="email" id="email" name="email" placeholder="Correo electrónico" aria-required="true")
-                            div#error-email.error-message
-                        div.container-message
-                            input(type="text" id="city" name="city" placeholder="Ciudad" aria-required="true")
-                            div#error-city.error-message
-                        div.container-message
-                            div.container-form__custom-select
-                                select(name="state" id="state" aria-required="true")
-                                    option(value="" disabled selected) Seleccione una opción
-                                    option(value="Estado") Estado
-                                i.i-icon.i-angle-down(aria-hidden="true")
-                            div#error-state.error-message
-                    .container-error
-                        div.container-form__container-terms
-                            label(for="TyC") 
-                                input(type="checkbox" id="TyC" name="TyC" aria-required="true")
-                                a(href="" target="_blank" title="Ir hacia terminos y condiciones") Acepto los Términos y Condiciones
-                        div#error-TyC.error-message
-                    fieldset.container-form__container-contact
-                        legend ¿Cómo deseas ser contactado?
-                        div.container-contacts
-                            label(for="whatsapp") 
-                                input(type="checkbox" id="whatsapp" name="contact-method" value="whatsapp")
-                                img(src=urlFolder+"images/seguros/GMX-whatsapp.svg" alt="Icono de whatsapp") 
-                                | Whatsapp
-                            label(for="email-contact") 
-                                input(type="checkbox" id="email-contact" name="contact-method" value="email")
-                                img(src=urlFolder+"images/seguros/GMX-email.svg" alt="Icono de mail")
-                                | Correo electrónico
-                        div#error-contact-method.error-message
-                    div.container-form__container-button
-                        button.o-btn.o-btn--green(type="submit" aria-label="Contactar agente") Contactar agente
-                    div.container-form__image
-                        img(src=urlFolder+"images/seguros/GMX-inscripcion-datos.png" alt="Imagen sobre persona inscribiendo datos")
+		#contactar.c-contact-form
+			section.container-contact-form
+				h3#contact-form-title Contactar ahora
+				p Solicita asesoría de un agente especializado, el cual te ayudará a contratar lo que realmente necesitas.
+				form.container-form(action='#' method='post' aria-labelledby='contact-form-title')
+					fieldset
+						legend Tipo de seguro de Interés
+						.container-message
+							.container-form__custom-select
+								select#insurance-type(name='insurance-type' aria-required='true')
+									option(value='' disabled selected) Seleccione...
+									option(value='Ambiental') Instituciones educativas
+									option(value='Ambiental') Profesionistas
+									option(value='Ambiental') Sector salud
+									option(value='Ambiental') Ambiental
+									option(value='Ambiental') Construcción
+									option(value='Ambiental') Industria Manufactura y Comercio
+									option(value='Ambiental') Aviación
+									option(value='Ambiental') Embarcaciones
+									option(value='Ambiental') Carga en Tránsito
+									option(value='Ambiental') Gobierno
+									option(value='Ambiental') Familiar
+									option(value='Ambiental') Esparcimiento
+									option(value='Ambiental') Riesgos Especiales
+								i.i-icon.i-angle-down(aria-hidden='true')
+							#error-insurance-type.error-message
+					fieldset
+						legend Información personal
+						.container-message
+							input#full-name(type='text' name='full-name' placeholder='Nombre completo' aria-required='true')
+							#error-full-name.error-message
+						.container-message
+							input#phone(type='text' name='phone' placeholder='Teléfono celular' aria-required='true')
+							#error-phone.error-message
+						.container-message
+							input#email(type='email' name='email' placeholder='Correo electrónico' aria-required='true')
+							#error-email.error-message
+						.container-message
+							input#city(type='text' name='city' placeholder='Ciudad' aria-required='true')
+							#error-city.error-message
+						.container-message
+							.container-form__custom-select
+								select#state(name='state' aria-required='true')
+									option(value='' disabled selected) Seleccione una opción
+									option(value='Estado') Estado
+								i.i-icon.i-angle-down(aria-hidden='true')
+							#error-state.error-message
+					.container-error
+						.container-form__container-terms
+							label(for='TyC') 
+								input#TyC(type='checkbox' name='TyC' aria-required='true')
+								a(href='' target='_blank' title='Ir hacia terminos y condiciones') Acepto los Términos y Condiciones
+						#error-TyC.error-message
+					fieldset.container-form__container-contact
+						legend ¿Cómo deseas ser contactado?
+						.container-contacts
+							label(for='whatsapp') 
+								input#whatsapp(type='checkbox' name='contact-method' value='whatsapp')
+								img(src=urlFolder + 'images/seguros/GMX-whatsapp.svg' alt='Icono de whatsapp') 
+								| Whatsapp
+							label(for='email-contact') 
+								input#email-contact(type='checkbox' name='contact-method' value='email')
+								img(src=urlFolder + 'images/seguros/GMX-email.svg' alt='Icono de mail')
+								| Correo electrónico
+						#error-contact-method.error-message
+					.container-form__container-button
+						button.o-btn.o-btn--green(type='submit' aria-label='Contactar agente') Contactar agente
+					.container-form__image
+						img(src=urlFolder + 'images/seguros/GMX-inscripcion-datos.png' alt='Imagen sobre persona inscribiendo datos')

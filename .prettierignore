@@ -1,0 +1,7 @@
+**/dist
+**/*.html
+**/*.js
+**/.git
+**/node_modules
+**/_scripts.pug
+**/_head.pug

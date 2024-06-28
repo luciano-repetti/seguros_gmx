@@ -1,37 +1,36 @@
 extends ../template/_template
 
-append configuracion
-    -var page			= {}
-    -page['link']		= 'seguros/mensaje-confirmado.html'
-    -page['title']		= 'Mensaje de confirmación'
-    -page['descrip']	= 'Mensaje de confirmación de envio de formulario.'
-    -page['keys']		= 'seguros, negocios, personales'
-    -page['lang']		= 'es'
-    -page['responsive']	= true
-    -page['section']	= []
-    -page['libsCss']	= []
-    -page['libs']		= []
-    -page['plugins']	= ['splide']
-    -page['js']			= [] 
+block append configuracion
+	- var page = {};
+	- page['link'] = 'seguros/mensaje-confirmado.html';
+	- page['title'] = 'Mensaje de confirmación';
+	- page['descrip'] = 'Mensaje de confirmación de envio de formulario.';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
 
-    - var path = '../../'
-
+	- var path = '../../';
 
 block contenido
-    main.o-section--main
-        .c-banner-text.c-banner-text--padding1
-            section.o-section.o-section--banner-small
-                .o-container
-                    .o-module.o-module--deco5.u-text-center
-                        .o-module__title 
-                            h1 Cotizar #[strong Seguro]
-        .c-navigation-page.c-navigation-page--void
-            div.c-navigation-page__list-section
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title
+							h1 Cotizar #[strong Seguro]
+		.c-navigation-page.c-navigation-page--void
+			.c-navigation-page__list-section
 
-        .c-message-sent
-            section.container-message
-                div.container-message__title
-                    img(src=urlFolder+"images/seguros/GMX-manos-alternadas.png" alt="alt")
-                    h3 Su mensaje se ha enviado correctamente
-                p En caso no recibir respuesta consultar la sección de SPAM de tu correo electrónico.
-                <a class="o-btn" href="/index.html" title="Ir al inicio">Volver al inicio</a>
+		.c-message-sent
+			section.container-message
+				.container-message__title
+					img(src=urlFolder + 'images/seguros/GMX-manos-alternadas.png' alt='alt')
+					h3 Su mensaje se ha enviado correctamente
+				p En caso no recibir respuesta consultar la sección de SPAM de tu correo electrónico.
+				a class="o-btn" href="/index.html" title="Ir al inicio" Volver al inicio

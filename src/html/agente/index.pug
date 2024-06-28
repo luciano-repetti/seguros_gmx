@@ -1,253 +1,267 @@
 extends ../template/_template
 
-append configuracion
-    -var page			= {}
-    -page['link']		= 'seguros/index.html'
-    -page['title']		= 'Seguros'
-    -page['descrip']	= 'Página de seguros'
-    -page['keys']		= 'seguros, negocios, personales'
-    -page['lang']		= 'es'
-    -page['responsive']	= true
-    -page['section']	= []
-    -page['libsCss']	= []
-    -page['libs']		= []
-    -page['plugins']	= ['splide']
-    -page['js']			= [] 
+block append configuracion
+	- var page = {};
+	- page['link'] = 'seguros/index.html';
+	- page['title'] = 'Seguros';
+	- page['descrip'] = 'Página de seguros';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
 
-    - var path = '../../'
-
+	- var path = '../../';
 
 block contenido
-    main.o-section--main
-        .c-banner-text.c-banner-text--padding1
-            section.o-section.o-section--banner-small
-                .o-container
-                    .o-module.o-module--deco5.u-text-center
-                        .o-module__title 
-                            h1 Reportar #[strong Siniestro]
-        .c-navigation-page
-            nav.c-navigation-page__list-section(aria-label="Secciones del sitio")
-                ul
-                    li.container-anchor.container-anchor--active
-                        a(href="#reportar-siniestro" title="Ir a la sección Reportar siniestro") Reportar siniestro
-                    li.container-anchor
-                        a(href="#procedimiento-siniestros" title="Ir a la sección de Procedimiento de atención a siniestros") Procedimiento de atención a siniestros
-                    li.container-anchor
-                        a(href="#documentacion-siniestros" title="Ir a la sección de Documentación por ramo para el trámite de siniestros") Documentación por ramo para el trámite de siniestros
-                    li.container-anchor
-                        a(href="#definiciones" title="Ir a la sección de Definiciones") Definiciones
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title
+							h1 Reportar #[strong Siniestro]
+		.c-navigation-page
+			nav.c-navigation-page__list-section(aria-label='Secciones del sitio')
+				ul
+					li.container-anchor.container-anchor--active
+						a(href='#reportar-siniestro' title='Ir a la sección Reportar siniestro') Reportar siniestro
+					li.container-anchor
+						a(href='#procedimiento-siniestros' title='Ir a la sección de Procedimiento de atención a siniestros') Procedimiento de atención a siniestros
+					li.container-anchor
+						a(
+							href='#documentacion-siniestros'
+							title='Ir a la sección de Documentación por ramo para el trámite de siniestros'
+						) Documentación por ramo para el trámite de siniestros
+					li.container-anchor
+						a(href='#definiciones' title='Ir a la sección de Definiciones') Definiciones
 
-        .c-introduction-text.section-change#reportar-siniestro
-            section.o-card-gray
-                h2 Reportar Siniestro #[br]online
-                a.o-btn.o-btn--green(href="#!" title="Reportar siniestro") Reportar siniestro
+		#reportar-siniestro.c-introduction-text.section-change
+			section.o-card-gray
+				h2 Reportar Siniestro #[br]online
+				a.o-btn.o-btn--green(href='#!' title='Reportar siniestro') Reportar siniestro
 
-        .c-introduction-text.section-change#reportar-siniestro
-            section.o-bento
-                h2 Otros canales para reportar un siniestro:
-                .row.row--uno
-                    .row--uno__col.col--uno
-                        .row--uno__col__box.row--uno__col__box--uno.o-card.o-card--blueDark
-                            div.container-text
-                                small Teléfono
-                                h3 24 horas los#[br]365 días del año
-                                div.container-image
-                                    img(src=urlFolder+"images/soy-agente/GMX-telefono.png" alt='')
-                            div.container-with-button
-                                a.o-btn-arrow(href="tel:8002153455" title="Ir hacia el numero de telefono")
-                                    i.i-icon.i-arrow-up-right(aria-hidden="true")
-                                div.container-text
-                                    p (55) 55841736
-                            div.container-with-button
-                                a.o-btn-arrow(href="tel:8002153455" title="Ir hacia el numero de telefono")
-                                    i.i-icon.i-arrow-up-right(aria-hidden="true")
-                                div.container-text
-                                    small Resto de la República#[br]LADA
-                                    p 800 2153 455
-                        .row--uno__col__box.row--uno__col__box--dos.o-card.o-card--blueDark
-                            div.container-image.container-image--height-full
-                                img(src=urlFolder+"images/soy-agente/GMX-todo-listo.png" alt="alt")
-                    .row--uno__col.col--dos.o-card
-                        div.container-text.container-text--color-black
-                            p ¿Tienes dudas al respecto de nuestros procedimientos y atención a siniestros?
-                            div.text-serif
-                                p Lunes a Jueves de 8:30 a 17:30 horas y Viernes de 8:30 a 15:00 horas
-                            div.container-with-button
-                                a.o-btn-arrow(href="tel:8002153455" title="Ir hacia el numero de telefono")
-                                    i.i-icon.i-arrow-up-right(aria-hidden="true")
-                                div.container-text
-                                    small Conmutador
-                                    p (55) 5480 4000
-                .row.row--dos.o-card-with-button.o-card-with-button--width-full
-                    div.o-card-with-button__container-button
-                        a.o-btn-arrow(href="mailto:siniestros@gmx.com.mx" title="Ir hacia el numero de telefono")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    div.o-card-with-button__container-info
-                        p Solicita atención con el área de Siniestros
-                        strong siniestros@gmx.com.mx
-                        p respuesta máxima al día hábil siguiente
+		#reportar-siniestro.c-introduction-text.section-change
+			section.o-bento
+				h2 Otros canales para reportar un siniestro:
+				.row.row--uno
+					.row--uno__col.col--uno
+						.row--uno__col__box.row--uno__col__box--uno.o-card.o-card--blueDark
+							.container-text
+								small Teléfono
+								h3 24 horas los#[br]365 días del año
+								.container-image
+									img(src=urlFolder + 'images/soy-agente/GMX-telefono.png' alt='')
+							.container-with-button
+								a.o-btn-arrow(href='tel:8002153455' title='Ir hacia el numero de telefono')
+									i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.container-text
+									p (55) 55841736
+							.container-with-button
+								a.o-btn-arrow(href='tel:8002153455' title='Ir hacia el numero de telefono')
+									i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.container-text
+									small Resto de la República#[br]LADA
+									p 800 2153 455
+						.row--uno__col__box.row--uno__col__box--dos.o-card.o-card--blueDark
+							.container-image.container-image--height-full
+								img(src=urlFolder + 'images/soy-agente/GMX-todo-listo.png' alt='alt')
+					.row--uno__col.col--dos.o-card
+						.container-text.container-text--color-black
+							p ¿Tienes dudas al respecto de nuestros procedimientos y atención a siniestros?
+							.text-serif
+								p Lunes a Jueves de 8:30 a 17:30 horas y Viernes de 8:30 a 15:00 horas
+							.container-with-button
+								a.o-btn-arrow(href='tel:8002153455' title='Ir hacia el numero de telefono')
+									i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.container-text
+									small Conmutador
+									p (55) 5480 4000
+				.row.row--dos.o-card-with-button.o-card-with-button--width-full
+					.o-card-with-button__container-button
+						a.o-btn-arrow(href='mailto:siniestros@gmx.com.mx' title='Ir hacia el numero de telefono')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					.o-card-with-button__container-info
+						p Solicita atención con el área de Siniestros
+						strong siniestros@gmx.com.mx
+						p respuesta máxima al día hábil siguiente
 
-        .o-section.section-change#procedimiento-siniestros
-            section.c-personal-attention
-                h2 Contamos con atención especializada las 24 horas de los 365 días del año.
-                ul
-                    li 
-                        .c-personal-attention__container-card
-                            .o-card-step.o-card-step--image
-                                img(src=urlFolder+"images/soy-agente/GMX-chateando.png" alt="alt")
-                                .o-card-step--image__step
-                                    p Paso 1
-                            .o-card-step
-                                h3 Realizar el reporte
-                                p Podrás realizarlo vía web en nuestra página principal o vía telefónica a nuestra Cabina de Siniestros GMX.
-                        .c-personal-attention__container-card
-                            .o-card-step.o-card-step--image.o-card-step--none.u-invisibility
-                                img(src=urlFolder+"images/soy-agente/GMX-chateando.png" alt="alt")
-                            .o-card-step.o-card-step--blue
-                                div.container-with-button
-                                    a.o-btn-arrow(href="tel:+5555841736" title="Ir hacia el numero de telefono")
-                                        i.i-icon.i-arrow-up-right(aria-hidden="true")
-                                    div.container-text
-                                        p (55) 55841736
-                                div.container-with-button
-                                    a.o-btn-arrow(href="tel:8002153455" title="Ir hacia el numero de telefono")
-                                        i.i-icon.i-arrow-up-right(aria-hidden="true")
-                                    div.container-text
-                                        small Resto de la República
-                                        p 800 2153 455
-                                div.container-image
-                                    img(src=urlFolder+"images/soy-agente/GMX-telefono.png" alt='')
+		#procedimiento-siniestros.o-section.section-change
+			section.c-personal-attention
+				h2 Contamos con atención especializada las 24 horas de los 365 días del año.
+				ul
+					li
+						.c-personal-attention__container-card
+							.o-card-step.o-card-step--image
+								img(src=urlFolder + 'images/soy-agente/GMX-chateando.png' alt='alt')
+								.o-card-step--image__step
+									p Paso 1
+							.o-card-step
+								h3 Realizar el reporte
+								p Podrás realizarlo vía web en nuestra página principal o vía telefónica a nuestra Cabina de Siniestros GMX.
+						.c-personal-attention__container-card
+							.o-card-step.o-card-step--image.o-card-step--none.u-invisibility
+								img(src=urlFolder + 'images/soy-agente/GMX-chateando.png' alt='alt')
+							.o-card-step.o-card-step--blue
+								.container-with-button
+									a.o-btn-arrow(href='tel:+5555841736' title='Ir hacia el numero de telefono')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									.container-text
+										p (55) 55841736
+								.container-with-button
+									a.o-btn-arrow(href='tel:8002153455' title='Ir hacia el numero de telefono')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									.container-text
+										small Resto de la República
+										p 800 2153 455
+								.container-image
+									img(src=urlFolder + 'images/soy-agente/GMX-telefono.png' alt='')
 
-                    li 
-                        .c-personal-attention__container-card
-                            .o-card-step.o-card-step--image
-                                img(src=urlFolder+"images/soy-agente/GMX-solicitud-datos.png" alt="alt")
-                                .o-card-step--image__step
-                                    p Paso 2
-                            .o-card-step
-                                h3 Solicitud de datos
-                                p Al momento de realizar el reporte es importante tener contigo datos del Asegurado o Beneficiario, ya que se recavarán datos mínimos e indispensables para el análisis del reclamo.
-                    li 
-                        .c-personal-attention__container-card
-                            .o-card-step.o-card-step--image
-                                img(src=urlFolder+"images/soy-agente/GMX-asignacion-reportes.png" alt="alt")
-                                .o-card-step--image__step
-                                    p Paso 3
-                            .o-card-step
-                                h3 Asignación de reportes
-                                p Una vez que reportado el siniestro a Cabina GMX, se brindará un número de reporte el cuál será el identificador único para el siniestro ocurrido.
-                    li 
-                        .c-personal-attention__container-card
-                            .o-card-step.o-card-step--image
-                                img(src=urlFolder+"images/soy-agente/GMX-primer-contacto.png" alt="alt")
-                                .o-card-step--image__step
-                                    p Paso 4
-                            .o-card-step
-                                h3 Primer contacto
-                                p Para nosotros es muy importante estar para ti en momentos complicados, es por eso que una vez realizado el reporte, el ajustador que atienda el siniestro se pondrá en contacto vía telefónica con el Asegurado o Beneficiario a la brevedad.
+					li
+						.c-personal-attention__container-card
+							.o-card-step.o-card-step--image
+								img(src=urlFolder + 'images/soy-agente/GMX-solicitud-datos.png' alt='alt')
+								.o-card-step--image__step
+									p Paso 2
+							.o-card-step
+								h3 Solicitud de datos
+								p Al momento de realizar el reporte es importante tener contigo datos del Asegurado o Beneficiario, ya que se recavarán datos mínimos e indispensables para el análisis del reclamo.
+					li
+						.c-personal-attention__container-card
+							.o-card-step.o-card-step--image
+								img(src=urlFolder + 'images/soy-agente/GMX-asignacion-reportes.png' alt='alt')
+								.o-card-step--image__step
+									p Paso 3
+							.o-card-step
+								h3 Asignación de reportes
+								p Una vez que reportado el siniestro a Cabina GMX, se brindará un número de reporte el cuál será el identificador único para el siniestro ocurrido.
+					li
+						.c-personal-attention__container-card
+							.o-card-step.o-card-step--image
+								img(src=urlFolder + 'images/soy-agente/GMX-primer-contacto.png' alt='alt')
+								.o-card-step--image__step
+									p Paso 4
+							.o-card-step
+								h3 Primer contacto
+								p Para nosotros es muy importante estar para ti en momentos complicados, es por eso que una vez realizado el reporte, el ajustador que atienda el siniestro se pondrá en contacto vía telefónica con el Asegurado o Beneficiario a la brevedad.
 
-        .o-section.section-change#documentacion-siniestros
-            .o-section.o-section--max-800
-                .c-introduction-text__text-container
-                    p Las siguientes listas son de tipo enunciativo, más no limitativo, operan de acuerdo a cada caso concreto y los documentos serán solicitados por medio del Ajustador.
-                    p Existen ramos donde por su naturaleza, no es posible estandarizar la información documental requerida, por lo que caso por caso, serán requeridos los documentos.
-                ul.c_documentation-siniestros
-                    li.o-card-large.o-card-large--thick
-                        .container-text
-                            div.punt
-                                p A
-                            p Ver método de cálculo
-                        button.o-btn-arrow.o-btn-arrow--arrow-down#button-expand-1(href="#" aria-label="Incendio" title="boton expandir información")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    ul.o-container-list.o-container-list--padding.u-hidden#contenido-1
-                        li Carta reclamación a GMX Seguros, detallando los daños o pérdidas.
-                        li Facturas de adquisición de los bienes afectados; escrituras en caso de inmuebles.
-                        li Copia certificada del acta, con todas sus actuaciones de la inspección ocular y peritajes de las autoridades correspondientes.
-                        li Copia del informe o parte de los bomberos.
-                        li Cotización del valor de reposición de los bienes afectados parcialmente y los destruidos, detallando y desglosando las refacciones, materiales, mano de obra, inventarios, mobiliario, etc.
-                        li Copia del último avalúo practicado a los edificios asegurados
-                        li Recibos de pago de impuestos y derechos.
-                        li Valor en libros de su activo fijo a la fecha del siniestro.
-                    li.o-card-large.o-card-large--thick
-                        .container-text
-                            div.punt
-                                p B
-                            p Diversos técnicos (Equipo electrónico, rotura de maquinaria, calderas, equipo de contratistas)
-                        a.o-btn-arrow(href="#" aria-label="Incendio" title="Ir hacia Diversos técnicos")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--thick
-                        .container-text
-                            div.punt
-                                p C
-                            p Diversos miscelaneos (Robo de contenidos o mercancías, dinero y valores)
-                        a.o-btn-arrow(href="#" aria-label="Incendio" title="Ir hacia Diversos miscelaneos")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--thick
-                        .container-text
-                            div.punt
-                                p D
-                            p Transportes
-                        a.o-btn-arrow(href="#" aria-label="Incendio" title="Ir hacia Transportes")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+		#documentacion-siniestros.o-section.section-change
+			.o-section.o-section--max-800
+				.c-introduction-text__text-container
+					p Las siguientes listas son de tipo enunciativo, más no limitativo, operan de acuerdo a cada caso concreto y los documentos serán solicitados por medio del Ajustador.
+					p Existen ramos donde por su naturaleza, no es posible estandarizar la información documental requerida, por lo que caso por caso, serán requeridos los documentos.
+				ul.c_documentation-siniestros
+					li.o-card-large.o-card-large--thick
+						.container-text
+							.punt
+								p A
+							p Ver método de cálculo
+						button#button-expand-1.o-btn-arrow.o-btn-arrow--arrow-down(
+							href='#'
+							aria-label='Incendio'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					ul#contenido-1.o-container-list.o-container-list--padding.u-hidden
+						li Carta reclamación a GMX Seguros, detallando los daños o pérdidas.
+						li Facturas de adquisición de los bienes afectados; escrituras en caso de inmuebles.
+						li Copia certificada del acta, con todas sus actuaciones de la inspección ocular y peritajes de las autoridades correspondientes.
+						li Copia del informe o parte de los bomberos.
+						li Cotización del valor de reposición de los bienes afectados parcialmente y los destruidos, detallando y desglosando las refacciones, materiales, mano de obra, inventarios, mobiliario, etc.
+						li Copia del último avalúo practicado a los edificios asegurados
+						li Recibos de pago de impuestos y derechos.
+						li Valor en libros de su activo fijo a la fecha del siniestro.
+					li.o-card-large.o-card-large--thick
+						.container-text
+							.punt
+								p B
+							p Diversos técnicos (Equipo electrónico, rotura de maquinaria, calderas, equipo de contratistas)
+						a.o-btn-arrow(href='#' aria-label='Incendio' title='Ir hacia Diversos técnicos')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--thick
+						.container-text
+							.punt
+								p C
+							p Diversos miscelaneos (Robo de contenidos o mercancías, dinero y valores)
+						a.o-btn-arrow(href='#' aria-label='Incendio' title='Ir hacia Diversos miscelaneos')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--thick
+						.container-text
+							.punt
+								p D
+							p Transportes
+						a.o-btn-arrow(href='#' aria-label='Incendio' title='Ir hacia Transportes')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
 
-        .o-section.section-change#definiciones
-            .o-section.o-section--max-1000
-                ul.c_documentation-siniestros
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 01
-                            p Ajustadores
-                        button.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down#button-expand-3(href="#" aria-label="Incendio" title="boton expandir información")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-container-list.o-container-list--padding.u-hidden#contenido-3
-                        p Profesional especializado que se encarga de recopilar todos los antecedentes del siniestro así como su documentación, para analizar y aplicar el contrato de seguro, de manera objetiva e imparcial.
-                        h3 Consultar documentos
-                        p Los despachos de ajustadores y las personas que dentro de estos despachos presten servicios para GMX Seguros, deberán contar con un alto nivel de experiencia, reconocida ética, honestidad y capacidad técnica, equipos y sistemas de cómputo para un adecuado flujo de información y control de los siniestros, vehículos, cámaras fotográficas y video; además, los despachos podrán tener personal bilingüe, presentar informes inglés-español (cuando sea necesario).
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 02
-                            p Asegurado
-                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Diversos técnicos")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 03
-                            p Cabina de siniestro GMX
-                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Diversos miscelaneos")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 04
-                            p Reporte
-                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 05
-                            p Inspección
-                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 06
-                            p Informe
-                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 07
-                            p Determinación de pérdidas
-                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 08
-                            p Convenio de ajuste y finiquito
-                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
-                    li.o-card-large.o-card-large--light-blue.o-card-large--thick
-                        .container-text
-                            small 09
-                            p Declinación
-                        a.o-btn-arrow.o-btn-arrow--border-light-blue(href="#" aria-label="Incendio" title="Ir hacia Transportes")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+		#definiciones.o-section.section-change
+			.o-section.o-section--max-1000
+				ul.c_documentation-siniestros
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 01
+							p Ajustadores
+						button#button-expand-3.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							href='#'
+							aria-label='Incendio'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-3.o-container-list.o-container-list--padding.u-hidden
+						p Profesional especializado que se encarga de recopilar todos los antecedentes del siniestro así como su documentación, para analizar y aplicar el contrato de seguro, de manera objetiva e imparcial.
+						h3 Consultar documentos
+						p Los despachos de ajustadores y las personas que dentro de estos despachos presten servicios para GMX Seguros, deberán contar con un alto nivel de experiencia, reconocida ética, honestidad y capacidad técnica, equipos y sistemas de cómputo para un adecuado flujo de información y control de los siniestros, vehículos, cámaras fotográficas y video; además, los despachos podrán tener personal bilingüe, presentar informes inglés-español (cuando sea necesario).
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 02
+							p Asegurado
+						a.o-btn-arrow.o-btn-arrow--border-light-blue(href='#' aria-label='Incendio' title='Ir hacia Diversos técnicos')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 03
+							p Cabina de siniestro GMX
+						a.o-btn-arrow.o-btn-arrow--border-light-blue(
+							href='#'
+							aria-label='Incendio'
+							title='Ir hacia Diversos miscelaneos'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 04
+							p Reporte
+						a.o-btn-arrow.o-btn-arrow--border-light-blue(href='#' aria-label='Incendio' title='Ir hacia Transportes')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 05
+							p Inspección
+						a.o-btn-arrow.o-btn-arrow--border-light-blue(href='#' aria-label='Incendio' title='Ir hacia Transportes')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 06
+							p Informe
+						a.o-btn-arrow.o-btn-arrow--border-light-blue(href='#' aria-label='Incendio' title='Ir hacia Transportes')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 07
+							p Determinación de pérdidas
+						a.o-btn-arrow.o-btn-arrow--border-light-blue(href='#' aria-label='Incendio' title='Ir hacia Transportes')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 08
+							p Convenio de ajuste y finiquito
+						a.o-btn-arrow.o-btn-arrow--border-light-blue(href='#' aria-label='Incendio' title='Ir hacia Transportes')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 09
+							p Declinación
+						a.o-btn-arrow.o-btn-arrow--border-light-blue(href='#' aria-label='Incendio' title='Ir hacia Transportes')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')

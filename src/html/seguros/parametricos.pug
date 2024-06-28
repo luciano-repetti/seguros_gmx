@@ -1,222 +1,221 @@
 extends ../template/_template
 
-append configuracion
-    -var page			= {}
-    -page['link']		= 'seguros/parametricos.html'
-    -page['title']		= 'Parámetricos'
-    -page['descrip']	= 'Página de seguros de tipos paramétricos'
-    -page['keys']		= ''
-    -page['lang']		= 'es'
-    -page['responsive']	= true
-    -page['section']	= []
-    -page['libsCss']	= []
-    -page['libs']		= []
-    -page['plugins']	= ['splide']
-    -page['js']			= [] 
+block append configuracion
+	- var page = {};
+	- page['link'] = 'seguros/parametricos.html';
+	- page['title'] = 'Parámetricos';
+	- page['descrip'] = 'Página de seguros de tipos paramétricos';
+	- page['keys'] = '';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
 
-    - var path = '../../'
-
+	- var path = '../../';
 
 block contenido
-    main.o-section--main
-        .c-banner-text.c-banner-text--padding1
-            section.o-section.o-section--banner-small
-                .o-container
-                    .o-module.o-module--deco5.u-text-center
-                        .o-module__title 
-                            h1 #[small Seguros] Paramétricos para #[strong Huracán]
-        .c-navigation-page
-            nav.c-navigation-page__list-section(aria-label="Secciones del sitio")
-                ul
-                    li.container-anchor.container-anchor--active
-                        a(href="#introduccion" title="Ir a la sección Introducción") Introducción
-                    li.container-anchor
-                        a(href="#en-que-consiste" title="Ir a la sección de ¿En qué consiste?") ¿En qué consiste?
-                    li.container-anchor
-                        a(href="#para-quien-es" title="Ir a la sección de ¿Para quién es?") ¿Para quién es?
-                    li.container-anchor
-                        a(href="#cobertura" title="Ir a la sección de Cobertura") Coberturas
-                    li.container-anchor
-                        a(href="#consideraciones" title="Ir a la sección de Consideraciones") Consideraciones
-                    li.container-anchor.container-anchor--bold
-                        a(href="#contactar" title="Ir a la sección Contactar ahora") Contactar ahora
-        .c-introduction-text#introduccion
-            div.c-introduction-text__text-container
-                p Cada año, las zonas costeras del país sufren las consecuencias económicas de las temporadas de huracanes.
-                p Si bien estos eventos son predecibles, el daño a la infraestructura productiva es inmediato y no siempre fácilmente atendible.
-                p Si bien estos eventos son predecibles, el daño a la infraestructura productiva es inmediato y no siempre fácilmente atendible.
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title
+							h1 #[small Seguros] Paramétricos para #[strong Huracán]
+		.c-navigation-page
+			nav.c-navigation-page__list-section(aria-label='Secciones del sitio')
+				ul
+					li.container-anchor.container-anchor--active
+						a(href='#introduccion' title='Ir a la sección Introducción') Introducción
+					li.container-anchor
+						a(href='#en-que-consiste' title='Ir a la sección de ¿En qué consiste?') ¿En qué consiste?
+					li.container-anchor
+						a(href='#para-quien-es' title='Ir a la sección de ¿Para quién es?') ¿Para quién es?
+					li.container-anchor
+						a(href='#cobertura' title='Ir a la sección de Cobertura') Coberturas
+					li.container-anchor
+						a(href='#consideraciones' title='Ir a la sección de Consideraciones') Consideraciones
+					li.container-anchor.container-anchor--bold
+						a(href='#contactar' title='Ir a la sección Contactar ahora') Contactar ahora
+		#introduccion.c-introduction-text
+			.c-introduction-text__text-container
+				p Cada año, las zonas costeras del país sufren las consecuencias económicas de las temporadas de huracanes.
+				p Si bien estos eventos son predecibles, el daño a la infraestructura productiva es inmediato y no siempre fácilmente atendible.
+				p Si bien estos eventos son predecibles, el daño a la infraestructura productiva es inmediato y no siempre fácilmente atendible.
 
-        .c-consists#en-que-consiste
-            section.c-consists.c-consists__card-safe
-                h2 ¿En qué consiste?
-                div.c-consists__card-safe__container-card
-                    div.c-consists__card-safe__container-card__card
-                        p Es una póliza que provee los primeros gastos causados por la velocidad del viento, siempre y cuando se presenten los parámetros de velocidad y ubicación geográfica establecidos en la póliza.
-                    div.c-consists__card-safe__container-card__card.c-consists__card-safe__container-card__card--image-container
-                        img(src=urlFolder+"images/seguros/GMX-nube.png" alt="Imagen de un grupo de constructores")
+		#en-que-consiste.c-consists
+			section.c-consists.c-consists__card-safe
+				h2 ¿En qué consiste?
+				.c-consists__card-safe__container-card
+					.c-consists__card-safe__container-card__card
+						p Es una póliza que provee los primeros gastos causados por la velocidad del viento, siempre y cuando se presenten los parámetros de velocidad y ubicación geográfica establecidos en la póliza.
+					.c-consists__card-safe__container-card__card.c-consists__card-safe__container-card__card--image-container
+						img(src=urlFolder + 'images/seguros/GMX-nube.png' alt='Imagen de un grupo de constructores')
 
-        .c-consists#para-quien-es
-            section.c-for-whom
-                h2 ¿Para quién es?
-                p Esta póliza ofrece cobertura para:
-                ul.c-for-whom__box-container
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
-                        p Hoteles, bares y restaurantes
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
-                        p Centros Comerciales
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
-                        p Parques de diversiones
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
-                        p Corporativos públicos y privados
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
-                        p Centros de espectáculos y estadios
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
-                        p Hogar
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
-                    li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
-                        p Centros de espectáculos y estadios
-                        div.c-for-whom__box-container__box__container-image
-                            img(src=urlFolder+"images/seguros/GMX-like.png" alt="Icono de like")
+		#para-quien-es.c-consists
+			section.c-for-whom
+				h2 ¿Para quién es?
+				p Esta póliza ofrece cobertura para:
+				ul.c-for-whom__box-container
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
+						p Hoteles, bares y restaurantes
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
+						p Centros Comerciales
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
+						p Parques de diversiones
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
+						p Corporativos públicos y privados
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
+						p Centros de espectáculos y estadios
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
+						p Hogar
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
+						p Centros de espectáculos y estadios
+						.c-for-whom__box-container__box__container-image
+							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
 
-        .c-coverage#cobertura
-            section.c-coverage__container-banner
-                h2 Coberturas
-                .c-coverage__container-elements
-                    h3 La indemnización para:
-                    ul.c-coverage__list-elements
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Bienes al intemperie, jardinería, campos de golf, palapas, albercas, entre otros.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Pérdida de playa.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Cubrir deducibles en caso de contar con la cobertura de fenómenos hidrometeorológicos.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Erosión de calles, playas, ríos, lagos y puentes en propiedad del Asegurado.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Cancelación de reservas.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Gastos relacionados con preparación para huracanes y remoción de escombros.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Pérdida de clientes.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Daños a la propiedad y pérdidas consecuenciales.
-                        li.c-coverage__list-elements__container-element 
-                            div.c-coverage__list-elements__container-image
-                                img(src=urlFolder+"images/seguros/GMX-escudo.png" alt="Icono de un escudo")
-                            div.c-coverage__list-elements__element
-                                p Daños por agua e inundación ocasionada por huracanes.
+		#cobertura.c-coverage
+			section.c-coverage__container-banner
+				h2 Coberturas
+				.c-coverage__container-elements
+					h3 La indemnización para:
+					ul.c-coverage__list-elements
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Bienes al intemperie, jardinería, campos de golf, palapas, albercas, entre otros.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Pérdida de playa.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Cubrir deducibles en caso de contar con la cobertura de fenómenos hidrometeorológicos.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Erosión de calles, playas, ríos, lagos y puentes en propiedad del Asegurado.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Cancelación de reservas.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Gastos relacionados con preparación para huracanes y remoción de escombros.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Pérdida de clientes.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Daños a la propiedad y pérdidas consecuenciales.
+						li.c-coverage__list-elements__container-element
+							.c-coverage__list-elements__container-image
+								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+							.c-coverage__list-elements__element
+								p Daños por agua e inundación ocasionada por huracanes.
 
-        .c-fovissste#consideraciones
-            section.container-fovissste
-                h3 Método de cálculo
-                div.container-fovissste__container
-                    .o-card-large
-                        p Ver método de cálculo
-                        a.o-btn-arrow(href="#" aria-label="Link hacia método de cálculo" title="Ir hacia método de cálculo")
-                            i.i-icon.i-arrow-up-right(aria-hidden="true")
+		#consideraciones.c-fovissste
+			section.container-fovissste
+				h3 Método de cálculo
+				.container-fovissste__container
+					.o-card-large
+						p Ver método de cálculo
+						a.o-btn-arrow(href='#' aria-label='Link hacia método de cálculo' title='Ir hacia método de cálculo')
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
 
-        .c-contact-form#contactar
-            section.container-contact-form
-                h3#contact-form-title Contactar ahora
-                p Solicita asesoría de un agente especializado, el cual te ayudará a contratar lo que realmente necesitas.
-                form.container-form(action="#" method="post" aria-labelledby="contact-form-title")
-                    label(for="insurance-type") Tipo de seguro de Interés
-                    div.container-message
-                        div.container-form__custom-select
-                            select(name="insurance-type" id="insurance-type" aria-required="true")
-                                option(value="" disabled selected) Seleccione...
-                                option(value="Ambiental") Instituciones educativas
-                                option(value="Ambiental") Profesionistas
-                                option(value="Ambiental") Sector salud
-                                option(value="Ambiental") Ambiental
-                                option(value="Ambiental") Construcción
-                                option(value="Ambiental") Industria Manufactura y Comercio
-                                option(value="Ambiental") Aviación
-                                option(value="Ambiental") Embarcaciones
-                                option(value="Ambiental") Carga en Tránsito
-                                option(value="Ambiental") Gobierno
-                                option(value="Ambiental") Familiar
-                                option(value="Ambiental") Esparcimiento
-                                option(value="Ambiental") Riesgos Especiales
-                            i.i-icon.i-angle-down(aria-hidden="true")
-                        div#error-insurance-type.error-message
-                    //- label.container-message(for="full-name")
-                    div.container-message
-                        input(type="text" id="full-name" name="full-name" placeholder="Nombre completo" aria-required="true")
-                        div#error-full-name.error-message
-                    //- label(for="phone")
-                    div.container-message
-                        input(type="text" id="phone" name="phone" placeholder="Teléfono celular" aria-required="true")
-                        div#error-phone.error-message
-                    //- label(for="email")
-                    div.container-message
-                        input(type="email" id="email" name="email" placeholder="Correo electrónico" aria-required="true")
-                        div#error-email.error-message
-                    //- label(for="city")
-                    div.container-message
-                        input(type="text" id="city" name="city" placeholder="Ciudad" aria-required="true")
-                        div#error-city.error-message
-                    div.container-message
-                        div.container-form__custom-select
-                            select(name="state" id="state" aria-required="true")
-                                option(value="" disabled selected) Seleccione una opción
-                                option(value="Estado") Estado
-                            i.i-icon.i-angle-down(aria-hidden="true")
-                        div#error-state.error-message
-                    .container-error
-                        div.container-form__container-terms
-                            label(for="TyC") 
-                                input(type="checkbox" id="TyC" name="TyC" aria-required="true")
-                                a(href="" target="_blank") Acepto los Términos y Condiciones
-                        div#error-TyC.error-message
-                    div.container-form__container-contact
-                        p ¿Cómo deseas ser contactado?
-                        div.container-contacts
-                            label(for="whatsapp") 
-                                input(type="checkbox" id="whatsapp" name="contact-method" value="whatsapp")
-                                img(src=urlFolder+"images/seguros/GMX-whatsapp.svg" alt="Icono de whatsapp") 
-                                | Whatsapp
-                            label(for="email-contact") 
-                                input(type="checkbox" id="email-contact" name="contact-method" value="email")
-                                img(src=urlFolder+"images/seguros/GMX-email.svg" alt="Icono de mail")
-                                | Correo electrónico
-                        div#error-contact-method.error-message
-                    div.container-form__container-button
-                        button.o-btn.o-btn--green(type="submit" aria-label="Contactar agente") Contactar agente
-                    div.container-form__image
-                        img(src=urlFolder+"images/seguros/GMX-inscripcion-datos.png" alt="Imagen sobre persona inscribiendo datos")
+		#contactar.c-contact-form
+			section.container-contact-form
+				h3#contact-form-title Contactar ahora
+				p Solicita asesoría de un agente especializado, el cual te ayudará a contratar lo que realmente necesitas.
+				form.container-form(action='#' method='post' aria-labelledby='contact-form-title')
+					label(for='insurance-type') Tipo de seguro de Interés
+					.container-message
+						.container-form__custom-select
+							select#insurance-type(name='insurance-type' aria-required='true')
+								option(value='' disabled selected) Seleccione...
+								option(value='Ambiental') Instituciones educativas
+								option(value='Ambiental') Profesionistas
+								option(value='Ambiental') Sector salud
+								option(value='Ambiental') Ambiental
+								option(value='Ambiental') Construcción
+								option(value='Ambiental') Industria Manufactura y Comercio
+								option(value='Ambiental') Aviación
+								option(value='Ambiental') Embarcaciones
+								option(value='Ambiental') Carga en Tránsito
+								option(value='Ambiental') Gobierno
+								option(value='Ambiental') Familiar
+								option(value='Ambiental') Esparcimiento
+								option(value='Ambiental') Riesgos Especiales
+							i.i-icon.i-angle-down(aria-hidden='true')
+						#error-insurance-type.error-message
+					//- label.container-message(for="full-name")
+					.container-message
+						input#full-name(type='text' name='full-name' placeholder='Nombre completo' aria-required='true')
+						#error-full-name.error-message
+					//- label(for="phone")
+					.container-message
+						input#phone(type='text' name='phone' placeholder='Teléfono celular' aria-required='true')
+						#error-phone.error-message
+					//- label(for="email")
+					.container-message
+						input#email(type='email' name='email' placeholder='Correo electrónico' aria-required='true')
+						#error-email.error-message
+					//- label(for="city")
+					.container-message
+						input#city(type='text' name='city' placeholder='Ciudad' aria-required='true')
+						#error-city.error-message
+					.container-message
+						.container-form__custom-select
+							select#state(name='state' aria-required='true')
+								option(value='' disabled selected) Seleccione una opción
+								option(value='Estado') Estado
+							i.i-icon.i-angle-down(aria-hidden='true')
+						#error-state.error-message
+					.container-error
+						.container-form__container-terms
+							label(for='TyC') 
+								input#TyC(type='checkbox' name='TyC' aria-required='true')
+								a(href='' target='_blank') Acepto los Términos y Condiciones
+						#error-TyC.error-message
+					.container-form__container-contact
+						p ¿Cómo deseas ser contactado?
+						.container-contacts
+							label(for='whatsapp') 
+								input#whatsapp(type='checkbox' name='contact-method' value='whatsapp')
+								img(src=urlFolder + 'images/seguros/GMX-whatsapp.svg' alt='Icono de whatsapp') 
+								| Whatsapp
+							label(for='email-contact') 
+								input#email-contact(type='checkbox' name='contact-method' value='email')
+								img(src=urlFolder + 'images/seguros/GMX-email.svg' alt='Icono de mail')
+								| Correo electrónico
+						#error-contact-method.error-message
+					.container-form__container-button
+						button.o-btn.o-btn--green(type='submit' aria-label='Contactar agente') Contactar agente
+					.container-form__image
+						img(src=urlFolder + 'images/seguros/GMX-inscripcion-datos.png' alt='Imagen sobre persona inscribiendo datos')
