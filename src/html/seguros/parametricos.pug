@@ -3,7 +3,7 @@ extends ../template/_template
 append configuracion
     -var page			= {}
     -page['link']		= 'seguros/parametricos.html'
-    -page['title']		= 'Paraéetricos'
+    -page['title']		= 'Parámetricos'
     -page['descrip']	= 'Página de seguros de tipos paramétricos'
     -page['keys']		= ''
     -page['lang']		= 'es'
@@ -48,7 +48,7 @@ block contenido
 
         .c-consists#en-que-consiste
             section.c-consists.c-consists__card-safe
-                h3 ¿En qué consiste?
+                h2 ¿En qué consiste?
                 div.c-consists__card-safe__container-card
                     div.c-consists__card-safe__container-card__card
                         p Es una póliza que provee los primeros gastos causados por la velocidad del viento, siempre y cuando se presenten los parámetros de velocidad y ubicación geográfica establecidos en la póliza.
@@ -57,7 +57,7 @@ block contenido
 
         .c-consists#para-quien-es
             section.c-for-whom
-                h3 ¿Para quién es?
+                h2 ¿Para quién es?
                 p Esta póliza ofrece cobertura para:
                 ul.c-for-whom__box-container
                     li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
@@ -91,10 +91,9 @@ block contenido
 
         .c-coverage#cobertura
             section.c-coverage__container-banner
-                h3 Coberturas
+                h2 Coberturas
                 .c-coverage__container-elements
-                    div.container-text
-                        h4 La indemnización para:
+                    h3 La indemnización para:
                     ul.c-coverage__list-elements
                         li.c-coverage__list-elements__container-element 
                             div.c-coverage__list-elements__container-image
