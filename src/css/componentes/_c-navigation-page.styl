@@ -8,7 +8,6 @@
     display flex
     justify-content center
     align-items center
-    padding: 1em 0
     margin-bottom .5em
     +Desktop(max)
         top: 66px
@@ -24,8 +23,11 @@
             max-width 1200px
             display flex
             justify-content space-between
-            align-items center
-            flex-wrap wrap
+            align-items stretch
+            flex-wrap nowrap
+            gap 1rem
+            flex-direction row
+
             +TabletLandscape(max)
                 padding 20px 20px
                 max-width 100%
@@ -37,29 +39,32 @@
                     display: flex
                     justify-content: center
                 &.container-anchor
+                    display flex
+                    align-items center
+                    text-align center
                     > a
                         width fit-content
                         font-size 18px
                         color blueDark-4
                         text-decoration none
-                        padding 1em 0
                         text-align: center
+                        padding 1rem 0
                         +TabletLandscape(max)
                             padding: .5em 0
                     &--active,
                     &:hover
                         > a
                             color green-1
-                            position relative
-                            &::after
-                                content: ""
-                                display: block
-                                width 100%
-                                height: 2px
-                                background-color green-1
-                                position: absolute
-                                bottom: 0
-                                transform: translateY(-100%)
+                        position relative
+                        &::after
+                            content: ""
+                            display: block
+                            width 100%
+                            height: 2px
+                            background-color green-1
+                            position: absolute
+                            bottom: -2px
+                            transform: translateY(-100%)
                     &--bold > a
                             font-weight: 600
     &--void

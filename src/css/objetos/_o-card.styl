@@ -25,7 +25,7 @@
 	border-radius 2em
 	padding: 2em
 	gap: 2em
-	> h2
+	h2
 		color blueDark-1
 		font-size 60px
 		font-family tipografia-serif
@@ -33,6 +33,15 @@
 			font-size 40px
 		+MobilePortrait(max)
 			font-size 28px
+
+	p
+		color blueDark-1
+		font-size 26px
+		font-family tipografia-serif
+		+Resposive(max, 600px)
+			font-size 16px
+		+MobilePortrait(max)
+			font-size 20px
 
 .o-card-step
 	display: flex

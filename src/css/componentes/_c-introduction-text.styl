@@ -1,12 +1,15 @@
 .c-introduction-text
     width 100%
     display flex
+    flex-direction column
     justify-content center
+    align-items center
     padding 50px 0
     +Tablet(max)
         padding 50px 20px
     &__text-container
         max-width 640px
+        width 100%
         +Tablet(max)
             max-width 100%
         > p
@@ -16,3 +19,13 @@
             +Tablet(max)
                 font-size 17px
                 line-height 25px
+        > h2
+          color blueDark-1
+          font-size 60px
+          font-family tipografia-serif
+          +Resposive(max, 600px)
+            font-size 40px
+          +MobilePortrait(max)
+            font-size 28px
+          &.mb-spacing
+            margin-bottom 2rem
