@@ -647,8 +647,15 @@ document.addEventListener("DOMContentLoaded", function () {
         .querySelector("li.container-anchor--active")
         ?.classList.remove("container-anchor--active");
 
-      if (document.querySelector("#title")) {
-        const texts = document.querySelector("#title h1").childNodes;
+      const containerTitle = document.querySelector("#title")
+      if (containerTitle) {
+        const title = document.querySelector("#title h1")
+        const texts = title.childNodes;
+        if (this.getAttribute("text-break")) {
+          containerTitle.classList?.add("o-module__title--column")
+        } else {
+          containerTitle.classList?.remove("o-module__title--column")
+        }
         texts.forEach((node) => {
           if (node.nodeName === "#text") {
             node.nodeValue = this.getAttribute("text-title")

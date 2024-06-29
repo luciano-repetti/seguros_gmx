@@ -1,7 +1,12 @@
 .o-module
 	&__title
+		&--column
+			h1, h2, h3
+				display: flex !important
+				flex-direction: column !important
 		position relative
 		h1, h2, h3
+			max-width: 800px
 			font-size 28px
 			line-height 38px 
 			color blueDark-1
@@ -11,7 +16,7 @@
 				line-height 66px 
 				font-family tipografia-serif
 				font-weight regular
-				display block
+				display inline-block
 				position relative
 				&:before
 					content ''
@@ -130,7 +135,7 @@
 					font-family tipografia-serif
 					font-weight regular
 					display block
-					position relative
+					// position relative
 				strong
 					margin-top 20px
 					color green-1
