@@ -654,7 +654,12 @@ document.addEventListener("DOMContentLoaded", function () {
             node.nodeValue = this.getAttribute("text-title")
           }
           if (node.nodeName === "STRONG") {
-            node.textContent = this.getAttribute("text-subtitle")
+            if (this.getAttribute("text-subtitle") != "") {
+              node.textContent = this.getAttribute("text-subtitle")
+            }
+            else {
+              node.classList.add("u-hidden");
+            }
           }
         })
       }
