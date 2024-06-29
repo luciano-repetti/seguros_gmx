@@ -22,86 +22,86 @@ block contenido
 			section.o-section.o-section--banner-small
 				.o-container
 					.o-module.o-module--deco5.u-text-center
-						.o-module__title
+						.o-module__title(id='title')
 							h1 #[small Ayuda con tu seguro] Con tus #[strong Pagos]
 		.c-navigation-page
 			nav.c-navigation-page__list-section(aria-label='Secciones del sitio')
 				ul
 					li.container-anchor.container-anchor--active
-						a(href='#con-tus-pagos' title='Ir a la sección Ayuda con tus pagos') Con tus pagos
+						a(href='#con-tus-pagos' title='Ir a la sección Ayuda con tus pagos' text-title='Con tus' text-subtitle='Pagos') Con tus pagos
 					li.container-anchor
-						a(href='#con-tus-facturas' title='Ir a la sección de Ayuda con tus facturas') Con tus facturas
+						a(href='#con-tus-facturas' title='Ir a la sección de Ayuda con tus facturas' text-title='Con tus' text-subtitle='Facturas') Con tus facturas
 					li.container-anchor
-						a(href='#con-codigo-qr' title='Ir a la sección de Ayuda con código QR') Con código QR
+						a(href='#con-codigo-qr' title='Ir a la sección de Ayuda con código QR' text-title='Con código' text-subtitle='QR') Con código QR
 					li.container-anchor
-						a(href='#con-tu-siniestro' title='Ir a la sección de Ayuda con tu siniestro') Con tu siniestro
+						a(href='#con-tu-siniestro' title='Ir a la sección de Ayuda con tu siniestro' text-title='Con tu' text-subtitle='Siniestro') Con tu siniestro
 					li.container-anchor
-						a(href='#unidad-especializada' title='Ir a la sección de Ayuda con Unidad especializada') UNE
+						a(href='#unidad-especializada' title='Ir a la sección de Ayuda con Unidad especializada' text-title='Directorio' text-subtitle='UNE') UNE
 					li.container-anchor
-						a(href='#derechos-basicos' title='Ir a la sección de Ayuda con Derechos basicos') Derechos básicos
+						a(href='#derechos-basicos' title='Ir a la sección de Ayuda con Derechos basicos' text-title='Derechos' text-subtitle='Básicos') Derechos básicos
 					li.container-anchor
-						a(href='#tipo-de-cambio' title='Ir a la sección de Tipo de cambio') Tipo de cambio
+						a(href='#tipo-de-cambio' title='Ir a la sección de Tipo de cambio' text-title='Tipo de' text-subtitle='Cambio') Tipo de cambio
 					li.container-anchor
-						a(href='#sacale-provecho' title='Ir a la sección de Sácale provecho a tu seguro') Sácale provecho a tu seguro
+						a(href='#sacale-provecho' title='Ir a la sección de Sácale provecho a tu seguro' text-title='Sácale provecho a tu' text-subtitle='Seguro') Sácale provecho a tu seguro
 					li.container-anchor
-						a(href='#manuales' title='Ir a la sección de manuales') Manuales de pago
+						a(href='#manuales' title='Ir a la sección de manuales' text-title='Manuales de' text-subtitle='pago') Manuales de pago
 					li.container-anchor
-						a(href='#boletines' title='Ir a la sección de boletines') Boletines
-		#con-tus-pagos.c-introduction-text.section-change
+						a(href='#boletines' title='Ir a la sección de boletines' text-title='Consulta nuestros' text-subtitle='Boletines') Boletines
+		#con-tus-pagos.c-introduction-text.section-change(aria-expanded="true")
 			.c-introduction-text__text-container
 				h2.mb-spacing Pago en línea de póliza de seguro
 			section.o-card-gray
 				p Consúltalo fácil, rápido y seguro
 				a.o-btn.o-btn--green(href='#!' title='Realizar pago ahora') Realizar pago ahora
 
-		#con-tus-facturas.c-introduction-text.section-change
+		#con-tus-facturas.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Facturas
 			section.o-card-gray
 				p Consulta y descarga tu factura
 				a.o-btn.o-btn--green(href='#!' title='Consultar ahora') Consultar ahora
 
-		#con-codigo-qr.c-introduction-text.section-change
+		#con-codigo-qr.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Ayuda con tu código QR
 			section.o-card-gray
 				p CAMBIAR
 				a.o-btn.o-btn--green(href='#!' title='CAMBIAR') CAMBIAR
 
-		#con-tu-siniestro.c-introduction-text.section-change
+		#con-tu-siniestro.c-introduction-text.section-change(aria-expanded="false")
 			section.o-card-gray
 				p Reportar Siniestro online
 				a.o-btn.o-btn--green(href='#!' title='Reportar siniestro') Reportar siniestro
 
-		#unidad-especializada.c-introduction-text.section-change
+		#unidad-especializada.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Unidad Especializada (UNE)
 			section.o-card-gray
 				p Reclamaciones, consultas y sugerencias
 				a.o-btn.o-btn--green(href='#!' title='Contactar ahora') Contactar ahora
 
-		#derechos-basicos.c-introduction-text.section-change
+		#derechos-basicos.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Derechos como contratante, asegurado y/o beneficiario de un seguro
 			section.o-card-gray
 				p CAMBIAR
 				a.o-btn.o-btn--green(href='#!' title='CAMBIAR') CAMBIAR
 
-		#tipo-de-cambio.c-introduction-text.section-change
+		#tipo-de-cambio.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Tipo de cambio al día de hoy
 			section.o-card-gray
 				p Consultar el tipo de cambio
 				a.o-btn.o-btn--green(href='#!' title='Consultar ahora') Consultar ahora
 
-		#sacale-provecho.c-introduction-text.section-change
+		#sacale-provecho.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Administración de riesgos
 			section.o-card-gray
 				p CAMBIAR
 				a.o-btn.o-btn--green(href='#!' title='CAMBIAR') CAMBIAR
 
-		#manuales.c-introduction-text.section-change
+		#manuales.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Manuales
 			section.o-card-gray
@@ -111,6 +111,6 @@ block contenido
 				p GMX policy payment manual. English version
 				a.o-btn.o-btn--green(href='#!' title='Consultar ahora') See now
 
-		#boletines.c-introduction-text.section-change
+		#boletines.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing CAMBIAR
