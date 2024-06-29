@@ -656,6 +656,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (node.nodeName === "STRONG") {
             if (this.getAttribute("text-subtitle") != "") {
               node.textContent = this.getAttribute("text-subtitle")
+              node.classList.remove("u-hidden")
             }
             else {
               node.classList.add("u-hidden");
