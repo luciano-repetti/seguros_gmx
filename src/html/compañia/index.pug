@@ -1,26 +1,42 @@
 extends ../template/_template
 
 block append configuracion
-	- var page = {};
-	- page['link'] = 'compañia/index.html';
-	- page['title'] = 'Historia Compañia';
-	- page['descrip'] = 'La historia de la compañia GMX Seguros';
-	- page['keys'] = 'seguros, negocios, personales';
-	- page['lang'] = 'es';
-	- page['responsive'] = true;
-	- page['section'] = [];
-	- page['libsCss'] = [];
-	- page['libs'] = [];
-	- page['plugins'] = ['splide'];
-	- page['js'] = [];
+    - var page = {};
+    - page['link'] = 'compañia/index.html';
+    - page['title'] = 'Historia Compañia';
+    - page['descrip'] = 'La historia de la compañia GMX Seguros';
+    - page['keys'] = 'seguros, negocios, personales';
+    - page['lang'] = 'es';
+    - page['responsive'] = true;
+    - page['section'] = [];
+    - page['libsCss'] = [];
+    - page['libs'] = [];
+    - page['plugins'] = ['splide'];
+    - page['js'] = [];
 
-	- var path = '../../';
+    - var path = '../../';
 
 block contenido
-	main.o-section--main
-		.c-banner-text.c-banner-text--padding1
-			section.o-section.o-section--banner-small
-				.o-container
-					.o-module.o-module--deco5.u-text-center
-						.o-module__title.o-module__title--adapted
-							h1 #[small Historia] Más de #[strong 25 años] de trayectoria
+    main.o-section--main
+        .c-banner-text.c-banner-text--padding1
+            section.o-section.o-section--banner-small
+                .o-container
+                    .o-module.o-module--deco5.u-text-center
+                        .o-module__title.o-module__title--adapted
+                            h1 #[small Historia] Más de #[strong 25 años] de trayectoria
+
+        .c-navigation-page
+            .c-navigation-page__list-section.c-navigation-page__list-section--gap(aria-label='Secciones del sitio')
+                ul(role='navigation')
+                    li.container-anchor.container-anchor--active
+                        a(href='#reportar-siniestro' title='Ir a la sección Reportar siniestro' text-title='Reportar' text-subtitle='siniestro') Historia
+                    li.container-anchor
+                        a(href='#procedimiento-siniestros' title='Ir a la sección de Procedimiento de atención a siniestros' text-title='Procedimiento de atención a ' text-subtitle='Siniestros') Misión, visión y valores
+                    li.container-anchor
+                        a(
+                            href='#documentacion-siniestros'
+                            title='Ir a la sección de Documentación por ramo para el trámite de siniestros'
+                            text-title='Documentación por ramo para el trámite de' text-subtitle='Siniestros'
+                        ) Innovación
+                    li.container-anchor
+                        a(href='#definiciones' title='Ir a la sección de Definiciones' text-title='Definiciones' text-subtitle='') Integridad corporativa
