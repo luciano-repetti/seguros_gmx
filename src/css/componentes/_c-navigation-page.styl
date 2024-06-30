@@ -24,14 +24,16 @@
             max-width 1200px
             display flex
             justify-content space-between
+            gap: 0
             align-items center
-            flex-wrap wrap
+            // flex-wrap wrap
             +TabletLandscape(max)
                 padding 20px 20px
                 max-width 100%
                 justify-content center
                 gap 1.5em
             li
+                text-align: center
                 +TabletLandscape(max)
                     width 100%
                     display: flex
@@ -62,6 +64,10 @@
                                 transform: translateY(-100%)
                     &--bold > a
                             font-weight: 600
+        &--gap
+            > ul
+                justify-content center
+                gap: 4em
     &--void
         position: static
         +Desktop(max)
