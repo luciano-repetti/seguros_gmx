@@ -26,7 +26,7 @@
             justify-content space-between
             gap: 0
             align-items center
-            // flex-wrap wrap
+            flex-wrap wrap
             +TabletLandscape(max)
                 padding 20px 20px
                 max-width 100%
@@ -68,6 +68,8 @@
             > ul
                 justify-content center
                 gap: 4em
+                +TabletLandscape(max)
+                    gap 1em
     &--void
         position: static
         +Desktop(max)
