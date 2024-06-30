@@ -12,6 +12,11 @@
         +TabletLandscape(max)
             padding-left: 20px
     ul
+        &.notification
+          margin-top 1rem
+          width 100%
+          &:after
+            display none
         display: flex
         flex-direction: column
         gap: 2em
@@ -42,6 +47,10 @@
         margin-bottom: 0em
         position: relative
     &__container-card
+        &.m-height
+            min-height 150px
+            .o-card-step:not(.o-card-step--image)
+              padding 2.5rem
         display: flex
         gap: 1em
         color: gray-2

@@ -64,9 +64,50 @@ block contenido
 		#con-codigo-qr.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Ayuda con tu código QR
-			section.o-card-gray
-				p CAMBIAR
-				a.o-btn.o-btn--green(href='#!' title='CAMBIAR') CAMBIAR
+			.o-section.o-section--max-800
+				.c-introduction-text__text-container
+					p El código QR que se encuentra en las pólizas de GMX Seguros, es una herramienta que garantiza la seguridad y autenticidad de las pólizas emitidas por la compañía.
+					p Este código contiene los datos encriptados del asegurado, y a su vez, permite validar la información registrada en GMX Seguros.
+					h3.my-spacing ¿Cómo visualizo el código QR?
+					section.c-personal-attention
+						ul
+							li
+								.c-personal-attention__container-card.m-height
+									.o-card-step.o-card-step--image
+										img(src=urlFolder + 'images/ayuda-con-tu-seguro/mobile.png' alt='alt')
+										.o-card-step--image__step
+											p Paso 1
+									.o-card-step
+										p Usa la cámara de tu teléfono móvil si cuenta con la funcionalidad de escaneo de código QR o descarga alguna aplicación para lectura de códigos QR.
+
+							li
+								.c-personal-attention__container-card.m-height
+									.o-card-step.o-card-step--image
+										img(src=urlFolder + 'images/ayuda-con-tu-seguro/mobile.png' alt='alt')
+										.o-card-step--image__step
+											p Paso 2
+									.o-card-step
+										p Escanear el código QR por medio de la aplicación.
+							li
+								.c-personal-attention__container-card.m-height
+									.o-card-step.o-card-step--image
+										img(src=urlFolder + 'images/ayuda-con-tu-seguro/mobile.png' alt='alt')
+										.o-card-step--image__step
+											p Paso 3
+									.o-card-step
+										p Se mostrará una liga por medio de la cual se desplegarán los datos registrados en GMX Seguros.
+						ul.notification
+							li
+								.c-personal-attention__container-card
+									.o-card-step.o-card-step--image.o-card-step--none.u-invisibility
+										img(src=urlFolder + 'images/ayuda-con-tu-seguro/mobile.png' alt='alt')
+									.o-card-with-button.o-card-with-button__without-icon
+										.o-card-with-button__container-info
+											h3 IMPORTANTE
+											p Para tu seguridad, es importante que valides que la liga a la cual te redireccionará el código QR sea
+											strong #[a(href='#' title='Ir hacia el codigo QR') qr.gmx.com.mx]
+											p Para cualquier aclaración comunícate al teléfono
+											strong #[a(href='tel:+5554804100' title='Ir hacia el numero de telefono') (55) 5480 4100]
 
 		#con-tu-siniestro.c-introduction-text.section-change(aria-expanded="false")
 			section.o-card-gray
