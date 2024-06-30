@@ -2,7 +2,7 @@ extends ../template/_template
 
 block append configuracion
 	- var page = {};
-	- page['link'] = 'seguros/mensaje-confirmado.html';
+	- page['link'] = 'seguros/mensaje-enviado.html';
 	- page['title'] = 'Mensaje de confirmación';
 	- page['descrip'] = 'Mensaje de confirmación de envio de formulario.';
 	- page['keys'] = 'seguros, negocios, personales';
@@ -31,6 +31,6 @@ block contenido
 			section.container-message
 				.container-message__title
 					img(src=urlFolder + 'images/seguros/GMX-manos-alternadas.png' alt='alt')
-					h3 Su mensaje se ha enviado correctamente
+					h2(aria-label='' aria-labelledby='') Su mensaje se ha enviado correctamente
 				p En caso no recibir respuesta consultar la sección de SPAM de tu correo electrónico.
-				a class="o-btn" href="/index.html" title="Ir al inicio" Volver al inicio
+				a.o-btn(href="/index.html" title="Ir al inicio") Volver al inicio
