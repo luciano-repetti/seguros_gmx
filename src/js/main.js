@@ -642,7 +642,7 @@ document.addEventListener("DOMContentLoaded", function () {
   anchors.forEach((anchor) => {
     anchor.addEventListener("click", function (event) {
       event.preventDefault();
-
+      $('html, body').animate({ scrollTop: 0 }, 'fast');
       document
         .querySelector("li.container-anchor--active")
         ?.classList.remove("container-anchor--active");
@@ -684,7 +684,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const activeAnchor = document.querySelector(
     "li.container-anchor--active a"
   );
-  if (activeAnchor) {
+  const navigationID = window.location.hash ? window.location.hash.substring(1) : null;
+  if (navigationID != null) {
+    document.querySelector(`a[href='#${navigationID}']`).click();
+  }
+  else {
     toggleSections(activeAnchor.getAttribute("href").substring(1));
   }
 });
