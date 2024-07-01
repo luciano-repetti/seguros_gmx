@@ -163,4 +163,28 @@
 			line-height: 28px
 			+MobileLandscape(max)
 				font-size: 16px
-			
+	&--with-image
+		display flex
+		flex-direction row
+		padding 28px 28px
+		gap 2rem
+		margin-top 1.5rem
+		+Resposive(max, 600px)
+			flex-direction column
+			gap .5rem
+			.o-card-step--img
+				margin 0 auto
+		.o-card-step--container
+			display flex
+			flex-direction column
+			gap 2rem
+			padding 20px 0
+			h3
+				margin 0
+	&--link
+		display flex
+		flex-direction row
+		align-items center
+		gap 1rem
+	&--img
+		max-width 130px
