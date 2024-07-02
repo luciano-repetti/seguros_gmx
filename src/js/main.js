@@ -642,7 +642,6 @@ document.addEventListener("DOMContentLoaded", function () {
   anchors.forEach((anchor) => {
     anchor.addEventListener("click", function (event) {
       event.preventDefault();
-      $('html, body').animate({ scrollTop: 0 }, 'fast');
       document
         .querySelector("li.container-anchor--active")
         ?.classList.remove("container-anchor--active");
@@ -667,6 +666,14 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleSections(activeId);
 
       history.pushState(null, "", `#${activeId}`);
+      if ($("#scrollTop")[0]) {
+        $('html, body').animate({ scrollTop: 0 }, 'fast');
+      }
+      else {
+        $('html, body').animate({
+          scrollTop: $(this.getAttribute("href")).offset().top - ($("ul[role='navigation']").height() * 3)
+        }, 500);
+      }
     });
   });
 
