@@ -26,21 +26,21 @@ block contenido
 							h1 Reportar #[strong Siniestro]
 		.c-navigation-page
 			.c-navigation-page__list-section(aria-label='Secciones del sitio')
-				ul(role='navigation')
+				ul#scrollTop(role='navigation')
 					li.container-anchor.container-anchor--active
-						a(href='#reportar-siniestro' title='Ir a la sección Reportar siniestro' text-break='true' text-title='Reportar' text-subtitle='siniestro') Reportar siniestro
+						a(href='#reportar-siniestro' title='Ir a la sección Reportar siniestro' text-break='true' template='<h1>Reportar <strong>Siniestros</strong></h1>') Reportar siniestro
 					li.container-anchor
-						a(href='#procedimiento-siniestros' title='Ir a la sección de Procedimiento de atención a siniestros' text-title='Procedimiento de atención a ' text-subtitle='Siniestros') Procedimiento de atención a siniestros
+						a(href='#procedimiento-siniestros' title='Ir a la sección de Procedimiento de atención a siniestros' template='<h1>Procedimiento de atención a <strong>siniestros</strong></h1>') Procedimiento de atención a siniestros
 					li.container-anchor
 						a(
 							href='#documentacion-siniestros'
 							title='Ir a la sección de Documentación por ramo para el trámite de siniestros'
-							text-title='Documentación por ramo para el trámite de' text-subtitle='Siniestros'
+							template='<h1>Documentación por ramo para el trámite de <strong>Siniestros</strong></h1>'
 						) Documentación por ramo para el trámite de siniestros
 					li.container-anchor
-						a(href='#definiciones' title='Ir a la sección de Definiciones' text-title='Definiciones' text-subtitle='') Definiciones
+						a(href='#definiciones' title='Ir a la sección de Definiciones' template='<h1>Definiciones</h1>') Definiciones
 
-		#reportar-siniestro.c-introduction-text.section-change(aria-expanded='true')
+		#reportar-siniestro.c-introduction-text.section-change(role='tabpanel' aria-expanded='true')
 			section.o-card-gray
 				h2 Reportar Siniestro #[br]online
 				a.o-btn.o-btn--green(href='#!' title='Reportar siniestro') Reportar siniestro
@@ -89,7 +89,7 @@ block contenido
 						strong siniestros@gmx.com.mx
 						p respuesta máxima al día hábil siguiente
 
-		#procedimiento-siniestros.o-section.section-change
+		#procedimiento-siniestros.o-section.section-change(role='tabpanel' aria-expanded='false')
 			section.c-personal-attention
 				h2 Contamos con atención especializada las 24 horas de los 365 días del año.
 				ul
@@ -148,7 +148,7 @@ block contenido
 								h3 Primer contacto
 								p Para nosotros es muy importante estar para ti en momentos complicados, es por eso que una vez realizado el reporte, el ajustador que atienda el siniestro se pondrá en contacto vía telefónica con el Asegurado o Beneficiario a la brevedad.
 
-		#documentacion-siniestros.o-section.section-change
+		#documentacion-siniestros.o-section.section-change(role='tabpanel' aria-expanded='false')
 			.o-section.o-section--max-800
 				.c-introduction-text__text-container
 					p Las siguientes listas son de tipo enunciativo, más no limitativo, operan de acuerdo a cada caso concreto y los documentos serán solicitados por medio del Ajustador.
@@ -160,20 +160,20 @@ block contenido
 								p A
 							p Ver método de cálculo
 						button#button-expand-1.o-btn-arrow.o-btn-arrow--arrow-down(
-							href='#'
 							aria-label='Incendio'
 							title='boton expandir información'
 						)
 							i.i-icon.i-arrow-up-right(aria-hidden='true')
-					ul#contenido-1.o-container-list.o-container-list--padding.u-hidden
-						li Carta reclamación a GMX Seguros, detallando los daños o pérdidas.
-						li Facturas de adquisición de los bienes afectados; escrituras en caso de inmuebles.
-						li Copia certificada del acta, con todas sus actuaciones de la inspección ocular y peritajes de las autoridades correspondientes.
-						li Copia del informe o parte de los bomberos.
-						li Cotización del valor de reposición de los bienes afectados parcialmente y los destruidos, detallando y desglosando las refacciones, materiales, mano de obra, inventarios, mobiliario, etc.
-						li Copia del último avalúo practicado a los edificios asegurados
-						li Recibos de pago de impuestos y derechos.
-						li Valor en libros de su activo fijo a la fecha del siniestro.
+					li
+						ul#contenido-1.o-container-list.o-container-list--padding.u-hidden
+							li Carta reclamación a GMX Seguros, detallando los daños o pérdidas.
+							li Facturas de adquisición de los bienes afectados; escrituras en caso de inmuebles.
+							li Copia certificada del acta, con todas sus actuaciones de la inspección ocular y peritajes de las autoridades correspondientes.
+							li Copia del informe o parte de los bomberos.
+							li Cotización del valor de reposición de los bienes afectados parcialmente y los destruidos, detallando y desglosando las refacciones, materiales, mano de obra, inventarios, mobiliario, etc.
+							li Copia del último avalúo practicado a los edificios asegurados
+							li Recibos de pago de impuestos y derechos.
+							li Valor en libros de su activo fijo a la fecha del siniestro.
 					li.o-card-large.o-card-large--thick
 						.container-text
 							.punt
@@ -196,7 +196,7 @@ block contenido
 						a.o-btn-arrow(href='#' aria-label='Incendio' title='Ir hacia Transportes')
 							i.i-icon.i-arrow-up-right(aria-hidden='true')
 
-		#definiciones.o-section.section-change
+		#definiciones.o-section.section-change(role='tabpanel' aria-expanded='false')
 			.o-section.o-section--max-1000
 				ul.c-documentation-siniestros
 					li.o-card-large.o-card-large--light-blue.o-card-large--thick
@@ -204,7 +204,6 @@ block contenido
 							small 01
 							p Ajustadores
 						button#button-expand-3.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
-							href='#'
 							aria-label='Incendio'
 							title='boton expandir información'
 						)
