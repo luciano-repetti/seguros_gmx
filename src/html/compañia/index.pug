@@ -29,17 +29,17 @@ block contenido
             .c-navigation-page__list-section.c-navigation-page__list-section--gap(aria-label='Secciones del sitio')
                 ul(role='navigation')
                     li.container-anchor.container-anchor--active
-                        a(href='#historia' title='Ir a la sección Historia' text-title='Más de' text-subtitle='25 años') Historia
+                        a(href='#historia' title='Ir a la sección Historia' template='<h1>Más de <strong>25 años</strong> de trayectoria</h1>') Historia
                     li.container-anchor
-                        a(href='#mision-vision-valores' title='Ir a la sección de misión, visión y valores' text-title='Procedimiento de atención a ' text-subtitle='Siniestros') Misión, visión y valores
+                        a(href='#mision-vision-valores' title='Ir a la sección de misión, visión y valores' template='<h1>Procedimiento de atención a <strong>Siniestros</strong></h1>') Misión, visión y valores
                     li.container-anchor
                         a(
                             href='#innovacion'
                             title='Ir a la sección de innovación'
-                            text-title='Documentación por ramo para el trámite de' text-subtitle='Siniestros'
+                            template='<h1>Documentación por ramo para el trámite de<strong>Siniestros</strong></h1>'
                         ) Innovación
                     li.container-anchor
-                        a(href='#integridad-corporativa' title='Ir a la sección de integridad corporativa' text-title='Definiciones' text-subtitle='') Integridad corporativa
+                        a(href='#integridad-corporativa' title='Ir a la sección de integridad corporativa' template='<h1>Definiciones</h1>') Integridad corporativa
 
         .o-section.o-section--padding.section-change#historia(aria-expanded='true')
             .c-introduction-text__text-container
@@ -121,4 +121,77 @@ block contenido
                                             p 800 08 74 426
                             .row.row--dos.o-card-with-button.o-card-with-button--width-full
                                 p O ingresa en el siguiente enlace:
-                                a(href="https://www.integriline.net/Welcome/options/" target='_blank') www.integriline.net/Welcome/options/ 
+                                a(href="https://www.integriline.net/Welcome/options/" target='_blank') www.integriline.net/Welcome/options/
+
+            .c-coverage
+                section.c-coverage__container-banner
+                    .container-heading-compania-h2
+                        h2 Consulta nuestras #[span políticas y manuales]
+                    ul.c-coverage__container-elements.c-coverage__container-elements--bg-white
+                        li
+                            h3 Política de Hospitalidad y Viáticos
+                            p La política de hospitalidad y viáticos pagados a servidores públicos proporciona los lineamientos aplicables que restringen cualquier tipo de gasto que solicite ser pagado a funcionarios públicos y que tengan relación con hospitalidad, viáticos, regalos y entretenimiento, con la finalidad de evitar que GMX tenga cualquier beneficio o ventaja indebidos sobre sus competidores.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar la política de Hospitalidad y viáticos
+                        li
+                            h3 Política de Contribuciones y Donaciones Políticas
+                            p “La Política de Donaciones y Contribuciones Políticas establece los lineamientos aplicables que restringen cualquier donativo o contribución que tengan una afinidad política en donde se pretenda vincular o bien utilizar el nombre de GMX Seguros.”
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar la política de Contribuciones y Donaciones Políticas
+                        li
+                            h3 Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de Procedencia ilícita y Financiamiento al Terrorismo
+                            p El Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de procedencia ilícita y Financiamiento al Terrorismo, establece las medidas, políticas y procedimientos que GMX Seguros observará, para prevenir, detectar y reportar los actos, omisiones u operaciones que pudieran favorecer, prestar ayuda, auxilio o cooperación de cualquier especie para la comisión del delito que se establecen en los artículos 139, 139 Quater, 148 Bis del Código Penal Federal (referido al Terrorismo) o que pudiesen ubicarse en los supuestos del Articulo 400 Bis del mismo ordenamiento legal (referido a Operaciones con Recursos de Procedencia Ilícita.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de Procedencia ilícita y Financiamiento al Terrorismo
+                        li
+                            h3 Manual de Prevención y Detección de Fraudes
+                            p El Manual de Prevención y Detección de Fraudes impulsa y propaga mediante la aplicación de valores éticos en todos los empleados de GMX Seguros, que permita el desempeño de sus funciones con un sentido de responsabilidad personal y social. Así como desarrollar y crear una conciencia permanente de prevención y detección de operaciones o situaciones fraudulentas.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Manual de Prevención y Detección de Fraudes
+                        li
+                            h3 Manual de Anticorrupción y Antisoborno
+                            p MEste manual establece las acciones a las que se ha sumado GMX en el combate a la corrupción y el soborno, esto con el fin de frenar, detener e incluso impedir actos que puedan ser señalados como tal.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Manual de Anticorrupción y Antisoborno
+                        li
+                            h3 Política de Regalos y Agradecimientos
+                            p La Política de Regalos y Agradecimientos establece los lineamientos que deben seguir todos los colaboradores de GMX, sin importar su nivel jerárquico en cuanto a la recepción y entrega de regalos provenientes de proveedores, agentes o terceros con los que tenga vínculos comerciales.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Política de Regalos y Agradecimientos
+                        li
+                            h3 Código de Ética para Proveedores
+                            p El Código de Ética regula el comportamiento de los proveedores en relación con la empresa, el proveedor debe mantener en todo momento un comportamiento ético que le permita establecer relaciones legitimas y productivas con sus propios proveedores y empresas con las que tengan relación contractual, de igual forma, deberá actuar con honradez e integridad en todos sus contactos y relaciones comerciales con entidades públicas y privadas.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Código de Ética para Proveedores
+                        li
+                            h3 Manual de Recursos Humanos
+                            p El Manual de Recursos Humanos tiene como proposito dar a conocer la visión, misión y valores de GMX Seguros.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span El Manual de Recursos Humanos tiene como proposito dar a conocer la visión, misión y valores de GMX Seguros.
+                        li
+                            h3 Código de Conducta
+                            p El Código de Conducta tiene como propósito subrayar las conductas y comportamientos que seguirán los colaboradores de GMX Seguros.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Código de Conducta
+                        li
+                            h3 Política de Conflicto de Intereses
+                            p La Política de Conflicto de Intereses se encarga de asegurar la transparencia y honestidad de las actividades de los consejeros y empleados de cualquier área de GMX Seguros, dando a conocer todas aquellas situaciones que pueden considerarse como conflictos de interés que puedan dañar la imagen de la Institución.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Política de Conflicto de Intereses
+                        li
+                            h3 Política de Sanciones Institucional
+                            p Esta política contiene las sanciones a las que pueden ser acreedores todos los colaboradores de GMX con independencia del su nivel o cargo dentro de ella, por incumplimiento o violación a cualquiera de sus políticas institucionales, que vulneren su ética o integridad.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Política de Sanciones Institucional
+
