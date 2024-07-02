@@ -41,6 +41,7 @@
 		padding: 30px 20px
 		gap: 3em
 	&--max-770
+		box-sizing: content-box
 		padding-top 0
 		max-width: 770px
 		align-items: flex-start
@@ -51,7 +52,24 @@
 			margin-bottom: 48px
 	&--padding
 		padding: 30px 20px
+	&--pl-6
+		padding-left: 6em
 	&--video
 		min-height 40vh
 		background-color #04689D
 		border-radius 6px
+	.greetings
+		display: flex
+		flex-direction: column
+		gap: .5em
+		color blueDark-1
+		font-size: 20px
+		*
+			margin-bottom: 0
+		> p
+			margin-bottom: 1em
+			font-family: tipografia-serif
+		> h4
+			span
+				display: block
+				margin-top: .5em

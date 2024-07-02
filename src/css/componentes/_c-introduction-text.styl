@@ -43,7 +43,19 @@
             font-size 20px
           &.my-spacing
             margin 2.5rem 0
-        .container-text
+        .container-heading-company-h4
+          margin-bottom: 2em
+          > h4
+            color blueDark-1
+            font-size 60px
+            font-family tipografia-serif
+            +Resposive(max, 600px)
+              font-size 40px
+            +MobilePortrait(max)
+              font-size 28px
+            &.mb-spacing
+              margin-bottom 2rem
+        .container-gray-company
           p
             color gray-2
             font-size 24px
