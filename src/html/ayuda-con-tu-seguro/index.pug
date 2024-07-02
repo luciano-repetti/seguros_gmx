@@ -163,7 +163,7 @@ block contenido
 						.o-card-step--link
 							a.o-btn-arrow(href='#' title='Ir hacia ...' target='_blank')
 								i.i-icon.i-arrow-up-right(aria-hidden='true')
-							.container-text
+							.container-text.white
 								p Visitar sitio Medtips
 
 		#manuales.c-introduction-text.section-change(aria-expanded="false")
@@ -177,5 +177,206 @@ block contenido
 				a.o-btn.o-btn--green(href='#!' title='Consultar ahora') See now
 
 		#boletines.c-introduction-text.section-change(aria-expanded="false")
-			.c-introduction-text__text-container
-				h2.mb-spacing CAMBIAR
+			.o-section--max-1200.o-section--padding
+				.c-newsletters__nav.js-tabs
+					ul.js-tabsNav(role='tablist' aria-labelledby='tablist-1')
+						li.filter
+							p Filtrar por:
+						li.is-active(role='presentation')
+							a#tab-1.js-tabsBtn(
+								href='#'
+								title='2023'
+								role='tab'
+								aria-selected='true'
+								aria-controls='tabpanel-1'
+							) 2023
+						li(role='presentation')
+							a#tab-2.js-tabsBtn(
+								href='#'
+								title='2022'
+								role='tab'
+								aria-selected='false'
+								aria-controls='tabpanel-2'
+								tabindex='-1'
+							) 2022
+						li(role='presentation')
+							a#tab-3.js-tabsBtn(
+								href='#'
+								title='2021'
+								role='tab'
+								aria-selected='false'
+								aria-controls='tabpanel-3'
+								tabindex='-1'
+							) 2021
+						li(role='presentation')
+							a#tab-4.js-tabsBtn(
+								href='#'
+								title='2020'
+								role='tab'
+								aria-selected='false'
+								aria-controls='tabpanel-4'
+								tabindex='-1'
+							) 2020
+						li(role='presentation')
+							a#tab-5.js-tabsBtn(
+								href='#'
+								title='2019'
+								role='tab'
+								aria-selected='false'
+								aria-controls='tabpanel-5'
+								tabindex='-1'
+							) 2019
+					.c-newsletters__box.o-section--max-1000
+
+
+
+
+
+
+
+
+
+						#tabpanel-1.c-newsletters__panel.js-tabsPanel.is-active(
+							role='tabpanel'
+							tabindex='0'
+							aria-labelledby='tab-1'
+							data-title='2023'
+						)
+							a.c-newsletters__link.js-tabsLink(href='#' role='button' aria-expanded='true' data-id='tab-1') 2023
+							.c-newsletters__content.js-tabsContent
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Riesgos más comunes en PyMES
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Aplicaciones Fitness
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p ¡Ahhh!…¿Segura tu casa?
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+
+
+
+
+
+
+
+
+
+
+						#tabpanel-2.c-newsletters__panel.js-tabsPanel(
+							role='tabpanel'
+							tabindex='0'
+							aria-labelledby='tab-2'
+							data-title='Profesionistas'
+						)
+							a.c-newsletters__link.js-tabsLink(href='#' role='button' aria-expanded='false' data-id='tab-2') 2022
+							.c-newsletters__content.js-tabsContent
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Riesgos más comunes en PyMES
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Aplicaciones Fitness
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p ¡Ahhh!…¿Segura tu casa?
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+
+						#tabpanel-3.c-newsletters__panel.js-tabsPanel(
+							role='tabpanel'
+							tabindex='0'
+							aria-labelledby='tab-3'
+							data-title='Profesionistas'
+						)
+							a.c-newsletters__link.js-tabsLink(href='#' role='button' aria-expanded='false' data-id='tab-3') 2021
+							.c-newsletters__content.js-tabsContent
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Riesgos más comunes en PyMES
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Aplicaciones Fitness
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p ¡Ahhh!…¿Segura tu casa?
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+
+						#tabpanel-4.c-newsletters__panel.js-tabsPanel(
+							role='tabpanel'
+							tabindex='0'
+							aria-labelledby='tab-4'
+							data-title='Profesionistas'
+						)
+							a.c-newsletters__link.js-tabsLink(href='#' role='button' aria-expanded='false' data-id='tab-4') 2020
+							.c-newsletters__content.js-tabsContent
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Riesgos más comunes en PyMES
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Aplicaciones Fitness
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p ¡Ahhh!…¿Segura tu casa?
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+
+
+						#tabpanel-5.c-newsletters__panel.js-tabsPanel(
+							role='tabpanel'
+							tabindex='0'
+							aria-labelledby='tab-5'
+							data-title='Profesionistas'
+						)
+							a.c-newsletters__link.js-tabsLink(href='#' role='button' aria-expanded='false' data-id='tab-5') 2019
+							.c-newsletters__content.js-tabsContent
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Riesgos más comunes en PyMES
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p Aplicaciones Fitness
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+								.c-newsletters__card
+									.c-newsletters__card-header
+										p ¡Ahhh!…¿Segura tu casa?
+									.c-newsletters__card-footer
+										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
+											i.i-icon.i-arrow-up-right(aria-hidden='true')

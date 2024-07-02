@@ -1,85 +1,88 @@
-.c-navigation-page
-    position: sticky
-    z-index: 50
-    top: 126px
-    width 100%
-    background-color blue-1
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    display flex
-    justify-content center
-    align-items center
-    margin-bottom .5rem
-    +Desktop(max)
-        top: 66px
-        box-shadow: none
-        position: static
-    +TabletLandscape(max)
-        padding 0 1.5rem
-    &__list-section
-        display flex
-        justify-content center
-        align-items center
-        width 100%
-        > ul
-            width 100%
-            max-width 1200px
-            display flex
-            flex-wrap nowrap
-            gap 1.5rem
-            flex-direction row
-            +TabletLandscape(max)
-                max-width 100%
-                justify-content center
-                gap 1rem
-            +Tablet(max)
-                flex-direction column
-            li
-                text-align: center
-                +TabletLandscape(max)
-                    display: flex
-                    justify-content: center
-                &.container-anchor
-                    display flex
-                    align-items center
-                    position relative
-                    > a
-                        width fit-content
-                        font-size 18px
-                        color blueDark-4
-                        text-decoration none
-                        padding 1rem 0
-                        text-align: center
-                        position static
-                        +TabletLandscape(max)
-                            font-size 12px
-                        +Tablet(max)
-                            font-size 20px
-                            border-bottom 2px solid transparent
-                    &--active,
-                    &:hover
-                        > a
-                            color green-1
-                            +Tablet(max)
-                              border-bottom 2px solid green-1
-                            &::after
-                                content: ""
-                                display: block
-                                width 100%
-                                height: 2px
-                                background-color green-1
-                                position: absolute
-                                bottom: -2px
-                                +Tablet(max)
-                                    display none
-                    &--bold > a
-                            font-weight: 600
-        &--gap
-            > ul
-                justify-content center
-                gap: 4rem
-                +TabletLandscape(max)
-                    gap 1rem
-    &--void
-        position: static
-        +Desktop(max)
-            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+	.c-navigation-page
+		position: sticky
+		z-index: 50
+		top: 126px
+		width 100%
+		background-color blue-1
+		box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+		display flex
+		justify-content center
+		align-items center
+		margin-bottom .5rem
+		+Desktop(max)
+				top: 66px
+				box-shadow: none
+				position: static
+		+TabletLandscape(max)
+				padding 0 1.5rem
+		&__list-section
+				display flex
+				justify-content center
+				align-items center
+				width 100%
+				> ul
+						width 100%
+						max-width 1200px
+						display flex
+						flex-wrap nowrap
+						gap 1.5rem
+						flex-direction row
+						+TabletLandscape(max)
+								max-width 100%
+								justify-content center
+								gap 1rem
+						+Tablet(max)
+								flex-direction column
+						li
+								text-align: center
+								+TabletLandscape(max)
+										display: flex
+										justify-content: center
+								&.container-anchor
+										display flex
+										align-items stretch !important
+										position relative
+										> a
+												width fit-content
+												font-size 18px
+												color blueDark-4
+												text-decoration none
+												padding 1rem 0
+												text-align: center
+												position static
+												display: flex;
+												justify-content: center;
+												align-items: center;
+												+TabletLandscape(max)
+														font-size 12px
+												+Tablet(max)
+														font-size 20px
+														border-bottom 2px solid transparent
+										&--active,
+										&:hover
+												> a
+														color green-1
+														+Tablet(max)
+															border-bottom 2px solid green-1
+														&::after
+																content: ""
+																display: block
+																width 100%
+																height: 2px
+																background-color green-1
+																position: absolute
+																bottom: -2px
+																+Tablet(max)
+																		display none
+										&--bold > a
+														font-weight: 600
+				&--gap
+						> ul
+								justify-content center
+								gap: 4rem
+								+TabletLandscape(max)
+										gap 1rem
+		&--void
+				position: static
+				+Desktop(max)
+						box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
