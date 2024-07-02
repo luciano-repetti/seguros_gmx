@@ -25,8 +25,8 @@ block contenido
 						.o-module__title.o-module__title--column
 							h1 #[small Seguros] Responsabilidad #[strong Ambiental]
 		.c-navigation-page
-			.c-navigation-page__list-section(aria-label='Secciones del sitio')
-				ul(role='navigation')
+			.c-navigation-page__list-section
+				ul(role='navigation' aria-label='Secciones del sitio')
 					li.container-anchor.container-anchor--active
 						a(href='#introduccion' title='Ir a la sección Introducción') Introducción
 					li.container-anchor
@@ -51,7 +51,7 @@ block contenido
 					.c-consists__card-safe__container-card__card
 						p Es un seguro destinado a cubrir las responsabilidades a consecuencia de los daños derivados de la contaminación que ocasione el asegurado con motivo de sus actividades comerciales.
 					.c-consists__card-safe__container-card__card.c-consists__card-safe__container-card__card--image-container
-						img(src=urlFolder + 'images/seguros/GMX-planta.png' alt='Imagen de una fabrica')
+						img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-planta.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una fabrica')
 
 		#para-quien-es.c-consists
 			section.c-for-whom
@@ -61,19 +61,19 @@ block contenido
 					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
 						p Empresas que manejan o generan materiales y/o residuos peligrosos.
 						.c-for-whom__box-container__box__container-image
-							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-like.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de like')
 					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
 						p Empresas que por su actividad puedan causar contaminación al medio ambiente.
 						.c-for-whom__box-container__box__container-image
-							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-like.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de like')
 					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
 						p Empresas a las cuales las autoridades les exigen un seguro de responsabilidad ambiental.
 						.c-for-whom__box-container__box__container-image
-							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-like.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de like')
 					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
 						p Empresas a las cuales se les exige un seguro por obligación contractual.
 						.c-for-whom__box-container__box__container-image
-							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-like.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de like')
 
 		#cobertura.c-coverage
 			section.c-coverage__container-banner
@@ -82,22 +82,22 @@ block contenido
 					ul.c-coverage__list-elements
 						li.c-coverage__list-elements__container-element
 							.c-coverage__list-elements__container-image
-								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+								img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 							.c-coverage__list-elements__element
 								p Daño ambiental ya sea súbito e imprevisto, gradual y paulatino.
 						li.c-coverage__list-elements__container-element
 							.c-coverage__list-elements__container-image
-								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+								img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 							.c-coverage__list-elements__element
 								p Responsabilidad Civil derivada por contaminación o daños al ambiente.
 						li.c-coverage__list-elements__container-element
 							.c-coverage__list-elements__container-image
-								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+								img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 							.c-coverage__list-elements__element
 								p Responsabilidad Administrativa.
 						li.c-coverage__list-elements__container-element
 							.c-coverage__list-elements__container-image
-								img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+								img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 							.c-coverage__list-elements__element
 								p Gastos de análisis y defensa jurídica.
 					.c-coverage__list-elements
@@ -105,17 +105,17 @@ block contenido
 						ul.c-coverage__list-elements
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Costos de respuesta de emergencia que incluyen los gastos para mitigar una pérdida ambiental.
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Sanciones económicas.
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Interrupción del negocio.
 
@@ -126,7 +126,7 @@ block contenido
 					.c-added-values__container-text(hidden)
 						h4 Estudios especializados de#[br]Administración de Riesgos
 					.c-added-values__container-image
-						img(src=urlFolder + 'images/seguros/GMX-valores-agregados.png' alt='Valores agregados')
+						img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-valores-agregados.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Valores agregados')
 				#card-carousel-desktop.splide.slider-values.splide--desktop
 					.splide__arrows
 						button.splide__arrow.splide__arrow--prev(
@@ -353,7 +353,7 @@ block contenido
 
 		#consideraciones.c-consists
 			section.c-considerations
-				h3 Consideraciones #[p Es importante para realizar una cotización]
+				h3 Consideraciones #[span Es importante para realizar una cotización]
 				.c-container-cards
 					ul.box-container
 						li.box-container__box
@@ -378,7 +378,7 @@ block contenido
 							span 7
 							p Plan de atención a emergencias y/o contingencias ambientales.
 					.image-container
-						img(src=urlFolder + 'images/seguros/GMX-todo-ok.png' alt='Icon Scientist')
+						img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-todo-ok.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icon Scientist')
 
 		.c-requirements
 			section.container-requirements
@@ -418,75 +418,72 @@ block contenido
 						ul.container-cards__card__requirements
 							li.container-cards__card__requirements__requirement
 								p Cuestionario Responsabilidad Ambiental de GMX Seguros juntos con sus anexos.
-							.container-cards__card__requirements__image
-								img(src=urlFolder + 'images/seguros/GMX-sugerencia-lista.png' alt='alt')
+						div.container-cards__card__requirements__image
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-sugerencia-lista.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='alt')
 
 		#contactar.c-contact-form
 			section.container-contact-form
 				h3#contact-form-title Contactar ahora
 				p Solicita asesoría de un agente especializado, el cual te ayudará a contratar lo que realmente necesitas.
 				form.container-form(action='#' method='post' aria-labelledby='contact-form-title')
-					fieldset
-						legend Tipo de seguro de Interés
-						.container-message
-							.container-form__custom-select
-								select#insurance-type(name='insurance-type' aria-required='true')
-									option(value='' disabled selected) Seleccione...
-									option(value='Ambiental') Instituciones educativas
-									option(value='Ambiental') Profesionistas
-									option(value='Ambiental') Sector salud
-									option(value='Ambiental') Ambiental
-									option(value='Ambiental') Construcción
-									option(value='Ambiental') Industria Manufactura y Comercio
-									option(value='Ambiental') Aviación
-									option(value='Ambiental') Embarcaciones
-									option(value='Ambiental') Carga en Tránsito
-									option(value='Ambiental') Gobierno
-									option(value='Ambiental') Familiar
-									option(value='Ambiental') Esparcimiento
-									option(value='Ambiental') Riesgos Especiales
-								i.i-icon.i-angle-down(aria-hidden='true')
-							#error-insurance-type.error-message
-					fieldset
-						legend Información personal
-						.container-message
-							input#full-name(type='text' name='full-name' placeholder='Nombre completo' aria-required='true')
-							#error-full-name.error-message
-						.container-message
-							input#phone(type='text' name='phone' placeholder='Teléfono celular' aria-required='true')
-							#error-phone.error-message
-						.container-message
-							input#email(type='email' name='email' placeholder='Correo electrónico' aria-required='true')
-							#error-email.error-message
-						.container-message
-							input#city(type='text' name='city' placeholder='Ciudad' aria-required='true')
-							#error-city.error-message
-						.container-message
-							.container-form__custom-select
-								select#state(name='state' aria-required='true')
-									option(value='' disabled selected) Seleccione una opción
-									option(value='Estado') Estado
-								i.i-icon.i-angle-down(aria-hidden='true')
-							#error-state.error-message
+					.container-message
+						p Tipo de seguro de Interés
+						.container-form__custom-select
+							select#insurance-type(name='insurance-type' aria-required='true')
+								option(value='' disabled selected) Seleccione...
+								option(value='Ambiental') Instituciones educativas
+								option(value='Ambiental') Profesionistas
+								option(value='Ambiental') Sector salud
+								option(value='Ambiental') Ambiental
+								option(value='Ambiental') Construcción
+								option(value='Ambiental') Industria Manufactura y Comercio
+								option(value='Ambiental') Aviación
+								option(value='Ambiental') Embarcaciones
+								option(value='Ambiental') Carga en Tránsito
+								option(value='Ambiental') Gobierno
+								option(value='Ambiental') Familiar
+								option(value='Ambiental') Esparcimiento
+								option(value='Ambiental') Riesgos Especiales
+							i.i-icon.i-angle-down(aria-hidden='true')
+						#error-insurance-type.error-message
+					.container-message
+						input#full-name(type='text' name='full-name' placeholder='Nombre completo' aria-required='true')
+						#error-full-name.error-message
+					.container-message
+						input#phone(type='text' name='phone' placeholder='Teléfono celular' aria-required='true')
+						#error-phone.error-message
+					.container-message
+						input#email(type='email' name='email' placeholder='Correo electrónico' aria-required='true')
+						#error-email.error-message
+					.container-message
+						input#city(type='text' name='city' placeholder='Ciudad' aria-required='true')
+						#error-city.error-message
+					.container-message
+						.container-form__custom-select
+							select#state(name='state' aria-required='true')
+								option(value='' disabled selected) Seleccione una opción
+								option(value='Estado') Estado
+							i.i-icon.i-angle-down(aria-hidden='true')
+						#error-state.error-message
 					.container-error
 						.container-form__container-terms
 							label(for='TyC') 
 								input#TyC(type='checkbox' name='TyC' aria-required='true')
 								a(href='' target='_blank' title='Ir hacia terminos y condiciones') Acepto los Términos y Condiciones
 						#error-TyC.error-message
-					fieldset.container-form__container-contact
-						legend ¿Cómo deseas ser contactado?
+					.container-form__container-contact
+						p ¿Cómo deseas ser contactado?
 						.container-contacts
 							label(for='whatsapp') 
 								input#whatsapp(type='checkbox' name='contact-method' value='whatsapp')
-								img(src=urlFolder + 'images/seguros/GMX-whatsapp.svg' alt='Icono de whatsapp') 
+								img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-whatsapp.svg' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de whatsapp') 
 								| Whatsapp
 							label(for='email-contact') 
 								input#email-contact(type='checkbox' name='contact-method' value='email')
-								img(src=urlFolder + 'images/seguros/GMX-email.svg' alt='Icono de mail')
+								img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-email.svg' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de mail')
 								| Correo electrónico
 						#error-contact-method.error-message
 					.container-form__container-button
 						button.o-btn.o-btn--green(type='submit' aria-label='Contactar agente') Contactar agente
 					.container-form__image
-						img(src=urlFolder + 'images/seguros/GMX-inscripcion-datos.png' alt='Imagen sobre persona inscribiendo datos')
+						img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-inscripcion-datos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen sobre persona inscribiendo datos')
