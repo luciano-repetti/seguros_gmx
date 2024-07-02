@@ -1,0 +1,53 @@
+.c-innovating
+    width 100%
+    display flex
+    gap: 64px
+    justify-content: center
+    position: relative
+    &__left
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        gap: 24px
+        width 50%
+        > .card-1
+            width 320px
+            height 536px
+        > .card-2
+            width 320px
+            height 384px
+        > .card-3
+            width 320px
+            height 536px
+        > .card-4
+            width 504px
+            height 384px
+        > .card-5
+            width 320px
+            height 288px
+    &__right
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 24px
+        width 50%
+        > .card-1
+            width 320px
+            height 808px
+        > .card-2
+            width 320px
+            height 384px
+        > .card-3
+            width 320px
+            height 536px
+        > .card-4
+            width 512px
+            height 448px
+    &:after
+        content: ''
+        position: absolute
+        left: 50%
+        // transform: translateX(-50%)
+        width: 2px
+        height: 100%
+        border-left: 2px dashed blueDark-4

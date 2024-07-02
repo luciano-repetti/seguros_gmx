@@ -655,7 +655,11 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           containerTitle.classList?.remove("o-module__title--column")
         }
-
+        if (this.getAttribute("text-type")) {
+          containerTitle.classList?.add("o-module__title--" + this.getAttribute("text-type"))
+        } else {
+          containerTitle.classList?.remove("o-module__title--adapted")
+        }
       }
       this.parentElement.classList.add("container-anchor--active");
 
