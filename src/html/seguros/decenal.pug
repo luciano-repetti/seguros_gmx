@@ -25,8 +25,8 @@ block contenido
 						.o-module__title.o-module__title--column
 							h1 #[small Seguros] Seguro #[strong Decenal]
 		.c-navigation-page
-			.c-navigation-page__list-section(aria-label='Secciones del sitio')
-				ul(role='navigation')
+			.c-navigation-page__list-section
+				ul(role='navigation' aria-label='Secciones del sitio')
 					li.container-anchor.container-anchor--active
 						a(href='#introduccion' title='Ir a la sección Introducción') Introducción
 					li.container-anchor
@@ -55,7 +55,7 @@ block contenido
 					.c-consists__card-safe__container-card__card
 						p Es un seguro que cubre la etapa posterior a la construcción.
 					.c-consists__card-safe__container-card__card.c-consists__card-safe__container-card__card--image-container
-						img(src=urlFolder + 'images/seguros/GMX-grupo.png' alt='Imagen de un grupo de constructores')
+						img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-grupo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de un grupo de constructores')
 
 		#para-quien-es.c-consists
 			section.c-for-whom
@@ -65,19 +65,19 @@ block contenido
 					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
 						p Desarrolladores inmobiliarios
 						.c-for-whom__box-container__box__container-image
-							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-like.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de like')
 					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
 						p Constructoras
 						.c-for-whom__box-container__box__container-image
-							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-like.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de like')
 					li.c-for-whom__box-container__box.c-for-whom__box-container__box--light-blue
 						p Infonavit (aplica para viviendas con o sin avance de obra)
 						.c-for-whom__box-container__box__container-image
-							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-like.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de like')
 					li.c-for-whom__box-container__box.c-for-whom__box-container__box--blue
 						p FOVISSSTE
 						.c-for-whom__box-container__box__container-image
-							img(src=urlFolder + 'images/seguros/GMX-like.png' alt='Icono de like')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-like.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de like')
 
 		#cobertura.c-coverage
 			section.c-coverage__container-banner
@@ -89,27 +89,27 @@ block contenido
 						ul.c-coverage__list-elements
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Vicios de construcción y hechura.
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Vicios del suelo en el cual se construyó.
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Mal comportamiento estructural.
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Error de cálculo y diseño estructural.
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Mala resistencia y calidad de los materiales.
 					.c-coverage__list-elements
@@ -118,12 +118,12 @@ block contenido
 						ul.c-coverage__list-elements
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Vicios de construcción y hechura.
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Mala resistencia y calidad de los materiales.
 					.c-coverage__list-elements
@@ -132,12 +132,12 @@ block contenido
 						ul.c-coverage__list-elements
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Vicios de construcción y hechura.
 							li.c-coverage__list-elements__container-element
 								.c-coverage__list-elements__container-image
-									img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de un escudo')
 								.c-coverage__list-elements__element
 									p Mala calidad de los materiales utilizados.
 
@@ -150,7 +150,7 @@ block contenido
 							span 1
 							p Mostrar los ingresos anuales por su actividad, tipo y cantidad de materiales peligrosos almacenados.
 						li.box-container__box.box-container__box--image
-							img(src=urlFolder + 'images/seguros/GMX-todo-ok.png' alt='Icon Scientist')
+							img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-todo-ok.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icon Scientist')
 
 		#fovissste.c-fovissste
 			section.container-fovissste
@@ -200,21 +200,21 @@ block contenido
 					#contenido-2.container-fovissste__container__contenido.u-hidden
 						p GMX Seguros otorga al asegurado servicios adicionales como asistencia médica, asistencia al hogar, asistencia en gadgets y una gran red de descuentos en establecimientos comerciales.
 						p El servicio de asistencias tiene una vigencia de tres años a partir de la escrituración de la vivienda. El número de eventos incluidos para cada asistencia se reestablece cada año.
-							h4 Asistencia médica
-							ul.o-container-list
-								li Orientación médica telefónica
-								li Ambulancia terrestre por emergencia
-								li Referencias médicas
-								li Médico a domicilio o consulta en consultorio
-							h4 Servicio de Asistencia al hogar
-							ul.o-container-list
-								li Plomería
-								li Cerrajería en casa
-								li Electricidad
-								li Asistencia especializada
-							h4 Asistencia en gadgets
-							h4 Reparación o reposición de equipos
-							h4 Red de descuentos en establecimientos comerciales
+						h4 Asistencia médica
+						ul.o-container-list
+							li Orientación médica telefónica
+							li Ambulancia terrestre por emergencia
+							li Referencias médicas
+							li Médico a domicilio o consulta en consultorio
+						h4 Servicio de Asistencia al hogar
+						ul.o-container-list
+							li Plomería
+							li Cerrajería en casa
+							li Electricidad
+							li Asistencia especializada
+						h4 Asistencia en gadgets
+						h4 Reparación o reposición de equipos
+						h4 Red de descuentos en establecimientos comerciales
 						.o-card-with-button
 							.o-card-with-button__container-button
 								a.o-btn-arrow(href='tel:+5590635397' title='Ir hacia el numero de telefono' target='_blank')
@@ -328,4 +328,4 @@ block contenido
 					.container-form__container-button
 						button.o-btn.o-btn--green(type='submit' aria-label='Contactar agente') Contactar agente
 					.container-form__image
-						img(src=urlFolder + 'images/seguros/GMX-inscripcion-datos.png' alt='Imagen sobre persona inscribiendo datos')
+						img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-inscripcion-datos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen sobre persona inscribiendo datos')
