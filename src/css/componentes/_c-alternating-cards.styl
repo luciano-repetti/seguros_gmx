@@ -1,0 +1,55 @@
+.alternating-cards
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap 1rem
+  width 100%
+  +TabletLandscape(max)
+    grid-template-columns repeat(2, 1fr)
+  +Tablet(max)
+    display flex
+    flex-direction column
+  &__card
+    display flex
+    flex-direction column
+    color white
+    padding 2rem
+    border-radius 2rem
+    background-color blueDark-1
+    justify-content space-between
+    &:nth-child(even)
+      background-color blueDark-5
+      color black
+    h4
+      font-size 20px
+      margin-bottom 2rem
+    p
+      padding 0
+      margin 0
+      font-size 16px
+      line-height 24px
+  &__buttons
+    display flex
+    flex-direction column
+    gap 2rem
+    margin-top 1rem
+  &__button
+    display flex
+    flex-direction row
+    align-items center
+    gap 1rem
+    > div:nth-child(0)
+      margin-bottom 3rem
+  &__cellphone
+    position relative
+    &::after
+      content "Teléfono"
+      position absolute
+      font-size 14px
+      top -20px
+      left 0
+      display flex
+  &__texts
+    display flex
+    flex-direction row
+    gap 0.5rem
+    margin-top 2rem

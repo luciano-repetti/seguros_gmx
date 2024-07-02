@@ -1,3 +1,5 @@
+$c-coverage = 'c-coverage'
+
 .c-coverage
     width 100%
     display flex
@@ -98,3 +100,28 @@
                 margin-bottom 0
                 +TabletLandscape(max)
                     font-size 16px
+    &.{$c-coverage}--gray
+      padding 0
+      .{$c-coverage}__container-banner
+          width 100%
+          max-width 1200px
+          background transparent
+          padding 0
+          color white
+          display flex
+          gap 1em
+          flex-direction column
+          max-width 100%
+          .{$c-coverage}__container-elements
+            padding 0
+            .{$c-coverage}__list-elements
+              &__element
+                  background-color blue-1
+                  border 1px solid blue-2
+                  p
+                    font-size 16px
+                    color blueDark-1
+              &__container
+                &-image
+                  background-color blue-1
+                  border 1px solid blue-2
