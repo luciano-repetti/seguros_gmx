@@ -649,8 +649,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const containerTitle = document.querySelector("#title")
       if (containerTitle) {
-        const title = document.querySelector("#title h1");
-        title.innerHTML = this.getAttribute("template");
+        containerTitle.innerHTML = this.getAttribute("template");
         if (this.getAttribute("text-break")) {
           containerTitle.classList?.add("o-module__title--column")
         } else {
