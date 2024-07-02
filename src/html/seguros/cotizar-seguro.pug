@@ -29,7 +29,7 @@ block contenido
 
 		.c-contact-form.c-contact-form--quotation
 			section.container-contact-form.container-contact-form--quotation
-				h3#contact-form-title Un agente especializado, te ayudará a contratar lo que realmente necesitas.
+				h2#contact-form-title Un agente especializado, te ayudará a contratar lo que realmente necesitas.
 				form.container-form(action='#' method='post' aria-labelledby='contact-form-title')
 					label(for='insurance-type') Tipo de seguro de Interés
 					.container-message
@@ -74,7 +74,7 @@ block contenido
 						.container-form__container-terms
 							label(for='TyC') 
 								input#TyC(type='checkbox' name='TyC' aria-required='true')
-								a(href='' target='_blank') Acepto los Términos y Condiciones
+								a(href='' target='_blank' title='Ir hacia terminos y condiciones') Acepto los Términos y Condiciones
 						#error-TyC.error-message
 					.container-form__container-contact
 						p ¿Cómo deseas ser contactado?
@@ -88,9 +88,11 @@ block contenido
 								img(src=urlFolder + 'images/seguros/GMX-email-azul.svg' alt='Icono de mail color azul')
 								| Correo electrónico
 						#error-contact-method.error-message
+					.container-captcha
+
 					.container-form__container-button
 						button.o-btn.o-btn--green(type='submit' aria-label='Contactar agente') Contactar agente
 			.container-officine
-				p Si lo deseas puedes consultar #[br] nuestras 
+				p Si lo deseas puedes consultar nuestras 
 					|
 					a(href='' title='Ir hacia oficinas de atención') oficinas de atención

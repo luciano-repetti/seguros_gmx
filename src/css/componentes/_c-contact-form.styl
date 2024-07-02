@@ -105,6 +105,9 @@
                         color: white
                         font-size: .9em
                         text-decoration: underline white
+                        &:hover
+                            text-decoration: underline blue
+                            color: blue
 
             &__container-contact
                 display: flex
@@ -157,13 +160,16 @@
         &--quotation
             position relative
             max-width 640px
+            margin-left: 250px
             background-color: transparent
             padding-top: 0
             +TabletPortrait(max)
                 max-width: 100%
+                margin-left: 0
                 padding: 0
-            > h3
+            > h2
                 font-size: 20px
+                line-height: 26px
                 color: gray-2
                 font-family: tipografia-sans
                 +Phablet(max)
@@ -185,16 +191,23 @@
                         color green-1
                         text-decoration: underline green-1
     .container-officine
-        width: fit-content
+        width: 270px
         height: fit-content
         padding: 1.5em
         background-color: blue-1
         border-radius: 1.5em
+        +TabletPortrait(max)
+            width 100%
         p
             color: blueDark-1
+            +TabletPortrait(max)
+                text-align: center
             a
                 color: green-1
                 text-decoration: underline green-1
+                &:hover
+                    color: blue
+                    text-decoration: underline blue
     &--quotation
         +TabletPortrait(max)
             padding: 4em
