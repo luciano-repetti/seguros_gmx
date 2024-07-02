@@ -25,8 +25,8 @@ block contenido
 						.o-module__title.o-module__title--column
 							h1 #[small Seguros] Paramétricos para #[strong Huracán]
 		.c-navigation-page
-			.c-navigation-page__list-section(aria-label='Secciones del sitio')
-				ul(role='navigation')
+			.c-navigation-page__list-section
+				ul(role='navigation' aria-label='Secciones del sitio')
 					li.container-anchor.container-anchor--active
 						a(href='#introduccion' title='Ir a la sección Introducción') Introducción
 					li.container-anchor
@@ -144,9 +144,9 @@ block contenido
 			section.container-fovissste
 				h3 Método de cálculo
 				.container-fovissste__container
-					.o-card-large
+					a.o-card-large(href='#' aria-label='Link hacia método de cálculo' title='Ir hacia método de cálculo')
 						p Ver método de cálculo
-						a.o-btn-arrow(href='#' aria-label='Link hacia método de cálculo' title='Ir hacia método de cálculo')
+						.o-btn-arrow
 							i.i-icon.i-arrow-up-right(aria-hidden='true')
 
 		#contactar.c-contact-form
