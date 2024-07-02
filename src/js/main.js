@@ -649,27 +649,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const containerTitle = document.querySelector("#title")
       if (containerTitle) {
-        const title = document.querySelector("#title h1")
-        const texts = title.childNodes;
+        const title = document.querySelector("#title h1");
+        title.innerHTML = this.getAttribute("template");
         if (this.getAttribute("text-break")) {
           containerTitle.classList?.add("o-module__title--column")
         } else {
           containerTitle.classList?.remove("o-module__title--column")
         }
-        texts.forEach((node) => {
-          if (node.nodeName === "#text") {
-            node.nodeValue = this.getAttribute("text-title")
-          }
-          if (node.nodeName === "STRONG") {
-            if (this.getAttribute("text-subtitle") != "") {
-              node.textContent = this.getAttribute("text-subtitle")
-              node.classList.remove("u-hidden")
-            }
-            else {
-              node.classList.add("u-hidden");
-            }
-          }
-        })
+
       }
       this.parentElement.classList.add("container-anchor--active");
 
