@@ -28,25 +28,26 @@ block contenido
 			.c-navigation-page__list-section(aria-label='Secciones del sitio')
 				ul(role='navigation')
 					li.container-anchor.container-anchor--active
-						a(href='#con-tus-pagos' title='Ir a la sección Ayuda con tus pagos' text-break='true' text-title='Con tus' text-subtitle='Pagos') Con tus pagos
+						a(href='#con-tus-pagos' title='Ir a la sección Ayuda con tus pagos' text-break='true' template='<h1>Con tus <strong>Pagos</strong></h1>') Con tus pagos
 					li.container-anchor
-						a(href='#con-tus-facturas' title='Ir a la sección de Ayuda con tus facturas' text-break='true' text-title='Con tus' text-subtitle='Facturas') Con tus facturas
+						a(href='#con-tus-facturas' title='Ir a la sección de Ayuda con tus facturas' text-break='true' template='<h1>Con tus <strong>Facturas</strong></h1>') Con tus facturas
 					li.container-anchor
-						a(href='#con-codigo-qr' title='Ir a la sección de Ayuda con código QR' text-break='true' text-title='Con código' text-subtitle='QR') Con código QR
+						a(href='#con-codigo-qr' title='Ir a la sección de Ayuda con código QR' text-break='true' template='<h1>Con código <strong>QR</strong></h1>') Con código QR
 					li.container-anchor
-						a(href='#con-tu-siniestro' title='Ir a la sección de Ayuda con tu siniestro' text-break='true' text-title='Con tu' text-subtitle='Siniestro') Con tu siniestro
+						a(href='#con-tu-siniestro' title='Ir a la sección de Ayuda con tu siniestro' text-break='true' template='<h1>Con tu <strong>Siniestro</strong></h1>') Con tu siniestro
 					li.container-anchor
-						a(href='#unidad-especializada' title='Ir a la sección de Ayuda con Unidad especializada' text-break='true' text-title='Directorio' text-subtitle='UNE') UNE
+						a(href='#unidad-especializada' title='Ir a la sección de Ayuda con Unidad especializada' text-break='true' template='<h1>Directorio <strong>Pagos</UNE></h1>') UNE
 					li.container-anchor
-						a(href='#derechos-basicos' title='Ir a la sección de Ayuda con Derechos basicos' text-break='true' text-title='Derechos' text-subtitle='Básicos') Derechos básicos
+						a(href='#derechos-basicos' title='Ir a la sección de Ayuda con Derechos basicos' text-break='true' template='<h1>Derechos <strong>Básicos</strong></h1>') Derechos básicos
 					li.container-anchor
-						a(href='#tipo-de-cambio' title='Ir a la sección de Tipo de cambio' text-break='true' text-title='Tipo de' text-subtitle='Cambio') Tipo de cambio
+						a(href='#tipo-de-cambio' title='Ir a la sección de Tipo de cambio' text-break='true' template='<h1>Tipo de <strong>Cambio</strong></h1>') Tipo de cambio
 					li.container-anchor
-						a(href='#sacale-provecho' title='Ir a la sección de Sácale provecho a tu seguro' text-break='true' text-title='Sácale provecho a tu' text-subtitle='Seguro') Sácale provecho a tu seguro
+						a(href='#sacale-provecho' title='Ir a la sección de Sácale provecho a tu seguro' text-break='true' template='<h1>Sácale provecho a tu <strong>Seguro</strong></h1>') Sácale provecho a tu seguro
 					li.container-anchor
-						a(href='#manuales' title='Ir a la sección de manuales' text-break='true' text-title='Manuales de' text-subtitle='pago') Manuales de pago
+						a(href='#manuales' title='Ir a la sección de manuales' text-break='true' template='<h1>Manuales de <strong>Pago</strong></h1>') Manuales de pago
 					li.container-anchor
-						a(href='#boletines' title='Ir a la sección de boletines' text-break='true' text-title='Consulta nuestros' text-subtitle='Boletines') Boletines
+						a(href='#boletines' title='Ir a la sección de boletines' text-break='true' template='<h1>Consulta nuestros <strong>Boletines</strong></h1>') Boletines
+
 		#con-tus-pagos.c-introduction-text.section-change(aria-expanded="true")
 			.c-introduction-text__text-container
 				h2.mb-spacing Pago en línea de póliza de seguro
@@ -79,7 +80,6 @@ block contenido
 											p Paso 1
 									.o-card-step
 										p Usa la cámara de tu teléfono móvil si cuenta con la funcionalidad de escaneo de código QR o descarga alguna aplicación para lectura de códigos QR.
-
 							li
 								.c-personal-attention__container-card.m-height
 									.o-card-step.o-card-step--image
@@ -127,9 +127,387 @@ block contenido
 		#derechos-basicos.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Derechos como contratante, asegurado y/o beneficiario de un seguro
-			section.o-card-gray
-				p CAMBIAR
-				a.o-btn.o-btn--green(href='#!' title='CAMBIAR') CAMBIAR
+				h3.my-spacing ¿Conoces tus derechos antes y durante la contratación de un Seguro?
+				p Cuando se contrata un seguro es muy común que se desconozcan los derechos que tiene el Asegurado al momento de adquirir esta protección, en caso de algún siniestro, e inclusive previo a la contratación.
+				p Si tú conoces bien cuáles son los derechos como Asegurado, podrás tener claro el alcance que tiene tu seguro, evitarás imprevistos de último momento y estarás mejor protegido.
+				h3.my-spacing ¿Cómo saber cuáles son tus derechos cuando contratas un Seguro y durante su vigencia?
+				p Como contratante tienes derecho antes y durante la contratación del Seguro a:
+				.c-coverage.c-coverage--gray
+					section.c-coverage__container-banner
+						.c-coverage__container-elements
+							ul.c-coverage__list-elements
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Solicitar por escrito información referente al importe de la comisión o compensación que recibe el intermediario que te ofrece el seguro.
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Solicitar al intermediario que te ofrece el seguro, la identificación que los acredita para ejercer su profesión.
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Recibir toda la información que te permita conocer las condiciones generales del seguro, incluyendo el alcance real de la cobertura que estás contratando, la forma de conservarla y la forma de dar por terminado el contrato. Para lo cual puedes dirigirte con tu intermediario de seguros o acudir a cualquiera de nuestras oficinas, las cuales podrás ubicar en nuestro portal www.gmx.com.mx.
+				h3.my-spacing ¿Cómo saber cuáles son tus derechos cuando contratas un Seguro y durante su vigencia?
+				.c-coverage.c-coverage--gray
+					section.c-coverage__container-banner
+						.c-coverage__container-elements
+							ul.c-coverage__list-elements
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Recibir el pago de las prestaciones contratadas en tu póliza por eventos ocurridos dentro del periodo de gracia, aunque no hayas pagado la prima en este periodo.
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Saber que en los seguros de daños, toda indemnización que la aseguradora pague, reduce en igual cantidad la suma asegurada. Sin embargo, ésta puede ser reinstalada, previa aceptación de la Compañía de Seguros con el pago de la prima correspondiente.
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Cobrar una indemnización por mora a la aseguradora, en caso de retraso en el pago de la suma asegurada.
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Ser atendidos por un ajustador designado por GMX Seguros, quién actuará de conformidad con los lineamientos, políticas y procedimientos que podrá consultar en nuestro portal.
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p En caso de inconformidad con el tratamiento de tu siniestro, puedes presentar una reclamación ante la aseguradora por medio de la Unidad de Atención Especializada (UNE). O bien, acudir a la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF), en cualquiera de sus delegaciones estatales.
+								li.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Si presentaste la queja ante CONDUSEF, puedes solicitar la emisión de un dictamen técnico, si las partes no se sometieron a arbitraje.
+				h3.my-spacing En caso de cualquier duda contacta a tu agente de seguros o acércate a GMX Seguros donde podrán informarte de tus derechos como asegurado.
+			.o-section--max-1000
+				.alternating-cards
+					.alternating-cards__card
+						.alternating-card__header
+							h4 Ciudad de México
+							p Tecoyotitla 412, Edificio GMX, Col. Ex Hacienda de Guadalupe Chimalistac, Álvaro Obregón, Ciudad de México, México, C.P. 01050.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+555480 4000' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (55) 5480 4000
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:8007188946' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800 718 8946
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:informacion@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p informacion@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Ciudad de México, Edo. de México y Toluca.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Aguascalientes
+							p Tecoyotitla 412, Edificio GMX, Col. Ex Hacienda de Guadalupe Chimalistac, Álvaro Obregón, Ciudad de México, México, C.P. 01050.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+5554804000' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (55) 5480 4000
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:8007188946' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800 718 8946
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:informacion@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p informacion@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Aguascalientes.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Chihuahua
+							p Av. Francisco Villa No. 4700, piso 1, Col. San Felipe V Etapa, Chihuahua, Chih. CP. 31203.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+6144377144' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (614) 4377.144
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:chihuahua@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p chihuahua@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Chihuahua.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Cuernavaca
+							p Avenida San Diego N. 326 Int. 1-B, Col. Vista Hermosa,Cuernavaca, Morelos, C.P.62290.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+7773225061' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (777) 322.5061
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:cuernavaca@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p cuernavaca@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Morelos, Guerrero.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Guadalajara
+							p Lerdo de Tejada No, 2074, Col. Lafayette, Guadalajara, Jal., C.P. 44150.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+3336167609' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (33) 3616.7609
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+8005085720' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.508.5720
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:guadalajara@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p guadalajara@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Jalisco, Nayarit, Colima, B.C.S y Colima
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Hermosillo
+							p Av. Luis Donaldo Colosio , No. 450, Torre UNO, nivel 6, local 5., Col. Metrocentro, Hermosillo Son. CP. 83200.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+6621359508' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (662) 135.9508
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:hermosillo@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p hermosillo@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Sonora.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 León
+							p Av. Guanajuato No. 602, Col. Jardines del Moral, León, Gto., C.P. 37160.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+4777183656' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (477) 718.3656
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+8005013577' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.501.3577
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:leon@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p leon@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Guanajuato, San Luis Potosí, Michoacán, Zacatecas.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Mazatlán
+							p Río Baluarte 607, Col. Palos Prietos, Mazatlán, Sinaloa C.P. 8201o.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+6691054689' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (669) 105.4689
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:mazatlan@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p mazatlan@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Sinaloa, Durango excepto Gómez Palacio y Lerdo
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Mérida
+							p Av. Colón No. 503 H, por 62 y Av. Reforma, Col. Centro, Mérida, Yuc., C.P. 97000.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+9999204202' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (999) 920.4202
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+8005040173' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.504.0173
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:merida@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p merida@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Yucatán, Quintana Roo, Campeche, Tabasco, Chiapas.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Monterrey
+							p Río Támesis No. 1010, 2º Piso, Col. Del Valle, San Pedro Garza García, N.L., C.P. 66220.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+8183567330' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (81) 8356.7330
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+8005040278' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.504.0278
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:monterrey@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p monterrey@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Nuevo León, Tamaulipas, Coahuila y Durango: Gómez palacio y Lerdo.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Puebla
+							p Rosendo Márquez No. 1914, Col. Belisario Domínguez, Puebla, Pue., C.P. 72180.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+2222468979' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (222) 246.8979
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+8000052020' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.005.2020
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:puebla@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p puebla@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Puebla, Veracruz, Tlaxcala, Oaxaca
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Querétaro
+							p Avenida 5 de Febrero, No. 1351, Edificio Roble, torre 2, oficina 401, Zona Industrial Benito Juárez, Querétaro, Qro. C.P. 76130.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+4422129231' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (442) 212.9231
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:queretaro@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p queretaro@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Querétaro, Hidalgo.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Tijuana
+							p Luis Cabrera No. 2033, Fracc. Zona Urbana Río, Deleg. Centro, Tijuana, B.C., C.P. 22010.
+						.alternating-card__body
+							.alternating-cards__buttons
+								.alternating-cards__button
+									a.o-btn-arrow(href='#' title='Ir hacia el mapa' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+6646835464' title='Ir hacia el numero de telefono' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (664) 683.5464
+								.alternating-cards__button
+									a.o-btn-arrow(href='tel:+8000199090' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.019.9090
+								.alternating-cards__button
+									a.o-btn-arrow(href='mailto:tijuana@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p tijuana@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p B.C.N
+				p.mt-2 “En cumplimiento a lo dispuesto en el artículo 202 de la Ley de Instituciones de Seguros y de Fianzas, la documentación ;contractual y la nota técnica que integran este producto de seguro, quedaron registradas ante la Comisión Nacional de Seguros y Fianzas, a partir del 6 de Abril de 2015, con el número RESP-S0092-0349-2015/CONDUSEF G00719001.”
 
 		#tipo-de-cambio.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
@@ -227,15 +605,6 @@ block contenido
 								tabindex='-1'
 							) 2019
 					.c-newsletters__box.o-section--max-1000
-
-
-
-
-
-
-
-
-
 						#tabpanel-1.c-newsletters__panel.js-tabsPanel.is-active(
 							role='tabpanel'
 							tabindex='0'
@@ -262,16 +631,6 @@ block contenido
 									.c-newsletters__card-footer
 										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
 											i.i-icon.i-arrow-up-right(aria-hidden='true')
-
-
-
-
-
-
-
-
-
-
 						#tabpanel-2.c-newsletters__panel.js-tabsPanel(
 							role='tabpanel'
 							tabindex='0'
@@ -298,7 +657,6 @@ block contenido
 									.c-newsletters__card-footer
 										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
 											i.i-icon.i-arrow-up-right(aria-hidden='true')
-
 						#tabpanel-3.c-newsletters__panel.js-tabsPanel(
 							role='tabpanel'
 							tabindex='0'
@@ -325,7 +683,6 @@ block contenido
 									.c-newsletters__card-footer
 										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
 											i.i-icon.i-arrow-up-right(aria-hidden='true')
-
 						#tabpanel-4.c-newsletters__panel.js-tabsPanel(
 							role='tabpanel'
 							tabindex='0'
@@ -352,8 +709,6 @@ block contenido
 									.c-newsletters__card-footer
 										a.o-btn-arrow.o-btn-arrow--blue(href='#' title='Descargar PDF' download)
 											i.i-icon.i-arrow-up-right(aria-hidden='true')
-
-
 						#tabpanel-5.c-newsletters__panel.js-tabsPanel(
 							role='tabpanel'
 							tabindex='0'
