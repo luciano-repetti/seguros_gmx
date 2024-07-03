@@ -694,11 +694,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const anchors = document.querySelectorAll("a.o-card-large");
   anchors.forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
-      if (!e.srcElement.getAttribute("href")) {
+      if (!e.target.getAttribute("href")) {
         e.preventDefault();
       }
-      if (e.srcElement.classList.contains("o-card-large")) {
-        e.srcElement.children[1].click();
+      if (e.target.classList.contains("o-card-large")) {
+        e.target.children[1].click();
       }
     });
   });
