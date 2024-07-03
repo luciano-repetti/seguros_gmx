@@ -26,7 +26,6 @@
 		&:focus
 			color white
 
-
 .o-btn-arrow
 	border 1px solid white
 	width 48px
@@ -72,7 +71,7 @@
 			background: blueDark-1
 			border-color: blueDark-1
 		&--arrow-down
-			&:hover, &.active
+			&:hover, &.active,
 				color: blue-1
 				background: blueDark-1
 				border-color: blueDark-1
@@ -96,3 +95,18 @@
 			border-color green-1
 			color white
 
+.o-card-large
+	&:hover
+		.o-btn-arrow
+			border-color green-1
+			background green-1
+			color white
+			&--border-light-blue
+				color: blue-1
+				background: blueDark-1
+				border-color: blueDark-1
+			&--arrow-down
+				transform: rotateZ(135deg)
+				background green-1
+				border-color green-1
+				color white

@@ -689,3 +689,17 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleSections(activeAnchor.getAttribute("href").substring(1));
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const anchors = document.querySelectorAll("a.o-card-large");
+  anchors.forEach(function (anchor) {
+    anchor.addEventListener("click", function (e) {
+      if (!e.srcElement.getAttribute("href")) {
+        e.preventDefault();
+      }
+      if (e.srcElement.classList.contains("o-card-large")) {
+        e.srcElement.children[1].click();
+      }
+    });
+  });
+});
