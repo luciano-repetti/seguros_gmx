@@ -25,8 +25,8 @@ block contenido
 						.o-module__title.o-module__title--column(id='title')
 							h1 #[small Ayuda con tu seguro] Con tus #[strong Pagos]
 		.c-navigation-page
-			.c-navigation-page__list-section(aria-label='Secciones del sitio')
-				ul#scrollTop(role='navigation')
+			.c-navigation-page__list-section
+				ul#scrollTop(role='navigation' aria-label='Secciones del sitio')
 					li.container-anchor.container-anchor--active
 						a(href='#con-tus-pagos' title='Ir a la sección Ayuda con tus pagos' text-break='true' template='<h1><small>Ayuda con tu seguro</small>Con tus <strong>Pagos</strong></h1>') Con tus pagos
 					li.container-anchor
@@ -48,21 +48,21 @@ block contenido
 					li.container-anchor
 						a(href='#boletines' title='Ir a la sección de boletines' text-break='true' template='<h1><small>Ayuda con tu seguro</small>Consulta nuestros <strong>Boletines</strong></h1>') Boletines
 
-		#con-tus-pagos.c-introduction-text.section-change(aria-expanded="true")
+		section#con-tus-pagos.c-introduction-text.section-change(role="tabpanel" aria-expanded="true")
 			.c-introduction-text__text-container
 				h2.mb-spacing Pago en línea de póliza de seguro
-			section.o-card-gray
+			.o-card-gray
 				p Consúltalo fácil, rápido y seguro
 				a.o-btn.o-btn--green(href='#!' title='Realizar pago ahora') Realizar pago ahora
 
-		#con-tus-facturas.c-introduction-text.section-change(aria-expanded="false")
+		section#con-tus-facturas.c-introduction-text.section-change(aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Facturas
-			section.o-card-gray
+			.o-card-gray
 				p Consulta y descarga tu factura
 				a.o-btn.o-btn--green(href='#!' title='Consultar ahora') Consultar ahora
 
-		#con-codigo-qr.c-introduction-text.section-change(aria-expanded="false")
+		section#con-codigo-qr.c-introduction-text.section-change(role="tabpanel" aria-expanded="false")
 			.c-introduction-text__text-container.c-introduction-text__text-container--no-margin
 				h2.mb-spacing Ayuda con tu código QR
 			.o-section.o-section--max-800
@@ -112,19 +112,19 @@ block contenido
 				.c-introduction-text__text-container
 					.o-section--video
 
-		#con-tu-siniestro.c-introduction-text.section-change(aria-expanded="false")
-			section.o-card-gray
+		#con-tu-siniestro.c-introduction-text.section-change(role="tabpanel" aria-expanded="false")
+			.o-card-gray
 				p Reportar Siniestro online
 				a.o-btn.o-btn--green(href='#!' title='Reportar siniestro') Reportar siniestro
 
-		#unidad-especializada.c-introduction-text.section-change(aria-expanded="false")
+		section#unidad-especializada.c-introduction-text.section-change(role="tabpanel" aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Unidad Especializada (UNE)
-			section.o-card-gray
+			.o-card-gray
 				p Reclamaciones, consultas y sugerencias
 				a.o-btn.o-btn--green(href='#!' title='Contactar ahora') Contactar ahora
 
-		#derechos-basicos.c-introduction-text.section-change(aria-expanded="false")
+		section#derechos-basicos.c-introduction-text.section-change(role="tabpanel" aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Derechos como contratante, asegurado y/o beneficiario de un seguro
 				h3.my-spacing ¿Conoces tus derechos antes y durante la contratación de un Seguro?
@@ -133,7 +133,7 @@ block contenido
 				h3.my-spacing ¿Cómo saber cuáles son tus derechos cuando contratas un Seguro y durante su vigencia?
 				p Como contratante tienes derecho antes y durante la contratación del Seguro a:
 				.c-coverage.c-coverage--gray
-					section.c-coverage__container-banner
+					.c-coverage__container-banner
 						.c-coverage__container-elements
 							ul.c-coverage__list-elements
 								li.c-coverage__list-elements__container-element
@@ -153,7 +153,7 @@ block contenido
 										p Recibir toda la información que te permita conocer las condiciones generales del seguro, incluyendo el alcance real de la cobertura que estás contratando, la forma de conservarla y la forma de dar por terminado el contrato. Para lo cual puedes dirigirte con tu intermediario de seguros o acudir a cualquiera de nuestras oficinas, las cuales podrás ubicar en nuestro portal www.gmx.com.mx.
 				h3.my-spacing ¿Cómo saber cuáles son tus derechos cuando contratas un Seguro y durante su vigencia?
 				.c-coverage.c-coverage--gray
-					section.c-coverage__container-banner
+					.c-coverage__container-banner
 						.c-coverage__container-elements
 							ul.c-coverage__list-elements
 								li.c-coverage__list-elements__container-element
@@ -200,7 +200,7 @@ block contenido
 										i.i-icon.i-arrow-up-right(aria-hidden='true')
 									p Ver el mapa
 								.alternating-cards__button
-									a.o-btn-arrow(href='tel:+555480 4000' title='Ir hacia el numero de telefono' target='_blank')
+									a.o-btn-arrow(href='tel:+5554804000' title='Ir hacia el numero de telefono' target='_blank')
 										i.i-icon.i-arrow-up-right(aria-hidden='true')
 									p.alternating-cards__cellphone (55) 5480 4000
 								.alternating-cards__button
@@ -509,14 +509,14 @@ block contenido
 								p B.C.N
 				p.mt-2 “En cumplimiento a lo dispuesto en el artículo 202 de la Ley de Instituciones de Seguros y de Fianzas, la documentación ;contractual y la nota técnica que integran este producto de seguro, quedaron registradas ante la Comisión Nacional de Seguros y Fianzas, a partir del 6 de Abril de 2015, con el número RESP-S0092-0349-2015/CONDUSEF G00719001.”
 
-		#tipo-de-cambio.c-introduction-text.section-change(aria-expanded="false")
+		section#tipo-de-cambio.c-introduction-text.section-change(role="tabpanel" aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Tipo de cambio al día de hoy
-			section.o-card-gray
+			.o-card-gray
 				p Consultar el tipo de cambio
 				a.o-btn.o-btn--green(href='#!' title='Consultar ahora') Consultar ahora
 
-		#sacale-provecho.c-introduction-text.section-change(aria-expanded="false")
+		section#sacale-provecho.c-introduction-text.section-change(role="tabpanel" aria-expanded="false")
 			.c-introduction-text__text-container.c-introduction-text__text-container--no-margin
 				h2 Administración de riesgos
 			.o-section.c-introduction-text__text-container
@@ -544,20 +544,20 @@ block contenido
 							.container-text.white
 								p Visitar sitio Medtips
 
-		#manuales.c-introduction-text.section-change(aria-expanded="false")
+		section#manuales.c-introduction-text.section-change(role="tabpanel" aria-expanded="false")
 			.c-introduction-text__text-container
 				h2.mb-spacing Manuales
-			section.o-card-gray
+			.o-card-gray
 				p Formas de pago para liquidar pólizas contratadas. Version español
 				a.o-btn.o-btn--green(href='#!' title='Consultar ahora') Consultar ahora
-			section.o-card-gray
+			.o-card-gray
 				p GMX policy payment manual. English version
 				a.o-btn.o-btn--green(href='#!' title='Consultar ahora') See now
 
-		#boletines.c-introduction-text.section-change(aria-expanded="false")
+		#boletines.c-introduction-text.section-change(role="tabpanel" aria-expanded="false")
 			.o-section--max-1200.o-section--padding
 				.c-newsletters__nav.js-tabs
-					ul.js-tabsNav(role='tablist' aria-labelledby='tablist-1')
+					ul.js-tabsNav(role='tablist' aria-label='tablist-1')
 						li.filter
 							p Filtrar por:
 						li.is-active(role='presentation')
