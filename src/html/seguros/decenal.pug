@@ -162,22 +162,19 @@ block contenido
 						title='Ir hacia facturacion Oferentes de vivienda'
 						).o-card-large
 						p Facturación: Oferentes de vivienda
-						button.o-btn-arrow
+						.o-btn-arrow
 							i.i-icon.i-arrow-up-right(aria-hidden='true')
 
 				.container-fovissste__container
 					a.o-card-large
 						p Comunicado normalización de operación 2024
-						button.o-btn-arrow.o-btn-arrow--arrow-down(aria-label='boton expandir información' title='Leer más')
+						.o-btn-arrow.o-btn-arrow--arrow-down
 							i.i-icon.i-arrow-up-right(aria-hidden='true')
 
 				.container-fovissste__container
 					a.o-card-large
 						p Certificados: Acreditados FOVISSSTE
-						button#button-expand-1.o-btn-arrow.o-btn-arrow--arrow-down(
-							aria-label='boton expandir información'
-							title='Leer más'
-						)
+						#button-expand-1.o-btn-arrow.o-btn-arrow--arrow-down
 							i.i-icon.i-arrow-up-right(aria-hidden='true')
 					ul#contenido-1.container-fovissste__container__contenido.u-hidden
 						li.container-fovissste__container__contenido__container-card
@@ -192,10 +189,7 @@ block contenido
 				.container-fovissste__container
 					a.o-card-large
 						p Asistencias FOVISSSTE
-						button#button-expand-2.o-btn-arrow.o-btn-arrow--arrow-down(
-							aria-label='boton expandir información'
-							title='Leer más'
-						)
+						#button-expand-2.o-btn-arrow.o-btn-arrow--arrow-down
 							i.i-icon.i-arrow-up-right(aria-hidden='true')
 					#contenido-2.container-fovissste__container__contenido.u-hidden
 						p GMX Seguros otorga al asegurado servicios adicionales como asistencia médica, asistencia al hogar, asistencia en gadgets y una gran red de descuentos en establecimientos comerciales.
@@ -233,26 +227,26 @@ block contenido
 				h3 Información INFONAVIT
 				a(href='#' title='Ir hacía seguro contra vicios ocultos').o-card-large.o-card-large--light-blue
 					p Decenal tradicional seguro contra vicios ocultos
-					button.o-btn-arrow.o-btn-arrow--border-light-blue
+					.o-btn-arrow.o-btn-arrow--border-light-blue
 						i.i-icon.i-arrow-up-right(aria-hidden='true')
 				a(href='#' title='Ir hacía ¿Tu vivienda tiene algún daño?').o-card-large.o-card-large--light-blue
 					p ¿Tu vivienda tiene algún daño?
-					button.o-btn-arrow.o-btn-arrow--border-light-blue
+					.o-btn-arrow.o-btn-arrow--border-light-blue
 						i.i-icon.i-arrow-up-right(aria-hidden='true')
 				a(href='#' title='Ir hacía Facturación: Oferentes de vivienda').o-card-large.o-card-large--light-blue
 					p Facturación: Oferentes de vivienda
-					button.o-btn-arrow.o-btn-arrow--border-light-blue
+					.o-btn-arrow.o-btn-arrow--border-light-blue
 						i.i-icon.i-arrow-up-right(aria-hidden='true')
 				a(href='#' title='Ir hacía Certificados Acreditados Infonavit').o-card-large.o-card-large--light-blue
 					p Certificados: Acreditados Infonavit
-					button.o-btn-arrow.o-btn-arrow--border-light-blue
+					.o-btn-arrow.o-btn-arrow--border-light-blue
 						i.i-icon.i-arrow-up-right(aria-hidden='true')
 				a(
 					href='#'
 					title='Ir hacía Certificados Nuevo seguro de calidad de la vivienda'
 					).o-card-large.o-card-large--light-blue
 					p Certificados: Nuevo seguro de calidad de la vivienda
-					button.o-btn-arrow.o-btn-arrow--border-light-blue
+					.o-btn-arrow.o-btn-arrow--border-light-blue
 						i.i-icon.i-arrow-up-right(aria-hidden='true')
 
 		#contactar.c-contact-form
@@ -265,40 +259,35 @@ block contenido
 						.container-form__custom-select
 							select#insurance-type(name='insurance-type' aria-required='true')
 								option(value='' disabled selected) Seleccione...
-								option(value='Ambiental') Instituciones educativas
-								option(value='Ambiental') Profesionistas
-								option(value='Ambiental') Sector salud
+								option(value='Instituciones educativas') Instituciones educativas
+								option(value='Profesionistas') Profesionistas
+								option(value='Sector salud') Sector salud
 								option(value='Ambiental') Ambiental
-								option(value='Ambiental') Construcción
-								option(value='Ambiental') Industria Manufactura y Comercio
-								option(value='Ambiental') Aviación
-								option(value='Ambiental') Embarcaciones
-								option(value='Ambiental') Carga en Tránsito
-								option(value='Ambiental') Gobierno
-								option(value='Ambiental') Familiar
-								option(value='Ambiental') Esparcimiento
-								option(value='Ambiental') Riesgos Especiales
+								option(value='Construcción') Construcción
+								option(value='Industria Manufactura y Comercio') Industria Manufactura y Comercio
+								option(value='Aviación') Aviación
+								option(value='Embarcaciones') Embarcaciones
+								option(value='Carga en Tránsito') Carga en Tránsito
+								option(value='Gobierno') Gobierno
+								option(value='Familiar') Familiar
+								option(value='Esparcimiento') Esparcimiento
+								option(value='Riesgos Especiales') Riesgos Especiales
 							i.i-icon.i-angle-down(aria-hidden='true')
 						#error-insurance-type.error-message
-					//- label.container-message(for="full-name")
 					.container-message
-						input#full-name(type='text' name='full-name' placeholder='Nombre completo' aria-required='true')
+						input#full-name(type='text' name='full-name' placeholder='Nombre completo' aria-label='Nombre completo' aria-required='true')
 						#error-full-name.error-message
-					//- label.container-message(for="business-name")
 					.container-message
-						input#business-name(type='text' name='business-name' placeholder='Razón social' aria-required='true')
+						input#business-name(type='text' name='business-name' placeholder='Razón social' aria-label='Razón social' aria-required='true')
 						#error-business-name.error-message
-					//- label(for="phone")
 					.container-message
-						input#phone(type='text' name='phone' placeholder='Teléfono celular' aria-required='true')
+						input#phone(type='text' name='phone' placeholder='Teléfono celular' aria-label='Teléfono celular' aria-required='true')
 						#error-phone.error-message
-					//- label(for="email")
 					.container-message
-						input#email(type='email' name='email' placeholder='Correo electrónico' aria-required='true')
+						input#email(type='email' name='email' placeholder='Correo electrónico' aria-label='Correo electrónico' aria-required='true')
 						#error-email.error-message
-					//- label(for="city")
 					.container-message
-						input#city(type='text' name='city' placeholder='Ciudad' aria-required='true')
+						input#city(type='text' name='city' placeholder='Ciudad' aria-label='Ciudad' aria-required='true')
 						#error-city.error-message
 					.container-message
 						.container-form__custom-select
@@ -307,22 +296,22 @@ block contenido
 								option(value='Estado') Estado
 							i.i-icon.i-angle-down(aria-hidden='true')
 						#error-state.error-message
-					//- label(for="name-developer")
 					.container-message
 						input#name-developer(
 							type='text'
 							name='name-developer'
 							placeholder='Nombre del desarrollador'
+							aria-label='Nombre del desarrollador'
 							aria-required='true'
 						)
 						#error-name-developer.error-message
 					.container-form__text-area
 						label(for='comments') ¿Comentarios adicionales? ¿Alguna necesidad específica?
-						textarea#comments(name='comments') 
+						textarea#comments(name='comments' aria-label='Comentarios adicionales')
 					.container-error
 						.container-form__container-terms
 							label(for='TyC') 
-								input#TyC(type='checkbox' name='TyC' aria-required='true')
+								input#TyC(type='checkbox' name='TyC' aria-label='Aceptar términos y condiciones' aria-required='true')
 								a(href='' target='_blank' title='Ir hacia terminos y condiciones') Acepto los Términos y Condiciones
 						#error-TyC.error-message
 					.container-form__container-button
