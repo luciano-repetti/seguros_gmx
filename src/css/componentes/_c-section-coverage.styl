@@ -5,6 +5,8 @@ $c-coverage = 'c-coverage'
     display flex
     justify-content center
     padding 30px 20px
+    +Mobile(max)
+        padding 30px 0px
     &__container-banner
         width 100%
         max-width 1200px
@@ -19,6 +21,8 @@ $c-coverage = 'c-coverage'
         +TabletLandscape(max)
             padding 2em 1.5em
             flex-direction column
+        +Mobile(max)
+            padding 2em 1em
         > h2
             width fit-content
             height fit-content
@@ -74,6 +78,8 @@ $c-coverage = 'c-coverage'
             gap: 75px
             +TabletLandscape(max)
                 margin-left: 0
+            +Mobile(max)
+                padding: 72px 10px
             li
                 display: flex
                 flex-direction: column
@@ -82,9 +88,13 @@ $c-coverage = 'c-coverage'
                     color: blueDark-1
                     font-size: 28px
                     margin-bottom: 40px
+                    +Mobile(max)
+                        font-size: 22px
                 p
                     font-size: 18px
                     margin-bottom: 35px
+                    +Mobile(max)
+                        font-size: 16px
 
     &__list-elements
         display flex
