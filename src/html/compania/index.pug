@@ -2,7 +2,7 @@ extends ../template/_template
 
 block append configuracion
     - var page = {};
-    - page['link'] = 'compañia/index.html';
+    - page['link'] = 'compania/index.html';
     - page['title'] = 'Historia Compañia';
     - page['descrip'] = 'La historia de la compañia GMX Seguros';
     - page['keys'] = 'seguros, negocios, personales';
@@ -51,7 +51,7 @@ block contenido
                         p En 1998 The St. Paul Companies inició operaciones en México.
 
                     .o-card-image
-                        img(src=urlFolder + 'images/compania/GMX-compania.png' alt="Imagen de la compañia GMX Seguros")
+                        img.js-lazy(data-src=urlFolder + 'images/compania/GMX-compania.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen de la compañia GMX Seguros")
 
                     .o-card-step.o-card-step--blue-light
                         small EN
@@ -62,14 +62,16 @@ block contenido
             section.c-introduction-text__text-container
                 p Brindar protección al patrimonio de nuestros clientes, tanto de sus bienes como en su persona, mediante productos especializados y asumiendo con alta RESPONSABILIDAD los riesgos tomados.
                 .o-card-image.o-card-image--h-full
-                    img(src=urlFolder + 'images/compania/GMX-oficina.png' alt="Imagen de la oficina de GMX Seguros")
+                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-oficina.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen de la oficina de GMX Seguros")
 
             .c-introduction-text__text-container
                 .container-gray-company
                     p Ser lideres en el mercado de seguros especializados en Responsabilidad Civil y otros ramos de Daños, bajo un crecimiento sostenido, #[small manteniéndonos como una compañía rentable, solvente y financieramente sana; con formación de PROFESIONALES MEXICANOS de alto nivel de especialización y responsabilidad.]
 
-            section.c-introduction-text__text-container
-                h2 Valores
+            section.o-section
+                .c-introduction-text__text-container
+                    h2 Valores
+
 
         .o-section.o-section--padding.section-change#innovacion(aria-expanded='false')
             section.c-introduction-text__text-container
@@ -79,25 +81,54 @@ block contenido
                     h2 Estamos innovando
                 .c-innovating
                     .c-innovating__left
-                        .o-card.card-1
-                            p Suscriptores especialistas
-                        .o-card.o-card--blueDark.card-2
-                            p imagen
-                        .o-card.card-3
-                            p Área de siniestros especializada
-                        .o-card.o-card--blueDark.card-4
-                            p Oficinas regionales autónomas
-                        .o-card.card-5
-                            p imagen
+                        .o-card.card.card-1
+                            .title
+                                h3 Suscriptores especialistas
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-papeles.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de papel escrito')
+                            p Nuestros suscriptores son amplios conocedores de los riesgos por segmento, con la ventaja de atender las necesidades específicas del asegurado; orientan de manera adecuada para contratar la póliza que realmente resuelva las necesidades.
+                        .o-card.o-card--blueDark.card.card-2
+                            .container-image-center
+                                img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-anteojos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona acomodandose los anteojos')
+                        .o-card.card.card-3
+                            .title
+                                h3 Área de siniestros especializada
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-usuario-valido.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de usuario con un escudo y un tick')
+                            p Entendemos la especialidad. Nuestro equipo de siniestros se especializa por ramo y por tipo de actividad, para tener un mejor entendimiento del caso y responder más allá de las expectativas de nuestros asegurados.
+                        .o-card.o-card--blueDark.card.card-4
+                            .title
+                                h3 Oficinas regionales autónomas
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-edificio.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un edificio')
+                            p Son independientes en su toma de decisiones. Suscriben riesgos locales, con conocimiento de la zona, lo que permite tener una mayor asertividad en las condiciones que ofrecemos a nuestros asegurados.
+                        .o-card.card.card-5
+                            .container-image-center
+                                img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-perfil.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona posicionada de perfil')
                     .c-innovating__right
-                        .o-card.card-1
-                            p Administración de riesgos
-                        .o-card.o-card--blueDark.card-2
-                            p Productos a la medida
-                        .o-card.card-3
-                            p Valores agregados
-                        .o-card.o-card--blueDark.card-4
-                            p Desarrollo e innovación
+                        .o-card.card.card-1
+                            .container-image-center
+                                img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-listo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona juntando el dedo pulgar con el dedo índice de una mano')
+                            h3 Administración de riesgos
+                            p Nuestro equipo de asesores en administración de riesgos acompaña a nuestros asegurados durante la vigencia de la póliza, con el fin de minimizar sus riesgos. Contamos con una amplia gama de especialistas en distintas materias, que garantizan una constante asesoría en materia de prevención.
+                        .o-card.o-card--blueDark.card.card-2
+                            .title
+                                h3 Productos a la medida
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-maletin.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un maletin')
+                            p Nuestro equipo de asesores en administración de riesgos acompaña a nuestros asegurados durante la vigencia de la póliza, con el fin de minimizar sus riesgos. Contamos con una amplia gama de especialistas en distintas materias, que garantizan una constante asesoría en materia de prevención.
+                        .o-card.card.card-3
+                            .container-icon-right
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-escudo-azul.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un escudo con un tick en su centro')
+                            h3 Valores agregados
+                            p Algunos de nuestros productos se complementan con asistencia legal laboral, penal, familiar, civil, entre otras; a través de nuestra compañía hermana MAS Servicios Asistenciales; apoyamos a nuestros asegurados en diversos temas legales.
+                        .o-card.o-card--blueDark.card.card-4
+                            .title
+                                h3 Desarrollo e innovación
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-portapapeles.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de portapapeles')
+                            p De manera constante buscamos la evolución de nuestro sector con nuevos productos y servicios, que satisfagan las necesidades del mercado. Ejemplo de ello es que somos pioneros en cobertura para guarderías, médicos y Responsabilidad Civil decenal.
 
 
 
@@ -108,7 +139,7 @@ block contenido
                     .c-introduction-text__text-container.u-gap-2
                         p Al ser nuestra empresa 100% mexicana, estamos comprometidos en participar en un cambio que contribuya a un clima de transparencia acorde a nuestros valores rectores LEALTAD, HONESTIDAD, CALIDAD PROFESIONALISMO, CONFIANZA Y RESPONSABILIDAD; bajo este principio GMX, maneja una tolerancia cero ante cualquier forma de corrupción, soborno o actividad ilícita, tal y como se establece en la Ley de Responsabilidades Administrativas vigente en nuestro país y en apego a las mejores prácticas nacionales e internacionales.
                         .o-card-image.o-card-image--h-full
-                            img(src=urlFolder + 'images/compania/GMX-director-general.png' alt="Imagen del director general de GMX Seguros, Jorge B Flores Cruz")
+                            img.js-lazy(data-src=urlFolder + 'images/compania/GMX-director-general.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen del director general de GMX Seguros, Jorge B Flores Cruz")
                         p Todos los funcionarios, directores y colaboradores, recibimos información y capacitación en materia de ética, anticorrupción y cumplimiento normativo que sirven para esta transformación; existiendo el compromiso constante de hacer negocios de manera íntegra, justa y respetando la sana competencia entre el sector, y socios comerciales.
                         p Para lograrlo, contamos con un programa de Integridad y Cumplimiento Normativo, el cual está a disposición del público en general para que nuestros socios, proveedores y clientes puedan tener acceso.
                         .greetings 
@@ -127,7 +158,7 @@ block contenido
                                     small Teléfono
                                     h3 CDMX
                                     .container-image
-                                        img(src=urlFolder + 'images/compania/GMX-telefono-black.png' alt='')
+                                        img.js-lazy(data-src=urlFolder + 'images/compania/GMX-telefono-black.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='')
                                 .container-with-button
                                     a.o-btn-arrow.o-btn-arrow--border-black(href='tel:91408346' title='Ir hacia el numero de telefono' target='_blank')
                                         i.i-icon.i-arrow-up-right(aria-hidden='true')
@@ -135,7 +166,7 @@ block contenido
                                         p 9140 8346
                             .image.o-card.o-card--blueDark
                                 .container-image.container-image--height-full
-                                    img(src=urlFolder + 'images/soy-agente/GMX-todo-listo.png' alt='alt')
+                                    img.js-lazy(data-src=urlFolder + 'images/soy-agente/GMX-todo-listo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='alt')
                             .anchor.o-card-with-button.o-card-with-button--width-full
                                 p O ingresa en el siguiente enlace:
                                 a(href="https://www.integriline.net/Welcome/options/" target='_blank') www.integriline.net/Welcome/options/
@@ -145,7 +176,7 @@ block contenido
                                         small Teléfono
                                         h3 Interior de la república
                                     .container-image
-                                        img(src=urlFolder + 'images/soy-agente/GMX-telefono.png' alt='')
+                                        img.js-lazy(data-src=urlFolder + 'images/soy-agente/GMX-telefono.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='')
                                 .container-with-button
                                     a.o-btn-arrow(href='tel:8000874426' title='Ir hacia el numero de telefono' target='_blank')
                                         i.i-icon.i-arrow-up-right(aria-hidden='true')

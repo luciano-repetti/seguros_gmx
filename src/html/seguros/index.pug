@@ -429,7 +429,7 @@ block contenido
 					.container-message
 						p Tipo de seguro de Interés
 						.container-form__custom-select
-							select#insurance-type(name='insurance-type' aria-required='true')
+							select#insurance-type(name='insurance-type' aria-required='true' aria-label='Tipo de seguro de Interés')
 								option(value='' disabled selected) Seleccione...
 								option(value='Ambiental') Instituciones educativas
 								option(value='Ambiental') Profesionistas
@@ -447,20 +447,20 @@ block contenido
 							i.i-icon.i-angle-down(aria-hidden='true')
 						#error-insurance-type.error-message
 					.container-message
-						input#full-name(type='text' name='full-name' placeholder='Nombre completo' aria-required='true')
+						input#full-name(type='text' name='full-name' placeholder='Nombre completo' aria-label='Nombre completo' aria-required='true')
 						#error-full-name.error-message
 					.container-message
-						input#phone(type='text' name='phone' placeholder='Teléfono celular' aria-required='true')
+						input#phone(type='text' name='phone' placeholder='Teléfono celular' aria-label='Teléfono celular' aria-required='true')
 						#error-phone.error-message
 					.container-message
-						input#email(type='email' name='email' placeholder='Correo electrónico' aria-required='true')
+						input#email(type='email' name='email' placeholder='Correo electrónico' aria-label='Correo electrónico' aria-required='true')
 						#error-email.error-message
 					.container-message
-						input#city(type='text' name='city' placeholder='Ciudad' aria-required='true')
+						input#city(type='text' name='city' placeholder='Ciudad' aria-label='Ciudad' aria-required='true')
 						#error-city.error-message
 					.container-message
 						.container-form__custom-select
-							select#state(name='state' aria-required='true')
+							select#state(name='state' aria-required='true' aria-label='Estado')
 								option(value='' disabled selected) Seleccione una opción
 								option(value='Estado') Estado
 							i.i-icon.i-angle-down(aria-hidden='true')
@@ -468,18 +468,18 @@ block contenido
 					.container-error
 						.container-form__container-terms
 							label(for='TyC') 
-								input#TyC(type='checkbox' name='TyC' aria-required='true')
+								input#TyC(type='checkbox' name='TyC' aria-label='Aceptar términos y condiciones' aria-required='true')
 								a(href='' target='_blank' title='Ir hacia terminos y condiciones') Acepto los Términos y Condiciones
 						#error-TyC.error-message
 					.container-form__container-contact
 						p ¿Cómo deseas ser contactado?
 						.container-contacts
 							label(for='whatsapp') 
-								input#whatsapp(type='checkbox' name='contact-method' value='whatsapp')
+								input#whatsapp(type='checkbox' name='contact-method' value='whatsapp' aria-label='Contacto por Whatsapp')
 								img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-whatsapp.svg' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de whatsapp') 
 								| Whatsapp
 							label(for='email-contact') 
-								input#email-contact(type='checkbox' name='contact-method' value='email')
+								input#email-contact(type='checkbox' name='contact-method' value='email' aria-label='Contacto por Correo electrónico')
 								img.js-lazy(data-src=urlFolder + 'images/seguros/GMX-email.svg' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Icono de mail')
 								| Correo electrónico
 						#error-contact-method.error-message
