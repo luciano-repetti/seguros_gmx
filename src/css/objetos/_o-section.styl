@@ -46,17 +46,28 @@
 		padding-top 0
 		max-width: 770px
 		align-items: flex-start
+		+Responsive(max, 886px)
+			align-items: center
+			padding: 0 20px
 		> h3 
 			font-size: 60px
 			font-family: tipografia-serif
 			color blueDark-1
 			margin-bottom: 48px
+			+Responsive(max, 886px)
+				font-size: 40px
+				max-width: 640px
+			+MobilePortrait(max)
+				font-size 28px
+
 	&--padding
 		padding: 30px 20px
 	&--pl-6
 		padding-left: 6em
-		+Tablet(max)
+		+Responsive(max, 886px)
 			padding-left: 0
+		+Tablet(max)
+			padding-left: 20px
 	&--video
 		min-height 40vh
 		background-color #04689D

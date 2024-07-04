@@ -98,8 +98,8 @@
         grid-template-rows: 1fr 1fr 0.75fr 0.75fr; 
         grid-template-areas: "cellphone-1 cellphone-2" "cellphone-1 cellphone-2" "image cellphone-2" "anchor anchor";
         +Phablet(max)
-          grid-template-areas: "cellphone-1" "cellphone-2" "image" "anchor"
-          grid-template-columns 1fr;
+            grid-template-areas: "cellphone-1" "cellphone-2" "image" "anchor"
+            grid-template-columns 1fr;
         .cellphone-1
             grid-area cellphone-1;
             display flex
@@ -113,23 +113,23 @@
             padding-top 3rem
             padding-bottom 3rem
             +Phablet(max)
-              gap 2rem;
+                gap 2rem;
             .container-text
-              display flex
-              flex-direction row
-              .container-image
-                position relative
-                img
-                  max-width: 42px
+                display flex
+                flex-direction row
+                .container-image
+                    position relative
+                    img
+                        max-width: 42px
         .image
             grid-area image;
             padding 0
             .container-image
-              display flex
-              justify-content center
-              align-items center
+                display flex
+                justify-content center
+                align-items center
             img
-              max-height: 75px
+                max-height: 75px
         .anchor
             grid-area anchor;
             display flex
@@ -137,15 +137,13 @@
             justify-content center
             gap 1rem
             padding 1rem 2rem
-            p
-              margin 0
             a
-              color black
-              font-weight 600
+                word-break: break-all
+                color black
+                font-weight 600
         .container-text
             +Phablet(max)
-              display flex
-              justify-content space-between
+                display flex
+                justify-content space-between
             h3
                 font-size: 28px
-
