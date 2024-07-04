@@ -1,0 +1,52 @@
+.c-bigbento
+  &__container
+    width 100%
+    min-height: 80vh
+    display grid
+    grid-auto-columns 1fr
+    grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    grid-template-rows 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    gap 1rem
+    grid-template-areas: "lealtad lealtad imagen1 calidad calidad calidad calidad" "lealtad lealtad imagen1 calidad calidad calidad calidad" "lealtad lealtad imagen1 honestidad honestidad imagen2 imagen2" "profesionalismo profesionalismo imagen1 honestidad honestidad imagen2 imagen2" "profesionalismo profesionalismo imagen1 honestidad honestidad imagen2 imagen2" "profesionalismo profesionalismo responsabilidad responsabilidad responsabilidad confianza confianza" "profesionalismo profesionalismo responsabilidad responsabilidad responsabilidad confianza confianza" "profesionalismo profesionalismo responsabilidad responsabilidad responsabilidad confianza confianza";
+    > div
+      border-radius 2rem
+  &__lealtad
+    background-color red
+    grid-area lealtad
+    width 100%
+    height 100%
+  &__imagen1
+    background-color blue
+    grid-area imagen1
+    width 100%
+    height 100%
+  &__calidad
+    background-color green
+    grid-area calidad
+    width 100%
+    height 100%
+  &__honestidad
+    background-color yellow
+    grid-area honestidad
+    width 100%
+    height 100%
+  &__imagen2
+    background-color purple
+    grid-area imagen2
+    width 100%
+    height 100%
+  &__profesionalismo
+    background-color violet
+    grid-area profesionalismo
+    width 100%
+    height 100%
+  &__responsabilidad
+    background-color pink
+    grid-area responsabilidad
+    width 100%
+    height 100%
+  &__confianza
+    background-color darkgreen
+    grid-area confianza
+    width 100%
+    height 100%
