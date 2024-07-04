@@ -41,6 +41,29 @@
 		max-width: 1000px
 		padding: 30px 20px
 		gap: 3em
+		h2.title
+			width 100%
+			text-align left
+			color blueDark-1
+			font-size 60px
+			font-family tipografia-serif
+			+Responsive(max, 600px)
+				font-size 40px
+			+MobilePortrait(max)
+				font-size 28px
+			&.mb-spacing
+				margin-bottom 2rem
+		h3.subtitle
+			width 100%
+			text-align left
+			color blueDark-1
+			font-size 28px
+			+Responsive(max, 600px)
+				font-size 16px
+			+MobilePortrait(max)
+				font-size 20px
+			&.my-spacing
+				margin 2.5rem 0
 	&--max-770
 		box-sizing: content-box
 		padding-top 0
@@ -61,6 +84,16 @@
 		min-height 40vh
 		background-color #04689D
 		border-radius 6px
+	&--notice
+		border-radius 2rem
+		width 95%
+		padding-top 2rem
+		padding-bottom 2rem
+		gap 1.5rem
+		+TabletPortrait(max)
+			padding: 30px 20px
+	&--blue
+		background-color blueDark-1
 	.greetings
 		display: flex
 		flex-direction: column

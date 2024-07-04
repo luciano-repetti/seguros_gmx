@@ -1,0 +1,121 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'agente/puntos-de-venta.html';
+	- page['title'] = 'Soy agente';
+	- page['descrip'] = 'Puntos de venta';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column#title
+							h1 #[small Soy agente] Puntos de venta en #[strong Linea]
+		.o-section
+			.o-section.o-section--max-1000
+				.c-card-type4__container
+					a(href="#" title="Médicos").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-medicos.svg' alt='Médicos')
+						p Médicos
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Contratistas").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-contratistas.svg' alt='Contratistas')
+						p Contratistas
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Hogar GMX").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-hogar.svg' alt='Hogar GMX')
+						p Hogar GMX
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Carga").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-carga.svg' alt='Carga')
+						p Carga
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Equipo de contratistas").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-equipo-contratistas.svg' alt='Equipo de contratistas')
+						p Equipo de contratistas
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Responsabilidad civil").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-responsabilidad-civil.svg' alt='Responsabilidad civil')
+						p Responsabilidad civil
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="PyME").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-pyme.svg' alt='PyME')
+						p PyME
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="RC contratista energía").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-rc-contratista-energia.svg' alt='RC contratista energía')
+						p RC contratista energía
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Obra civil").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-obra-civil.svg' alt='Obra civil')
+						p Obra civil
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Estancias infantiles y guarderías").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-estancias-infantiles.svg' alt='Estancias infantiles y guarderías')
+						p Estancias infantiles y guarderías
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Guarderías IMSS").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-guarderias-imss.svg' alt='Guarderías IMSS')
+						p Guarderías IMSS
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					a(href="#" title="Medipet").c-card-type4__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/soy-agente/GMX-medipet.svg' alt='Medipet')
+						p Medipet
+						.o-btn-arrow.o-btn-arrow--blue
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+				h2.title Nuestro programa de recompensas
+				h3.subtitle Aprovecha los beneficios que tenemos para ti al usar cualquiera de nuestros PVL´s.
+				a(href="#" title="Ir a ...").c-image-banner(style="background-image: url(" + urlFolder + "images/soy-agente/GMX-pvl-background.png)")
+					img.js-lazy(
+						src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+						data-src=urlFolder + 'images/soy-agente/GMX-pvl.svg' alt='PVL')
+					.o-btn-arrow
+						i.i-icon.i-arrow-up-right(aria-hidden='true')

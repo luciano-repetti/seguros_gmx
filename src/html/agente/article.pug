@@ -1,0 +1,56 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'agente/article.html';
+	- page['title'] = 'Soy agente';
+	- page['descrip'] = 'Articulo ...';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column#title
+							h1 #[small Soy agente] Avisos y #[strong Noticias]
+		.o-container
+			.o-return
+				a.return(href="#" title="Regresar") Regresar
+				.o-return__container
+					h2.mb-spacing Facturación de asegurados pendiente de 2023
+					p Estimado Agente,
+					p Derivado de los cambios en la facturación electrónica versión 4.0 y en cumplimiento de las disposiciones fiscales sobre los nuevos requerimientos para la generación del Comprobante Fiscal Digital por Internet (CFDI) estamos obligados, entre otras cosas, a registrar el Régimen Fiscal de la persona física o moral de acuerdo a la información registrada en la constancia de situación fiscal emitida por el SAT, la cual, se puede obtener en su portal; también es necesario para el timbrado de facturas los demás datos obligatorios que enseguida se mencionan:
+					ul
+						li Nombre o razón social
+						li R.F.C.
+						li Código postal del domicilio fiscal
+					img.-o-return__image.js-lazy(
+						src=urlFolder + 'images/soy-agente/GMX-Placeholder-Small.jpg'
+						data-src=urlFolder + 'images/soy-agente/GMX-image-placeholder.png'
+						alt=' Imagen de Rc Profesional')
+					p En caso de tener más de un régimen fiscal, se debe indicar el régimen en el que se pretende realizar la deducción
+					p GMX Seguros adoptó el uso del CFDI versión 4.0 a partir del mes de enero de 2023 en preparación a la obligatoriedad que se tendrá a partir de abril de este año, por lo que es necesario validar que la información de los Asegurados y/o Pagadores coincida con la Constancia de Situación Fiscal actualizada.
+					h3.my-spacing Consultar documentos
+					p Es importante reiterar, que, aun cuando se haya pagado la póliza y se encuentre correctamente aplicada la prima, si los datos no están actualizados o son erróneos, la validación del CFDI no permitirá el timbrado de la factura, por lo tanto, el gasto no se podrá deducir ni acreditar el IVA correspondiente en la fecha de pago, sino hasta el momento que los datos sean actualizados.
+					p Solicitamos el valioso apoyo de todos nuestros Agentes de Seguros y así evitar contratiempos para los Asegurados.
+					p Confiamos en que juntos podremos hacer esta transición sin problemas si cuidamos los detalles en este nuevo proceso.
+				a.o-return__banner(href="mailto:facturacionv4@gmx.com.mx" title="facturacionv4@gmx.com.mx")
+					.o-btn-arrow
+						i.i-icon.i-arrow-up-right(aria-hidden='true')
+					.o-return__text
+						small Para dudas o aclaraciones envíanos un corre a
+						p facturacionv4@gmx.com.mx
+				.o-return__container
+					p Atentamiente,
+					p GMX Seguros
