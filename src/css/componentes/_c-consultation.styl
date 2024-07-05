@@ -1,0 +1,58 @@
+$c-consultation = 'c-consultation';
+.c-consultation
+  &__container
+    display flex
+    flex-direction row
+    width 100%
+    gap 1rem
+    +Tablet(max)
+      flex-direction column
+  &__left,
+  &__right
+    display flex
+    flex-direction column
+    width 100%
+    gap 1rem
+  &__right
+    .{$c-consultation}__content
+      .{$c-consultation}__image
+        background-color white
+        border 1px solid blue-4
+        border-radius 25px
+        padding .75rem 1.25rem
+      img
+        width 36px
+        +Tablet(max)
+          min-width 15px
+  &__left
+    .{$c-consultation}__content
+      img
+        width 100px
+        object-fit contain
+        +Tablet(max)
+          width 75px
+  &__card
+    background-color blue-1
+    border 1px solid blue-3
+    padding 1rem
+    border-radius 2rem
+    display flex
+    flex-direction row
+    justify-content space-between
+    min-height 100px
+    gap 1rem
+  &__content
+    display flex
+    align-items center
+    justify-content flex-start
+    gap 1rem
+    p
+      color blueDark-1
+      margin 0
+      font-size 20px
+      +MobilePortrait(max)
+        font-size 14px
+  &__arrow
+    display flex
+    justify-content center
+    align-items center

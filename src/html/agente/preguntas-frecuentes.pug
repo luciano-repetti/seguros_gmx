@@ -1,0 +1,179 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'agente/sitios-de-consulta.html';
+	- page['title'] = 'Soy agente';
+	- page['descrip'] = 'Sitios de consulta';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column#title
+							h1 #[small Soy agente] Preguntas #[strong Frecuentes]
+		.o-section
+			.o-section.o-section--max-1000
+				ul.c-documentation-siniestros
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 01
+							p Datos fiscales para facturación
+						button#button-expand-1.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Datos fiscales para facturación'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1.o-container-list.o-container-list--padding.u-hidden
+						p TECOYOTITLA 412 EDIFICIO GMX, COL. EX HACIENDA DE GUADALUPE CHIMALISTAC, ÁLVARO OBREGÓN, MÉXICO D.F. 01050 RFC. GMS971110BTA
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 02
+							p ¿Cuánto tiempo tengo para pagar mi recibo?
+						button#button-expand-2.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='¿Cuánto tiempo tengo para pagar mi recibo?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-2.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 03
+							p Si mi recibo está fuera de vigencia, ¿qué hago para poder pagar?
+						button#button-expand-3.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Si mi recibo está fuera de vigencia, ¿qué hago para poder pagar?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-3.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 04
+							p ¿Me pueden dar el número de la cuenta concentradora para hacer el pago de mi póliza?
+						button#button-expand-4.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='¿Me pueden dar el número de la cuenta concentradora para hacer el pago de mi póliza?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-4.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 05
+							p Si quiero hacer el pago mediante transferencia bancaria ¿cómo le hago?
+						button#button-expand-5.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Si quiero hacer el pago mediante transferencia bancaria ¿cómo le hago?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-5.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 06
+							p ¿Y si quiero pagar con American Express?
+						button#button-expand-6.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='¿Y si quiero pagar con American Express?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-6.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 07
+							p ¿Qué tipo de cambio utiliza GMX Seguros?
+						button#button-expand-7.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='¿Qué tipo de cambio utiliza GMX Seguros?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-7.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 08
+							p ¿Me pueden decir el tipo de cambio del día de mañana para programar el pago?
+						button#button-expand-8.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='¿Me pueden decir el tipo de cambio del día de mañana para programar el pago?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-8.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 09
+							p ¿Con quién puedo validar el pago de una póliza?
+						button#button-expand-9.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='¿Con quién puedo validar el pago de una póliza?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-9.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 10
+							p ¿Con quién puedo verificar mi pago de comisiones?
+						button#button-expand-10.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='¿Con quién puedo verificar mi pago de comisiones?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-10.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
+
+
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick
+						.container-text
+							small 11
+							p ¿Qué documentos necesito mandar para cumplir con el artículo 492 y a quién debo mandarlos?
+						button#button-expand-11.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='¿Qué documentos necesito mandar para cumplir con el artículo 492 y a quién debo mandarlos?'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-11.o-container-list.o-container-list--padding.u-hidden
+						h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, rerum?
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, veniam. Doloremque atque quo ratione minima, amet voluptatem quibusdam ducimus animi esse, nemo cumque velit? Voluptas minima labore consectetur cum nostrum!
