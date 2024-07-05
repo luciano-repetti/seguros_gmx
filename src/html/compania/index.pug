@@ -1,307 +1,309 @@
 extends ../template/_template
 
 block append configuracion
-	- var page = {};
-	- page['link'] = 'compania/index.html';
-	- page['title'] = 'Historia Compañia';
-	- page['descrip'] = 'La historia de la compañia GMX Seguros';
-	- page['keys'] = 'seguros, negocios, personales';
-	- page['lang'] = 'es';
-	- page['responsive'] = true;
-	- page['section'] = [];
-	- page['libsCss'] = [];
-	- page['libs'] = [];
-	- page['plugins'] = ['splide'];
-	- page['js'] = [];
+    - var page = {};
+    - page['link'] = 'compania/index.html';
+    - page['title'] = 'Historia Compañia';
+    - page['descrip'] = 'La historia de la compañia GMX Seguros';
+    - page['keys'] = 'seguros, negocios, personales';
+    - page['lang'] = 'es';
+    - page['responsive'] = true;
+    - page['section'] = [];
+    - page['libsCss'] = [];
+    - page['libs'] = [];
+    - page['plugins'] = ['splide'];
+    - page['js'] = [];
 
-	- var path = '../../';
+    - var path = '../../';
 
 block contenido
-	main.o-section--main
-		.c-banner-text.c-banner-text--padding1
-			section.o-section.o-section--banner-small
-				.o-container
-					.o-module.o-module--deco5.u-text-center
-						.o-module__title.o-module__title--adapted#title
-							h1 #[small Historia] Más de #[strong 25 años] de trayectoria
+    main.o-section--main
+        .c-banner-text.c-banner-text--padding1
+            section.o-section.o-section--banner-small
+                .o-container
+                    .o-module.o-module--deco5.u-text-center
+                        .o-module__title.o-module__title--adapted#title
+                            h1 #[small Historia] Más de #[strong 25 años] de trayectoria
 
-		.c-navigation-page
-			.c-navigation-page__list-section.c-navigation-page__list-section--gap(aria-label='Secciones del sitio')
-				ul#scrollTop(role='navigation')
-					li.container-anchor.container-anchor--active
-						a(href='#historia' title='Ir a la sección Historia' text-type="adapted" template='<h1>Más de <strong>25 años</strong> de trayectoria</h1>') Historia
-					li.container-anchor
-						a(href='#mision-vision-valores' title='Ir a la sección de misión, visión y valores' template='<h1><small>Misión, Visión y Valores</small>Comprometidos con tu<strong>futuro</strong></h1>') Misión, visión y valores
-					li.container-anchor
-						a(
-							href='#innovacion'
-							title='Ir a la sección de innovación'
-							template='<h1><small>Innovación</small>Productos y servicios <strong>disruptivos</strong></h1>'
-						) Innovación
-					li.container-anchor
-						a(href='#integridad-corporativa' title='Ir a la sección de integridad corporativa' text-type="adapted" template='<h1><small>Integridad corporativa</small>Nos guiamos por <strong>valores</strong> fundamentales</h1>') Integridad corporativa
+        .c-navigation-page
+            .c-navigation-page__list-section.c-navigation-page__list-section--gap(aria-label='Secciones del sitio')
+                ul#scrollTop(role='navigation')
+                    li.container-anchor.container-anchor--active
+                        a(href='#historia' title='Ir a la sección Historia' text-type="adapted" template='<h1>Más de <strong>25 años</strong> de trayectoria</h1>') Historia
+                    li.container-anchor
+                        a(href='#mision-vision-valores' title='Ir a la sección de misión, visión y valores' template='<h1><small>Misión, Visión y Valores</small>Comprometidos con tu<strong>futuro</strong></h1>') Misión, visión y valores
+                    li.container-anchor
+                        a(
+                            href='#innovacion'
+                            title='Ir a la sección de innovación'
+                            template='<h1><small>Innovación</small>Productos y servicios <strong>disruptivos</strong></h1>'
+                        ) Innovación
+                    li.container-anchor
+                        a(href='#integridad-corporativa' title='Ir a la sección de integridad corporativa' text-type="adapted" template='<h1><small>Integridad corporativa</small>Nos guiamos por <strong>valores</strong> fundamentales</h1>') Integridad corporativa
 
-		.o-container.section-change#historia(aria-expanded='true')
-			.o-return
-				.return.underline ¿Quienes somos?
-				.o-return__container.o-return__container--640
-					p Somos una empresa mexicana especializada en dar soluciones de aseguramiento personalizada en materia de Responsabilidad Civil y Daños.
-					p Nuestros más de 25 años de trayectoria nos han permitido conocer el mercado de los seguros; lo que nos ha hecho desarrollar de manera constante productos innovadores, que resuelven las necesidades de protección ante distintos riesgos.
-					.o-container-card
-						h3 Nuestro inicio
-						.o-card-step.o-card-step--history
-							p En 1998 The St. Paul Companies inició operaciones en México.
+        .o-container.section-change#historia(aria-expanded='true')
+            .o-return
+                .return.underline ¿Quienes somos?
+                .o-return__container.o-return__container--640
+                    p Somos una empresa mexicana especializada en dar soluciones de aseguramiento personalizada en materia de Responsabilidad Civil y Daños.
+                    p Nuestros más de 25 años de trayectoria nos han permitido conocer el mercado de los seguros; lo que nos ha hecho desarrollar de manera constante productos innovadores, que resuelven las necesidades de protección ante distintos riesgos.
+                    .o-container-card
+                        h3 Nuestro inicio
+                        .o-card-step.o-card-step--history
+                            p En 1998 The St. Paul Companies inició operaciones en México.
 
-						.o-card-image
-							img.js-lazy(data-src=urlFolder + 'images/compania/GMX-compania.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen de la compañia GMX Seguros")
+                        .o-card-image
+                            img.js-lazy(data-src=urlFolder + 'images/compania/GMX-compania.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen de la compañia GMX Seguros")
 
-						.o-card-step.o-card-step--blue-light
-							small EN
-							strong 2002,
-							p la firma fue adquirida por un conjunto accionario mexicano con amplia experiencia en seguros. Así nació Grupo Mexicano de Seguros S.A. de C.V.
+                        .o-card-step.o-card-step--blue-light
+                            small EN
+                            strong 2002,
+                            p la firma fue adquirida por un conjunto accionario mexicano con amplia experiencia en seguros. Así nació Grupo Mexicano de Seguros S.A. de C.V.
 
-		.o-container.section-change#mision-vision-valores(aria-expanded='false')
-			.o-return
-				.return.underline Misión
-				.o-return__container.o-return__container--640
-					p Brindar protección al patrimonio de nuestros clientes, tanto de sus bienes como en su persona, mediante productos especializados y asumiendo con alta RESPONSABILIDAD los riesgos tomados.
-					.o-card-image.o-card-image--h-full
-						img.js-lazy(data-src=urlFolder + 'images/compania/GMX-oficina.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen de la oficina de GMX Seguros")
+        .o-container.section-change#mision-vision-valores(aria-expanded='false')
+            .o-return
+                .return.underline Misión
+                .o-return__container.o-return__container--640
+                    p Brindar protección al patrimonio de nuestros clientes, tanto de sus bienes como en su persona, mediante productos especializados y asumiendo con alta RESPONSABILIDAD los riesgos tomados.
+                    .o-card-image.o-card-image--h-full
+                        img.js-lazy(data-src=urlFolder + 'images/compania/GMX-oficina.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen de la oficina de GMX Seguros")
 
-			.o-return
-				.return.underline Visión
-				.o-return__container.o-return__container--640
-					.container-gray-company
-						p Ser lideres en el mercado de seguros especializados en Responsabilidad Civil y otros ramos de Daños, bajo un crecimiento sostenido, #[small manteniéndonos como una compañía rentable, solvente y financieramente sana; con formación de PROFESIONALES MEXICANOS de alto nivel de especialización y responsabilidad.]
+            .o-return
+                .return.underline Visión
+                .o-return__container.o-return__container--640
+                    .container-gray-company
+                        p Ser lideres en el mercado de seguros especializados en Responsabilidad Civil y otros ramos de Daños, bajo un crecimiento sostenido, #[small manteniéndonos como una compañía rentable, solvente y financieramente sana; con formación de PROFESIONALES MEXICANOS de alto nivel de especialización y responsabilidad.]
 
-			section.o-section
-				.c-introduction-text__text-container
-					h2 Valores
-			.o-section.o-section--max-1200.c-bigbento__container
-				.c-bigbento__lealtad.o-card.o-card--blueDark
-					.title
-						h3 Lealtad
-						.container-icon
-							img.js-lazy(data-src=urlFolder + 'images/compania/GMX-manos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un apreton de manos')
-					p Al compromiso de defender lo que creemos, en quién creemos y las metas por las que hemos trabajando en buenos y malos momentos.
-				.c-bigbento__imagen1.o-card
-					.container-image-center
-						img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-cruzada-brazos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona cruzada de brazos y sonriendo')
-				.c-bigbento__calidad.o-card
-					.container-icon
-						img.js-lazy(data-src=urlFolder + 'images/compania/GMX-diamante.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de una mano con un diamante flotante')
-					.title
-						h3 Calidad
-						p Hacer las cosas bien desde la primera vez es nuestra convicción, nuestra base para alcanzar el desarrollo profesional y organizacional.
-				.c-bigbento__honestidad.o-card.o-card--blueDark
-					.title
-						h3 Honestidad
-						.container-icon
-							img.js-lazy(data-src=urlFolder + 'images/compania/GMX-organizacion.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de tierra con lineas divisorias')
-					p Para comportarnos de manera íntegra, razonables y confiable y reflejar congruencia entre nuestro pensar, hablar y actuar.
-				.c-bigbento__imagen2.o-card
-					.container-image-center
-						img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-computadora.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona sosnteniendo una laptop')
-				.c-bigbento__profesionalismo.o-card
-					.container-icon-left
-						.container-icon
-							img.js-lazy(data-src=urlFolder + 'images/compania/GMX-maletin-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un maletin con un escudo en su centro')
-					h3 Profesionalismo
-					p Utilizamos el máximo de nuestras capacidades para cumplir, de manera disciplina y responsable, con todos los asuntos que nos son encomendados.
-				.c-bigbento__responsabilidad.o-card.o-card--blueDark
-					.title
-						h3 Responsabilidad
-						.container-icon
-							img.js-lazy(data-src=urlFolder + 'images/compania/GMX-contrato.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un contrato')
-					p Para cumplir con los compromisos que aceptamos ante nuestros clientes, familia, compañeros y autoridades.
-				.c-bigbento__confianza.o-card.o-card--blueDark
-					.title
-						h3 Confianza
-						.container-icon
-							img.js-lazy(data-src=urlFolder + 'images/compania/GMX-insignia.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de una insignia')
-					p Para mostrar a nuestros clientes, compañeros y familiares, nuestra buena fe, ánimo,. aliento y valor para obrar.
+            section.o-section
+                .c-introduction-text__text-container
+                    h2 Valores
+            .o-section.o-section--max-1200.c-bigbento__container
+                .c-bigbento__lealtad.o-card.o-card--blueDark
+                    .title
+                        h3 Lealtad
+                        .container-icon
+                            img.js-lazy(data-src=urlFolder + 'images/compania/GMX-manos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un apreton de manos')
+                    p Al compromiso de defender lo que creemos, en quién creemos y las metas por las que hemos trabajando en buenos y malos momentos.
+                .c-bigbento__imagen1.o-card
+                    .container-image-center
+                        img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-cruzada-brazos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona cruzada de brazos y sonriendo')
+                .c-bigbento__calidad.o-card
+                    .container-icon
+                        img.js-lazy(data-src=urlFolder + 'images/compania/GMX-diamante.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de una mano con un diamante flotante')
+                    .title
+                        h3 Calidad
+                        p Hacer las cosas bien desde la primera vez es nuestra convicción, nuestra base para alcanzar el desarrollo profesional y organizacional.
+                .c-bigbento__honestidad.o-card.o-card--blueDark
+                    .title
+                        h3 Honestidad
+                        .container-icon
+                            img.js-lazy(data-src=urlFolder + 'images/compania/GMX-organizacion.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de tierra con lineas divisorias')
+                    p Para comportarnos de manera íntegra, razonables y confiable y reflejar congruencia entre nuestro pensar, hablar y actuar.
+                .c-bigbento__imagen2.o-card
+                    .container-image-center
+                        img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-computadora.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona sosnteniendo una laptop')
+                .c-bigbento__profesionalismo.o-card
+                    .container-icon-left
+                        .container-icon
+                            img.js-lazy(data-src=urlFolder + 'images/compania/GMX-maletin-escudo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un maletin con un escudo en su centro')
+                    h3 Profesionalismo
+                    p Utilizamos el máximo de nuestras capacidades para cumplir, de manera disciplina y responsable, con todos los asuntos que nos son encomendados.
+                .c-bigbento__responsabilidad.o-card.o-card--blueDark
+                    .title
+                        h3 Responsabilidad
+                        .container-icon
+                            img.js-lazy(data-src=urlFolder + 'images/compania/GMX-contrato.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un contrato')
+                    p Para cumplir con los compromisos que aceptamos ante nuestros clientes, familia, compañeros y autoridades.
+                .c-bigbento__confianza.o-card.o-card--blueDark
+                    .title
+                        h3 Confianza
+                        .container-icon
+                            img.js-lazy(data-src=urlFolder + 'images/compania/GMX-insignia.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de una insignia')
+                    p Para mostrar a nuestros clientes, compañeros y familiares, nuestra buena fe, ánimo,. aliento y valor para obrar.
 
-		.o-container.section-change#innovacion(aria-expanded='false')
-			.o-return
-				a.return Trayectoria
-				.o-return__container.o-return__container--640
-					p Nuestra trayectoria y experiencia de más de 25 años en el sector seguros, nos han permitido desarrollar productos adecuados a la realidad del país y ofrecer soluciones a la medida de cada riesgo.
-			section.o-section.o-section--max-1200
-				.c-introduction-text__text-container
-					h2 Estamos innovando
-				.c-innovating
-					.c-innovating__left
-						.o-card.card.card-1
-							.title
-								h3 Suscriptores especialistas
-								.container-icon
-									img.js-lazy(data-src=urlFolder + 'images/compania/GMX-papeles.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de papel escrito')
-							p Nuestros suscriptores son amplios conocedores de los riesgos por segmento, con la ventaja de atender las necesidades específicas del asegurado; orientan de manera adecuada para contratar la póliza que realmente resuelva las necesidades.
-						.o-card.o-card--blueDark.card.card-2
-							.container-image-center
-								img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-anteojos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona acomodandose los anteojos')
-						.o-card.card.card-3
-							.title
-								h3 Área de siniestros especializada
-								.container-icon
-									img.js-lazy(data-src=urlFolder + 'images/compania/GMX-usuario-valido.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de usuario con un escudo y un tick')
-							p Entendemos la especialidad. Nuestro equipo de siniestros se especializa por ramo y por tipo de actividad, para tener un mejor entendimiento del caso y responder más allá de las expectativas de nuestros asegurados.
-						.o-card.o-card--blueDark.card.card-4
-							.title
-								h3 Oficinas regionales autónomas
-								.container-icon
-									img.js-lazy(data-src=urlFolder + 'images/compania/GMX-edificio.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un edificio')
-							p Son independientes en su toma de decisiones. Suscriben riesgos locales, con conocimiento de la zona, lo que permite tener una mayor asertividad en las condiciones que ofrecemos a nuestros asegurados.
-						.o-card.card.card-5
-							.container-image-center
-								img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-perfil.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona posicionada de perfil')
-					.c-innovating__right
-						.o-card.card.card-1
-							.container-image-center
-								img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-listo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona juntando el dedo pulgar con el dedo índice de una mano')
-							h3 Administración de riesgos
-							p Nuestro equipo de asesores en administración de riesgos acompaña a nuestros asegurados durante la vigencia de la póliza, con el fin de minimizar sus riesgos. Contamos con una amplia gama de especialistas en distintas materias, que garantizan una constante asesoría en materia de prevención.
-						.o-card.o-card--blueDark.card.card-2
-							.title
-								h3 Productos a la medida
-								.container-icon
-									img.js-lazy(data-src=urlFolder + 'images/compania/GMX-maletin.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un maletin')
-							p Nuestro equipo de asesores en administración de riesgos acompaña a nuestros asegurados durante la vigencia de la póliza, con el fin de minimizar sus riesgos. Contamos con una amplia gama de especialistas en distintas materias, que garantizan una constante asesoría en materia de prevención.
-						.o-card.card.card-3
-							.container-icon-right
-								.container-icon
-									img.js-lazy(data-src=urlFolder + 'images/compania/GMX-escudo-azul.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un escudo con un tick en su centro')
-							h3 Valores agregados
-							p Algunos de nuestros productos se complementan con asistencia legal laboral, penal, familiar, civil, entre otras; a través de nuestra compañía hermana MAS Servicios Asistenciales; apoyamos a nuestros asegurados en diversos temas legales.
-						.o-card.o-card--blueDark.card.card-4
-							.title
-								h3 Desarrollo e innovación
-								.container-icon
-									img.js-lazy(data-src=urlFolder + 'images/compania/GMX-portapapeles.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de portapapeles')
-							p De manera constante buscamos la evolución de nuestro sector con nuevos productos y servicios, que satisfagan las necesidades del mercado. Ejemplo de ello es que somos pioneros en cobertura para guarderías, médicos y Responsabilidad Civil decenal.
+        .o-container.section-change#innovacion(aria-expanded='false')
+            .o-return
+                a.return Trayectoria
+                .o-return__container.o-return__container--640
+                    p Nuestra trayectoria y experiencia de más de 25 años en el sector seguros, nos han permitido desarrollar productos adecuados a la realidad del país y ofrecer soluciones a la medida de cada riesgo.
+            section.o-section.o-section--max-1200
+                .c-introduction-text__text-container
+                    h2 Estamos innovando
+                .c-innovating
+                    .c-innovating__left
+                        .o-card.card.card-1
+                            .title
+                                h3 Suscriptores especialistas
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-papeles.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de papel escrito')
+                            p Nuestros suscriptores son amplios conocedores de los riesgos por segmento, con la ventaja de atender las necesidades específicas del asegurado; orientan de manera adecuada para contratar la póliza que realmente resuelva las necesidades.
+                        .o-card.o-card--blueDark.card.card-2
+                            .container-image-center
+                                img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-anteojos.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona acomodandose los anteojos')
+                        .o-card.card.card-3
+                            .title
+                                h3 Área de siniestros especializada
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-usuario-valido.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de usuario con un escudo y un tick')
+                            p Entendemos la especialidad. Nuestro equipo de siniestros se especializa por ramo y por tipo de actividad, para tener un mejor entendimiento del caso y responder más allá de las expectativas de nuestros asegurados.
+                        .o-card.o-card--blueDark.card.card-4
+                            .title
+                                h3 Oficinas regionales autónomas
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-edificio.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un edificio')
+                            p Son independientes en su toma de decisiones. Suscriben riesgos locales, con conocimiento de la zona, lo que permite tener una mayor asertividad en las condiciones que ofrecemos a nuestros asegurados.
+                        .o-card.card.card-5
+                            .container-image-center
+                                img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-perfil.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona posicionada de perfil')
+                    .c-innovating__right
+                        .o-card.card.card-1
+                            .container-image-center
+                                img.js-lazy(data-src=urlFolder + 'images/compania/GMX-persona-listo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='Imagen de una persona juntando el dedo pulgar con el dedo índice de una mano')
+                            h3 Administración de riesgos
+                            p Nuestro equipo de asesores en administración de riesgos acompaña a nuestros asegurados durante la vigencia de la póliza, con el fin de minimizar sus riesgos. Contamos con una amplia gama de especialistas en distintas materias, que garantizan una constante asesoría en materia de prevención.
+                        .o-card.o-card--blueDark.card.card-2
+                            .title
+                                h3 Productos a la medida
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-maletin.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un maletin')
+                            p Nuestro equipo de asesores en administración de riesgos acompaña a nuestros asegurados durante la vigencia de la póliza, con el fin de minimizar sus riesgos. Contamos con una amplia gama de especialistas en distintas materias, que garantizan una constante asesoría en materia de prevención.
+                        .o-card.card.card-3
+                            .container-icon-right
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-escudo-azul.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de un escudo con un tick en su centro')
+                            h3 Valores agregados
+                            p Algunos de nuestros productos se complementan con asistencia legal laboral, penal, familiar, civil, entre otras; a través de nuestra compañía hermana MAS Servicios Asistenciales; apoyamos a nuestros asegurados en diversos temas legales.
+                        .o-card.o-card--blueDark.card.card-4
+                            .title
+                                h3 Desarrollo e innovación
+                                .container-icon
+                                    img.js-lazy(data-src=urlFolder + 'images/compania/GMX-portapapeles.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='icono de portapapeles')
+                            p De manera constante buscamos la evolución de nuestro sector con nuevos productos y servicios, que satisfagan las necesidades del mercado. Ejemplo de ello es que somos pioneros en cobertura para guarderías, médicos y Responsabilidad Civil decenal.
 
 
 
-		.o-section.o-section--padding.section-change#integridad-corporativa(aria-expanded='false')
-			.o-section.o-section--max-1200
-				.o-section.o-section--pl-6.o-section--max-770
-					h3 GMX atiende y trabaja bajo el principio de Integridad.
-					.c-introduction-text__text-container.u-gap-2
-						p Al ser nuestra empresa 100% mexicana, estamos comprometidos en participar en un cambio que contribuya a un clima de transparencia acorde a nuestros valores rectores LEALTAD, HONESTIDAD, CALIDAD PROFESIONALISMO, CONFIANZA Y RESPONSABILIDAD; bajo este principio GMX, maneja una tolerancia cero ante cualquier forma de corrupción, soborno o actividad ilícita, tal y como se establece en la Ley de Responsabilidades Administrativas vigente en nuestro país y en apego a las mejores prácticas nacionales e internacionales.
-						.o-card-image.o-card-image--h-full
-							img.js-lazy(data-src=urlFolder + 'images/compania/GMX-director-general.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen del director general de GMX Seguros, Jorge B Flores Cruz")
-						p Todos los funcionarios, directores y colaboradores, recibimos información y capacitación en materia de ética, anticorrupción y cumplimiento normativo que sirven para esta transformación; existiendo el compromiso constante de hacer negocios de manera íntegra, justa y respetando la sana competencia entre el sector, y socios comerciales.
-						p Para lograrlo, contamos con un programa de Integridad y Cumplimiento Normativo, el cual está a disposición del público en general para que nuestros socios, proveedores y clientes puedan tener acceso.
-						.greetings 
-							p Recibe un saludo.
-							h4 Jorge B. Flores Cruz 3 #[span DIRECTOR GENERAL]
-							h5 GRUPO MEXICANO DE SEGUROS S.A. DE C.V.
-					section.c-introduction-text__text-container
-						.container-heading-company-h4
-							h4 ¡Vive y comparte con nosotros esa cultura!
-						p Nuestro sistema de denuncia es anónimo y garantiza 100% la confidencialidad de los usuarios, por lo tanto, no habrá represalias ni consecuencias de ningún tipo contra la persona que realice una denuncia.
-						p GMX Seguros , prohíbe cualquier forma de castigo, acción disciplinaria o represalia contra cualquier persona sin distinción de puesto, cargo, o función; aplicando a quien quebrante lo anterior, las medidas disciplinarias previstas en nuestra política de sanciones.    
-						h3.my-5 Para denunciar puedes llamar a los teléfonos
-						.o-bento.o-bento--company
-							.cellphone-1.o-card
-								.container-text.container-text--black
-									small Teléfono
-									h3 CDMX
-									.container-image
-										img.js-lazy(data-src=urlFolder + 'images/compania/GMX-telefono-black.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='')
-								.container-with-button
-									a.o-btn-arrow.o-btn-arrow--border-black(href='tel:91408346' title='Ir hacia el numero de telefono' target='_blank')
-										i.i-icon.i-arrow-up-right(aria-hidden='true')
-									.container-text
-										p 9140 8346
-							.image.o-card.o-card--blueDark
-								.container-image.container-image--height-full
-									img.js-lazy(data-src=urlFolder + 'images/soy-agente/GMX-todo-listo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='alt')
-							.anchor.o-card-with-button.o-card-with-button--width-full
-								p O ingresa en el siguiente enlace:
-								a(href="https://www.integriline.net/Welcome/options/" target='_blank') www.integriline.net/Welcome/options/
-							.cellphone-2.o-card.o-card--blueDark
-								.container-text
-									div
-										small Teléfono
-										h3 Interior de la república
-									.container-image
-										img.js-lazy(data-src=urlFolder + 'images/soy-agente/GMX-telefono.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='')
-								.container-with-button
-									a.o-btn-arrow(href='tel:8000874426' title='Ir hacia el numero de telefono' target='_blank')
-										i.i-icon.i-arrow-up-right(aria-hidden='true')
-									.container-text
-										p 800 08 74 426
+        .o-container.section-change#integridad-corporativa(aria-expanded='false')
+            .o-return
+                a.return.underline Introducción
+                .o-return__container.o-section.o-section--max-1200
+                    .o-section.o-section--pl-6.o-section--max-770
+                        h3 GMX atiende y trabaja bajo el principio de Integridad.
+                        .c-introduction-text__text-container.u-gap-2
+                            p Al ser nuestra empresa 100% mexicana, estamos comprometidos en participar en un cambio que contribuya a un clima de transparencia acorde a nuestros valores rectores LEALTAD, HONESTIDAD, CALIDAD PROFESIONALISMO, CONFIANZA Y RESPONSABILIDAD; bajo este principio GMX, maneja una tolerancia cero ante cualquier forma de corrupción, soborno o actividad ilícita, tal y como se establece en la Ley de Responsabilidades Administrativas vigente en nuestro país y en apego a las mejores prácticas nacionales e internacionales.
+                            .o-card-image.o-card-image--h-full
+                                img.js-lazy(data-src=urlFolder + 'images/compania/GMX-director-general.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt="Imagen del director general de GMX Seguros, Jorge B Flores Cruz")
+                            p Todos los funcionarios, directores y colaboradores, recibimos información y capacitación en materia de ética, anticorrupción y cumplimiento normativo que sirven para esta transformación; existiendo el compromiso constante de hacer negocios de manera íntegra, justa y respetando la sana competencia entre el sector, y socios comerciales.
+                            p Para lograrlo, contamos con un programa de Integridad y Cumplimiento Normativo, el cual está a disposición del público en general para que nuestros socios, proveedores y clientes puedan tener acceso.
+                            .greetings 
+                                p Recibe un saludo.
+                                h4 Jorge B. Flores Cruz 3 #[span DIRECTOR GENERAL]
+                                h5 GRUPO MEXICANO DE SEGUROS S.A. DE C.V.
+                        section.c-introduction-text__text-container
+                            .container-heading-company-h4
+                                h4 ¡Vive y comparte con nosotros esa cultura!
+                            p Nuestro sistema de denuncia es anónimo y garantiza 100% la confidencialidad de los usuarios, por lo tanto, no habrá represalias ni consecuencias de ningún tipo contra la persona que realice una denuncia.
+                            p GMX Seguros , prohíbe cualquier forma de castigo, acción disciplinaria o represalia contra cualquier persona sin distinción de puesto, cargo, o función; aplicando a quien quebrante lo anterior, las medidas disciplinarias previstas en nuestra política de sanciones.    
+                            h3.my-5 Para denunciar puedes llamar a los teléfonos
+                            .o-bento.o-bento--company
+                                .cellphone-1.o-card
+                                    .container-text.container-text--black
+                                        small Teléfono
+                                        h3 CDMX
+                                        .container-image
+                                            img.js-lazy(data-src=urlFolder + 'images/compania/GMX-telefono-black.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='')
+                                    .container-with-button
+                                        a.o-btn-arrow.o-btn-arrow--border-black(href='tel:91408346' title='Ir hacia el numero de telefono' target='_blank')
+                                            i.i-icon.i-arrow-up-right(aria-hidden='true')
+                                        .container-text
+                                            p 9140 8346
+                                .image.o-card.o-card--blueDark
+                                    .container-image.container-image--height-full
+                                        img.js-lazy(data-src=urlFolder + 'images/soy-agente/GMX-todo-listo.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='alt')
+                                .anchor.o-card-with-button.o-card-with-button--width-full
+                                    p O ingresa en el siguiente enlace:
+                                    a(href="https://www.integriline.net/Welcome/options/" target='_blank') www.integriline.net/Welcome/options/
+                                .cellphone-2.o-card.o-card--blueDark
+                                    .container-text
+                                        div
+                                            small Teléfono
+                                            h3 Interior de la república
+                                        .container-image
+                                            img.js-lazy(data-src=urlFolder + 'images/soy-agente/GMX-telefono.png' src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg' alt='')
+                                    .container-with-button
+                                        a.o-btn-arrow(href='tel:8000874426' title='Ir hacia el numero de telefono' target='_blank')
+                                            i.i-icon.i-arrow-up-right(aria-hidden='true')
+                                        .container-text
+                                            p 800 08 74 426
 
-			.c-coverage
-				section.c-coverage__container-banner
-					.container-heading-compania-h2
-						h2 Consulta nuestras #[span políticas y manuales]
-					ul.c-coverage__container-elements.c-coverage__container-elements--bg-white
-						li
-							h3 Política de Hospitalidad y Viáticos
-							p La política de hospitalidad y viáticos pagados a servidores públicos proporciona los lineamientos aplicables que restringen cualquier tipo de gasto que solicite ser pagado a funcionarios públicos y que tengan relación con hospitalidad, viáticos, regalos y entretenimiento, con la finalidad de evitar que GMX tenga cualquier beneficio o ventaja indebidos sobre sus competidores.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar la política de Hospitalidad y viáticos
-						li
-							h3 Política de Contribuciones y Donaciones Políticas
-							p “La Política de Donaciones y Contribuciones Políticas establece los lineamientos aplicables que restringen cualquier donativo o contribución que tengan una afinidad política en donde se pretenda vincular o bien utilizar el nombre de GMX Seguros.”
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar la política de Contribuciones y Donaciones Políticas
-						li
-							h3 Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de Procedencia ilícita y Financiamiento al Terrorismo
-							p El Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de procedencia ilícita y Financiamiento al Terrorismo, establece las medidas, políticas y procedimientos que GMX Seguros observará, para prevenir, detectar y reportar los actos, omisiones u operaciones que pudieran favorecer, prestar ayuda, auxilio o cooperación de cualquier especie para la comisión del delito que se establecen en los artículos 139, 139 Quater, 148 Bis del Código Penal Federal (referido al Terrorismo) o que pudiesen ubicarse en los supuestos del Articulo 400 Bis del mismo ordenamiento legal (referido a Operaciones con Recursos de Procedencia Ilícita.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de Procedencia ilícita y Financiamiento al Terrorismo
-						li
-							h3 Manual de Prevención y Detección de Fraudes
-							p El Manual de Prevención y Detección de Fraudes impulsa y propaga mediante la aplicación de valores éticos en todos los empleados de GMX Seguros, que permita el desempeño de sus funciones con un sentido de responsabilidad personal y social. Así como desarrollar y crear una conciencia permanente de prevención y detección de operaciones o situaciones fraudulentas.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar Manual de Prevención y Detección de Fraudes
-						li
-							h3 Manual de Anticorrupción y Antisoborno
-							p MEste manual establece las acciones a las que se ha sumado GMX en el combate a la corrupción y el soborno, esto con el fin de frenar, detener e incluso impedir actos que puedan ser señalados como tal.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar Manual de Anticorrupción y Antisoborno
-						li
-							h3 Política de Regalos y Agradecimientos
-							p La Política de Regalos y Agradecimientos establece los lineamientos que deben seguir todos los colaboradores de GMX, sin importar su nivel jerárquico en cuanto a la recepción y entrega de regalos provenientes de proveedores, agentes o terceros con los que tenga vínculos comerciales.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar Política de Regalos y Agradecimientos
-						li
-							h3 Código de Ética para Proveedores
-							p El Código de Ética regula el comportamiento de los proveedores en relación con la empresa, el proveedor debe mantener en todo momento un comportamiento ético que le permita establecer relaciones legitimas y productivas con sus propios proveedores y empresas con las que tengan relación contractual, de igual forma, deberá actuar con honradez e integridad en todos sus contactos y relaciones comerciales con entidades públicas y privadas.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar Código de Ética para Proveedores
-						li
-							h3 Manual de Recursos Humanos
-							p El Manual de Recursos Humanos tiene como proposito dar a conocer la visión, misión y valores de GMX Seguros.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span El Manual de Recursos Humanos tiene como proposito dar a conocer la visión, misión y valores de GMX Seguros.
-						li
-							h3 Código de Conducta
-							p El Código de Conducta tiene como propósito subrayar las conductas y comportamientos que seguirán los colaboradores de GMX Seguros.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar Código de Conducta
-						li
-							h3 Política de Conflicto de Intereses
-							p La Política de Conflicto de Intereses se encarga de asegurar la transparencia y honestidad de las actividades de los consejeros y empleados de cualquier área de GMX Seguros, dando a conocer todas aquellas situaciones que pueden considerarse como conflictos de interés que puedan dañar la imagen de la Institución.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar Política de Conflicto de Intereses
-						li
-							h3 Política de Sanciones Institucional
-							p Esta política contiene las sanciones a las que pueden ser acreedores todos los colaboradores de GMX con independencia del su nivel o cargo dentro de ella, por incumplimiento o violación a cualquiera de sus políticas institucionales, que vulneren su ética o integridad.
-							a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
-								span.container-text
-									span Consultar Política de Sanciones Institucional
+            .c-coverage
+                section.c-coverage__container-banner
+                    .container-heading-compania-h2
+                        h2 Consulta nuestras #[span políticas y manuales]
+                    ul.c-coverage__container-elements.c-coverage__container-elements--bg-white
+                        li
+                            h3 Política de Hospitalidad y Viáticos
+                            p La política de hospitalidad y viáticos pagados a servidores públicos proporciona los lineamientos aplicables que restringen cualquier tipo de gasto que solicite ser pagado a funcionarios públicos y que tengan relación con hospitalidad, viáticos, regalos y entretenimiento, con la finalidad de evitar que GMX tenga cualquier beneficio o ventaja indebidos sobre sus competidores.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar la política de Hospitalidad y viáticos
+                        li
+                            h3 Política de Contribuciones y Donaciones Políticas
+                            p “La Política de Donaciones y Contribuciones Políticas establece los lineamientos aplicables que restringen cualquier donativo o contribución que tengan una afinidad política en donde se pretenda vincular o bien utilizar el nombre de GMX Seguros.”
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar la política de Contribuciones y Donaciones Políticas
+                        li
+                            h3 Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de Procedencia ilícita y Financiamiento al Terrorismo
+                            p El Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de procedencia ilícita y Financiamiento al Terrorismo, establece las medidas, políticas y procedimientos que GMX Seguros observará, para prevenir, detectar y reportar los actos, omisiones u operaciones que pudieran favorecer, prestar ayuda, auxilio o cooperación de cualquier especie para la comisión del delito que se establecen en los artículos 139, 139 Quater, 148 Bis del Código Penal Federal (referido al Terrorismo) o que pudiesen ubicarse en los supuestos del Articulo 400 Bis del mismo ordenamiento legal (referido a Operaciones con Recursos de Procedencia Ilícita.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Manual de Cumplimiento en materia de Prevención de Lavado de Dinero con recursos de Procedencia ilícita y Financiamiento al Terrorismo
+                        li
+                            h3 Manual de Prevención y Detección de Fraudes
+                            p El Manual de Prevención y Detección de Fraudes impulsa y propaga mediante la aplicación de valores éticos en todos los empleados de GMX Seguros, que permita el desempeño de sus funciones con un sentido de responsabilidad personal y social. Así como desarrollar y crear una conciencia permanente de prevención y detección de operaciones o situaciones fraudulentas.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Manual de Prevención y Detección de Fraudes
+                        li
+                            h3 Manual de Anticorrupción y Antisoborno
+                            p MEste manual establece las acciones a las que se ha sumado GMX en el combate a la corrupción y el soborno, esto con el fin de frenar, detener e incluso impedir actos que puedan ser señalados como tal.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Manual de Anticorrupción y Antisoborno
+                        li
+                            h3 Política de Regalos y Agradecimientos
+                            p La Política de Regalos y Agradecimientos establece los lineamientos que deben seguir todos los colaboradores de GMX, sin importar su nivel jerárquico en cuanto a la recepción y entrega de regalos provenientes de proveedores, agentes o terceros con los que tenga vínculos comerciales.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Política de Regalos y Agradecimientos
+                        li
+                            h3 Código de Ética para Proveedores
+                            p El Código de Ética regula el comportamiento de los proveedores en relación con la empresa, el proveedor debe mantener en todo momento un comportamiento ético que le permita establecer relaciones legitimas y productivas con sus propios proveedores y empresas con las que tengan relación contractual, de igual forma, deberá actuar con honradez e integridad en todos sus contactos y relaciones comerciales con entidades públicas y privadas.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Código de Ética para Proveedores
+                        li
+                            h3 Manual de Recursos Humanos
+                            p El Manual de Recursos Humanos tiene como proposito dar a conocer la visión, misión y valores de GMX Seguros.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span El Manual de Recursos Humanos tiene como proposito dar a conocer la visión, misión y valores de GMX Seguros.
+                        li
+                            h3 Código de Conducta
+                            p El Código de Conducta tiene como propósito subrayar las conductas y comportamientos que seguirán los colaboradores de GMX Seguros.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Código de Conducta
+                        li
+                            h3 Política de Conflicto de Intereses
+                            p La Política de Conflicto de Intereses se encarga de asegurar la transparencia y honestidad de las actividades de los consejeros y empleados de cualquier área de GMX Seguros, dando a conocer todas aquellas situaciones que pueden considerarse como conflictos de interés que puedan dañar la imagen de la Institución.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Política de Conflicto de Intereses
+                        li
+                            h3 Política de Sanciones Institucional
+                            p Esta política contiene las sanciones a las que pueden ser acreedores todos los colaboradores de GMX con independencia del su nivel o cargo dentro de ella, por incumplimiento o violación a cualquiera de sus políticas institucionales, que vulneren su ética o integridad.
+                            a.o-card-archive(href='' download='' title='Descargar PDF Folleto de asistencias')
+                                span.container-text
+                                    span Consultar Política de Sanciones Institucional
 
