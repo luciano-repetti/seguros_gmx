@@ -16,44 +16,74 @@
       grid-template-areas "lealtad" "imagen1" "calidad" "honestidad" "imagen2" "profesionalismo" "responsabilidad" "confianza"
       grid-template-columns repeat(1, 1fr)
     > div
-      border-radius 2rem
+      display: flex
+      flex-direction: column
+      > p
+        margin-top 36px
+        font-size 20px
+        +Responsive(max, 500px)
+            font-size 16px
+      h3
+        margin-top: 20px
+        font-family tipografia-serif
+        font-size: 26px
+        word-break: break-all
+        +Responsive(max, 500px)
+          word-break: normal
+          font-size: 22px
   &__lealtad
-    background-color red
     grid-area lealtad
     width 100%
     height 100%
   &__imagen1
-    background-color blue
     grid-area imagen1
     width 100%
     height 100%
+    +Responsive(max, 500px)
+      img
+        width 40%
+        height: auto
   &__calidad
-    background-color green
     grid-area calidad
     width 100%
     height 100%
+    flex-direction: row !important
+    .title
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      gap: 8px
+      padding-left: 1em
+      h3
+        margin-top: 0
   &__honestidad
-    background-color yellow
     grid-area honestidad
     width 100%
     height 100%
   &__imagen2
-    background-color purple
     grid-area imagen2
     width 100%
     height 100%
+    img
+      width 80px
+      height: auto
+    +Responsive(max, 500px)
+      img
+        width 40%
+        height: auto
   &__profesionalismo
-    background-color violet
     grid-area profesionalismo
     width 100%
     height 100%
+    h3
+      padding-top: 45px
+      +Responsive(max, 500px)
+        padding-top: 15px
   &__responsabilidad
-    background-color pink
     grid-area responsabilidad
     width 100%
     height 100%
   &__confianza
-    background-color darkgreen
     grid-area confianza
     width 100%
     height 100%
