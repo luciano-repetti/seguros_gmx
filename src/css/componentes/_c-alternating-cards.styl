@@ -1,3 +1,4 @@
+$alternating-cards = 'alternating-cards'
 .alternating-cards
   display grid
   grid-template-columns repeat(3, 1fr)
@@ -16,9 +17,13 @@
     border-radius 2rem
     background-color blueDark-1
     justify-content space-between
+    .{$alternating-cards}__button p
+      color white
     &:nth-child(even)
       background-color blueDark-5
       color black
+      .{$alternating-cards}__button p
+        color black
     h4
       font-size 20px
       margin-bottom 2rem

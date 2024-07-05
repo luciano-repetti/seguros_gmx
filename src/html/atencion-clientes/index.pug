@@ -1,0 +1,351 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'atencion-clientes/index.html';
+	- page['title'] = 'Atencion a clientes';
+	- page['descrip'] = 'Centros de atencion a clientes';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column(id='title')
+							h1 #[small Centro de atención a clientes] Oficinas de #[strong Atención]
+		.c-navigation-page
+			.c-navigation-page__list-section
+		section.c-introduction-text.section-change
+			.c-introduction-text__text-container
+				p Contamos con oficinas de atención en diferentes estados de la República Mexicana. Cada una se ubica en lugares estratégicos para brindar servicios de calidad y especializados por zona.
+			.o-section--max-1000
+				.alternating-cards
+					.alternating-cards__card
+						.alternating-card__header
+							h4 Ciudad de México
+							p Tecoyotitla 412, Edificio GMX, Col. Ex Hacienda de Guadalupe Chimalistac, Álvaro Obregón, Ciudad de México, México, C.P. 01050.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+5554804000' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (55) 5480 4000
+								a.alternating-cards__button(href='tel:8007188946' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800 718 8946
+								a.alternating-cards__button(href='mailto:informacion@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p informacion@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Ciudad de México, Edo. de México y Toluca.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Aguascalientes
+							p Tecoyotitla 412, Edificio GMX, Col. Ex Hacienda de Guadalupe Chimalistac, Álvaro Obregón, Ciudad de México, México, C.P. 01050.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+5554804000' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (55) 5480 4000
+								a.alternating-cards__button(href='tel:8007188946' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800 718 8946
+								a.alternating-cards__button(href='mailto:informacion@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p informacion@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Aguascalientes.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Chihuahua
+							p Av. Francisco Villa No. 4700, piso 1, Col. San Felipe V Etapa, Chihuahua, Chih. CP. 31203.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+6144377144' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (614) 4377.144
+								a.alternating-cards__button(href='mailto:chihuahua@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p chihuahua@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Chihuahua.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Cuernavaca
+							p Avenida San Diego N. 326 Int. 1-B, Col. Vista Hermosa,Cuernavaca, Morelos, C.P.62290.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+7773225061' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (777) 322.5061
+								a.alternating-cards__button(href='mailto:cuernavaca@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p cuernavaca@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Morelos, Guerrero.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Guadalajara
+							p Lerdo de Tejada No, 2074, Col. Lafayette, Guadalajara, Jal., C.P. 44150.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+3336167609' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (33) 3616.7609
+								a.alternating-cards__button(href='tel:+8005085720' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.508.5720
+								a.alternating-cards__button(href='mailto:guadalajara@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p guadalajara@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Jalisco, Nayarit, Colima, B.C.S y Colima
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Hermosillo
+							p Av. Luis Donaldo Colosio , No. 450, Torre UNO, nivel 6, local 5., Col. Metrocentro, Hermosillo Son. CP. 83200.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+6621359508' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (662) 135.9508
+								a.alternating-cards__button(href='mailto:hermosillo@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p hermosillo@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Sonora.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 León
+							p Av. Guanajuato No. 602, Col. Jardines del Moral, León, Gto., C.P. 37160.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+4777183656' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (477) 718.3656
+								a.alternating-cards__button(href='tel:+8005013577' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.501.3577
+								a.alternating-cards__button(href='mailto:leon@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p leon@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Guanajuato, San Luis Potosí, Michoacán, Zacatecas.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Mazatlán
+							p Río Baluarte 607, Col. Palos Prietos, Mazatlán, Sinaloa C.P. 8201o.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+6691054689' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (669) 105.4689
+								a.alternating-cards__button(href='mailto:mazatlan@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p mazatlan@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Sinaloa, Durango excepto Gómez Palacio y Lerdo
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Mérida
+							p Av. Colón No. 503 H, por 62 y Av. Reforma, Col. Centro, Mérida, Yuc., C.P. 97000.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+9999204202' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (999) 920.4202
+								a.alternating-cards__button(href='tel:+8005040173' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.504.0173
+								a.alternating-cards__button(href='mailto:merida@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p merida@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Yucatán, Quintana Roo, Campeche, Tabasco, Chiapas.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Monterrey
+							p Río Támesis No. 1010, 2º Piso, Col. Del Valle, San Pedro Garza García, N.L., C.P. 66220.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+8183567330' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (81) 8356.7330
+								a.alternating-cards__button(href='tel:+8005040278' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.504.0278
+								a.alternating-cards__button(href='mailto:monterrey@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p monterrey@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Nuevo León, Tamaulipas, Coahuila y Durango: Gómez palacio y Lerdo.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Puebla
+							p Rosendo Márquez No. 1914, Col. Belisario Domínguez, Puebla, Pue., C.P. 72180.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+2222468979' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (222) 246.8979
+								a.alternating-cards__button(href='tel:+8000052020' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.005.2020
+								a.alternating-cards__button(href='mailto:puebla@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p puebla@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Puebla, Veracruz, Tlaxcala, Oaxaca
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Querétaro
+							p Avenida 5 de Febrero, No. 1351, Edificio Roble, torre 2, oficina 401, Zona Industrial Benito Juárez, Querétaro, Qro. C.P. 76130.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+4422129231' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (442) 212.9231
+								a.alternating-cards__button(href='mailto:queretaro@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p queretaro@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p Querétaro, Hidalgo.
+					.alternating-cards__card
+						.alternating-cards__header
+							h4 Tijuana
+							p Luis Cabrera No. 2033, Fracc. Zona Urbana Río, Deleg. Centro, Tijuana, B.C., C.P. 22010.
+						.alternating-card__body
+							.alternating-cards__buttons
+								a.alternating-cards__button(href='#' title='Ir hacia el mapa' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p Ver el mapa
+								a.alternating-cards__button(href='tel:+6646835464' title='Ir hacia el numero de telefono' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p.alternating-cards__cellphone (664) 683.5464
+								a.alternating-cards__button(href='tel:+8000199090' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p 800.019.9090
+								a.alternating-cards__button(href='mailto:tijuana@gmx.com.mx' title='Ir hacia el e-mail' target='_blank')
+									.o-btn-arrow
+										i.i-icon.i-arrow-up-right(aria-hidden='true')
+									p tijuana@gmx.com.mx
+						.alternating-card__footer
+							.alternating-cards__texts
+								p *Atiende:
+								p B.C.N

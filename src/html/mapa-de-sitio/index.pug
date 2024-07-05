@@ -1,0 +1,214 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'mapa-de-sitio/index.html';
+	- page['title'] = 'Mapa de sitio';
+	- page['descrip'] = '...';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column
+							h1 Mapa de #[strong Sitio]
+		.c-navigation-page
+			.c-navigation-page__list-section
+				ul#scrollTop(role='navigation' aria-label='Secciones del sitio')
+					li.container-text
+						p Filtrar por:
+					li.container-anchor.container-anchor--active
+						a(href='#no-filter' data-href="none" title='No filtrar') TODOS
+					li.container-anchor
+						a(href='#letter' data-href="a" title='Filtrar por letra A') A
+					li.container-anchor
+						a(href='#letter' data-href="b" title='Filtrar por la letra B') B
+					li.container-anchor
+						a(href='#letter' data-href="c" title='Filtrar por la letra C') C
+					li.container-anchor
+						a(href='#letter' data-href="d" title='Filtrar por la letra D') D
+					li.container-anchor
+						a(href='#letter' data-href="e" title='Filtrar por la letra E') E
+					li.container-anchor
+						a(href='#letter' data-href="f" title='Filtrar por la letra F') F
+					li.container-anchor
+						a(href='#letter' data-href="g" title='Filtrar por la letra G') G
+					li.container-anchor
+						a(href='#letter' data-href="h" title='Filtrar por la letra H') H
+					li.container-anchor
+						a(href='#letter' data-href="i" title='Filtrar por la letra I') I
+					li.container-anchor
+						a(href='#letter' data-href="j" title='Filtrar por la letra J') J
+					li.container-anchor
+						a(href='#letter' data-href="k" title='Filtrar por la letra K') K
+					li.container-anchor
+						a(href='#letter' data-href="l" title='Filtrar por la letra L') L
+					li.container-anchor
+						a(href='#letter' data-href="m" title='Filtrar por la letra M') M
+					li.container-anchor
+						a(href='#letter' data-href="n" title='Filtrar por la letra N') N
+					li.container-anchor
+						a(href='#letter' data-href="o" title='Filtrar por la letra O') O
+					li.container-anchor
+						a(href='#letter' data-href="p" title='Filtrar por la letra P') P
+					li.container-anchor
+						a(href='#letter' data-href="q" title='Filtrar por la letra Q') Q
+					li.container-anchor
+						a(href='#letter' data-href="r" title='Filtrar por la letra R') R
+					li.container-anchor
+						a(href='#letter' data-href="s" title='Filtrar por la letra S') S
+					li.container-anchor
+						a(href='#letter' data-href="t" title='Filtrar por la letra T') T
+					li.container-anchor
+						a(href='#letter' data-href="u" title='Filtrar por la letra U') U
+					li.container-anchor
+						a(href='#letter' data-href="v" title='Filtrar por la letra V') V
+					li.container-anchor
+						a(href='#letter' data-href="w" title='Filtrar por la letra W') W
+					li.container-anchor
+						a(href='#letter' data-href="x" title='Filtrar por la letra X') X
+					li.container-anchor
+						a(href='#letter' data-href="y" title='Filtrar por la letra Y') Y
+					li.container-anchor
+						a(href='#letter' data-href="z" title='Filtrar por la letra Z') Z
+		section.c-introduction-text
+			.o-section.o-section--max-1000
+				ul.c-documentation-siniestros
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='a'
+						)
+						.container-text.w-100
+							p Aviso de privacidad
+						button#button-expand-1-1.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Aviso de privacidad'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-1.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='a'
+						)
+						p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit nostrum non magni iusto voluptatem omnis quod neque quae corporis voluptas quas, vero libero delectus distinctio aliquam ducimus autem labore perspiciatis accusantium fuga ipsa! Dignissimos aut facilis sapiente labore, facere vel voluptatum accusamus, deleniti voluptatibus praesentium, fuga tempora ratione perferendis veritatis.
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='b'
+						)
+						.container-text.w-100
+							p Blog
+						button#button-expand-1-2.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Blog'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-2.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='b'
+						)
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas velit, error voluptatem expedita quibusdam eum temporibus! Magnam porro placeat laboriosam, exercitationem quas temporibus obcaecati eum, dolorum, quos modi eveniet hic?
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='c'
+						)
+						.container-text.w-100
+							p Centro de atención a clientes
+						button#button-expand-1-3.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Centro de atención a clientes'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-3.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='c'
+						)
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas velit, error voluptatem expedita quibusdam eum temporibus! Magnam porro placeat laboriosam, exercitationem quas temporibus obcaecati eum, dolorum, quos modi eveniet hic?
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='e'
+						)
+						.container-text.w-100
+							p Encuentra un agente
+						button#button-expand-1-4.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Encuentra un agente'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-4.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='e'
+						)
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas velit, error voluptatem expedita quibusdam eum temporibus! Magnam porro placeat laboriosam, exercitationem quas temporibus obcaecati eum, dolorum, quos modi eveniet hic?
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='g'
+						)
+						.container-text.w-100
+							p Grupo valore
+						button#button-expand-1-5.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Grupo valore'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-5.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='g'
+						)
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas velit, error voluptatem expedita quibusdam eum temporibus! Magnam porro placeat laboriosam, exercitationem quas temporibus obcaecati eum, dolorum, quos modi eveniet hic?
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='l'
+						)
+						.container-text.w-100
+							p Legal
+						button#button-expand-1-6.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Legal'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-6.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='l'
+						)
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas velit, error voluptatem expedita quibusdam eum temporibus! Magnam porro placeat laboriosam, exercitationem quas temporibus obcaecati eum, dolorum, quos modi eveniet hic?
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='p'
+						)
+						.container-text.w-100
+							p Preguntas frecuentes
+						button#button-expand-1-7.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Preguntas frecuentes'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-7.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='p'
+						)
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas velit, error voluptatem expedita quibusdam eum temporibus! Magnam porro placeat laboriosam, exercitationem quas temporibus obcaecati eum, dolorum, quos modi eveniet hic?
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='s'
+						)
+						.container-text.w-100
+							p Seguros
+						button#button-expand-1-8.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Seguros'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-8.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='s'
+						)
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas velit, error voluptatem expedita quibusdam eum temporibus! Magnam porro placeat laboriosam, exercitationem quas temporibus obcaecati eum, dolorum, quos modi eveniet hic?
+					li.o-card-large.o-card-large--light-blue.o-card-large--thick(
+						data-letter='t'
+						)
+						.container-text.w-100
+							p Trabaja con nosotros
+						button#button-expand-1-9.o-btn-arrow.o-btn-arrow--border-light-blue.o-btn-arrow--border-light-blue--arrow-down(
+							aria-label='Trabaja con nosotros'
+							title='boton expandir información'
+						)
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+					li#contenido-1-9.o-container-list.o-container-list--padding.u-hidden(
+						data-letter='t'
+						)
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas velit, error voluptatem expedita quibusdam eum temporibus! Magnam porro placeat laboriosam, exercitationem quas temporibus obcaecati eum, dolorum, quos modi eveniet hic?

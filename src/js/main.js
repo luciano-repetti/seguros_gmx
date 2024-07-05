@@ -387,40 +387,41 @@ document
 
 document.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
+  if (document.querySelectorAll(".c-navigation-page__list-section li:not(.container-button)")) {
+    document
+      .querySelectorAll(
+        ".c-navigation-page__list-section li:not(.container-button)"
+      )
+      .forEach((li) => {
+        const sectionId = li
+          .querySelector("a")
+          .getAttribute("href")
+          .substring(1);
+        const sectionElement = document.getElementById(sectionId);
 
-  document
-    .querySelectorAll(
-      ".c-navigation-page__list-section li:not(.container-button)"
-    )
-    .forEach((li) => {
-      const sectionId = li
-        .querySelector("a")
-        .getAttribute("href")
-        .substring(1);
-      const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+          const sectionTop =
+            sectionElement.offsetTop -
+            document.querySelector(".c-header").offsetHeight -
+            100;
 
-      if (sectionElement) {
-        const sectionTop =
-          sectionElement.offsetTop -
-          document.querySelector(".c-header").offsetHeight -
-          100;
+          if (
+            scrollPosition >= sectionTop &&
+            scrollPosition < sectionTop + sectionElement.offsetHeight
+          ) {
+            document
+              .querySelectorAll(
+                ".c-navigation-page__list-section li:not(.container-button)"
+              )
+              .forEach((li) => {
+                li.classList.remove("container-anchor--active");
+              });
 
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionElement.offsetHeight
-        ) {
-          document
-            .querySelectorAll(
-              ".c-navigation-page__list-section li:not(.container-button)"
-            )
-            .forEach((li) => {
-              li.classList.remove("container-anchor--active");
-            });
-
-          li.classList.add("container-anchor--active");
+            li.classList.add("container-anchor--active");
+          }
         }
-      }
-    });
+      });
+  }
 });
 
 document
@@ -700,6 +701,43 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.target.classList.contains("o-card-large")) {
         e.target.children[1].click();
       }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll("[data-active]");
+  cards.forEach(function (card) {
+    card.addEventListener("click", function (event) {
+      if (card.getAttribute("data-active") == "false") {
+        if (document.querySelector("[data-active='true']")) {
+          document.querySelector("[data-active='true']").setAttribute("data-active", "false");
+        }
+        card.setAttribute("data-active", "true");
+      }
+      else {
+        card.setAttribute("data-active", "false");
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hrefs = document.querySelectorAll("[data-href]");
+  const cards = document.querySelectorAll("[data-letter]");
+  hrefs.forEach(function (href) {
+    href.addEventListener("click", function (event) {
+      cards.forEach(function (card) {
+        if (href.getAttribute("data-href") == "none") {
+          card.classList.remove("c-hidden");
+        }
+        else if (card.getAttribute("data-letter") != href.getAttribute("data-href")) {
+          card.classList.add("c-hidden");
+        }
+        else {
+          card.classList.remove("c-hidden");
+        }
+      });
     });
   });
 });

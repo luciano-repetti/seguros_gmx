@@ -1,0 +1,90 @@
+$clickeable-cards = 'clickeable-cards'
+.clickeable-cards
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap 1rem
+  width 100%
+  +TabletLandscape(max)
+    grid-template-columns repeat(2, 1fr)
+  +Tablet(max)
+    display flex
+    flex-direction column
+  .o-btn-arrow
+    width 48px
+    max-width 48px
+    min-width 48px
+    transition: all 150ms;
+    +Responsive(max, 568px)
+      max-width 38px
+      min-width 38px
+  &__card
+    position relative
+    cursor pointer
+    .{clickeable-cards}__container
+      display none
+    &[data-active='true']
+      z-index 10
+      .{clickeable-cards}__texts
+        > .o-btn-arrow
+          transform: rotateZ(135deg)
+          background green-1
+          border-color green-1
+          color white
+      .{clickeable-cards}__container
+        display flex
+        z-index -1
+  &__texts
+    display flex
+    color white
+    padding 2rem
+    border-radius 2rem
+    background-color blueDark-1
+    -webkit-user-select none
+    -ms-user-select none
+    user-select none
+    &:hover
+      .o-btn-arrow
+        border-color green-1
+        background green-1
+        color white
+    display flex
+    flex-direction row
+    gap 0.5rem
+    justify-content space-between
+    p
+      padding 0
+      margin 0
+      font-size 24px
+      font-family tipografia-serif
+  &__container
+    position absolute
+    top (100% - 30px)
+    left 0
+    width 100%
+    min-height 12rem
+    padding 2rem
+    padding-top calc(30px + 2rem)
+    background-color blueDark-5
+    border-bottom-left-radius 2rem
+    border-bottom-right-radius 2rem
+    +Tablet(max)
+      position relative
+      margin-top -2rem
+    ul
+      display flex
+      flex-direction column
+      gap 1rem
+      li
+        a        
+          display flex
+          flex-direction row
+          align-items center
+          gap 1rem
+          &:hover
+            .o-btn-arrow
+              border-color green-1
+              background green-1
+              color white
+          p
+            margin 0
+            color black

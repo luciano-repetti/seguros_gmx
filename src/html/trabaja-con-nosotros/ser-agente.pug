@@ -1,0 +1,61 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'trabaja-con-nosotros/ser-agente.html';
+	- page['title'] = 'Trabaja con nosotros';
+	- page['descrip'] = 'Quiero ser agente en seguros GMX';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column#title
+							h1 Quiero trabajar en #[strong GMX] #[strong seguros]
+		.c-navigation-page
+			.c-navigation-page__list-section
+		section.c-introduction-text
+			.c-introduction-text__text-container
+				h2.mb-spacing ¿Cómo ser agente?
+				.c-coverage.c-coverage--gray
+					.c-coverage__container-banner
+						.c-coverage__container-elements
+							.c-coverage__list-elements
+								.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p GMX Seguros suscribe riesgos de los ramos de daños, excepto automóviles.
+								.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Para intermediar estos ramos se requiere contar con cédula vigente tipo B, C ó W5.
+								.c-coverage__list-elements__container-element
+									.c-coverage__list-elements__container-image
+										img(src=urlFolder + 'images/seguros/GMX-escudo.png' alt='Icono de un escudo')
+									.c-coverage__list-elements__element
+										p Póliza de responsabilidad civil con suma asegurada de un millón de pesos.
+				.o-return
+					.o-return__container
+						h3.my-spacing ¿Tienes todo para ser un agente?
+					.o-return__banner
+						.o-return__text
+							small Envíanos un correo electrónico
+						.o-return__text
+							a(href="mailto:talento@gmx.com.mx" title="talento@gmx.com.mx")
+								.o-btn-arrow
+									i.i-icon.i-arrow-up-right(aria-hidden='true')
+								p talento@gmx.com.mx

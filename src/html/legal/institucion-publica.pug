@@ -1,0 +1,62 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'legal/institucion-publica.html';
+	- page['title'] = 'Legal';
+	- page['descrip'] = 'Institución pública';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column#title
+							h1 #[small Legal] Institución pública #[strong CONDUSEF]
+		.c-navigation-page
+			.c-navigation-page__list-section
+		.o-container
+			.o-return
+				.o-return__container
+					p La CONDUSEF es una institución pública especializada en materia financiera, que tiene por objeto promover y difundir la educación y la transparencia financiera para que los usuarios tomen decisiones informadas sobre los beneficios, costos y riesgos de los productos y servicios ofertados en el sistema financiero mexicano; así como proteger sus intereses mediante la supervisión y regulación a las instituciones financieras y proporcionarles servicios que los asesoren y apoyen en la defensa de sus derechos, también se orienta a los usuarios y se atienden quejas y reclamaciones en contra de las instituciones financieras.
+					p En caso de dudas, quejas, reclamaciones o consultar información, podrá acudir a la Comisión Nacional para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF) con domicilio en Insurgentes Sur Número 762, Colonia del Valle, Delegación Benito Juárez, Código Postal 03100, Ciudad de México,
+					p correo electrónico asesoria@condusef.gob.mx, teléfono 01 800 999 8080 y 5340 0999 o consultar la página electrónica en internet
+				.o-return__banner
+					.o-return__text
+						small Correo electrónico
+					.o-return__text
+						a(href="mailto:asesoria@condusef.gob.mx" title="asesoria@condusef.gob.mx")
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+							p asesoria@condusef.gob.mx
+				.o-return__banner
+					.o-return__text
+						small Teléfonos
+					.o-return__text
+						a(href="tel:018009998080" title="018009998080")
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+							p 01 800 999 8080
+					.o-return__text
+						a(href="tel:53400999" title="53400999")
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+							p 53400999
+					.o-return__text
+						small Sitio de internet
+					.o-return__text
+						a(href="https://www.condusef.gob.mx" title="www.condusef.gob.mx")
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+							p www.condusef.gob.mx.

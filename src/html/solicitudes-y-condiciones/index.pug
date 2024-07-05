@@ -1,0 +1,1139 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'solicitudes-y-condiciones/index.html';
+	- page['title'] = 'Solicitudes y condiciones generales';
+	- page['descrip'] = '...';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column
+							h1 Solicitudes y condiciones #[strong General]
+		.c-navigation-page
+			.c-navigation-page__list-section
+				ul#scrollTop(role='navigation' aria-label='Secciones del sitio')
+					li.container-text
+						p Filtrar por:
+					li.container-anchor.container-anchor--active
+						a(href='#no-filter' data-href="none" title='No filtrar') TODOS
+					li.container-anchor
+						a(href='#letter' data-href="a" title='Filtrar por letra A') A
+					li.container-anchor
+						a(href='#letter' data-href="b" title='Filtrar por la letra B') B
+					li.container-anchor
+						a(href='#letter' data-href="c" title='Filtrar por la letra C') C
+					li.container-anchor
+						a(href='#letter' data-href="d" title='Filtrar por la letra D') D
+					li.container-anchor
+						a(href='#letter' data-href="e" title='Filtrar por la letra E') E
+					li.container-anchor
+						a(href='#letter' data-href="f" title='Filtrar por la letra F') F
+					li.container-anchor
+						a(href='#letter' data-href="g" title='Filtrar por la letra G') G
+					li.container-anchor
+						a(href='#letter' data-href="h" title='Filtrar por la letra H') H
+					li.container-anchor
+						a(href='#letter' data-href="i" title='Filtrar por la letra I') I
+					li.container-anchor
+						a(href='#letter' data-href="j" title='Filtrar por la letra J') J
+					li.container-anchor
+						a(href='#letter' data-href="k" title='Filtrar por la letra K') K
+					li.container-anchor
+						a(href='#letter' data-href="l" title='Filtrar por la letra L') L
+					li.container-anchor
+						a(href='#letter' data-href="m" title='Filtrar por la letra M') M
+					li.container-anchor
+						a(href='#letter' data-href="n" title='Filtrar por la letra N') N
+					li.container-anchor
+						a(href='#letter' data-href="o" title='Filtrar por la letra O') O
+					li.container-anchor
+						a(href='#letter' data-href="p" title='Filtrar por la letra P') P
+					li.container-anchor
+						a(href='#letter' data-href="q" title='Filtrar por la letra Q') Q
+					li.container-anchor
+						a(href='#letter' data-href="r" title='Filtrar por la letra R') R
+					li.container-anchor
+						a(href='#letter' data-href="s" title='Filtrar por la letra S') S
+					li.container-anchor
+						a(href='#letter' data-href="t" title='Filtrar por la letra T') T
+					li.container-anchor
+						a(href='#letter' data-href="u" title='Filtrar por la letra U') U
+					li.container-anchor
+						a(href='#letter' data-href="v" title='Filtrar por la letra V') V
+					li.container-anchor
+						a(href='#letter' data-href="w" title='Filtrar por la letra W') W
+					li.container-anchor
+						a(href='#letter' data-href="x" title='Filtrar por la letra X') X
+					li.container-anchor
+						a(href='#letter' data-href="y" title='Filtrar por la letra Y') Y
+					li.container-anchor
+						a(href='#letter' data-href="z" title='Filtrar por la letra Z') Z
+
+		section.c-introduction-text
+			.o-section.o-section--max-1000
+				.clickeable-cards
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='a'
+						)
+						.clickeable-cards__texts
+							p Abogados
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='a'
+						)
+						.clickeable-cards__texts
+							p Abogados
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='a'
+						)
+						.clickeable-cards__texts
+							p Abogados
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='a'
+						)
+						.clickeable-cards__texts
+							p Abogados
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='a'
+						)
+						.clickeable-cards__texts
+							p Abogados
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='a'
+						)
+						.clickeable-cards__texts
+							p Abogados
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='c'
+						)
+						.clickeable-cards__texts
+							p Contadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='c'
+						)
+						.clickeable-cards__texts
+							p Contadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='c'
+						)
+						.clickeable-cards__texts
+							p Contadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='c'
+						)
+						.clickeable-cards__texts
+							p Contadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='c'
+						)
+						.clickeable-cards__texts
+							p Contadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='c'
+						)
+						.clickeable-cards__texts
+							p Contadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='e'
+						)
+						.clickeable-cards__texts
+							p Estudios ambientales
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='e'
+						)
+						.clickeable-cards__texts
+							p Estudios ambientales
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='e'
+						)
+						.clickeable-cards__texts
+							p Estudios ambientales
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='e'
+						)
+						.clickeable-cards__texts
+							p Estudios ambientales
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='e'
+						)
+						.clickeable-cards__texts
+							p Estudios ambientales
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='e'
+						)
+						.clickeable-cards__texts
+							p Estudios ambientales
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='h'
+						)
+						.clickeable-cards__texts
+							p Hogar
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='h'
+						)
+						.clickeable-cards__texts
+							p Hogar
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='h'
+						)
+						.clickeable-cards__texts
+							p Hogar
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='h'
+						)
+						.clickeable-cards__texts
+							p Hogar
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='h'
+						)
+						.clickeable-cards__texts
+							p Hogar
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='h'
+						)
+						.clickeable-cards__texts
+							p Hogar
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='i'
+						)
+						.clickeable-cards__texts
+							p Industria de las bebidas alcohólicas
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='i'
+						)
+						.clickeable-cards__texts
+							p Industria de las bebidas alcohólicas
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='i'
+						)
+						.clickeable-cards__texts
+							p Industria de las bebidas alcohólicas
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='i'
+						)
+						.clickeable-cards__texts
+							p Industria de las bebidas alcohólicas
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='i'
+						)
+						.clickeable-cards__texts
+							p Industria de las bebidas alcohólicas
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='i'
+						)
+						.clickeable-cards__texts
+							p Industria de las bebidas alcohólicas
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='l'
+						)
+						.clickeable-cards__texts
+							p Liquidadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='l'
+						)
+						.clickeable-cards__texts
+							p Liquidadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='l'
+						)
+						.clickeable-cards__texts
+							p Liquidadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='l'
+						)
+						.clickeable-cards__texts
+							p Liquidadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='l'
+						)
+						.clickeable-cards__texts
+							p Liquidadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='l'
+						)
+						.clickeable-cards__texts
+							p Liquidadores
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='m'
+						)
+						.clickeable-cards__texts
+							p Médicos
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='m'
+						)
+						.clickeable-cards__texts
+							p Médicos
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='m'
+						)
+						.clickeable-cards__texts
+							p Médicos
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='m'
+						)
+						.clickeable-cards__texts
+							p Médicos
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='m'
+						)
+						.clickeable-cards__texts
+							p Médicos
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
+					.clickeable-cards__card(
+						data-active='false'
+						data-letter='m'
+						)
+						.clickeable-cards__texts
+							p Médicos
+							.o-btn-arrow
+								i.i-icon.i-arrow-up-right(aria-hidden='true')
+						.clickeable-cards__container
+							ul
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Condiciones generales
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Solicitudes
+								li
+									a(href="#" title="Ir a ....")
+										.o-btn-arrow
+											i.i-icon.i-arrow-up-right(aria-hidden='true')
+										p Folletos de derechos básicos
