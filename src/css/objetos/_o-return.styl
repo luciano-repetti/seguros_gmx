@@ -15,7 +15,6 @@ $o-return = 'o-return'
 		gap 2rem
 	.return
 		color blueDark-1
-		padding-left 2.5rem
 		display flex
 		flex-direction row
 		align-items center
@@ -28,14 +27,24 @@ $o-return = 'o-return'
 		&::after
 			content ""
 			position absolute
-			top 0
-			left 0
-			width 1.5rem
-			height 1.5rem
-			background-repeat no-repeat
-			background-position center
-			background-size contain
-			background-image url("../images/soy-agente/left-arrow.svg")
+		&.underline
+			&::after
+				left 0
+				bottom -3px
+				width 100%
+				height 2px
+				background-color blueDark-1
+		&.anchor
+			padding-left 2.5rem
+			&::after
+				top 0
+				left 0
+				width 1.5rem
+				height 1.5rem
+				background-repeat no-repeat
+				background-position center
+				background-size contain
+				background-image url("../images/soy-agente/left-arrow.svg")
 	&__container
 		max-width 800px
 		width 100%
