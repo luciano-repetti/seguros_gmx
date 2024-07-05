@@ -8,6 +8,13 @@
     grid-template-rows 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
     gap 1rem
     grid-template-areas: "lealtad lealtad imagen1 calidad calidad calidad calidad" "lealtad lealtad imagen1 calidad calidad calidad calidad" "lealtad lealtad imagen1 honestidad honestidad imagen2 imagen2" "profesionalismo profesionalismo imagen1 honestidad honestidad imagen2 imagen2" "profesionalismo profesionalismo imagen1 honestidad honestidad imagen2 imagen2" "profesionalismo profesionalismo responsabilidad responsabilidad responsabilidad confianza confianza" "profesionalismo profesionalismo responsabilidad responsabilidad responsabilidad confianza confianza" "profesionalismo profesionalismo responsabilidad responsabilidad responsabilidad confianza confianza";
+    +TabletPortrait(max)
+      grid-template-areas "lealtad imagen1" "calidad honestidad" "imagen2 profesionalismo" "responsabilidad confianza"
+      grid-template-columns repeat(2, 1fr)
+      grid-template-rows auto
+    +Tablet(max)
+      grid-template-areas "lealtad" "imagen1" "calidad" "honestidad" "imagen2" "profesionalismo" "responsabilidad" "confianza"
+      grid-template-columns repeat(1, 1fr)
     > div
       border-radius 2rem
   &__lealtad
