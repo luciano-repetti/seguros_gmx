@@ -756,7 +756,13 @@ document.addEventListener("DOMContentLoaded", function () {
       breakpoints: {
         '600': {
           height: "75vh",
-        }
+        },
+        '769': {
+          height: "80vh",
+        },
+        '830': {
+          height: "60vh"
+        },
       }
     });
     primarySlider.sync(secondarySlider).mount();
