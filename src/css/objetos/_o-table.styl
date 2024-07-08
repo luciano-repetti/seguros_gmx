@@ -1,8 +1,7 @@
 .o-table
-    width: 100%
+    width: 960px
     border-collapse: separate
     border-spacing: 0 12px
-    overflow-x: scroll
 
     td, th
         font-family: tipografia-sans
@@ -24,8 +23,9 @@
             border-right: 1px solid blue-3
         +Desktop(min)
             font-size: 18px
+            padding: 20px
         +Tablet(max)
-            font-size: 17px
+            font-size: 16px
             line-height: 25px
 
     tbody
@@ -47,3 +47,5 @@
                 border-left: 1px solid blue-3
             &:last-child
                 border-right: 1px solid blue-3
+            +Tablet(max)
+                font-size: 17px
