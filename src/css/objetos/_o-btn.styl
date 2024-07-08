@@ -28,8 +28,10 @@
 
 .o-btn-arrow
 	border 1px solid white
-	width 48px
-	height 48px
+	// width 48px
+	// height 48px
+	min-width 48px
+	min-height 48px
 	display inline-flex
 	border-radius 50%
 	background white
@@ -112,6 +114,8 @@
 				color: blue-1
 				background: blueDark-1
 				border-color: blueDark-1
+				&--arrow-down
+					transform: rotateZ(135deg)
 			&--arrow-down
 				transform: rotateZ(135deg)
 				background green-1

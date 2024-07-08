@@ -103,6 +103,7 @@ $c-coverage = 'c-coverage'
         > p
             font-family tipografia-serif
             padding-left: 90px
+
         // .container-content-text
         //     display flex
         //     flex-direction column
@@ -119,6 +120,7 @@ $c-coverage = 'c-coverage'
             width 100%
             // +TabletLandscape(max)
             //     flex-direction column
+
         &__container-image
             display flex
             align-items center
@@ -151,6 +153,38 @@ $c-coverage = 'c-coverage'
                 line-height: 28px
                 +TabletLandscape(max)
                     font-size 16px
+        &--step
+            position: relative
+            +TabletLandscape(max)
+                margin-left: 20px
+            &:after
+                content: ''
+                position: absolute
+                top: 53px
+                left: -20px
+                width: 2px
+                height: 74%
+                border-left: 2px dashed blueDark-4
+
+            &__container-element
+                position: relative
+                &:first-child, &:last-child
+                    &:after
+                        content: ''
+                        position: absolute
+                        z-index: 2
+                        top: 54px
+                        left: -19px
+                        transform: translate(-50%, -50%)
+                        height: 16px
+                        width 16px
+                        background-color: blueDark-4
+                        border-radius: 100%
+                
+                &:last-child
+                    &:after
+                        +TabletLandscape(max)
+                            top: 60px
     &.{$c-coverage}--gray
       padding 0
       .{$c-coverage}__container-banner
