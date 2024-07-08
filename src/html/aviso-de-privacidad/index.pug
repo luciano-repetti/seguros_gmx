@@ -1,0 +1,144 @@
+extends ../template/_template
+
+block append configuracion
+    - var page = {};
+    - page['link'] = 'aviso-legal/html.html';
+    - page['title'] = 'Aviso legal';
+    - page['descrip'] = '...';
+    - page['keys'] = 'seguros, negocios, personales';
+    - page['lang'] = 'es';
+    - page['responsive'] = true;
+    - page['section'] = [];
+    - page['libsCss'] = [];
+    - page['libs'] = [];
+    - page['plugins'] = ['splide'];
+    - page['js'] = [];
+
+    - var path = '../../';
+
+block contenido
+    main.o-section--main
+        .c-banner-text.c-banner-text--padding1
+            section.o-section.o-section--banner-small
+                .o-container
+                    .o-module.o-module--deco5.u-text-center
+                        .o-module__title.o-module__title--column#title
+                            h1 Aviso de #[strong privacidad]
+        .c-navigation-page.c-navigation-page--void
+            .c-navigation-page__list-section
+
+        .o-section
+            section.o-section--max-1000
+                .o-text
+                    p Grupo Mexicano de Seguros, S.A. de C.V., mejor conocido como GMX Seguros, con domicilio en Calle Tecoyotitla # 412 Edificio GMX, Col. Ex Hacienda de Guadalupe Chimalistac, Alcaldía Álvaro Obregón, C.P. 01050, Ciudad de México, y portal de internet #[a(href='www.gmx.com.mx' target='_blank') www.gmx.com.mx], es el responsable del uso y protección de sus datos personales, y hace de su conocimiento que tratará los datos personales que usted nos proporcione y que, a continuación se enlistan para los fines indicados en el presente Aviso de Privacidad.
+                    h2 ¿Qué datos personales utilizaremos para estos fines?
+                    p Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:
+                ul.o-container-list
+                    li Datos de identificación
+                    li Datos de contacto
+                    li Datos laborales
+                    li Datos académicos
+                    li Datos migratorios
+                    li Datos patrimoniales y/o financieros
+                    li Datos sobre procedimientos administrativos seguidos en forma de juicio y/o jurisdiccionales.
+            section.o-section--max-1000
+                .o-text
+                    h2 ¿Para qué fines utilizaremos sus datos personales?
+                    p Los datos personales proporcionados por usted o a través de terceros o por vía electrónica, óptica, sonora, visual o por cualquier otro medio o tecnología y aquellos generados con motivo de la relación jurídica que tengamos celebrada, o que en su caso, se celebre con usted los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:
+                    ul.o-container-list.o-container-list--black
+                        li Clientes (Proponentes, solicitantes, contratantes, asegurados, beneficiarios, fideicomitentes, fideicomisarios y proveedores de recursos). Para la evaluación de su solicitud de seguro y selección de riesgos y, en su caso, emisión del contrato de seguro, trámite a sus solicitudes de pago de siniestros, administración, mantenimiento y renovación de la póliza de seguro, prevención de fraude y operaciones ilícitas, para información estadística, así como para todos los fines relacionados con el cumplimiento de nuestras obligaciones de conformidad con lo establecido en el propio contrato, la Ley sobre el Contrato de Seguro y en la normatividad aplicable.
+                        li Proveedores o prestadores de bienes y/o servicios (incluye agentes de seguros). Para todos los fines vinculados con la relación jurídica/contractual que celebremos con usted.
+                    p De manera adicional, utilizaremos su información personal para las siguientes finalidades secundarias que no son necesarias para el servicio solicitado, pero que nos permiten y facilitan brindarle una mejor atención:
+                    ul.o-container-list.o-container-list--black
+                        li Mercadotecnia publicitaria
+                        li Prospección comercial
+                    p Si usted no está de acuerdo con el tratamiento de sus datos para las finalidades secundarias, podrá manifestar su negativa mediante los siguientes mecanismos:
+                    p Si proporciona sus datos en forma personal o Directa, llenando el formato que al efecto solicite y se le proporcione o pueda descargar dando click en “Formato de solicitud de derechos ARCO”.
+                    p Si este aviso de privacidad no se te da a conocer de manera directa o personal, tienes un plazo de 5 días para oponerte al tratamiento y transferencia de tus datos para los fines secundarios indicados, utilizando los mismos medios mencionados anteriormente.
+                    p La negativa para el uso de sus datos personales para estas finalidades no podrá ser un motivo para que le neguemos los servicios y productos que solicita o contrata con nosotros.
+                    p “Cookies”.
+                    p Le informamos que en nuestra pagina de Internet utilizamos cookies, web beacons u otras tecnologías, a través de las cuales es posible monitorear su comportamiento como usuario de internet así como brindarle un mejor servicio y experiencia al navegar en nuestra página.
+                    p El Usuario acuerda recibir las Cookies que les transmitan los servidores de GMX.
+                    p “Cookie” es un archivo de datos que se almacena en el disco duro del equipo de cómputo del Usuario cuando éste tiene acceso a un sitio de Internet. Las Cookies pueden contener información tal como la identificación proporcionada por el Usuario o información para rastrear las páginas que éste ha visitado. Mediante su uso, no se identifica personalmente a los usuarios, únicamente a sus equipos de cómputo. Los sitios pueden emitir publicidad o la ejecución de funciones de terceros que envían “cookies” a los equipos de cómputo de los usuarios.
+                    p Los usuarios pueden cambiar sus opciones a través de sus equipos de cómputo y/o navegador de Internet para dejar de aceptar “cookies” o bien confirmar si las permiten. Sin embargo, si se desactivan las “cookies” podría limitarse el uso de algunas funciones del Sitio Web.
+                    p GMX en sus sitios Web puede utilizar cookies, pero dicha información es utilizada sobre una base anónima y agregada de tal manera que no podrá ser identificado en ella.
+
+            section.o-section--max-1000
+                .o-text
+                    h2 ¿Con quién compartimos su información personal y para qué fines?
+                    p Le informamos que sus datos personales son compartidos dentro y fuera del país con las siguientes personas, empresas, organizaciones o autoridades distintas a nosotros, para los siguientes fines:
+                table.o-table
+                    thead
+                        tr
+                            th Destinatario de los datos personales
+                            th Finalidad
+                            th Requiere del consentimiento
+                    tbody
+                        tr
+                            td Autoridades financieras, mexicanas y extranjeras
+                            td Con la finalidad de dar cumplimiento a nuestras obligaciones derivadas de leyes o tratados internacionales como institución de seguros, obligaciones tributarias, así como para el cumplimiento de notificaciones o requerimientos oficiales.
+                            td No
+                        tr
+                            td Autoridades Judiciales, mexicanas y extranjeras
+                            td Con la finalidad de dar cumplimiento a notificaciones, requerimientos u oficios de carácter judicial.
+                            td No
+                        tr
+                            td Instituciones, organizaciones o entidades del sector Asegurador
+                            td Para fines de selección de riesgos.
+                            td No
+
+
+            section.o-section--max-1000
+                .o-text
+                    h2 ¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso?
+                    p Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.
+                    p Para el ejercicio de los derechos de Acceso, Rectificación, Cancelación y Oposición (ARCO) deberá presentar su solicitud por escrito que contenga nombre, dirección y que exprese en forma clara y precisa la solicitud de Acceso, de Rectificación de datos, de Cancelación u Oposición e indicando medio de recepción de respuesta a su solicitud (correo electrónico o Postal); adjuntando copia simple de documento oficial que acredite su personalidad, cualquier documento o información que facilite la localización de sus datos personales y en caso de solicitar una rectificación de datos personales, deberán indicar también, las modificaciones a realizarse y aportar la documentación que sustente su petición; mediante correo electrónico a la siguiente dirección #[a(href='mailto:datos.personales@gmx.com.mx') datos.personales@gmx.com.mx]., o de manera presencial en las oficinas de la Ciudad de México, entregándola al Responsable del Tratamiento de Datos Personales.
+                    p Para hacer efectivo sus derechos ponemos a su disposición el siguiente medio:
+                    p Correo electrónico: #[a(href='mailto:datos.personales@gmx.com.mx') datos.personales@gmx.com.mx.], o en su caso, a través de una llamada telefónica al número 55 54 80 40 00 Ext. 4214 con el Responsable del Tratamiento de Datos Personales.
+                    p Los datos de contacto de la persona o departamento de datos personales, que está a cargo de dar trámite a las solicitudes de derechos ARCO, son los siguientes:
+                    p Lic. Maria del Carmen Cedillo Ramirez
+                    p Calle Tecoyotitla 412 Edificio GMX,
+                    p Col. Ex Hacienda de Guadalupe Chimalistac, Delegación Álvaro Obregón,
+                    p C.P. 01050, Ciudad de México
+                    p Correo electrónico: #[a(href='mailto:datos.personales@gmx.com.mx') datos.pesonales@gmx.com.mx]
+                    p Número telefónico: 5554804000 Ext. 4214, Ciudad de México
+            section.o-section--max-1000
+                .o-text
+                    p Asimismo usted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus datos personales. Sin embargo, es importante que tenga en cuenta que no en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que por alguna obligación legal requiramos seguir tratando sus datos personales. Asimismo, usted deberá considerar que para ciertos fines, la revocación de su consentimiento implicará que no le podamos seguir prestando el servicio que nos solicitó, o la conclusión de su relación con nosotros.
+                    p Para revocar su consentimiento deberá presentar su solicitud por escrito que contenga nombre, dirección y que exprese en forma clara y precisa la solicitud de Revocación del consentimiento e indicando medio de recepción de respuesta a su solicitud (correo electrónico o Postal); adjuntando copia simple de documento oficial que acredite su personalidad, o cualquier otro elemento o documento que facilite la localización de los datos personales; mediante correo electrónico a la siguiente dirección #[a(href='mailto:datos.personales@gmx.com.mx') datos.personales@gmx.com.mx]., o de manera presencial en las oficinas de la Ciudad de México, entregándola al Responsable del Tratamiento de Datos Personales.
+                    p Para hacer efectivo su derecho para la revocación del consentimiento, ponemos a su disposición el siguiente medio:
+                    p Correo electrónico a la siguiente dirección #[a(href='mailto:datos.personales@gmx.com.mx') datos.personales@gmx.com.mx]., o llamada telefónica al Responsable del Tratamiento de Datos Personales.
+                    p Así como mediante el siguiente “Formato de solicitud de derechos ARCO”
+            section.o-section--max-1000
+                .o-text
+                    h2 ¿Cómo puede limitar el uso o divulgación de su información personal?
+                    p Con objeto de que usted pueda limitar el uso y divulgación de su información personal, le ofrecemos los siguientes medios:
+                    p Su inscripción en el Registro Público de Usuarios (Reus) a cargo de la Condusef, para ello puedes visitar su página de Internet o contactarla directamente.
+            section.o-section--max-1000
+                .o-text
+                    h2 ¿Cómo puede conocer los cambios en este aviso privacidad?
+                    p El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas.
+                    p Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, a través de: páginas #[a(href='www.gmx.com.mx') www.gmx.com.mx], #[a(href='www.medipet.mx') www.medipet.mx], #[a(href='www.meditips.mx') www.meditips.mx] y #[a(href='www.guarderiatips.mx') www.guarderiatips.mx] y a través de comunicados colocados en nuestras oficinas o informados mediante cualquier medio de comunicación que tengamos con usted.
+            section.o-section--max-1000
+                .o-text
+                    h4 Glosario
+                    h5 Aviso de Privacidad:
+                    p Es un documento físico, electrónico o en cualquier otro formato generado por el responsable que se pone a disposición de la persona física a quien correspondan los datos, y que detalla la información que se recaba de ellos y con qué fines.
+                    h5 Datos personales:
+                    p Cualquier información concerniente a una persona física identificada o identificable.
+                    h5 Datos personables sensibles:
+                    p Aquellos que afectan a la esfera más íntima de su titular, o cuya utilización indebida pueda dar origen a discriminación o conlleve un riesgo grave para éste. En particular se consideran sensibles, aquellos que puedan revelar aspectos como origen racial o étnico, estado de salud presente y futuro, información genética, creencias religiosas, filosóficas y morales, afiliación sindical, opinión política, preferencias sexuales.
+                    h5 Derechos ARCO:
+                    p Son los derechos de acceso, rectificación, cancelación y oposición.
+                    h5 Ley:
+                    p Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
+                    h5 Responsable:
+                    p Persona física o moral de carácter privado que decide sobre el tratamiento de datos personales. 
+                    h5 Tercero:
+                    p La persona física o moral, nacional o extranjera, distinta del titular o del responsable de los datos.
+                    h5 Titular
+                    p La persona física a quien corresponden los datos personales.
+                    h5 Transferencia:
+                    p Toda comunicación de datos realizada a persona distinta del responsable o encargado del tratamiento.
+                    h5 Tratamiento:
+                    p La obtención, uso, divulgación o almacenamiento de datos personales, por cualquier medio

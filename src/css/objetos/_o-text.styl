@@ -1,0 +1,31 @@
+.o-text
+    > h2, > h3, > h4, > h5
+        color blueDark-1
+        font-size 60px
+        margin-bottom 1em
+        +Desktop(min)
+            font-size 40px
+        +Responsive(max, 600px)
+            font-size 40px
+        +MobilePortrait(max)
+            font-size 28px
+    > p
+        a
+            color green-1
+            &:hover
+                text-decoration underline
+    > p, > h5
+        font-size 20px
+        line-height 30px
+        color: gray-2
+        margin 1em 0
+        +Desktop(min)
+            font-size 18px
+        +Tablet(max)
+            font-size 17px
+            line-height 25px
+    > h5
+        color blueDark-1
+
+    &.mb-spacing
+        margin-bottom 3.5rem

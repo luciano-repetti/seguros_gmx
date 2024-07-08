@@ -1,0 +1,49 @@
+.o-table
+    width: 100%
+    border-collapse: separate
+    border-spacing: 0 12px
+    overflow-x: scroll
+
+    td, th
+        font-family: tipografia-sans
+        font-size: 20px
+        line-height: 26px
+        text-align: center
+        vertical-align: top
+        border-top: 1px solid blue-3
+        border-bottom: 1px solid blue-3
+        background-clip: padding-box
+        padding: 35px
+        &:first-child
+            border-top-left-radius: 2em
+            border-bottom-left-radius: 2em
+            border-left: 1px solid blue-3
+        &:last-child
+            border-top-right-radius: 2em
+            border-bottom-right-radius: 2em
+            border-right: 1px solid blue-3
+        +Desktop(min)
+            font-size: 18px
+        +Tablet(max)
+            font-size: 17px
+            line-height: 25px
+
+    tbody
+        tr
+            border: 1px solid blue-3
+            td
+                background-color: blueDark-1
+                color: white
+                
+
+    thead
+        th
+            font-size: 22px
+            background-color blue-1
+            color blueDark-1
+            border-top: 1px solid blue-3
+            border-bottom: 1px solid blue-3
+            &:first-child
+                border-left: 1px solid blue-3
+            &:last-child
+                border-right: 1px solid blue-3

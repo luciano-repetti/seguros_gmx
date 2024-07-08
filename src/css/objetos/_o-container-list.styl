@@ -7,11 +7,12 @@
         color: gray-2
         margin-bottom: 5px
         padding-left: 15px
+        line-height: 30px
         &:before
             content: "•"
             position: absolute
             left: 0
-            top: 50%
+            top: 15px
             transform: translateY(-50%)
             margin-right: 8px
             color: blueDark-4
@@ -27,6 +28,10 @@
         font-size: 32px
         +Mobile(max)
             font-size: 24px
+    &--black
+        > li
+            &:before
+                color gray-2
     &--padding
         padding-left: 2em
         padding-top: 1em
