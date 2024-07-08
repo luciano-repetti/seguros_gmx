@@ -12,12 +12,13 @@ $blog-articles = 'blog-articles'
     grid-template-columns repeat(3, 1fr)
     gap 2rem
     width 100%
-    margin-bottom 10rem
     +TabletLandscape(max)
       grid-template-columns repeat(2, 1fr)
     +Tablet(max)
       display flex
       flex-direction column
+    &--mb
+      margin-bottom 10rem
   &__card
     display flex
     flex-direction column

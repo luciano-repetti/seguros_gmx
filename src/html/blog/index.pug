@@ -1,0 +1,346 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'blog/index.html';
+	- page['title'] = 'Blog';
+	- page['descrip'] = 'Todas las noticias';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.blog-page__header
+			.o-container.blog-page__width
+				.splide#blog-carousel
+					.splide__track
+						ul.splide__list
+							li.splide__slide.blog-page__carousel
+								.blog-page__col
+									h1 La casa de los sueños de los Millennials y la Generación Z
+									p ¿Eres organizador de eventos? estas son las coberturas que debes tener
+									a.blog-articles__link(href="#" title="Ir a ...")
+										img.js-lazy(
+											src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+											data-src=urlFolder + 'images/blog/eye.svg'
+											alt='Icono de ojo')
+										p Leer nota
+									.blog-page__controls
+										button.blog-page__control.blog-page__control--prev
+											i.i-icon.i-arrow-left
+										button.blog-page__control.blog-page__control--next
+											i.i-icon.i-arrow-right
+								.blog-page__col
+									img.blog-page__img.js-lazy(
+										src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+										data-src=urlFolder + 'images/blog/article-1.png'
+										alt=' Imagen de Rc Profesional'
+									)
+							li.splide__slide.blog-page__carousel
+								.blog-page__col
+									h1 ¿Qué podemos esperar de las veterinarias públicas en México?
+									p Así evidencian su buen estado de salud y son la principal coraza para prevenir…
+									a.blog-articles__link(href="#" title="Ir a ...")
+										img.js-lazy(
+											src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+											data-src=urlFolder + 'images/blog/eye.svg'
+											alt='Icono de ojo')
+										p Leer nota
+									.blog-page__controls
+										button.blog-page__control.blog-page__control--prev
+											i.i-icon.i-arrow-left
+										button.blog-page__control.blog-page__control--next
+											i.i-icon.i-arrow-right
+								.blog-page__col
+									img.blog-page__img.js-lazy(
+										src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+										data-src=urlFolder + 'images/blog/article-3.png'
+										alt=' Imagen de Rc Profesional'
+									)
+							li.splide__slide.blog-page__carousel
+								.blog-page__col
+									h1 Prepárate para la temporada de huracanes
+									p México es uno de los países más vulnerables a los huracanes debido a su extensa costa y a su ubicación geográfica…
+									a.blog-articles__link(href="#" title="Ir a ...")
+										img.js-lazy(
+											src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+											data-src=urlFolder + 'images/blog/eye.svg'
+											alt='Icono de ojo')
+										p Leer nota
+									.blog-page__controls
+										button.blog-page__control.blog-page__control--prev
+											i.i-icon.i-arrow-left
+										button.blog-page__control.blog-page__control--next
+											i.i-icon.i-arrow-right
+								.blog-page__col
+									img.blog-page__img.js-lazy(
+										src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+										data-src=urlFolder + 'images/blog/background.png'
+										alt=' Imagen de Rc Profesional'
+									)
+							li.splide__slide.blog-page__carousel
+								.blog-page__col
+									h1 Piel y pelaje de las mascotas: también dales cuidado dermatológico
+									p Seguros para pymes cubren los daños a tu negocio y a terceros
+									a.blog-articles__link(href="#" title="Ir a ...")
+										img.js-lazy(
+											src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+											data-src=urlFolder + 'images/blog/eye.svg'
+											alt='Icono de ojo')
+										p Leer nota
+									.blog-page__controls
+										button.blog-page__control.blog-page__control--prev
+											i.i-icon.i-arrow-left
+										button.blog-page__control.blog-page__control--next
+											i.i-icon.i-arrow-right
+								.blog-page__col
+									img.blog-page__img.js-lazy(
+										src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+										data-src=urlFolder + 'images/blog/article-2.png'
+										alt=' Imagen de Rc Profesional'
+									)
+				.splide#articles-carousel
+					.splide__track
+						ul.splide__list.blog-page__articles
+							li.splide__slide.blog-page__article
+								small En tendencia
+								p La casa de los sueños de los Millennials y la Generación Z
+							li.splide__slide.blog-page__article
+								small Productos
+								p ¿Qué podemos esperar de las veterinarias públicas en México?
+							li.splide__slide.blog-page__article
+								small Protege tu negocio
+								p La casa de los sueños de los Millennials y la Generación Z
+							li.splide__slide.blog-page__article
+								small Mascotas
+								p Piel y pelaje de las mascotas: también dales cuidado dermatológico
+		.o-container
+			.blog-page__container
+				h2 Todas las noticias
+				ul(role="list")
+					li
+						a.active(href="#" title="Todas las noticias") Todos
+					li
+						a(href="#" title="Noticias de productos") Productos
+					li
+						a(href="#" title="Noticias en tendencia") En tendencia
+					li
+						a(href="#" title="Noticias de mascotas") Mascotas
+					li
+						a(href="#" title="Noticias de protege tu negocio") Protege tu negocio
+					li
+						a(href="#" title="Noticias de bienestar y salud") Bienestar y salud
+			.blog-articles
+				.blog-articles__container
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-1.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Productos
+						.blog-articles__title
+							h2 ¿Eres organizador de eventos? Estas son las coberturas que debes tener
+						.blog-articles__description
+							p La casa de los sueños de los Millennials y la Generación Z
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-2.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Protege tu negocio
+						.blog-articles__title
+							h2 Seguros para pymes cubren los daños a tu negocio y a terceros
+						.blog-articles__description
+							p ¿Qué podemos esperar de las veterinarias públicas en México?
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-3.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Mascotas
+						.blog-articles__title
+							h2 Piel y pelaje de las mascotas: también dales cuidado dermatológico
+						.blog-articles__description
+							p Así evidencian su buen estado de salud y son la principal coraza para prevenir…
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-1.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Productos
+						.blog-articles__title
+							h2 ¿Eres organizador de eventos? Estas son las coberturas que debes tener
+						.blog-articles__description
+							p La casa de los sueños de los Millennials y la Generación Z
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-2.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Protege tu negocio
+						.blog-articles__title
+							h2 Seguros para pymes cubren los daños a tu negocio y a terceros
+						.blog-articles__description
+							p ¿Qué podemos esperar de las veterinarias públicas en México?
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-3.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Mascotas
+						.blog-articles__title
+							h2 Piel y pelaje de las mascotas: también dales cuidado dermatológico
+						.blog-articles__description
+							p Así evidencian su buen estado de salud y son la principal coraza para prevenir…
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-1.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Productos
+						.blog-articles__title
+							h2 ¿Eres organizador de eventos? Estas son las coberturas que debes tener
+						.blog-articles__description
+							p La casa de los sueños de los Millennials y la Generación Z
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-2.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Protege tu negocio
+						.blog-articles__title
+							h2 Seguros para pymes cubren los daños a tu negocio y a terceros
+						.blog-articles__description
+							p ¿Qué podemos esperar de las veterinarias públicas en México?
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-3.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Mascotas
+						.blog-articles__title
+							h2 Piel y pelaje de las mascotas: también dales cuidado dermatológico
+						.blog-articles__description
+							p Así evidencian su buen estado de salud y son la principal coraza para prevenir…
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Leer nota
+				hr
+				.c-notice__pagination_container.my-5
+					ul.c-notice__pagination(role="list")
+						li.c-notice__list.c-notice__list--active
+							a(
+								href="#"
+								title="Ir a pagina 1"
+							) 1
+						li.c-notice__list
+							a(
+								href="#"
+								title="Ir a pagina 2"
+							) 2
+						li.c-notice__list
+							a(
+								href="#"
+								title="Ir a pagina 3"
+							) 3
+						li.c-notice__list
+							a(
+								href="#"
+								title="Ir a pagina 4"
+							) 4
+						li.c-notice__list
+							a(
+								href="#"
+								title="Ir a pagina 5"
+							) 5
+						li.c-notice__list
+							a(
+								href="#"
+								title="Ir a pagina ..."
+							) ...

@@ -1,0 +1,135 @@
+$blog-page = 'blog-page'
+.blog-page
+  &__header
+    background-color blueDark-1
+    width 100%
+    display flex
+    justify-content center
+    align-items center
+    padding 2rem 0
+    margin-bottom 3rem
+  &__carousel
+    display grid
+    grid-template-columns: repeat(2, 1fr)
+    gap 2rem
+    margin-bottom 2rem
+    width 100%
+    +Tablet(max)
+      display flex
+      flex-direction column-reverse
+    h1
+      color white
+      font-size 55px
+      font-family tipografia-serif
+      +Tablet(max)
+        font-size 40px
+    p
+      color white
+      font-size 20px
+    a
+      p
+        color green-1
+  &__width
+    width 100%
+  &__col
+    width 100%
+    display flex
+    flex-direction column
+    justify-content flex-end
+    gap 1.5rem
+    p
+      margin 0
+    h1
+      margin 0
+  &__img
+    border-radius 1.5rem
+    height 100%
+    object-fit cover
+  &__controls
+    display flex
+    flex-direction row
+    gap 1.5rem
+  &__control
+    width 2.5rem
+    height 2.5rem
+    background-color white
+    cursor pointer
+    border-radius 100%
+    border none
+    display flex
+    justify-content center
+    align-items center
+    i
+      color blueDark-1
+      font-size 1.5rem
+    &:hover
+      i
+        color green-1
+  &__container
+    margin-bottom 1.5rem
+    display flex
+    flex-direction row
+    justify-content space-between
+    align-items center
+    +TabletPortrait(max)
+      flex-direction column
+    h2
+      font-size 30px
+      color blueDark-4
+    ul
+      display flex
+      flex-direction row
+      gap 1.5rem
+      +TabletPortrait(max)
+        overflow-x: auto
+        width 100%
+        white-space: nowrap;
+        min-height 8vh
+        align-items center
+        li
+          min-height 8vh
+          display flex
+          justify-content center
+          align-items center
+    a
+      color blueDark-4
+      &.active
+        color green-1
+        position relative
+        &::after
+          position absolute
+          content ""
+          bottom -4px
+          left 0
+          width 100%
+          height 2px
+          background-color green-1
+          display flex
+  &__articles
+    display grid
+    grid-template-columns repeat(4, 1fr)
+    width 100%
+    gap 1rem
+  &__article
+    border none!important
+    border-top 1px solid white!important
+    color white
+    display flex
+    flex-direction column
+    justify-content flex-start
+    gap 1rem
+    padding-top 1rem
+    +TabletPortrait(max)
+      display none
+    &.is-active
+      border-top 1px solid green-1!important
+      color green-1
+    small
+      font-size 14px
+    p
+      font-size 18px
+#articles-carousel
+  +TabletPortrait(min)
+    margin-top 2rem
+  +TabletPortrait(max)
+    padding 0

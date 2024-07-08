@@ -726,3 +726,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector("#blog-carousel");
+  if (carousel) {
+    var secondarySlider = new Splide('#articles-carousel', {
+      rewind: false,
+      cover: true,
+      arrows: false,
+      pagination: false,
+      isNavigation: true,
+      drag: false,
+      breakpoints: {
+        '600': {
+          height: "0",
+          padding: "0",
+          margin: "0"
+        }
+      }
+    }).mount();
+    var primarySlider = new Splide('#blog-carousel', {
+      height: 450,
+      heightRatio: 0.5,
+      pagination: false,
+      type: 'fade',
+      rewind: true,
+      arrows: false,
+      cover: true,
+      breakpoints: {
+        '600': {
+          height: "75vh",
+        }
+      }
+    });
+    primarySlider.sync(secondarySlider).mount();
+    const prevButton = document.querySelectorAll("button.blog-page__control--prev");
+    const nextButton = document.querySelectorAll("button.blog-page__control--next");
+    prevButton.forEach(function (button) {
+      button.addEventListener("click", function () {
+        primarySlider.go('<');
+      });
+    });
+    nextButton.forEach(function (button) {
+      button.addEventListener("click", function () {
+        primarySlider.go('>');
+      });
+    });
+  }
+});
