@@ -1,0 +1,147 @@
+extends ../template/_template
+
+block append configuracion
+	- var page = {};
+	- page['link'] = 'blog/article.html';
+	- page['title'] = 'Blog';
+	- page['descrip'] = 'Articulo ...';
+	- page['keys'] = 'seguros, negocios, personales';
+	- page['lang'] = 'es';
+	- page['responsive'] = true;
+	- page['section'] = [];
+	- page['libsCss'] = [];
+	- page['libs'] = [];
+	- page['plugins'] = ['splide'];
+	- page['js'] = [];
+
+	- var path = '../../';
+
+block contenido
+	main.o-section--main
+		.c-banner-text.c-banner-text--padding1.c-banner-text--image
+			section.o-section.o-section--banner-small
+				.o-container
+					.o-module.o-module--deco5.u-text-center
+						.o-module__title.o-module__title--column
+							h1 Prepárate para la temporada de huracanes #[small Protege tu negocio]
+		.o-container.o-container--blog
+			img.js-lazy(
+				width=1200
+				height=600
+				src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+				data-src=urlFolder + 'images/blog/background.png'
+				alt=' Imagen de Rc Profesional'
+)
+	.o-container
+		.o-return.o-return
+			a.return.anchor(href="#" title="Regresar") Regresar
+			.o-return__container.o-return__container--blog.o-return__container--640
+				h2 México es uno de los países más vulnerables a los huracanes debido a su extensa costa y a su ubicación geográfica. Los estados con mayor riesgo son los que se encuentran en las costas del Pacífico y del Golfo de México, como Guerrero, Oaxaca, Chiapas, Veracruz, Tamaulipas y Yucatán
+				p De acuerdo con el Servicio Meteorológico Nacional (SMN) este 2024 se prevén entre 14 y 19 tormentas tropicales en el Pacífico, de las cuales más de la mitad podrían convertirse en huracanes. Además, en el Atlántico, se espera la formación de 6 a 10 tormentas tropicales, con tres a cinco de ellas convirtiéndose en huracanes.
+				p <a href="#" title="Ir a ...">La temporada de huracanes</a> puede comenzar a formarse a partir del 15 de mayo en el Pacífico, mientras que en el Atlántico la temporada suele desfasarse hasta junio y en ambos casos terminará en noviembre. No esperes hasta tener una pérdida para verificar tu seguro; revisa tu póliza para garantizar que tienes la cobertura adecuada en caso de que una tormenta destructiva o inundación ocurra.
+				.o-return__banner.o-return__banner--gray.my-5
+					.o-return__text
+						small Conoce nuestra soluciones para la temporada de Huracanes
+					a.o-return__text(href="#" title="Ir a ...")
+						.o-btn-arrow.o-btn-arrow--blueDark
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/icon.svg'
+							alt='Imagen de ...'
+						)
+						p Paramétrico Huracán
+				img.-o-return__image.js-lazy(
+					src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+					data-src=urlFolder + 'images/blog/image.png'
+					alt='Foto de palmeras')
+				h2 Cómo prepararte para la temporada de huracanes
+				h3.my-spacing 1. Verifica que la estructura de tu inmueble tiene la cobertura correcta
+				p El seguro estándar de riesgos hidrometeorológicos cubre la estructura de su casa en caso de desastres como huracanes y tormentas, junto con una serie de otros desastres. Es importante que comprendas los elementos que podrían afectar el pago del seguro después de un huracán, es decir las exclusiones y ajustar tu póliza en consecuencia.
+				h3.my-spacing 2. Verifica el límite de tu póliza y rectifica que el monto sea suficiente para reconstruir el inmueble en caso de pérdida total.
+				p Vale la pena comprender en detalle cuánto costaría reconstruir la propiedad en caso de que sufra daños graves o se destruya. Recuerda que no es lo mismo el valor en el mercado que el costo de reconstrucción. Asegúrate de que tu póliza cubre esa cantidad
+				h3.my-spacing 3. Comprende tu deducible.
+				p Revisa si es el mismo monto para cualquier siniestros hidrometeorológicos o son tabuladores distintos para inundaciones o huracanes, por ejemplo.
+				p Toma en cuenta que si vives en un área con alto riesgo de huracanes, el deducible por huracanes puede ser un porcentaje más alto del promedio.
+				p Si tienes un deducible alto por huracán, tormenta o inundación, considera reservar el dinero adicional que puedas necesitar para reconstruir o reparar tu inmueble.
+				h3.my-spacing 4. Comprende tu deducible.
+				p Como mencionamos, es fundamental que revises las exclusiones de tu seguro, es decir, eventos NO cubiertos por la póliza o alguna restricción.
+				p Una exclusión común puede ser la remoción de escombros. Las personas tienden a subestimar este riesgo, pero los huracanes de categoría alta generan escombros por el daño a estructuras no ancladas, mobiliario, árboles e incluso anuncios espectaculares y demás basura que puede llegar que otras partes de la zona afectada, por lo que tener una cobertura que cubra este riesgo es importante.
+				p Otra exclusión común son los atascos de drenaje, que generalmente tampoco están cubiertos por el seguro contra inundaciones.
+				p Conoce todas las exclusiones de tu póliza y platica con un agente de seguros sobre la adquisición de una cobertura extra para riesgos no cubiertos.
+				p Los gastos de manutención adicionales (ALE) cubren el costo adicional.
+				h3.my-spacing 5. Complementa tu póliza tradicional con un
+				p Seguro paramétrico. A diferencia de una póliza de daños tradicional, el paramétrico por huracanes no cubre las afectaciones físicas a un inmueble, sino las pérdidas financieras que se deriven de ese fenómeno.
+				p Por ejemplo, supongamos que un huracán daña las vías de acceso a una determinada zona.
+				p Ahí hay un hotel. Pero el viento no afectó al inmueble, ni causó mayor afectación. No obstante, los huéspedes no pueden llegar y, por lo tanto, el hotel tiene perjuicios económicos.
+				p En estos casos es cuando un paramétrico entra en acción: está diseñado para cubrir esas pérdidas financieras, por eso son una mancuerna ideal con un seguro de daños tradicional.
+				.o-return__banner
+					.o-return__text
+						small Prepárate para el inicio de temporada de Huracanes. Conoce sobre tu póliza y cómo robustecerla.
+					a.o-return__text(href="#" title="Ir a contacta ahora un agente")
+						.o-btn-arrow
+							i.i-icon.i-arrow-up-right(aria-hidden='true')
+						p Contacta ahora un agente
+			.o-return__container
+			article.blog-articles
+				hr
+				.blog-articles__text.blog-articles__text--center
+					h1 Temas relacionados
+				.blog-articles__container
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-1.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Productos
+						.blog-articles__title
+							h2 ¿Eres organizador de eventos? Estas son las coberturas que debes tener
+						.blog-articles__description
+							p La casa de los sueños de los Millennials y la Generación Z
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Conocer más
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-2.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Protege tu negocio
+						.blog-articles__title
+							h2 Seguros para pymes cubren los daños a tu negocio y a terceros
+						.blog-articles__description
+							p ¿Qué podemos esperar de las veterinarias públicas en México?
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Conocer más
+					article.blog-articles__card
+						img.js-lazy(
+							src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+							data-src=urlFolder + 'images/blog/article-3.png'
+							alt='Imagen de articulo 1'
+						)
+						.blog-articles__tag
+							small Mascotas
+						.blog-articles__title
+							h2 Piel y pelaje de las mascotas: también dales cuidado dermatológico
+						.blog-articles__description
+							p Así evidencian su buen estado de salud y son la principal coraza para prevenir…
+						footer.blog-articles__footer
+							a.blog-articles__link(href="#" title="Ir a ...")
+								img.js-lazy(
+									src=urlFolder + 'images/global/GMX-Placeholder-Small.jpg'
+									data-src=urlFolder + 'images/blog/eye.svg'
+									alt='Icono de ojo')
+								p Conocer más

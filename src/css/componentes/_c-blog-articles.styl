@@ -1,0 +1,58 @@
+$blog-articles = 'blog-articles'
+.blog-articles
+  h1
+    font-size 36px
+    color blueDark-4
+    margin-bottom 2rem
+  &__text
+    &--center
+      text-align center
+  &__container
+    display grid
+    grid-template-columns repeat(3, 1fr)
+    gap 2rem
+    width 100%
+    margin-bottom 10rem
+    +TabletLandscape(max)
+      grid-template-columns repeat(2, 1fr)
+    +Tablet(max)
+      display flex
+      flex-direction column
+  &__card
+    display flex
+    flex-direction column
+    border-radius 2rem
+    justify-content space-between
+    gap 1rem
+  &__tag
+    small
+      font-size 14px
+      padding .5rem
+      min-width 150px
+      border 1px solid blue-3
+      background blue-1
+      color blueDark-1
+      border-radius 2rem
+      display inline-block
+      text-align center
+  &__title
+    h2
+      font-size 28px
+      font-family tipografia-serif
+      color blueDark-1
+  &__description
+    p
+      font-size 20px
+      color gray-2
+  &__link
+    color green-1
+    display flex
+    align-items center
+    flex-direction row
+    gap .5rem
+    font-size 20px
+    p
+      margin 0
+	hr
+		width 100%
+		opacity .25;
